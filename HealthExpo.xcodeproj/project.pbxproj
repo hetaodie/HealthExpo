@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */; };
+		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
+		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
+		53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */; };
 		7C04FBC21D1A69AF00414252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC11D1A69AF00414252 /* main.m */; };
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC71D1A69AF00414252 /* ViewController.m */; };
@@ -16,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
+		53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
+		53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
+		53F36E261D1AE2E000C8DBB2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Login/RegisterViewController.h; sourceTree = "<group>"; };
+		53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Login/RegisterViewController.m; sourceTree = "<group>"; };
+		53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Login/RegisterViewController.xib; sourceTree = "<group>"; };
 		7C04FBBD1D1A69AF00414252 /* HealthExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C04FBC11D1A69AF00414252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C04FBC31D1A69AF00414252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53F36E201D1ADA7F00C8DBB2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */,
+				53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */,
+				53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */,
+				53F36E261D1AE2E000C8DBB2 /* RegisterViewController.h */,
+				53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */,
+				53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		7C04FBB41D1A69AF00414252 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +81,7 @@
 		7C04FBBF1D1A69AF00414252 /* HealthExpo */ = {
 			isa = PBXGroup;
 			children = (
+				53F36E201D1ADA7F00C8DBB2 /* Login */,
 				7C04FBC31D1A69AF00414252 /* AppDelegate.h */,
 				7C04FBC41D1A69AF00414252 /* AppDelegate.m */,
 				7C04FBC61D1A69AF00414252 /* ViewController.h */,
@@ -136,6 +160,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
+				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
 				7C04FBCB1D1A69AF00414252 /* Main.storyboard in Resources */,
@@ -149,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
+				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
@@ -300,6 +328,7 @@
 				7C04FBD61D1A69AF00414252 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
