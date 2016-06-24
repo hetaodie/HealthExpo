@@ -16,11 +16,11 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITabBar *bottomView;
-@property (strong, nonatomic) IBOutlet UITabBarItem *firstTabBar;
-@property (strong, nonatomic) IBOutlet UITabBarItem *secondTabBar;
-@property (strong, nonatomic) IBOutlet UITabBarItem *thirdTabBar;
-@property (strong, nonatomic) IBOutlet UITabBarItem *fourthTabBar;
-@property (strong, nonatomic) IBOutlet UITabBarItem *fifthTabBar;
+@property (strong, nonatomic) UITabBarItem *firstTabBar;
+@property (strong, nonatomic) UITabBarItem *secondTabBar;
+@property (strong, nonatomic) UITabBarItem *thirdTabBar;
+@property (strong, nonatomic) UITabBarItem *fourthTabBar;
+@property (strong, nonatomic) UITabBarItem *fifthTabBar;
 
 @end
 
@@ -39,6 +39,17 @@
     self.thirdTabBar = [[UITabBarItem alloc] initWithTitle:@"通讯录" image:[UIImage imageNamed:@"tongxunlu"] selectedImage:[UIImage imageNamed:@"tongxunlu2"]];
     self.fourthTabBar = [[UITabBarItem alloc] initWithTitle:@"签到" image:[UIImage imageNamed:@"qiandao"] selectedImage:[UIImage imageNamed:@"qiandao2"]];
     self.fifthTabBar = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"wode"] selectedImage:[UIImage imageNamed:@"wode2"]];
+    
+    self.bottomView.items = @[_firstTabBar, _secondTabBar, _thirdTabBar, _fourthTabBar, _firstTabBar];
+    
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                                       [UIColor whiteColor], UITextAttributeTextColor,
+//                                                       nil] forState:UIControlStateNormal];
+//    UIColor *titleHighlightedColor = [UIColor colorWithRed:153/255.0 green:192/255.0 blue:48/255.0 alpha:1.0];
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                                       titleHighlightedColor, UITextAttributeTextColor,
+//                                                       nil] forState:UIControlStateHighlighted];
+    
 }
 
 - (void)adjustViewControllers{
@@ -62,7 +73,7 @@
     UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:loginVC];
     nav5.tabBarItem = self.fifthTabBar;
     
-    self.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4, nav5, nil];
+    self.viewControllers = @[nav1, nav2, nav3, nav4, nav5];
 }
 
 - (void)didReceiveMemoryWarning {

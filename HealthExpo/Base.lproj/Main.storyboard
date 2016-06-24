@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -23,13 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="ePG-7K-IlU"/>
                                 </constraints>
-                                <items>
-                                    <tabBarItem title="Item" id="p1G-lg-SbO"/>
-                                    <tabBarItem tag="1" title="Item" id="zir-uW-YkN"/>
-                                    <tabBarItem tag="2" title="Item" id="Ic3-p3-OuL"/>
-                                    <tabBarItem tag="3" title="Item" id="P3t-04-OMy"/>
-                                    <tabBarItem tag="4" title="Item" id="wEa-Ti-Qpc"/>
-                                </items>
+                                <items/>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -41,11 +35,6 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="s3s-5F-lXk" id="LgZ-5K-EKU"/>
-                        <outlet property="fifthTabBar" destination="wEa-Ti-Qpc" id="0z9-uz-ZSb"/>
-                        <outlet property="firstTabBar" destination="p1G-lg-SbO" id="EOF-X8-x9J"/>
-                        <outlet property="fourthTabBar" destination="P3t-04-OMy" id="OIV-F9-Vkm"/>
-                        <outlet property="secondTabBar" destination="zir-uW-YkN" id="NBV-3I-DCE"/>
-                        <outlet property="thirdTabBar" destination="Ic3-p3-OuL" id="duj-dB-R4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -19,6 +19,7 @@
 		69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE631D1D10B300B555FD /* CheckInViewController.xib */; };
 		69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE671D1D10DF00B555FD /* ContactsViewController.m */; };
 		69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */; };
+		69E4BE6D1D1D1E6800B555FD /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE6C1D1D1E6800B555FD /* LoginManager.m */; };
 		7C04FBC21D1A69AF00414252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC11D1A69AF00414252 /* main.m */; };
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC71D1A69AF00414252 /* ViewController.m */; };
@@ -46,6 +47,8 @@
 		69E4BE661D1D10DF00B555FD /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Contacts/ContactsViewController.h; sourceTree = "<group>"; };
 		69E4BE671D1D10DF00B555FD /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Contacts/ContactsViewController.m; sourceTree = "<group>"; };
 		69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactsViewController.xib; path = Contacts/ContactsViewController.xib; sourceTree = "<group>"; };
+		69E4BE6B1D1D1E6800B555FD /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginManager.h; path = Login/LoginManager.h; sourceTree = "<group>"; };
+		69E4BE6C1D1D1E6800B555FD /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginManager.m; path = Login/LoginManager.m; sourceTree = "<group>"; };
 		7C04FBBD1D1A69AF00414252 /* HealthExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C04FBC11D1A69AF00414252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C04FBC31D1A69AF00414252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 				53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */,
 				53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */,
 				53F36E261D1AE2E000C8DBB2 /* RegisterViewController.h */,
+				69E4BE6B1D1D1E6800B555FD /* LoginManager.h */,
+				69E4BE6C1D1D1E6800B555FD /* LoginManager.m */,
 				53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */,
 				53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */,
 			);
@@ -122,6 +127,13 @@
 			name = CheckIn;
 			sourceTree = "<group>";
 		};
+		69E4BE6E1D1D1E9A00B555FD /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
 		7C04FBB41D1A69AF00414252 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 				69E4BE501D1D0F2A00B555FD /* Contacts */,
 				69E4BE511D1D0F4C00B555FD /* CheckIn */,
 				53F36E201D1ADA7F00C8DBB2 /* Login */,
+				69E4BE6E1D1D1E9A00B555FD /* NetWork */,
 				7C04FBC31D1A69AF00414252 /* AppDelegate.h */,
 				7C04FBC41D1A69AF00414252 /* AppDelegate.m */,
 				7C04FBC61D1A69AF00414252 /* ViewController.h */,
@@ -244,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
+				69E4BE6D1D1D1E6800B555FD /* LoginManager.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
