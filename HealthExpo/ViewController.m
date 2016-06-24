@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "HomePageViewController.h"
+#import "PhoneViewController.h"
+#import "ContactsViewController.h"
+#import "CheckInViewController.h"
 #import "LoginViewController.h"
-#import "RegisterViewController.h"
+
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITabBar *bottomView;
@@ -38,12 +42,27 @@
 }
 
 - (void)adjustViewControllers{
-    LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    loginVC.tabBarItem = self.firstTabBar;
-    RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
-    registerVC.tabBarItem = self.secondTabBar;
+    HomePageViewController *hopageVC = [[HomePageViewController alloc] initWithNibName:@"HomePageViewController" bundle:nil];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:hopageVC];
+    nav1.tabBarItem = self.firstTabBar;
     
-    self.viewControllers = [NSArray arrayWithObjects:loginVC, loginVC, registerVC, registerVC, loginVC, nil];
+    PhoneViewController *phoneVC = [[PhoneViewController alloc] initWithNibName:@"PhoneViewController" bundle:nil];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:phoneVC];
+    nav2.tabBarItem = self.secondTabBar;
+    
+    ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:contactsVC];
+    nav3.tabBarItem = self.thirdTabBar;
+    
+    CheckInViewController *checkInVC = [[CheckInViewController alloc] initWithNibName:@"CheckInViewController" bundle:nil];
+    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:checkInVC];
+    nav4.tabBarItem = self.fourthTabBar;
+    
+    LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    nav5.tabBarItem = self.fifthTabBar;
+    
+    self.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4, nav5, nil];
 }
 
 - (void)didReceiveMemoryWarning {

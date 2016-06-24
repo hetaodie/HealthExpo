@@ -11,6 +11,14 @@
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
 		53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */; };
+		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
+		69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE541D1D107800B555FD /* HomePageViewController.xib */; };
+		69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE581D1D108C00B555FD /* PhoneViewController.m */; };
+		69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE591D1D108C00B555FD /* PhoneViewController.xib */; };
+		69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE621D1D10B300B555FD /* CheckInViewController.m */; };
+		69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE631D1D10B300B555FD /* CheckInViewController.xib */; };
+		69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE671D1D10DF00B555FD /* ContactsViewController.m */; };
+		69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */; };
 		7C04FBC21D1A69AF00414252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC11D1A69AF00414252 /* main.m */; };
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC71D1A69AF00414252 /* ViewController.m */; };
@@ -26,6 +34,18 @@
 		53F36E261D1AE2E000C8DBB2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Login/RegisterViewController.h; sourceTree = "<group>"; };
 		53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Login/RegisterViewController.m; sourceTree = "<group>"; };
 		53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Login/RegisterViewController.xib; sourceTree = "<group>"; };
+		69E4BE521D1D107800B555FD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
+		69E4BE531D1D107800B555FD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = HomePage/HomePageViewController.m; sourceTree = "<group>"; };
+		69E4BE541D1D107800B555FD /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = HomePage/HomePageViewController.xib; sourceTree = "<group>"; };
+		69E4BE571D1D108C00B555FD /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneViewController.h; path = Phone/PhoneViewController.h; sourceTree = "<group>"; };
+		69E4BE581D1D108C00B555FD /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneViewController.m; path = Phone/PhoneViewController.m; sourceTree = "<group>"; };
+		69E4BE591D1D108C00B555FD /* PhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhoneViewController.xib; path = Phone/PhoneViewController.xib; sourceTree = "<group>"; };
+		69E4BE611D1D10B300B555FD /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckInViewController.h; path = CheckIn/CheckInViewController.h; sourceTree = "<group>"; };
+		69E4BE621D1D10B300B555FD /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckInViewController.m; path = CheckIn/CheckInViewController.m; sourceTree = "<group>"; };
+		69E4BE631D1D10B300B555FD /* CheckInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CheckInViewController.xib; path = CheckIn/CheckInViewController.xib; sourceTree = "<group>"; };
+		69E4BE661D1D10DF00B555FD /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Contacts/ContactsViewController.h; sourceTree = "<group>"; };
+		69E4BE671D1D10DF00B555FD /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Contacts/ContactsViewController.m; sourceTree = "<group>"; };
+		69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactsViewController.xib; path = Contacts/ContactsViewController.xib; sourceTree = "<group>"; };
 		7C04FBBD1D1A69AF00414252 /* HealthExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C04FBC11D1A69AF00414252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C04FBC31D1A69AF00414252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +82,46 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				69E4BE521D1D107800B555FD /* HomePageViewController.h */,
+				69E4BE531D1D107800B555FD /* HomePageViewController.m */,
+				69E4BE541D1D107800B555FD /* HomePageViewController.xib */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
+		69E4BE4F1D1D0F0F00B555FD /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				69E4BE571D1D108C00B555FD /* PhoneViewController.h */,
+				69E4BE581D1D108C00B555FD /* PhoneViewController.m */,
+				69E4BE591D1D108C00B555FD /* PhoneViewController.xib */,
+			);
+			name = Phone;
+			sourceTree = "<group>";
+		};
+		69E4BE501D1D0F2A00B555FD /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				69E4BE661D1D10DF00B555FD /* ContactsViewController.h */,
+				69E4BE671D1D10DF00B555FD /* ContactsViewController.m */,
+				69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		69E4BE511D1D0F4C00B555FD /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				69E4BE611D1D10B300B555FD /* CheckInViewController.h */,
+				69E4BE621D1D10B300B555FD /* CheckInViewController.m */,
+				69E4BE631D1D10B300B555FD /* CheckInViewController.xib */,
+			);
+			name = CheckIn;
+			sourceTree = "<group>";
+		};
 		7C04FBB41D1A69AF00414252 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +141,10 @@
 		7C04FBBF1D1A69AF00414252 /* HealthExpo */ = {
 			isa = PBXGroup;
 			children = (
+				69E4BE4E1D1D0EF800B555FD /* HomePage */,
+				69E4BE4F1D1D0F0F00B555FD /* Phone */,
+				69E4BE501D1D0F2A00B555FD /* Contacts */,
+				69E4BE511D1D0F4C00B555FD /* CheckIn */,
 				53F36E201D1ADA7F00C8DBB2 /* Login */,
 				7C04FBC31D1A69AF00414252 /* AppDelegate.h */,
 				7C04FBC41D1A69AF00414252 /* AppDelegate.m */,
@@ -164,6 +228,10 @@
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
+				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
+				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
+				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
+				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
 				7C04FBCB1D1A69AF00414252 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,9 +245,13 @@
 			files = (
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
+				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
+				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
+				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
+				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
