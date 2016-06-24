@@ -44,6 +44,7 @@
 - (IBAction)onLoginButtonClicked:(id)sender {
     NSString *userName = self.phoneNumTextField.text;
     NSString *password = self.passwordTextField.text;
+    
     //TODO 校验 跳转
 }
 
