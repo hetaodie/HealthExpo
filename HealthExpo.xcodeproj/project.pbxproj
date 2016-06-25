@@ -21,6 +21,7 @@
 		69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */; };
 		69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE6C1D1D1E6800B555FD /* UserInfoManager.m */; };
 		69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6847D1D1E78880092F031 /* CustomTabBarController.m */; };
+		69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E684811D1E877B0092F031 /* UIButton+CountDown.m */; };
 		7C04FBC21D1A69AF00414252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC11D1A69AF00414252 /* main.m */; };
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCC1D1A69AF00414252 /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 		69E6847B1D1E775F0092F031 /* HENotificationKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HENotificationKey.h; sourceTree = "<group>"; };
 		69E6847C1D1E78880092F031 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		69E6847D1D1E78880092F031 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		69E684801D1E877B0092F031 /* UIButton+CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
+		69E684811D1E877B0092F031 /* UIButton+CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
 		7C04FBBD1D1A69AF00414252 /* HealthExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C04FBC11D1A69AF00414252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C04FBC31D1A69AF00414252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +149,15 @@
 			name = NetWork;
 			sourceTree = "<group>";
 		};
+		69E6847F1D1E875C0092F031 /* UICategory */ = {
+			isa = PBXGroup;
+			children = (
+				69E684801D1E877B0092F031 /* UIButton+CountDown.h */,
+				69E684811D1E877B0092F031 /* UIButton+CountDown.m */,
+			);
+			name = UICategory;
+			sourceTree = "<group>";
+		};
 		7C04FBB41D1A69AF00414252 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +179,7 @@
 		7C04FBBF1D1A69AF00414252 /* HealthExpo */ = {
 			isa = PBXGroup;
 			children = (
+				69E6847F1D1E875C0092F031 /* UICategory */,
 				69E4BE4E1D1D0EF800B555FD /* HomePage */,
 				69E4BE4F1D1D0F0F00B555FD /* Phone */,
 				69E4BE501D1D0F2A00B555FD /* Contacts */,
@@ -336,6 +349,7 @@
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
+				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,

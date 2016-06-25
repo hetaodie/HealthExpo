@@ -28,7 +28,7 @@
     [self createUItabbarContainViewControllers:self.tabBarController];
     self.window.rootViewController  = self.tabBarController;
     [self.window makeKeyAndVisible];
-    
+
     [[UserInfoManager shareManager] checkLoginKeyAvailable];
     return YES;
 }
