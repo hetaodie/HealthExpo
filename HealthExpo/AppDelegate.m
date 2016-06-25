@@ -14,6 +14,7 @@
 #import "LoginViewController.h"
 #import "CustomTabBarController.h"
 #import "UserInfoManager.h"
+#import "UIColor+HEX.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,8 @@
     [self createUItabbarContainViewControllers:self.tabBarController];
     self.window.rootViewController  = self.tabBarController;
     [self.window makeKeyAndVisible];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHex:0x00b38a alpha:1]];
 
     [[UserInfoManager shareManager] checkLoginKeyAvailable];
     return YES;

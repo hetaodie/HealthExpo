@@ -22,6 +22,7 @@
 		69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE6C1D1D1E6800B555FD /* UserInfoManager.m */; };
 		69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6847D1D1E78880092F031 /* CustomTabBarController.m */; };
 		69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E684811D1E877B0092F031 /* UIButton+CountDown.m */; };
+		69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E684841D1E96CE0092F031 /* UIColor+HEX.m */; };
 		7C04FBC21D1A69AF00414252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC11D1A69AF00414252 /* main.m */; };
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCC1D1A69AF00414252 /* Assets.xcassets */; };
@@ -56,6 +57,8 @@
 		69E6847D1D1E78880092F031 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		69E684801D1E877B0092F031 /* UIButton+CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
 		69E684811D1E877B0092F031 /* UIButton+CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		69E684831D1E96CE0092F031 /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		69E684841D1E96CE0092F031 /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
 		7C04FBBD1D1A69AF00414252 /* HealthExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C04FBC11D1A69AF00414252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C04FBC31D1A69AF00414252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,18 +145,13 @@
 			name = CheckIn;
 			sourceTree = "<group>";
 		};
-		69E4BE6E1D1D1E9A00B555FD /* NetWork */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NetWork;
-			sourceTree = "<group>";
-		};
 		69E6847F1D1E875C0092F031 /* UICategory */ = {
 			isa = PBXGroup;
 			children = (
 				69E684801D1E877B0092F031 /* UIButton+CountDown.h */,
 				69E684811D1E877B0092F031 /* UIButton+CountDown.m */,
+				69E684831D1E96CE0092F031 /* UIColor+HEX.h */,
+				69E684841D1E96CE0092F031 /* UIColor+HEX.m */,
 			);
 			name = UICategory;
 			sourceTree = "<group>";
@@ -185,7 +183,6 @@
 				69E4BE501D1D0F2A00B555FD /* Contacts */,
 				69E4BE511D1D0F4C00B555FD /* CheckIn */,
 				53F36E201D1ADA7F00C8DBB2 /* Login */,
-				69E4BE6E1D1D1E9A00B555FD /* NetWork */,
 				7C04FBC31D1A69AF00414252 /* AppDelegate.h */,
 				7C04FBC41D1A69AF00414252 /* AppDelegate.m */,
 				69E6847C1D1E78880092F031 /* CustomTabBarController.h */,
@@ -343,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
+				69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */,
 				69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
