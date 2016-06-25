@@ -13,6 +13,7 @@
 #import "CheckInViewController.h"
 #import "LoginViewController.h"
 #import "CustomTabBarController.h"
+#import "UserInfoManager.h"
 
 @interface AppDelegate ()
 
@@ -28,7 +29,7 @@
     self.window.rootViewController  = self.tabBarController;
     [self.window makeKeyAndVisible];
     
-    
+    [[UserInfoManager shareManager] checkLoginKeyAvailable];
     return YES;
 }
 

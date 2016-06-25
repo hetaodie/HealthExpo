@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LoginManager : NSObject
+@interface UserInfoManager : NSObject
+@property (nonatomic, strong) NSString *userName;
 
 + (instancetype)shareManager;
 /**
@@ -23,4 +24,8 @@
  *  校验登陆token是否失效。
  */
 - (void)checkLoginKeyAvailable;
+/**
+ *  保存编辑后的userinfo
+ */
+- (void)saveEditedUserInfo;
 @end

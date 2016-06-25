@@ -35,6 +35,6 @@
     
 }
 - (void)checkTokenFailed:(NSNotification *)aNotification{
-    
+    [self setSelectedIndex:4];//登陆界面
 }
 @end
