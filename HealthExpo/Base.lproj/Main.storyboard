@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,7 +23,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="ePG-7K-IlU"/>
                                 </constraints>
-                                <items/>
+                                <items>
+                                    <tabBarItem title="首页" image="shouye" selectedImage="shouye2" id="cS1-47-c1F"/>
+                                    <tabBarItem tag="1" title="电话" image="dianhua2" selectedImage="dianhua2" id="NlR-4e-Px9"/>
+                                    <tabBarItem tag="2" title="通讯录" image="tongxunlu" selectedImage="tongxunlu2" id="RR0-gd-TfU"/>
+                                    <tabBarItem tag="3" title="签到" image="qiandao" selectedImage="qiandao2" id="hAU-MM-HR5"/>
+                                    <tabBarItem tag="4" title="我的" image="wode" selectedImage="wode2" id="ePs-X8-di7"/>
+                                </items>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -41,4 +47,15 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="dianhua2" width="22" height="21"/>
+        <image name="qiandao" width="23" height="22"/>
+        <image name="qiandao2" width="23" height="21"/>
+        <image name="shouye" width="22" height="21"/>
+        <image name="shouye2" width="21" height="21"/>
+        <image name="tongxunlu" width="23" height="23"/>
+        <image name="tongxunlu2" width="23" height="22"/>
+        <image name="wode" width="22" height="22"/>
+        <image name="wode2" width="22" height="22"/>
+    </resources>
 </document>

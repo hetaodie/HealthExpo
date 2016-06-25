@@ -20,10 +20,9 @@
 		69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE671D1D10DF00B555FD /* ContactsViewController.m */; };
 		69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */; };
 		69E4BE6D1D1D1E6800B555FD /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE6C1D1D1E6800B555FD /* LoginManager.m */; };
+		69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6847D1D1E78880092F031 /* CustomTabBarController.m */; };
 		7C04FBC21D1A69AF00414252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC11D1A69AF00414252 /* main.m */; };
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
-		7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC71D1A69AF00414252 /* ViewController.m */; };
-		7C04FBCB1D1A69AF00414252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBC91D1A69AF00414252 /* Main.storyboard */; };
 		7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCC1D1A69AF00414252 /* Assets.xcassets */; };
 		7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCE1D1A69AF00414252 /* LaunchScreen.storyboard */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
@@ -51,13 +50,13 @@
 		69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactsViewController.xib; path = Contacts/ContactsViewController.xib; sourceTree = "<group>"; };
 		69E4BE6B1D1D1E6800B555FD /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginManager.h; path = Login/LoginManager.h; sourceTree = "<group>"; };
 		69E4BE6C1D1D1E6800B555FD /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginManager.m; path = Login/LoginManager.m; sourceTree = "<group>"; };
+		69E6847B1D1E775F0092F031 /* HENotificationKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HENotificationKey.h; sourceTree = "<group>"; };
+		69E6847C1D1E78880092F031 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
+		69E6847D1D1E78880092F031 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		7C04FBBD1D1A69AF00414252 /* HealthExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C04FBC11D1A69AF00414252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C04FBC31D1A69AF00414252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C04FBC41D1A69AF00414252 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C04FBC61D1A69AF00414252 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7C04FBC71D1A69AF00414252 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7C04FBCA1D1A69AF00414252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C04FBCC1D1A69AF00414252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C04FBCF1D1A69AF00414252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C04FBD11D1A69AF00414252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,9 +175,9 @@
 				69E4BE6E1D1D1E9A00B555FD /* NetWork */,
 				7C04FBC31D1A69AF00414252 /* AppDelegate.h */,
 				7C04FBC41D1A69AF00414252 /* AppDelegate.m */,
-				7C04FBC61D1A69AF00414252 /* ViewController.h */,
-				7C04FBC71D1A69AF00414252 /* ViewController.m */,
-				7C04FBC91D1A69AF00414252 /* Main.storyboard */,
+				69E6847C1D1E78880092F031 /* CustomTabBarController.h */,
+				69E6847D1D1E78880092F031 /* CustomTabBarController.m */,
+				69E6847B1D1E775F0092F031 /* HENotificationKey.h */,
 				7C04FBCC1D1A69AF00414252 /* Assets.xcassets */,
 				7C04FBCE1D1A69AF00414252 /* LaunchScreen.storyboard */,
 				7C04FBD11D1A69AF00414252 /* Info.plist */,
@@ -272,7 +271,6 @@
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
-				7C04FBCB1D1A69AF00414252 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,10 +334,10 @@
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
-				7C04FBC81D1A69AF00414252 /* ViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
+				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,14 +345,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C04FBC91D1A69AF00414252 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C04FBCA1D1A69AF00414252 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C04FBCE1D1A69AF00414252 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
