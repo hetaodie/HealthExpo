@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self adjustNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +35,35 @@
 
 - (void)dealloc{
     
+}
+
+- (void)adjustNavigationBar{
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 12, 21);
+    [backBtn setImage:[UIImage imageNamed:@"houtui"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    
+    self.navigationItem.title = @"登 录";
+    
+    UIButton *registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    registerBtn.frame = CGRectMake(0, 0, 30, 30);
+    [registerBtn setTitle:@"注册" forState:UIControlStateNormal];
+    registerBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+//    [registerBtn setImage:[UIImage imageNamed:@"houtui"] forState:UIControlStateNormal];
+    [registerBtn addTarget:self action:@selector(gotoRegister:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *registerItem = [[UIBarButtonItem alloc] initWithCustomView:registerBtn];
+    self.navigationItem.rightBarButtonItem = registerItem;
+}
+
+- (void)doBack:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)gotoRegister:(id)sender{
+    RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 - (IBAction)onForgetPasswordButtonClicked:(id)sender {

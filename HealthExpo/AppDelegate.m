@@ -15,6 +15,7 @@
 #import "CustomTabBarController.h"
 #import "UserInfoManager.h"
 #import "UIColor+HEX.h"
+#import "UserViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,8 +31,7 @@
     self.window.rootViewController  = self.tabBarController;
     [self.window makeKeyAndVisible];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHex:0x00b38a alpha:1]];
-
+    [self adjustNavigationUI];
     [[UserInfoManager shareManager] checkLoginKeyAvailable];
     return YES;
 }
@@ -60,6 +60,13 @@
 
 
 #pragma mark - private Func 
+- (void)adjustNavigationUI{
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    [navBar setBarTintColor:[UIColor colorWithHex:0x00b38a alpha:1]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:18]}];
+}
+
 - (void)createUItabbarContainViewControllers:(UITabBarController *)tbController{
     HomePageViewController *hopageVC = [[HomePageViewController alloc] initWithNibName:@"HomePageViewController" bundle:nil];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:hopageVC];
@@ -77,7 +84,7 @@
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:checkInVC];
     nav4.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"签到" image:[UIImage imageNamed:@"qiandao"] selectedImage:[UIImage imageNamed:@"qiandao2"]];
     
-    LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    UserViewController *loginVC = [[UserViewController alloc] initWithNibName:@"UserViewController" bundle:nil];
     UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:loginVC];
     nav5.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"wode"] selectedImage:[UIImage imageNamed:@"wode2"]];
     

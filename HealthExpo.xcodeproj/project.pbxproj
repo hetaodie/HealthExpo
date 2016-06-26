@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BC91D1FC4A60043144E /* UserViewController.m */; };
+		53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A34BCA1D1FC4A60043144E /* UserViewController.xib */; };
 		53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */; };
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
@@ -31,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53A34BC81D1FC4A60043144E /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserViewController.h; path = User/UserViewController.h; sourceTree = "<group>"; };
+		53A34BC91D1FC4A60043144E /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewController.m; path = User/UserViewController.m; sourceTree = "<group>"; };
+		53A34BCA1D1FC4A60043144E /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserViewController.xib; path = User/UserViewController.xib; sourceTree = "<group>"; };
 		53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 		53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
@@ -90,6 +95,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		53A34BC71D1FC41F0043144E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				53F36E201D1ADA7F00C8DBB2 /* Login */,
+				69E4BE6B1D1D1E6800B555FD /* UserInfoManager.h */,
+				69E4BE6C1D1D1E6800B555FD /* UserInfoManager.m */,
+				53A34BC81D1FC4A60043144E /* UserViewController.h */,
+				53A34BC91D1FC4A60043144E /* UserViewController.m */,
+				53A34BCA1D1FC4A60043144E /* UserViewController.xib */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		53F36E201D1ADA7F00C8DBB2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +115,6 @@
 				53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */,
 				53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */,
 				53F36E261D1AE2E000C8DBB2 /* RegisterViewController.h */,
-				69E4BE6B1D1D1E6800B555FD /* UserInfoManager.h */,
-				69E4BE6C1D1D1E6800B555FD /* UserInfoManager.m */,
 				53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */,
 				53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */,
 			);
@@ -182,7 +198,7 @@
 				69E4BE4F1D1D0F0F00B555FD /* Phone */,
 				69E4BE501D1D0F2A00B555FD /* Contacts */,
 				69E4BE511D1D0F4C00B555FD /* CheckIn */,
-				53F36E201D1ADA7F00C8DBB2 /* Login */,
+				53A34BC71D1FC41F0043144E /* User */,
 				7C04FBC31D1A69AF00414252 /* AppDelegate.h */,
 				7C04FBC41D1A69AF00414252 /* AppDelegate.m */,
 				69E6847C1D1E78880092F031 /* CustomTabBarController.h */,
@@ -247,6 +263,7 @@
 				TargetAttributes = {
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XWV65WS8FZ;
 					};
 				};
 			};
@@ -274,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
+				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
@@ -350,6 +368,7 @@
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
+				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,7 +474,9 @@
 			baseConfigurationReference = BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HealthExpo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,7 +488,9 @@
 			baseConfigurationReference = 63E82F490416CA25014F41CA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HealthExpo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

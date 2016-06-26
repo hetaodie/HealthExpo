@@ -7,6 +7,7 @@
 //
 
 #import "UserInfoManager.h"
+#import "HENotificationKey.h"
 //登陆token
 #define HELoginTokenKey @"HELoginTokenKey"
 #define HEUserName @"HEUserName"
@@ -39,6 +40,8 @@
 - (void)checkLoginKeyAvailable{
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKey];
     //TODO 发送token进行校验，返回后发送通知
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_failed_Notifocation object:nil];
 }
 
 #pragma mark - UserInfo

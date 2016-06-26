@@ -7,6 +7,7 @@
 //
 
 #import "CustomTabBarController.h"
+#import "LoginViewController.h"
 #import "HENotificationKey.h"
 
 @implementation CustomTabBarController
@@ -36,5 +37,8 @@
 }
 - (void)checkTokenFailed:(NSNotification *)aNotification{
     [self setSelectedIndex:4];//登陆界面
+    LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    UINavigationController *nav4 = self.viewControllers[4];
+    [nav4 pushViewController:logVC animated:YES];
 }
 @end
