@@ -7,6 +7,8 @@
 //
 
 #import "RegisterViewController.h"
+#import "UIColor+HEX.h"
+#import "UIButton+CountDown.h"
 
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UIView *registerPhoneNumBackgroundView;
@@ -27,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self refreshUI];
     [self adjustNavigationBar];
 }
 
@@ -69,12 +71,26 @@
 }
 
 - (IBAction)onGetCheckNumButtonClicked:(id)sender {
+    [self.getCheckNumButton startWithTime:10 title:@"获取验证码" countDownTile:@"" mainColor:[UIColor colorWithHex:0x00b38a alpha:1] countColor:[UIColor colorWithHex:0xdcdcdc alpha:1]];
 }
 
 - (IBAction)onRegisterButtonClicked:(id)sender {
 }
 
 - (void)refreshUI{
+    self.registerPhoneNumBackgroundView.layer.borderWidth = 1;
+    self.registerPhoneNumBackgroundView.layer.borderColor = [[UIColor colorWithHex:0x00b38a alpha:1] CGColor];
+    self.registerPhoneNumBackgroundView.layer.cornerRadius = 5.0;
     
+    self.checkNumBackgroundView.layer.borderWidth = 1;
+    self.checkNumBackgroundView.layer.borderColor = [[UIColor colorWithHex:0x00b38a alpha:1] CGColor];
+    self.checkNumBackgroundView.layer.cornerRadius = 5.0;
+    
+    self.registerPasswordBackgroundView.layer.borderWidth = 1;
+    self.registerPasswordBackgroundView.layer.borderColor = [[UIColor colorWithHex:0x00b38a alpha:1] CGColor];
+    self.registerPasswordBackgroundView.layer.cornerRadius = 5.0;
+    
+    self.registerButton.layer.cornerRadius = 5.0;
+    self.getCheckNumButton.layer.cornerRadius = 5.0;
 }
 @end
