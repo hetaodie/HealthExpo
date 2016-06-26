@@ -14,6 +14,8 @@
 		53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BD41D20115D0043144E /* UserInfoImageTableViewCell.m */; };
 		53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A34BD51D20115D0043144E /* UserInfoImageTableViewCell.xib */; };
 		53A34BDA1D2014D10043144E /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BD91D2014D10043144E /* UserInfo.m */; };
+		53A34BE61D20255D0043144E /* CallStatic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53A34BDF1D20255D0043144E /* CallStatic.plist */; };
+		53A34BE81D20258B0043144E /* libStatus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A34BE71D20258B0043144E /* libStatus.a */; };
 		53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */; };
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
@@ -49,6 +51,17 @@
 		53A34BD51D20115D0043144E /* UserInfoImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserInfoImageTableViewCell.xib; path = User/UserInfoImageTableViewCell.xib; sourceTree = "<group>"; };
 		53A34BD81D2014D10043144E /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = User/UserInfo.h; sourceTree = "<group>"; };
 		53A34BD91D2014D10043144E /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = User/UserInfo.m; sourceTree = "<group>"; };
+		53A34BDC1D20255D0043144E /* AFFNumberiCallboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFNumberiCallboard.h; path = iCallStatusSDK/include/AFFNumberiCallboard.h; sourceTree = "<group>"; };
+		53A34BDD1D20255D0043144E /* AFFNumericKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFNumericKeyboard.h; path = iCallStatusSDK/include/AFFNumericKeyboard.h; sourceTree = "<group>"; };
+		53A34BDE1D20255D0043144E /* CallStatic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallStatic.h; path = iCallStatusSDK/include/CallStatic.h; sourceTree = "<group>"; };
+		53A34BDF1D20255D0043144E /* CallStatic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CallStatic.plist; path = iCallStatusSDK/include/CallStatic.plist; sourceTree = "<group>"; };
+		53A34BE01D20255D0043144E /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHelper.h; path = iCallStatusSDK/include/ColorHelper.h; sourceTree = "<group>"; };
+		53A34BE11D20255D0043144E /* HttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpUtils.h; path = iCallStatusSDK/include/HttpUtils.h; sourceTree = "<group>"; };
+		53A34BE21D20255D0043144E /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "iCallStatusSDK/include/NSString+MD5.h"; sourceTree = "<group>"; };
+		53A34BE31D20255D0043144E /* rescourceDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rescourceDown.h; path = iCallStatusSDK/include/rescourceDown.h; sourceTree = "<group>"; };
+		53A34BE41D20255D0043144E /* StringsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringsUtils.h; path = iCallStatusSDK/include/StringsUtils.h; sourceTree = "<group>"; };
+		53A34BE51D20255D0043144E /* UserdefaultAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserdefaultAction.h; path = iCallStatusSDK/include/UserdefaultAction.h; sourceTree = "<group>"; };
+		53A34BE71D20258B0043144E /* libStatus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStatus.a; path = HealthExpo/iCallStatusSDK/libStatus.a; sourceTree = "<group>"; };
 		53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 		53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A34BE81D20258B0043144E /* libStatus.a in Frameworks */,
 				9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +117,7 @@
 		34861F2DFE51E919EB04A2E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53A34BE71D20258B0043144E /* libStatus.a */,
 				F403DA16C4CB879B3CB0AE82 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -135,6 +150,23 @@
 				53A34BD51D20115D0043144E /* UserInfoImageTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		53A34BDB1D2025160043144E /* iCallSDK */ = {
+			isa = PBXGroup;
+			children = (
+				53A34BDC1D20255D0043144E /* AFFNumberiCallboard.h */,
+				53A34BDD1D20255D0043144E /* AFFNumericKeyboard.h */,
+				53A34BDE1D20255D0043144E /* CallStatic.h */,
+				53A34BDF1D20255D0043144E /* CallStatic.plist */,
+				53A34BE01D20255D0043144E /* ColorHelper.h */,
+				53A34BE11D20255D0043144E /* HttpUtils.h */,
+				53A34BE21D20255D0043144E /* NSString+MD5.h */,
+				53A34BE31D20255D0043144E /* rescourceDown.h */,
+				53A34BE41D20255D0043144E /* StringsUtils.h */,
+				53A34BE51D20255D0043144E /* UserdefaultAction.h */,
+			);
+			name = iCallSDK;
 			sourceTree = "<group>";
 		};
 		53F36E201D1ADA7F00C8DBB2 /* Login */ = {
@@ -222,6 +254,7 @@
 		7C04FBBF1D1A69AF00414252 /* HealthExpo */ = {
 			isa = PBXGroup;
 			children = (
+				53A34BDB1D2025160043144E /* iCallSDK */,
 				69E6847F1D1E875C0092F031 /* UICategory */,
 				69E4BE4E1D1D0EF800B555FD /* HomePage */,
 				69E4BE4F1D1D0F0F00B555FD /* Phone */,
@@ -325,6 +358,7 @@
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
+				53A34BE61D20255D0043144E /* CallStatic.plist in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
@@ -509,9 +543,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -523,9 +562,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

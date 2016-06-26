@@ -10,7 +10,9 @@
 #import "RegisterViewController.h"
 #import "UIColor+HEX.h"
 
-@interface LoginViewController ()
+#import "rescourceDown.h"
+
+@interface LoginViewController ()<rescourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *phoneNumBackgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *phoneNumImage;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
@@ -75,8 +77,18 @@
 - (IBAction)onLoginButtonClicked:(id)sender {
     NSString *userName = self.phoneNumTextField.text;
     NSString *password = self.passwordTextField.text;
-    
     //TODO 校验 跳转
+    
+    
+    //测试登录
+    rescourceDown *rD = [[rescourceDown alloc] init];
+    rD.delegate = self;
+    [rD requestForRegistNum:@"sdkceshi" andPwd:@"888888" withAgentId:@"1"];
+}
+
+//测试icallsdk
+- (void)registResult:(NSDictionary *)resultDic withError:(NSString *)errMsg{
+    NSLog(@"resultDic desc %@, errMsg is %@", resultDic.description, errMsg);
 }
 
 - (void)refreshUI{

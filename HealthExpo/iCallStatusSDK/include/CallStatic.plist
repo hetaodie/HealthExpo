@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>home_pay_url</key>
+	<string>http://pay.doda.net.cn/recharge/service/easypay.php</string>
+	<key>home_call_url</key>
+	<string>http://mob.whxingming.com:8899/call/</string>
+	<key>home_reg_url</key>
+	<string>http://mob.whxingming.com:8899/reg/</string>
+	<key>home_balance_url</key>
+	<string>http://mob.whxingming.com:8899/search_balance/</string>
+	<key>home_url</key>
+	<string>http://mob.whxingming.com:8899/</string>
+	<key>sign_value</key>
+	<string>@#*LFJ@)38912&amp;&amp;$</string>
+</dict>
+</plist>
