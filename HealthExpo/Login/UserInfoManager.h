@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserInfo.h"
 
 @interface UserInfoManager : NSObject
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) UserInfo *userInfo;
 
 + (instancetype)shareManager;
 /**
