@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "UIColor+HEX.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIView *phoneNumBackgroundView;
@@ -26,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
+    [self refreshUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,7 +80,15 @@
 }
 
 - (void)refreshUI{
+    self.phoneNumBackgroundView.layer.borderWidth = 1;
+    self.phoneNumBackgroundView.layer.borderColor = [[UIColor colorWithHex:0x00b38a alpha:1] CGColor];
+    self.phoneNumBackgroundView.layer.cornerRadius = 5.0;
     
+    self.passwordBackgroundView.layer.borderWidth = 1;
+    self.passwordBackgroundView.layer.borderColor = [[UIColor colorWithHex:0x00b38a alpha:1] CGColor];
+    self.passwordBackgroundView.layer.cornerRadius = 5.0;
+    
+    self.loginButton.layer.cornerRadius = 5.0;
 }
 
 @end
