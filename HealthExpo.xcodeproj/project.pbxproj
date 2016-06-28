@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405241D22BDAB004A1A43 /* UserSettingViewController.m */; };
+		532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532405251D22BDAB004A1A43 /* UserSettingViewController.xib */; };
+		5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */; };
+		5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5324052A1D22C12D004A1A43 /* UserSettingTableViewCell.xib */; };
 		53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BC91D1FC4A60043144E /* UserViewController.m */; };
 		53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A34BCA1D1FC4A60043144E /* UserViewController.xib */; };
 		53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BCF1D2011370043144E /* UserInfoCommonTableViewCell.m */; };
@@ -40,6 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		532405231D22BDAB004A1A43 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingViewController.h; path = User/UserSettingViewController.h; sourceTree = "<group>"; };
+		532405241D22BDAB004A1A43 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingViewController.m; path = User/UserSettingViewController.m; sourceTree = "<group>"; };
+		532405251D22BDAB004A1A43 /* UserSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserSettingViewController.xib; path = User/UserSettingViewController.xib; sourceTree = "<group>"; };
+		532405281D22C12D004A1A43 /* UserSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingTableViewCell.h; path = User/UserSettingTableViewCell.h; sourceTree = "<group>"; };
+		532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingTableViewCell.m; path = User/UserSettingTableViewCell.m; sourceTree = "<group>"; };
+		5324052A1D22C12D004A1A43 /* UserSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserSettingTableViewCell.xib; path = User/UserSettingTableViewCell.xib; sourceTree = "<group>"; };
 		53A34BC81D1FC4A60043144E /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserViewController.h; path = User/UserViewController.h; sourceTree = "<group>"; };
 		53A34BC91D1FC4A60043144E /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewController.m; path = User/UserViewController.m; sourceTree = "<group>"; };
 		53A34BCA1D1FC4A60043144E /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserViewController.xib; path = User/UserViewController.xib; sourceTree = "<group>"; };
@@ -135,6 +145,9 @@
 				53A34BC81D1FC4A60043144E /* UserViewController.h */,
 				53A34BC91D1FC4A60043144E /* UserViewController.m */,
 				53A34BCA1D1FC4A60043144E /* UserViewController.xib */,
+				532405231D22BDAB004A1A43 /* UserSettingViewController.h */,
+				532405241D22BDAB004A1A43 /* UserSettingViewController.m */,
+				532405251D22BDAB004A1A43 /* UserSettingViewController.xib */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -148,6 +161,9 @@
 				53A34BD31D20115D0043144E /* UserInfoImageTableViewCell.h */,
 				53A34BD41D20115D0043144E /* UserInfoImageTableViewCell.m */,
 				53A34BD51D20115D0043144E /* UserInfoImageTableViewCell.xib */,
+				532405281D22C12D004A1A43 /* UserSettingTableViewCell.h */,
+				532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */,
+				5324052A1D22C12D004A1A43 /* UserSettingTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -355,6 +371,7 @@
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
 				53A34BD21D2011380043144E /* UserInfoCommonTableViewCell.xib in Resources */,
+				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
@@ -362,6 +379,7 @@
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
+				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
 			);
@@ -429,6 +447,8 @@
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
+				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
+				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,

@@ -10,6 +10,7 @@
 #import "UserInfoCommonTableViewCell.h"
 #import "UserInfoImageTableViewCell.h"
 #import "UserInfoManager.h"
+#import "UserSettingViewController.h"
 
 @interface UserViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *topUserCover;
@@ -41,7 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark UITableViewDelegate && UITableViewDataSource
+#pragma mark - UITableViewDelegate && UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
@@ -96,7 +97,8 @@
 }
 
 - (void)doSetting:(id)sender{
-    
+    UserSettingViewController *usVC = [[UserSettingViewController alloc] initWithNibName:@"UserSettingViewController" bundle:nil];
+    [self.navigationController pushViewController:usVC animated:YES];
 }
 
 - (void)refreshTopView{
