@@ -20,6 +20,10 @@
 		53A34BDA1D2014D10043144E /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BD91D2014D10043144E /* UserInfo.m */; };
 		53A34BE61D20255D0043144E /* CallStatic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53A34BDF1D20255D0043144E /* CallStatic.plist */; };
 		53A34BE81D20258B0043144E /* libStatus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A34BE71D20258B0043144E /* libStatus.a */; };
+		53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABCD901D26B72300A424F0 /* HomePagePictureTableViewCell.m */; };
+		53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53ABCD911D26B72300A424F0 /* HomePagePictureTableViewCell.xib */; };
+		53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */; };
+		53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */; };
 		53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */; };
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
@@ -72,6 +76,12 @@
 		53A34BE41D20255D0043144E /* StringsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringsUtils.h; path = iCallStatusSDK/include/StringsUtils.h; sourceTree = "<group>"; };
 		53A34BE51D20255D0043144E /* UserdefaultAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserdefaultAction.h; path = iCallStatusSDK/include/UserdefaultAction.h; sourceTree = "<group>"; };
 		53A34BE71D20258B0043144E /* libStatus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStatus.a; path = HealthExpo/iCallStatusSDK/libStatus.a; sourceTree = "<group>"; };
+		53ABCD8F1D26B72300A424F0 /* HomePagePictureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePagePictureTableViewCell.h; path = HomePage/HomePagePictureTableViewCell.h; sourceTree = "<group>"; };
+		53ABCD901D26B72300A424F0 /* HomePagePictureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePagePictureTableViewCell.m; path = HomePage/HomePagePictureTableViewCell.m; sourceTree = "<group>"; };
+		53ABCD911D26B72300A424F0 /* HomePagePictureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePagePictureTableViewCell.xib; path = HomePage/HomePagePictureTableViewCell.xib; sourceTree = "<group>"; };
+		53ABCD941D26BA0B00A424F0 /* HomePageCommonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageCommonTableViewCell.h; path = HomePage/HomePageCommonTableViewCell.h; sourceTree = "<group>"; };
+		53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageCommonTableViewCell.m; path = HomePage/HomePageCommonTableViewCell.m; sourceTree = "<group>"; };
+		53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageCommonTableViewCell.xib; path = HomePage/HomePageCommonTableViewCell.xib; sourceTree = "<group>"; };
 		53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 		53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +195,19 @@
 			name = iCallSDK;
 			sourceTree = "<group>";
 		};
+		53ABCD8E1D26B6E200A424F0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53ABCD8F1D26B72300A424F0 /* HomePagePictureTableViewCell.h */,
+				53ABCD901D26B72300A424F0 /* HomePagePictureTableViewCell.m */,
+				53ABCD911D26B72300A424F0 /* HomePagePictureTableViewCell.xib */,
+				53ABCD941D26BA0B00A424F0 /* HomePageCommonTableViewCell.h */,
+				53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */,
+				53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		53F36E201D1ADA7F00C8DBB2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +224,7 @@
 		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				53ABCD8E1D26B6E200A424F0 /* Cells */,
 				69E4BE521D1D107800B555FD /* HomePageViewController.h */,
 				69E4BE531D1D107800B555FD /* HomePageViewController.m */,
 				69E4BE541D1D107800B555FD /* HomePageViewController.xib */,
@@ -370,6 +394,7 @@
 			files = (
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
+				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
 				53A34BD21D2011380043144E /* UserInfoCommonTableViewCell.xib in Resources */,
 				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
@@ -377,6 +402,7 @@
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				53A34BE61D20255D0043144E /* CallStatic.plist in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
+				53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */,
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
 				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
@@ -457,6 +483,8 @@
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
+				53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */,
+				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
