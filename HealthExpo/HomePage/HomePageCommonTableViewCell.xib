@@ -50,15 +50,15 @@
                         <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinglun" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-km-rDN">
-                        <rect key="frame" x="273" y="58" width="6" height="6"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pinglun" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-km-rDN">
+                        <rect key="frame" x="267" y="56" width="12" height="11"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="6" id="Fnz-fl-atL"/>
-                            <constraint firstAttribute="height" constant="6" id="j1n-8W-ARg"/>
+                            <constraint firstAttribute="width" constant="12" id="Fnz-fl-atL"/>
+                            <constraint firstAttribute="height" constant="11" id="j1n-8W-ARg"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isM-9z-BgN">
-                        <rect key="frame" x="243" y="55" width="20" height="11"/>
+                        <rect key="frame" x="237" y="55" width="20" height="11"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="NR7-is-Fqb"/>
                             <constraint firstAttribute="height" constant="11" id="UT9-YV-Kat"/>
@@ -68,7 +68,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chakan" translatesAutoresizingMaskIntoConstraints="NO" id="BHs-5a-D8h">
-                        <rect key="frame" x="224" y="56" width="13" height="10"/>
+                        <rect key="frame" x="218" y="56" width="13" height="10"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="RD8-YB-fqA"/>
                             <constraint firstAttribute="width" constant="13" id="X0P-IO-LYa"/>
