@@ -10,6 +10,7 @@
 #import "HomePageCommonTableViewCell.h"
 #import "HomePagePictureTableViewCell.h"
 #import "JianKangBKViewController.h"
+#import "GuaHaoViewController.h"
 
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -41,6 +42,7 @@
 }
 - (IBAction)onBaiKeClicked:(id)sender {
     JianKangBKViewController *jkbkVC = [[JianKangBKViewController alloc] initWithNibName:@"JianKangBKViewController" bundle:nil];
+    jkbkVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 - (IBAction)onJiGouClicked:(id)sender {
@@ -48,6 +50,9 @@
 - (IBAction)onZaZhiClicked:(id)sender {
 }
 - (IBAction)onGuaHaoClicked:(id)sender {
+    GuaHaoViewController *ghVC = [[GuaHaoViewController alloc] initWithNibName:@"GuaHaoViewController" bundle:nil];
+    ghVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ghVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
