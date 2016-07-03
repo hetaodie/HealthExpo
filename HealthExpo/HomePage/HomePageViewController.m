@@ -12,6 +12,8 @@
 
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 
@@ -19,12 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
+    self.searchView.layer.cornerRadius = 15;
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+
     // Dispose of any resources that can be recreated.
 }
 
