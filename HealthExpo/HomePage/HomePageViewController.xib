@@ -329,7 +329,6 @@
                 <constraint firstAttribute="trailing" secondItem="tcs-ds-8GC" secondAttribute="trailing" constant="10" id="kdS-TM-Psg"/>
                 <constraint firstItem="5Ed-ZV-xHn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mLF-fN-nqZ"/>
             </constraints>
-            <nil key="simulatedTopBarMetrics"/>
         </view>
     </objects>
     <resources>

@@ -24,6 +24,10 @@
 		53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53ABCD911D26B72300A424F0 /* HomePagePictureTableViewCell.xib */; };
 		53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */; };
 		53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */; };
+		53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BC4C671D290533009035BC /* JianKangBKViewController.m */; };
+		53BC4C6A1D290533009035BC /* JianKangBKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53BC4C681D290533009035BC /* JianKangBKViewController.xib */; };
+		53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BC4C6D1D2907B8009035BC /* JianKangBKTableViewCell.m */; };
+		53BC4C701D2907B8009035BC /* JianKangBKTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53BC4C6E1D2907B8009035BC /* JianKangBKTableViewCell.xib */; };
 		53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */; };
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
@@ -82,6 +86,12 @@
 		53ABCD941D26BA0B00A424F0 /* HomePageCommonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageCommonTableViewCell.h; path = HomePage/HomePageCommonTableViewCell.h; sourceTree = "<group>"; };
 		53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageCommonTableViewCell.m; path = HomePage/HomePageCommonTableViewCell.m; sourceTree = "<group>"; };
 		53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageCommonTableViewCell.xib; path = HomePage/HomePageCommonTableViewCell.xib; sourceTree = "<group>"; };
+		53BC4C661D290533009035BC /* JianKangBKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JianKangBKViewController.h; path = HomePage/YiLiaoBaiKe/JianKangBKViewController.h; sourceTree = "<group>"; };
+		53BC4C671D290533009035BC /* JianKangBKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JianKangBKViewController.m; path = HomePage/YiLiaoBaiKe/JianKangBKViewController.m; sourceTree = "<group>"; };
+		53BC4C681D290533009035BC /* JianKangBKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JianKangBKViewController.xib; path = HomePage/YiLiaoBaiKe/JianKangBKViewController.xib; sourceTree = "<group>"; };
+		53BC4C6C1D2907B8009035BC /* JianKangBKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JianKangBKTableViewCell.h; path = HomePage/YiLiaoBaiKe/JianKangBKTableViewCell.h; sourceTree = "<group>"; };
+		53BC4C6D1D2907B8009035BC /* JianKangBKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JianKangBKTableViewCell.m; path = HomePage/YiLiaoBaiKe/JianKangBKTableViewCell.m; sourceTree = "<group>"; };
+		53BC4C6E1D2907B8009035BC /* JianKangBKTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JianKangBKTableViewCell.xib; path = HomePage/YiLiaoBaiKe/JianKangBKTableViewCell.xib; sourceTree = "<group>"; };
 		53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 		53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Login/LoginViewController.xib; sourceTree = "<group>"; };
@@ -208,6 +218,27 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		53BC4C651D290485009035BC /* YiLiaoBaiKe */ = {
+			isa = PBXGroup;
+			children = (
+				53BC4C6B1D29077E009035BC /* Cells */,
+				53BC4C661D290533009035BC /* JianKangBKViewController.h */,
+				53BC4C671D290533009035BC /* JianKangBKViewController.m */,
+				53BC4C681D290533009035BC /* JianKangBKViewController.xib */,
+			);
+			name = YiLiaoBaiKe;
+			sourceTree = "<group>";
+		};
+		53BC4C6B1D29077E009035BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53BC4C6C1D2907B8009035BC /* JianKangBKTableViewCell.h */,
+				53BC4C6D1D2907B8009035BC /* JianKangBKTableViewCell.m */,
+				53BC4C6E1D2907B8009035BC /* JianKangBKTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		53F36E201D1ADA7F00C8DBB2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +255,7 @@
 		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				53BC4C651D290485009035BC /* YiLiaoBaiKe */,
 				53ABCD8E1D26B6E200A424F0 /* Cells */,
 				69E4BE521D1D107800B555FD /* HomePageViewController.h */,
 				69E4BE531D1D107800B555FD /* HomePageViewController.m */,
@@ -395,6 +427,7 @@
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
 				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
+				53BC4C6A1D290533009035BC /* JianKangBKViewController.xib in Resources */,
 				53A34BD21D2011380043144E /* UserInfoCommonTableViewCell.xib in Resources */,
 				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
@@ -402,6 +435,7 @@
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				53A34BE61D20255D0043144E /* CallStatic.plist in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
+				53BC4C701D2907B8009035BC /* JianKangBKTableViewCell.xib in Resources */,
 				53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */,
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
@@ -474,12 +508,14 @@
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
+				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
+				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
