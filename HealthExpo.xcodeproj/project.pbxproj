@@ -24,6 +24,9 @@
 		53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53ABCD911D26B72300A424F0 /* HomePagePictureTableViewCell.xib */; };
 		53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */; };
 		53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */; };
+		53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AD05541D2C03A300557942 /* HomePageModelSource.m */; };
+		53AD05581D2C03D500557942 /* HomePageNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AD05571D2C03D500557942 /* HomePageNewsItem.m */; };
+		53AD055B1D2C072F00557942 /* HEDataCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AD055A1D2C072F00557942 /* HEDataCategory.m */; };
 		53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BC4C671D290533009035BC /* JianKangBKViewController.m */; };
 		53BC4C6A1D290533009035BC /* JianKangBKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53BC4C681D290533009035BC /* JianKangBKViewController.xib */; };
 		53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BC4C6D1D2907B8009035BC /* JianKangBKTableViewCell.m */; };
@@ -109,6 +112,12 @@
 		53ABCD941D26BA0B00A424F0 /* HomePageCommonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageCommonTableViewCell.h; path = HomePage/HomePageCommonTableViewCell.h; sourceTree = "<group>"; };
 		53ABCD951D26BA0B00A424F0 /* HomePageCommonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageCommonTableViewCell.m; path = HomePage/HomePageCommonTableViewCell.m; sourceTree = "<group>"; };
 		53ABCD961D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageCommonTableViewCell.xib; path = HomePage/HomePageCommonTableViewCell.xib; sourceTree = "<group>"; };
+		53AD05531D2C03A300557942 /* HomePageModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageModelSource.h; path = HomePage/HomePageModelSource.h; sourceTree = "<group>"; };
+		53AD05541D2C03A300557942 /* HomePageModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageModelSource.m; path = HomePage/HomePageModelSource.m; sourceTree = "<group>"; };
+		53AD05561D2C03D500557942 /* HomePageNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageNewsItem.h; path = HomePage/HomePageNewsItem.h; sourceTree = "<group>"; };
+		53AD05571D2C03D500557942 /* HomePageNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageNewsItem.m; path = HomePage/HomePageNewsItem.m; sourceTree = "<group>"; };
+		53AD05591D2C072F00557942 /* HEDataCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HEDataCategory.h; path = HomePage/HEDataCategory.h; sourceTree = "<group>"; };
+		53AD055A1D2C072F00557942 /* HEDataCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HEDataCategory.m; path = HomePage/HEDataCategory.m; sourceTree = "<group>"; };
 		53BC4C661D290533009035BC /* JianKangBKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JianKangBKViewController.h; path = HomePage/YiLiaoBaiKe/JianKangBKViewController.h; sourceTree = "<group>"; };
 		53BC4C671D290533009035BC /* JianKangBKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JianKangBKViewController.m; path = HomePage/YiLiaoBaiKe/JianKangBKViewController.m; sourceTree = "<group>"; };
 		53BC4C681D290533009035BC /* JianKangBKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JianKangBKViewController.xib; path = HomePage/YiLiaoBaiKe/JianKangBKViewController.xib; sourceTree = "<group>"; };
@@ -276,6 +285,17 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		53AD05521D2C037300557942 /* DataItems */ = {
+			isa = PBXGroup;
+			children = (
+				53AD05561D2C03D500557942 /* HomePageNewsItem.h */,
+				53AD05571D2C03D500557942 /* HomePageNewsItem.m */,
+				53AD05591D2C072F00557942 /* HEDataCategory.h */,
+				53AD055A1D2C072F00557942 /* HEDataCategory.m */,
+			);
+			name = DataItems;
+			sourceTree = "<group>";
+		};
 		53BC4C651D290485009035BC /* YiLiaoBaiKe */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,10 +382,13 @@
 		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				53AD05521D2C037300557942 /* DataItems */,
 				53ABCD8E1D26B6E200A424F0 /* Cells */,
 				69E4BE521D1D107800B555FD /* HomePageViewController.h */,
 				69E4BE531D1D107800B555FD /* HomePageViewController.m */,
 				69E4BE541D1D107800B555FD /* HomePageViewController.xib */,
+				53AD05531D2C03A300557942 /* HomePageModelSource.h */,
+				53AD05541D2C03A300557942 /* HomePageModelSource.m */,
 				53BC4C651D290485009035BC /* YiLiaoBaiKe */,
 				53BC4C721D290E65009035BC /* YiLiaoJiGou */,
 				53BC4C711D290E3A009035BC /* DianZiZaZhi */,
@@ -662,11 +685,13 @@
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
+				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
+				53AD055B1D2C072F00557942 /* HEDataCategory.m in Sources */,
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				7C67443F1D2BC3B100661276 /* MessageInfoView.m in Sources */,
 				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
@@ -678,6 +703,7 @@
 				53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */,
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
+				53AD05581D2C03D500557942 /* HomePageNewsItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

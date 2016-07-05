@@ -11,11 +11,14 @@
 #import "HomePagePictureTableViewCell.h"
 #import "JianKangBKViewController.h"
 #import "GuaHaoViewController.h"
+#import "HomePageModelSource.h"
 
-@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (nonatomic, strong) HomePageModelSource *dataSource;
+
 
 @end
 
@@ -27,6 +30,9 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.dataSource = [[HomePageModelSource alloc] init];
+    [self.dataSource getHomePageNews];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -91,6 +97,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+#pragma mark - HomePageModelSourceDelegate
+- (void)getHomePageNewsFailed{
+    
+}
+- (void)getHomePageNewsSuccess:(NSArray *)dataArray{
     
 }
 
