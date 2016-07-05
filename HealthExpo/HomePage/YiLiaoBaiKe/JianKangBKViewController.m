@@ -8,6 +8,7 @@
 
 #import "JianKangBKViewController.h"
 #import "JianKangBKTableViewCell.h"
+#import "JiBingBKViewController.h"
 
 @interface JianKangBKViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
@@ -73,6 +74,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
+    if(row ==0){
+        JiBingBKViewController *jkbkVC = [[JiBingBKViewController alloc] initWithNibName:@"JiBingBKViewController" bundle:nil];
+        jkbkVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:jkbkVC animated:YES];
+    }
+    else{
     
+    }
 }
 @end

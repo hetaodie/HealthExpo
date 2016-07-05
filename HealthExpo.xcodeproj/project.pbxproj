@@ -53,6 +53,18 @@
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCC1D1A69AF00414252 /* Assets.xcassets */; };
 		7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCE1D1A69AF00414252 /* LaunchScreen.storyboard */; };
+		7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */; };
+		7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */; };
+		7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77AA1D2B5EFC008A58D7 /* JiBingBKLeftView.m */; };
+		7C6A77AD1D2B5F0F008A58D7 /* JiBingBKLeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77AC1D2B5F0F008A58D7 /* JiBingBKLeftView.xib */; };
+		7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77AF1D2B5F2E008A58D7 /* JiBingBKRightView.m */; };
+		7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77B11D2B5F3D008A58D7 /* JiBingBKRightView.xib */; };
+		7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77B91D2B81D5008A58D7 /* JiBingBKLeftViewCell.m */; };
+		7C6A77BC1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77BA1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib */; };
+		7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77BE1D2B82B2008A58D7 /* JiBingBKTopView.m */; };
+		7C6A77C11D2B82C2008A58D7 /* JiBingBKTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77C01D2B82C2008A58D7 /* JiBingBKTopView.xib */; };
+		7C6A77C51D2B9348008A58D7 /* JiBingBKRightViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77C31D2B9348008A58D7 /* JiBingBKRightViewCell.m */; };
+		7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77C41D2B9348008A58D7 /* JiBingBKRightViewCell.xib */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +152,24 @@
 		7C04FBCC1D1A69AF00414252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C04FBCF1D1A69AF00414252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C04FBD11D1A69AF00414252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C6A77A31D2B5EBA008A58D7 /* JiBingBKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKViewController.h; sourceTree = "<group>"; };
+		7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKViewController.m; sourceTree = "<group>"; };
+		7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKViewController.xib; sourceTree = "<group>"; };
+		7C6A77A91D2B5EFC008A58D7 /* JiBingBKLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKLeftView.h; sourceTree = "<group>"; };
+		7C6A77AA1D2B5EFC008A58D7 /* JiBingBKLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKLeftView.m; sourceTree = "<group>"; };
+		7C6A77AC1D2B5F0F008A58D7 /* JiBingBKLeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKLeftView.xib; sourceTree = "<group>"; };
+		7C6A77AE1D2B5F2E008A58D7 /* JiBingBKRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKRightView.h; sourceTree = "<group>"; };
+		7C6A77AF1D2B5F2E008A58D7 /* JiBingBKRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKRightView.m; sourceTree = "<group>"; };
+		7C6A77B11D2B5F3D008A58D7 /* JiBingBKRightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKRightView.xib; sourceTree = "<group>"; };
+		7C6A77B81D2B81D5008A58D7 /* JiBingBKLeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKLeftViewCell.h; sourceTree = "<group>"; };
+		7C6A77B91D2B81D5008A58D7 /* JiBingBKLeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKLeftViewCell.m; sourceTree = "<group>"; };
+		7C6A77BA1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKLeftViewCell.xib; sourceTree = "<group>"; };
+		7C6A77BD1D2B82B2008A58D7 /* JiBingBKTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKTopView.h; sourceTree = "<group>"; };
+		7C6A77BE1D2B82B2008A58D7 /* JiBingBKTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKTopView.m; sourceTree = "<group>"; };
+		7C6A77C01D2B82C2008A58D7 /* JiBingBKTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKTopView.xib; sourceTree = "<group>"; };
+		7C6A77C21D2B9348008A58D7 /* JiBingBKRightViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKRightViewCell.h; sourceTree = "<group>"; };
+		7C6A77C31D2B9348008A58D7 /* JiBingBKRightViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKRightViewCell.m; sourceTree = "<group>"; };
+		7C6A77C41D2B9348008A58D7 /* JiBingBKRightViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKRightViewCell.xib; sourceTree = "<group>"; };
 		BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F403DA16C4CB879B3CB0AE82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,10 +264,14 @@
 		53BC4C651D290485009035BC /* YiLiaoBaiKe */ = {
 			isa = PBXGroup;
 			children = (
+				7C6A77A81D2B5EC1008A58D7 /* views */,
 				53BC4C6B1D29077E009035BC /* Cells */,
 				53BC4C661D290533009035BC /* JianKangBKViewController.h */,
 				53BC4C671D290533009035BC /* JianKangBKViewController.m */,
 				53BC4C681D290533009035BC /* JianKangBKViewController.xib */,
+				7C6A77A31D2B5EBA008A58D7 /* JiBingBKViewController.h */,
+				7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */,
+				7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */,
 			);
 			name = YiLiaoBaiKe;
 			sourceTree = "<group>";
@@ -248,6 +282,12 @@
 				53BC4C6C1D2907B8009035BC /* JianKangBKTableViewCell.h */,
 				53BC4C6D1D2907B8009035BC /* JianKangBKTableViewCell.m */,
 				53BC4C6E1D2907B8009035BC /* JianKangBKTableViewCell.xib */,
+				7C6A77C21D2B9348008A58D7 /* JiBingBKRightViewCell.h */,
+				7C6A77C31D2B9348008A58D7 /* JiBingBKRightViewCell.m */,
+				7C6A77C41D2B9348008A58D7 /* JiBingBKRightViewCell.xib */,
+				7C6A77B81D2B81D5008A58D7 /* JiBingBKLeftViewCell.h */,
+				7C6A77B91D2B81D5008A58D7 /* JiBingBKLeftViewCell.m */,
+				7C6A77BA1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -407,6 +447,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C6A77A81D2B5EC1008A58D7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7C6A77A91D2B5EFC008A58D7 /* JiBingBKLeftView.h */,
+				7C6A77AA1D2B5EFC008A58D7 /* JiBingBKLeftView.m */,
+				7C6A77AC1D2B5F0F008A58D7 /* JiBingBKLeftView.xib */,
+				7C6A77AE1D2B5F2E008A58D7 /* JiBingBKRightView.h */,
+				7C6A77AF1D2B5F2E008A58D7 /* JiBingBKRightView.m */,
+				7C6A77B11D2B5F3D008A58D7 /* JiBingBKRightView.xib */,
+				7C6A77BD1D2B82B2008A58D7 /* JiBingBKTopView.h */,
+				7C6A77BE1D2B82B2008A58D7 /* JiBingBKTopView.m */,
+				7C6A77C01D2B82C2008A58D7 /* JiBingBKTopView.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		8639F12BFCDBDAB9524DA0FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C6A77C11D2B82C2008A58D7 /* JiBingBKTopView.xib in Resources */,
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
 				53BC4C781D290EFD009035BC /* GuaHaoViewController.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
@@ -484,6 +541,7 @@
 				53BC4C6A1D290533009035BC /* JianKangBKViewController.xib in Resources */,
 				53A34BD21D2011380043144E /* UserInfoCommonTableViewCell.xib in Resources */,
 				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
+				7C6A77BC1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib in Resources */,
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
@@ -493,9 +551,13 @@
 				53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */,
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
+				7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */,
 				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
+				7C6A77AD1D2B5F0F008A58D7 /* JiBingBKLeftView.xib in Resources */,
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
 				53BC4C7D1D2915DE009035BC /* DianZiZaZhiViewController.xib in Resources */,
+				7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */,
+				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,20 +621,26 @@
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
 				69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */,
 				69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */,
+				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
+				7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */,
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				53BC4C811D291CB3009035BC /* HENetTask.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
+				7C6A77C51D2B9348008A58D7 /* JiBingBKRightViewCell.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
+				7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */,
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
+				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
+				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
