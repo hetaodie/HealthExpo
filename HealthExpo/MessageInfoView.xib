@@ -2,10 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageInfoView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageInfoView">
+            <connections>
+                <outlet property="contentView" destination="NIA-fx-0qm" id="FMq-CK-Qp5"/>
+                <outlet property="leaveMessageButton" destination="eyT-y1-EN9" id="iJ9-wT-8BX"/>
+                <outlet property="tableView" destination="UIw-9a-h8G" id="rBz-Jp-cic"/>
+                <outlet property="titleLabel" destination="eaY-Qp-K4S" id="49j-If-OUi"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="NIA-fx-0qm">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -18,13 +25,56 @@
                         <constraint firstAttribute="height" constant="10" id="pa2-QU-j1D"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omz-tl-eno">
+                    <rect key="frame" x="0.0" y="10" width="600" height="29"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="留言板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-Qp-K4S">
+                            <rect key="frame" x="15" y="6" width="42" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyT-y1-EN9">
+                            <rect key="frame" x="539" y="-1" width="46" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="留言">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="eyT-y1-EN9" firstAttribute="centerY" secondItem="omz-tl-eno" secondAttribute="centerY" id="9uU-Qk-3T3"/>
+                        <constraint firstItem="eaY-Qp-K4S" firstAttribute="centerY" secondItem="omz-tl-eno" secondAttribute="centerY" id="Ftx-7p-GEI"/>
+                        <constraint firstAttribute="height" constant="29" id="OL5-sx-ZW0"/>
+                        <constraint firstItem="eaY-Qp-K4S" firstAttribute="leading" secondItem="omz-tl-eno" secondAttribute="leading" constant="15" id="oxX-5e-NwX"/>
+                        <constraint firstAttribute="trailing" secondItem="eyT-y1-EN9" secondAttribute="trailing" constant="15" id="yBV-OT-7tV"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIw-9a-h8G">
+                    <rect key="frame" x="0.0" y="39" width="600" height="561"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="NqX-qM-iGL"/>
+                        <outlet property="delegate" destination="-1" id="xb6-sI-ZbG"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="UIw-9a-h8G" firstAttribute="top" secondItem="omz-tl-eno" secondAttribute="bottom" id="BHF-MW-Wzj"/>
+                <constraint firstItem="UIw-9a-h8G" firstAttribute="leading" secondItem="NIA-fx-0qm" secondAttribute="leading" id="G4C-hM-gh5"/>
                 <constraint firstAttribute="trailing" secondItem="OWe-iv-HjQ" secondAttribute="trailing" id="Q3n-pH-D8T"/>
+                <constraint firstItem="omz-tl-eno" firstAttribute="top" secondItem="OWe-iv-HjQ" secondAttribute="bottom" id="QO1-to-NEO"/>
+                <constraint firstAttribute="trailing" secondItem="omz-tl-eno" secondAttribute="trailing" id="Vw0-sc-WaE"/>
                 <constraint firstItem="OWe-iv-HjQ" firstAttribute="top" secondItem="NIA-fx-0qm" secondAttribute="top" id="WeH-mk-bVz"/>
+                <constraint firstAttribute="bottom" secondItem="UIw-9a-h8G" secondAttribute="bottom" id="cOt-vK-55S"/>
+                <constraint firstItem="omz-tl-eno" firstAttribute="leading" secondItem="NIA-fx-0qm" secondAttribute="leading" id="cfl-t5-bqX"/>
+                <constraint firstAttribute="trailing" secondItem="UIw-9a-h8G" secondAttribute="trailing" id="ky0-zs-f1M"/>
                 <constraint firstItem="OWe-iv-HjQ" firstAttribute="leading" secondItem="NIA-fx-0qm" secondAttribute="leading" id="nJF-C1-BxV"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="277" y="550"/>
         </view>
     </objects>

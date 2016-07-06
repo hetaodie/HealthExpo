@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JiBingDetailViewController">
             <connections>
+                <outlet property="searchView" destination="eJj-r5-wEv" id="C6d-Qh-e22"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,90 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-Ob-hEf">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibw-Gh-u76">
+                            <rect key="frame" x="15" y="29" width="12" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="7kt-eb-EH4"/>
+                                <constraint firstAttribute="width" constant="12" id="wo1-8c-IjB"/>
+                            </constraints>
+                            <state key="normal" image="houtui"/>
+                            <connections>
+                                <action selector="houtuiButtonPress:" destination="-1" eventType="touchUpInside" id="8yc-NU-ZYh"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJj-r5-wEv">
+                            <rect key="frame" x="57" y="26" width="255" height="29"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sousuo" translatesAutoresizingMaskIntoConstraints="NO" id="gjE-la-YUs">
+                                    <rect key="frame" x="10" y="6" width="17" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="17" id="2lh-QB-wKZ"/>
+                                        <constraint firstAttribute="height" constant="18" id="3Wg-n4-Mph"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索疾病" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8u-O4-n4s">
+                                    <rect key="frame" x="37" y="7" width="208" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="fxD-r8-0ZG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="255" id="4M0-xu-62i"/>
+                                <constraint firstItem="u8u-O4-n4s" firstAttribute="leading" secondItem="gjE-la-YUs" secondAttribute="trailing" constant="10" id="9Wl-IP-Olz"/>
+                                <constraint firstItem="gjE-la-YUs" firstAttribute="centerY" secondItem="eJj-r5-wEv" secondAttribute="centerY" id="G4A-xy-Bk4"/>
+                                <constraint firstItem="gjE-la-YUs" firstAttribute="leading" secondItem="eJj-r5-wEv" secondAttribute="leading" constant="10" id="dPK-q4-W1z"/>
+                                <constraint firstItem="u8u-O4-n4s" firstAttribute="centerY" secondItem="eJj-r5-wEv" secondAttribute="centerY" id="fWB-Lv-xEg"/>
+                                <constraint firstAttribute="height" constant="29" id="m7I-po-Ztd"/>
+                                <constraint firstAttribute="trailing" secondItem="u8u-O4-n4s" secondAttribute="trailing" constant="10" id="txw-xU-VUU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="0dr-kB-4db"/>
+                        <constraint firstItem="Ibw-Gh-u76" firstAttribute="leading" secondItem="oWq-Ob-hEf" secondAttribute="leading" constant="15" id="B9W-WS-a8p"/>
+                        <constraint firstItem="Ibw-Gh-u76" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="top" constant="29" id="RU8-Wg-eNh"/>
+                        <constraint firstItem="eJj-r5-wEv" firstAttribute="leading" secondItem="Ibw-Gh-u76" secondAttribute="trailing" constant="30" id="RtQ-po-CEz"/>
+                        <constraint firstItem="eJj-r5-wEv" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="top" constant="26" id="lKB-Nb-stk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVn-kl-ntd" customClass="JiBingInfoView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="215"/>
+                    <color key="backgroundColor" red="0.1532170575" green="1" blue="0.1150021256" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="215" id="N2q-ED-YA3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0p0-Pr-f5m" customClass="MessageInfoView">
+                    <rect key="frame" x="0.0" y="279" width="600" height="321"/>
+                    <color key="backgroundColor" red="0.72946259469999997" green="0.42235293499999998" blue="0.060168584999999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0p0-Pr-f5m" secondAttribute="trailing" id="318-l3-dd1"/>
+                <constraint firstAttribute="trailing" secondItem="oWq-Ob-hEf" secondAttribute="trailing" id="DOo-bF-sKX"/>
+                <constraint firstItem="0p0-Pr-f5m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wjp-3f-R4x"/>
+                <constraint firstItem="dVn-kl-ntd" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="bottom" id="Xj1-rw-XcF"/>
+                <constraint firstItem="oWq-Ob-hEf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aUD-nu-FxO"/>
+                <constraint firstAttribute="bottom" secondItem="0p0-Pr-f5m" secondAttribute="bottom" id="gfP-LE-jFO"/>
+                <constraint firstItem="oWq-Ob-hEf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hMW-4v-ldQ"/>
+                <constraint firstItem="0p0-Pr-f5m" firstAttribute="top" secondItem="dVn-kl-ntd" secondAttribute="bottom" id="nYr-Gx-Hei"/>
+                <constraint firstAttribute="trailing" secondItem="dVn-kl-ntd" secondAttribute="trailing" id="ozL-6x-dKS"/>
+                <constraint firstItem="dVn-kl-ntd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yGv-Kg-hJK"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="houtui" width="12" height="21"/>
+        <image name="sousuo" width="16" height="17"/>
+    </resources>
 </document>

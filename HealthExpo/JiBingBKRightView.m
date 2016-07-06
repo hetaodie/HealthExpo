@@ -62,9 +62,9 @@
     return 100;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-    
     if (self.delegate && [self.delegate respondsToSelector:@selector(onSelectIndex:)]) {
         [self.delegate onSelectIndex:row];
     }

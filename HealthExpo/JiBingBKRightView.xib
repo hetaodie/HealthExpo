@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JiBingBKRightView">
             <connections>
                 <outlet property="contentView" destination="6iB-tF-ioO" id="Qof-Ke-Ntp"/>
-                <outlet property="tableView" destination="pjE-DZ-blX" id="qoZ-qL-19f"/>
+                <outlet property="tableView" destination="3EM-dR-IXT" id="1GG-Ow-H7A"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,22 +16,21 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-DZ-blX">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3EM-dR-IXT">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="GQr-DB-1Wu"/>
-                        <outlet property="delegate" destination="-1" id="twc-77-OVI"/>
+                        <outlet property="dataSource" destination="-1" id="Dmq-aa-W5a"/>
+                        <outlet property="delegate" destination="-1" id="qKq-cV-3ND"/>
                     </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="pjE-DZ-blX" secondAttribute="bottom" id="HNu-TI-apd"/>
-                <constraint firstItem="pjE-DZ-blX" firstAttribute="leading" secondItem="6iB-tF-ioO" secondAttribute="leading" id="RRs-R4-PJA"/>
-                <constraint firstItem="pjE-DZ-blX" firstAttribute="top" secondItem="6iB-tF-ioO" secondAttribute="top" id="Rdf-4W-nvR"/>
-                <constraint firstAttribute="trailing" secondItem="pjE-DZ-blX" secondAttribute="trailing" id="ckl-dd-VCv"/>
+                <constraint firstItem="3EM-dR-IXT" firstAttribute="top" secondItem="6iB-tF-ioO" secondAttribute="top" id="LgS-CM-VK7"/>
+                <constraint firstAttribute="bottom" secondItem="3EM-dR-IXT" secondAttribute="bottom" id="Q1j-gc-f0X"/>
+                <constraint firstItem="3EM-dR-IXT" firstAttribute="leading" secondItem="6iB-tF-ioO" secondAttribute="leading" id="aFK-FS-0jh"/>
+                <constraint firstAttribute="trailing" secondItem="3EM-dR-IXT" secondAttribute="trailing" id="e0D-Kd-nt9"/>
             </constraints>
             <point key="canvasLocation" x="283" y="400"/>
         </view>

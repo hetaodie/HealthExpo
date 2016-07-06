@@ -7,8 +7,13 @@
 //
 
 #import "JiBingBKViewController.h"
+#import "JiBingBKLeftView.h"
+#import "JiBingBKRightView.h"
+#import "JiBingDetailViewController.h"
 
-@interface JiBingBKViewController ()
+@interface JiBingBKViewController ()<JiBingBKRightViewDelegate>
+@property (weak, nonatomic) IBOutlet JiBingBKLeftView *leftView;
+@property (weak, nonatomic) IBOutlet JiBingBKRightView *rightView;
 
 @end
 
@@ -17,11 +22,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationItem.title = @"疾病百科";
+    self.rightView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+- (void)onSelectIndex:(NSUInteger)aIndex{
+    JiBingDetailViewController *jkdeVC = [[JiBingDetailViewController alloc] initWithNibName:@"JiBingDetailViewController" bundle:nil];
+    jkdeVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "JiBingDetailViewController.h"
 
 @interface JiBingDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIView *searchView;
 
 @end
 
@@ -16,13 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:YES];
+     self.searchView.layer.cornerRadius = 15;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)houtuiButtonPress:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
