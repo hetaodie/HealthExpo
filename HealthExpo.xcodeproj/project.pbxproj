@@ -72,6 +72,12 @@
 		7C6744551D2CE66300661276 /* YiMiaoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744531D2CE66300661276 /* YiMiaoDetailViewController.xib */; };
 		7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744571D2CE68E00661276 /* YiMiaoDetailView.m */; };
 		7C67445A1D2CE6A900661276 /* YiMiaoDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744591D2CE6A900661276 /* YiMiaoDetailView.xib */; };
+		7C67445E1D2D1E0A00661276 /* YiLiaoJiGouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C67445C1D2D1E0A00661276 /* YiLiaoJiGouViewController.m */; };
+		7C67445F1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C67445D1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib */; };
+		7C6744691D2D1F7B00661276 /* YiLiaoJiGouRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744671D2D1F7B00661276 /* YiLiaoJiGouRightView.m */; };
+		7C67446A1D2D1F7B00661276 /* YiLiaoJiGouRightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744681D2D1F7B00661276 /* YiLiaoJiGouRightView.xib */; };
+		7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744721D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m */; };
+		7C6744751D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744731D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.xib */; };
 		7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */; };
 		7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */; };
 		7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77AA1D2B5EFC008A58D7 /* JiBingBKLeftView.m */; };
@@ -201,6 +207,15 @@
 		7C6744561D2CE68E00661276 /* YiMiaoDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoDetailView.h; sourceTree = "<group>"; };
 		7C6744571D2CE68E00661276 /* YiMiaoDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoDetailView.m; sourceTree = "<group>"; };
 		7C6744591D2CE6A900661276 /* YiMiaoDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiMiaoDetailView.xib; sourceTree = "<group>"; };
+		7C67445B1D2D1E0A00661276 /* YiLiaoJiGouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiLiaoJiGouViewController.h; sourceTree = "<group>"; };
+		7C67445C1D2D1E0A00661276 /* YiLiaoJiGouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiLiaoJiGouViewController.m; sourceTree = "<group>"; };
+		7C67445D1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiLiaoJiGouViewController.xib; sourceTree = "<group>"; };
+		7C6744661D2D1F7B00661276 /* YiLiaoJiGouRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiLiaoJiGouRightView.h; sourceTree = "<group>"; };
+		7C6744671D2D1F7B00661276 /* YiLiaoJiGouRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiLiaoJiGouRightView.m; sourceTree = "<group>"; };
+		7C6744681D2D1F7B00661276 /* YiLiaoJiGouRightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiLiaoJiGouRightView.xib; sourceTree = "<group>"; };
+		7C6744711D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiLiaoJiGouRightViewCell.h; sourceTree = "<group>"; };
+		7C6744721D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiLiaoJiGouRightViewCell.m; sourceTree = "<group>"; };
+		7C6744731D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiLiaoJiGouRightViewCell.xib; sourceTree = "<group>"; };
 		7C6A77A31D2B5EBA008A58D7 /* JiBingBKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKViewController.h; sourceTree = "<group>"; };
 		7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKViewController.m; sourceTree = "<group>"; };
 		7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKViewController.xib; sourceTree = "<group>"; };
@@ -380,6 +395,11 @@
 		53BC4C721D290E65009035BC /* YiLiaoJiGou */ = {
 			isa = PBXGroup;
 			children = (
+				7C6744701D2D1FB400661276 /* cells */,
+				7C6744651D2D1F7100661276 /* views */,
+				7C67445B1D2D1E0A00661276 /* YiLiaoJiGouViewController.h */,
+				7C67445C1D2D1E0A00661276 /* YiLiaoJiGouViewController.m */,
+				7C67445D1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib */,
 			);
 			name = YiLiaoJiGou;
 			sourceTree = "<group>";
@@ -525,6 +545,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C6744651D2D1F7100661276 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7C6744661D2D1F7B00661276 /* YiLiaoJiGouRightView.h */,
+				7C6744671D2D1F7B00661276 /* YiLiaoJiGouRightView.m */,
+				7C6744681D2D1F7B00661276 /* YiLiaoJiGouRightView.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		7C6744701D2D1FB400661276 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C6744711D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.h */,
+				7C6744721D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m */,
+				7C6744731D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.xib */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		7C6A77A81D2B5EC1008A58D7 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,8 +667,10 @@
 				53BC4C781D290EFD009035BC /* GuaHaoViewController.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
 				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
+				7C67446A1D2D1F7B00661276 /* YiLiaoJiGouRightView.xib in Resources */,
 				7C67445A1D2CE6A900661276 /* YiMiaoDetailView.xib in Resources */,
 				7C67443C1D2BB34B00661276 /* JiBingInfoView.xib in Resources */,
+				7C67445F1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib in Resources */,
 				53BC4C6A1D290533009035BC /* JianKangBKViewController.xib in Resources */,
 				53A34BD21D2011380043144E /* UserInfoCommonTableViewCell.xib in Resources */,
 				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
@@ -647,6 +689,7 @@
 				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
 				7C6A77AD1D2B5F0F008A58D7 /* JiBingBKLeftView.xib in Resources */,
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
+				7C6744751D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.xib in Resources */,
 				53BC4C7D1D2915DE009035BC /* DianZiZaZhiViewController.xib in Resources */,
 				7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */,
 				7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */,
@@ -715,6 +758,7 @@
 				53A34BDA1D2014D10043144E /* UserInfo.m in Sources */,
 				7C6744541D2CE66300661276 /* YiMiaoDetailViewController.m in Sources */,
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
+				7C6744691D2D1F7B00661276 /* YiLiaoJiGouRightView.m in Sources */,
 				69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */,
 				69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */,
 				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
@@ -734,6 +778,7 @@
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
+				7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
@@ -743,6 +788,7 @@
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				7C67443F1D2BC3B100661276 /* MessageInfoView.m in Sources */,
 				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
+				7C67445E1D2D1E0A00661276 /* YiLiaoJiGouViewController.m in Sources */,
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,

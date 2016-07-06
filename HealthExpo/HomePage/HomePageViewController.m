@@ -13,6 +13,8 @@
 #import "GuaHaoViewController.h"
 #import "HomePageModelSource.h"
 
+#import "YiLiaoJiGouViewController.h"
+
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *searchView;
@@ -56,6 +58,9 @@
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 - (IBAction)onJiGouClicked:(id)sender {
+    YiLiaoJiGouViewController *jkbkVC = [[YiLiaoJiGouViewController alloc] initWithNibName:@"YiLiaoJiGuoViewController" bundle:nil];
+    jkbkVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 - (IBAction)onZaZhiClicked:(id)sender {
 }
