@@ -10,7 +10,7 @@
 
 @interface HEDataCategory : NSObject
 @property (nonatomic, assign) NSInteger cmpID;
-@property (nonatomic, assign) NSTimeInterval createdDate;
+@property (nonatomic, strong) NSString *createdDate;
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) BOOL isPerm;
 @property (nonatomic, assign) BOOL isShow;

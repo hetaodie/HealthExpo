@@ -14,7 +14,7 @@
 @property (nonatomic, assign) NSInteger catID;
 @property (nonatomic, assign) NSInteger cmpID;
 @property (nonatomic, strong) NSString *contentText;
-@property (nonatomic, assign) NSTimeInterval createDate;
+@property (nonatomic, strong) NSString *createDate;
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) BOOL isShow;
 @property (nonatomic, assign) NSInteger orderNum;

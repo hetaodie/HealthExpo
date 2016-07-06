@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (nonatomic, strong) HomePageModelSource *dataSource;
-
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -34,6 +34,7 @@
     self.tableView.dataSource = self;
     
     self.dataSource = [[HomePageModelSource alloc] init];
+    self.dataSource.delegate = self;
     [self.dataSource getHomePageNews];
 }
 
@@ -72,7 +73,7 @@
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return [self.dataArray count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -89,14 +90,14 @@
         if (!cell) {
             cell = [HomePagePictureTableViewCell cellFromNib];
         }
-//        [cell fillCellImage:<#(UIImage *)#> title:<#(NSString *)#>]
+        [cell fillCellWithData:self.dataArray[indexPath.row]];
         return cell;
     } else {
         HomePageCommonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomePageCommonTableViewCell"];
         if (!cell) {
             cell = [HomePageCommonTableViewCell cellFromNib];
         }
-        //filldata
+        [cell fillCellWithData:self.dataArray[indexPath.row]];
         return cell;
     }
 }
@@ -110,7 +111,8 @@
     
 }
 - (void)getHomePageNewsSuccess:(NSArray *)dataArray{
-    
+    self.dataArray = dataArray;
+    [self.tableView reloadData];
 }
 
 @end

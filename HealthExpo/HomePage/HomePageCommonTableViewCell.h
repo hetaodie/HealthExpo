@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class HomePageNewsItem;
 @interface HomePageCommonTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -17,6 +18,6 @@
 
 + (instancetype)cellFromNib;
 
-//- (void)fillCellWithData:(id)data;
+- (void)fillCellWithData:(HomePageNewsItem *)data;
 
 @end

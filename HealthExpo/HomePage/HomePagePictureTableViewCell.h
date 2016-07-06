@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class HomePageNewsItem;
 @interface HomePagePictureTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 + (instancetype)cellFromNib;
 
-- (void)fillCellImage:(UIImage *)aImage title:(NSString *)aTitle;
+- (void)fillCellWithData:(HomePageNewsItem *)data;
 
 @end

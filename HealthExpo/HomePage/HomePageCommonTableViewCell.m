@@ -7,6 +7,8 @@
 //
 
 #import "HomePageCommonTableViewCell.h"
+#import "HomePageNewsItem.h"
+#import "UIImageView+WebCache.h"
 
 @implementation HomePageCommonTableViewCell
 
@@ -16,6 +18,14 @@
 
 - (void)awakeFromNib {
     // Initialization code
+}
+
+- (void)fillCellWithData:(HomePageNewsItem *)data{
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];//image Data
+    self.titleLabel.text = data.title;
+    self.timeLabel.text = data.createDate;
+    
+    self.lookLabel.text = [NSString stringWithFormat:@"%zd", data.viewNum];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

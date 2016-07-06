@@ -9,6 +9,7 @@
 #import "HomePageModelSource.h"
 #import "HENetTask.h"
 #import "HomePageNewsItem.h"
+#import "NSDate+String.h"
 @interface HomePageModelSource()
 @property (nonatomic, strong) NSArray *dataArray;
 @end
@@ -49,7 +50,7 @@
         item.catID = [dict[@"catid"] integerValue];
         item.cmpID = [dict[@"cmpid"] integerValue];
         item.contentText = dict[@"contenttext"];
-        item.createDate = [dict[@"createdDate"] longLongValue];
+        item.createDate = [NSDate stringFromTimeInterval: [dict[@"createdDate"] doubleValue]];
         item.ID = [dict[@"id"] integerValue];
         item.isShow = [dict[@"isshow"] boolValue];
         item.orderNum = [dict[@"ordernum"] integerValue];
@@ -71,7 +72,7 @@
 - (HEDataCategory *)categoryDataFromDict:(NSDictionary *)dict{
     HEDataCategory *category = [[HEDataCategory alloc] init];
     category.cmpID = [dict[@"cmpid"] integerValue];
-    category.createdDate = [dict[@"createdDate"] longLongValue];
+    category.createdDate = [NSDate stringFromTimeInterval:[dict[@"createdDate"] doubleValue]];
     category.ID = [dict[@"id"] integerValue];
     category.isPerm = [dict[@"isperm"] boolValue];
     category.isShow = [dict[@"isshow"] boolValue];

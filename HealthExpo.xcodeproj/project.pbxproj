@@ -11,6 +11,7 @@
 		532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532405251D22BDAB004A1A43 /* UserSettingViewController.xib */; };
 		5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */; };
 		5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5324052A1D22C12D004A1A43 /* UserSettingTableViewCell.xib */; };
+		5367D02D1D2D5CF6008BB509 /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 5367D02C1D2D5CF6008BB509 /* NSDate+String.m */; };
 		53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BC91D1FC4A60043144E /* UserViewController.m */; };
 		53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A34BCA1D1FC4A60043144E /* UserViewController.xib */; };
 		53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A34BCF1D2011370043144E /* UserInfoCommonTableViewCell.m */; };
@@ -102,6 +103,8 @@
 		532405281D22C12D004A1A43 /* UserSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingTableViewCell.h; path = User/UserSettingTableViewCell.h; sourceTree = "<group>"; };
 		532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingTableViewCell.m; path = User/UserSettingTableViewCell.m; sourceTree = "<group>"; };
 		5324052A1D22C12D004A1A43 /* UserSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserSettingTableViewCell.xib; path = User/UserSettingTableViewCell.xib; sourceTree = "<group>"; };
+		5367D02B1D2D5CF6008BB509 /* NSDate+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
+		5367D02C1D2D5CF6008BB509 /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
 		53A34BC81D1FC4A60043144E /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserViewController.h; path = User/UserViewController.h; sourceTree = "<group>"; };
 		53A34BC91D1FC4A60043144E /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewController.m; path = User/UserViewController.m; sourceTree = "<group>"; };
 		53A34BCA1D1FC4A60043144E /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserViewController.xib; path = User/UserViewController.xib; sourceTree = "<group>"; };
@@ -499,6 +502,8 @@
 				69E684811D1E877B0092F031 /* UIButton+CountDown.m */,
 				69E684831D1E96CE0092F031 /* UIColor+HEX.h */,
 				69E684841D1E96CE0092F031 /* UIColor+HEX.m */,
+				5367D02B1D2D5CF6008BB509 /* NSDate+String.h */,
+				5367D02C1D2D5CF6008BB509 /* NSDate+String.m */,
 			);
 			name = UICategory;
 			sourceTree = "<group>";
@@ -788,6 +793,7 @@
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
+				5367D02D1D2D5CF6008BB509 /* NSDate+String.m in Sources */,
 				7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
