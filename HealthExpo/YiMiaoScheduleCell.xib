@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YiMiaoScheduleCell" id="KGk-i7-Jjw" customClass="YiMiaoScheduleCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yimiao" translatesAutoresizingMaskIntoConstraints="NO" id="zvB-18-iNE">
+                        <rect key="frame" x="15" y="16" width="33" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="YuG-fh-Ci6"/>
+                            <constraint firstAttribute="height" constant="33" id="q8t-ZP-Gcl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S63-eC-vme">
+                        <rect key="frame" x="63" y="20" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-BB-OYM">
+                        <rect key="frame" x="63" y="47" width="31" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiantou" translatesAutoresizingMaskIntoConstraints="NO" id="3Eo-oy-PBE">
+                        <rect key="frame" x="353" y="26" width="7" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="jmy-GV-hh5"/>
+                            <constraint firstAttribute="width" constant="7" id="qwm-L7-ajZ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Eo-oy-PBE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S63-eC-vme" secondAttribute="trailing" constant="15" id="JAn-dS-oMj"/>
+                    <constraint firstItem="zvB-18-iNE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="K7V-qF-hxi"/>
+                    <constraint firstItem="oxa-BB-OYM" firstAttribute="leading" secondItem="S63-eC-vme" secondAttribute="leading" id="XRv-2H-74c"/>
+                    <constraint firstItem="3Eo-oy-PBE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bbZ-bm-8vh"/>
+                    <constraint firstItem="S63-eC-vme" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="eAH-hN-Q9M"/>
+                    <constraint firstItem="oxa-BB-OYM" firstAttribute="top" secondItem="S63-eC-vme" secondAttribute="bottom" constant="10" id="iP7-RL-RPD"/>
+                    <constraint firstItem="zvB-18-iNE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iva-MS-siH"/>
+                    <constraint firstAttribute="trailing" secondItem="3Eo-oy-PBE" secondAttribute="trailing" constant="15" id="n1n-Z7-MII"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oxa-BB-OYM" secondAttribute="trailing" constant="45" id="ool-ML-eEG"/>
+                    <constraint firstItem="S63-eC-vme" firstAttribute="leading" secondItem="zvB-18-iNE" secondAttribute="trailing" constant="15" id="xsD-Mm-BeU"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jiantou" width="7" height="13"/>
+        <image name="yimiao" width="67" height="66"/>
+    </resources>
+</document>

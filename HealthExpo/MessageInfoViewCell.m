@@ -43,7 +43,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setupControlStatus];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -52,20 +51,4 @@
     // Configure the view for the selected state
 }
 
-
-- (void)setupControlStatus{
-    self.titleLabel.textColor = [UIColor colorWithHexString:@"0x00b38a" alpha:1.0];
-    self.fristContentLabel.textColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
-    
-    self.firstDateLabel.textColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
-    self.secondTitleLabel.textColor = [UIColor colorWithHexString:@"0x00b38a" alpha:1.0];
-    
-    self.louLabel.textColor = [UIColor colorWithHexString:@"0x00b38a" alpha:1.0];
-    self.secondContentLabel.textColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
-    
-    self.secondeDateLabel.textColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
-    self.topView.backgroundColor = [UIColor colorWithHexString:@"0x333333" alpha:1.0];
-     self.middeView.backgroundColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
-    self.topView.backgroundColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
-}
 @end

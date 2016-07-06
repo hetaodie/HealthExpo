@@ -9,6 +9,7 @@
 #import "JianKangBKViewController.h"
 #import "JianKangBKTableViewCell.h"
 #import "JiBingBKViewController.h"
+#import "YiMiaoScheduleViewController.h"
 
 @interface JianKangBKViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
@@ -81,7 +82,9 @@
         [self.navigationController pushViewController:jkbkVC animated:YES];
     }
     else{
-    
+        YiMiaoScheduleViewController *yimiaoVC = [[YiMiaoScheduleViewController alloc] initWithNibName:@"YiMiaoScheduleViewController" bundle:nil];
+        yimiaoVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:yimiaoVC animated:YES];
     }
 }
 @end

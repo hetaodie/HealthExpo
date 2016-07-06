@@ -64,6 +64,10 @@
 		7C6744411D2BC3BE00661276 /* MessageInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744401D2BC3BE00661276 /* MessageInfoView.xib */; };
 		7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744431D2C9ED300661276 /* MessageInfoViewCell.m */; };
 		7C6744461D2C9ED300661276 /* MessageInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744441D2C9ED300661276 /* MessageInfoViewCell.xib */; };
+		7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744481D2CC41E00661276 /* YiMiaoScheduleViewController.m */; };
+		7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744491D2CC41E00661276 /* YiMiaoScheduleViewController.xib */; };
+		7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C67444D1D2CC6F100661276 /* YiMiaoScheduleCell.m */; };
+		7C6744501D2CC6F100661276 /* YiMiaoScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C67444E1D2CC6F100661276 /* YiMiaoScheduleCell.xib */; };
 		7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */; };
 		7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */; };
 		7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A77AA1D2B5EFC008A58D7 /* JiBingBKLeftView.m */; };
@@ -181,6 +185,12 @@
 		7C6744421D2C9ED300661276 /* MessageInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInfoViewCell.h; sourceTree = "<group>"; };
 		7C6744431D2C9ED300661276 /* MessageInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageInfoViewCell.m; sourceTree = "<group>"; };
 		7C6744441D2C9ED300661276 /* MessageInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageInfoViewCell.xib; sourceTree = "<group>"; };
+		7C6744471D2CC41E00661276 /* YiMiaoScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoScheduleViewController.h; sourceTree = "<group>"; };
+		7C6744481D2CC41E00661276 /* YiMiaoScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoScheduleViewController.m; sourceTree = "<group>"; };
+		7C6744491D2CC41E00661276 /* YiMiaoScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiMiaoScheduleViewController.xib; sourceTree = "<group>"; };
+		7C67444C1D2CC6F100661276 /* YiMiaoScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoScheduleCell.h; sourceTree = "<group>"; };
+		7C67444D1D2CC6F100661276 /* YiMiaoScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoScheduleCell.m; sourceTree = "<group>"; };
+		7C67444E1D2CC6F100661276 /* YiMiaoScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiMiaoScheduleCell.xib; sourceTree = "<group>"; };
 		7C6A77A31D2B5EBA008A58D7 /* JiBingBKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingBKViewController.h; sourceTree = "<group>"; };
 		7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingBKViewController.m; sourceTree = "<group>"; };
 		7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingBKViewController.xib; sourceTree = "<group>"; };
@@ -315,6 +325,9 @@
 				7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */,
 				7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */,
 				7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */,
+				7C6744471D2CC41E00661276 /* YiMiaoScheduleViewController.h */,
+				7C6744481D2CC41E00661276 /* YiMiaoScheduleViewController.m */,
+				7C6744491D2CC41E00661276 /* YiMiaoScheduleViewController.xib */,
 			);
 			name = YiLiaoBaiKe;
 			sourceTree = "<group>";
@@ -334,6 +347,9 @@
 				7C6744421D2C9ED300661276 /* MessageInfoViewCell.h */,
 				7C6744431D2C9ED300661276 /* MessageInfoViewCell.m */,
 				7C6744441D2C9ED300661276 /* MessageInfoViewCell.xib */,
+				7C67444C1D2CC6F100661276 /* YiMiaoScheduleCell.h */,
+				7C67444D1D2CC6F100661276 /* YiMiaoScheduleCell.m */,
+				7C67444E1D2CC6F100661276 /* YiMiaoScheduleCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -615,6 +631,8 @@
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
 				53BC4C7D1D2915DE009035BC /* DianZiZaZhiViewController.xib in Resources */,
 				7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */,
+				7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */,
+				7C6744501D2CC6F100661276 /* YiMiaoScheduleCell.xib in Resources */,
 				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
 				7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */,
@@ -688,6 +706,7 @@
 				7C6A77C51D2B9348008A58D7 /* JiBingBKRightViewCell.m in Sources */,
 				7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
+				7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
 				7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */,
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
@@ -704,6 +723,7 @@
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				7C67443F1D2BC3B100661276 /* MessageInfoView.m in Sources */,
 				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
+				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
