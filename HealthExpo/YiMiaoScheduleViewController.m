@@ -8,6 +8,7 @@
 
 #import "YiMiaoScheduleViewController.h"
 #import "YiMiaoScheduleCell.h"
+#import "YiMiaoDetailViewController.h"
 #define YIMiaoCellHeight 75
 
 @interface YiMiaoScheduleViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -57,5 +58,11 @@
         cell = [views firstObject];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    YiMiaoDetailViewController *jkbkVC = [[YiMiaoDetailViewController alloc] initWithNibName:@"YiMiaoDetailViewController" bundle:nil];
+    jkbkVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 @end
