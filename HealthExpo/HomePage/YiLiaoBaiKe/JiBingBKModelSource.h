@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JiBingBKModelSource : NSObject
+@protocol JiBingBKModelSourceDelegate <NSObject>
 
+
+
+@end
+
+@interface JiBingBKModelSource : NSObject
+@property (nonatomic, weak) id<JiBingBKModelSourceDelegate> delegate;
+
+- (void)getJiBingList;
 @end
