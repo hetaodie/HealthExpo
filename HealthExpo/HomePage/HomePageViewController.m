@@ -12,6 +12,7 @@
 #import "JianKangBKViewController.h"
 #import "GuaHaoViewController.h"
 #import "HomePageModelSource.h"
+#import "SpeakerMessageItem.h"
 
 #import "YiLiaoJiGouViewController.h"
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (strong, nonatomic) IBOutlet UILabel *spearkLabel;
 @property (nonatomic, strong) HomePageModelSource *dataSource;
 @property (nonatomic, strong) NSArray *dataArray;
 
@@ -110,9 +112,18 @@
 - (void)getHomePageNewsFailed{
     
 }
+
 - (void)getHomePageNewsSuccess:(NSArray *)dataArray{
     self.dataArray = dataArray;
     [self.tableView reloadData];
+}
+
+- (void)getSpearkMessageFailed{
+    
+}
+
+- (void)getSpearkMessageSuccess:(SpeakerMessageItem *)data{
+    self.spearkLabel.text = data.title;
 }
 
 @end

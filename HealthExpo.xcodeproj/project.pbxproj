@@ -41,6 +41,7 @@
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
 		53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */; };
+		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
 		69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE541D1D107800B555FD /* HomePageViewController.xib */; };
 		69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE581D1D108C00B555FD /* PhoneViewController.m */; };
@@ -160,6 +161,8 @@
 		53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Login/RegisterViewController.m; sourceTree = "<group>"; };
 		53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Login/RegisterViewController.xib; sourceTree = "<group>"; };
 		63E82F490416CA25014F41CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerMessageItem.h; sourceTree = "<group>"; };
+		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
 		69E4BE521D1D107800B555FD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
 		69E4BE531D1D107800B555FD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = HomePage/HomePageViewController.m; sourceTree = "<group>"; };
 		69E4BE541D1D107800B555FD /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = HomePage/HomePageViewController.xib; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				53AD05571D2C03D500557942 /* HomePageNewsItem.m */,
 				53AD05591D2C072F00557942 /* HEDataCategory.h */,
 				53AD055A1D2C072F00557942 /* HEDataCategory.m */,
+				69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */,
+				69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */,
 			);
 			name = DataItems;
 			sourceTree = "<group>";
@@ -815,6 +820,7 @@
 				53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */,
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
+				69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */,
 				53AD05581D2C03D500557942 /* HomePageNewsItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

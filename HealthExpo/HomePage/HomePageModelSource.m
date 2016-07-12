@@ -10,6 +10,8 @@
 #import "HENetTask.h"
 #import "HomePageNewsItem.h"
 #import "NSDate+String.h"
+#import "SpeakerMessageItem.h"
+
 @interface HomePageModelSource()
 @property (nonatomic, strong) NSArray *dataArray;
 @end
@@ -20,7 +22,6 @@
     HENetTask *task = [[HENetTask alloc] initWithUrlString:@"mobile/getContentList.action?catid=1"];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
         NSArray *array = [self itemsArrayFromJsonArray:responseObject];
         weakSelf.dataArray = array;
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getHomePageNewsSuccess:)]) {
@@ -37,8 +38,48 @@
     [task runInMethod:HE_GET];
 }
 
+- (void)getSpeakerMessage{
+    HENetTask *task1 = [[HENetTask alloc] initWithUrlString:@"mobile/getContentDetail.action?cid=1"];
+    __weak __typeof(self) weakSelf = self;
+    task1.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        SpeakerMessageItem *item = [self speakerMessageItemFromResponse:responseObject];
+        if ([weakSelf.delegate respondsToSelector:@selector(getSpearkMessageSuccess:)]) {
+            [weakSelf.delegate getSpearkMessageSuccess:item];
+        }
+    };
+    
+    task1.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if ([weakSelf respondsToSelector:@selector(getSpearkMessageFailed)]) {
+            [self.delegate getSpearkMessageFailed];
+        }
+    };
+    
+    [task1 runInMethod:HE_GET];
+}
+
 - (NSArray *)getDataArray{
     return _dataArray;
+}
+
+- (SpeakerMessageItem *)speakerMessageItemFromResponse:(NSDictionary *)responseDict{
+    SpeakerMessageItem *item = [[SpeakerMessageItem alloc] init];
+    item.catID = [responseDict[@"catid"] integerValue];
+    item.cmpID = [responseDict[@"cmpid"] integerValue];
+    item.contentText = responseDict[@"contenttext"];
+    item.contentText = [NSDate stringFromTimeInterval:[responseDict[@"createdDate"] doubleValue]];
+    item.ID = [responseDict[@"id"] integerValue];
+    item.isShow = [responseDict[@"isshow"] boolValue];
+    item.orderNum = [responseDict[@"ordernum"] integerValue];
+    item.phone = responseDict[@"phone"];
+    item.pYear = [responseDict[@"pyeare"] integerValue];
+    item.showName = responseDict[@"showname"];
+    item.sTitle = responseDict[@"stitle"];
+    item.sType = [responseDict[@"stype"] integerValue];
+    item.templateCode = responseDict[@"templatecode"];
+    item.title = responseDict[@"title"];
+    item.viewNum = [responseDict[@"viewnum"] integerValue];
+    
+    return item;
 }
 
 - (NSArray *)itemsArrayFromJsonArray:(NSArray *)jsonArray{
