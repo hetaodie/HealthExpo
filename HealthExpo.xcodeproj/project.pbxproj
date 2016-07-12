@@ -42,6 +42,7 @@
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
 		53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */; };
 		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
+		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
 		69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE541D1D107800B555FD /* HomePageViewController.xib */; };
 		69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE581D1D108C00B555FD /* PhoneViewController.m */; };
@@ -163,6 +164,8 @@
 		63E82F490416CA25014F41CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerMessageItem.h; sourceTree = "<group>"; };
 		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
+		69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JiBingBKModelSource.h; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.h; sourceTree = "<group>"; };
+		69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JiBingBKModelSource.m; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.m; sourceTree = "<group>"; };
 		69E4BE521D1D107800B555FD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
 		69E4BE531D1D107800B555FD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = HomePage/HomePageViewController.m; sourceTree = "<group>"; };
 		69E4BE541D1D107800B555FD /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = HomePage/HomePageViewController.xib; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 				7C6A77A31D2B5EBA008A58D7 /* JiBingBKViewController.h */,
 				7C6A77A41D2B5EBA008A58D7 /* JiBingBKViewController.m */,
 				7C6A77A51D2B5EBA008A58D7 /* JiBingBKViewController.xib */,
+				69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */,
+				69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */,
 				7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */,
 				7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */,
 				7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */,
@@ -801,6 +806,7 @@
 				5367D02D1D2D5CF6008BB509 /* NSDate+String.m in Sources */,
 				7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
+				69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
