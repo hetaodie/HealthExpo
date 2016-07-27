@@ -66,6 +66,7 @@
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 - (IBAction)onZaZhiClicked:(id)sender {
+    
 }
 - (IBAction)onGuaHaoClicked:(id)sender {
     GuaHaoViewController *ghVC = [[GuaHaoViewController alloc] initWithNibName:@"GuaHaoViewController" bundle:nil];
