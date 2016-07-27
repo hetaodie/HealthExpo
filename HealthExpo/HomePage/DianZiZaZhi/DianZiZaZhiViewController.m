@@ -7,8 +7,16 @@
 //
 
 #import "DianZiZaZhiViewController.h"
+#import "DianZiZaZhiItemView.h"
+#import "DianZiZaZhiModelSource.h"
 
-@interface DianZiZaZhiViewController ()
+@interface DianZiZaZhiViewController ()<DianZiZaZhiItemViewDelegate, DianZiZaZhiModelSourceDelegate>
+@property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *firstItemView;
+@property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *secondItemView;
+@property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *thirdItemView;
+@property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *fourthItemView;
+
+@property (nonatomic, strong) DianZiZaZhiModelSource *modelSource;
 
 @end
 
@@ -17,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
+    self.firstItemView = [DianZiZaZhiItemView viewFromNib];
+    self.secondItemView = [DianZiZaZhiItemView viewFromNib];
+    self.thirdItemView = [DianZiZaZhiItemView viewFromNib];
+    self.fourthItemView = [DianZiZaZhiItemView viewFromNib];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,4 +63,23 @@
     
 }
 
+- (IBAction)onTougaoButtonClicked:(id)sender {
+}
+
+- (IBAction)onHeZuoButtonClicked:(id)sender {
+}
+
+#pragma mark - DianZiZaZhiModelSourceDelegate
+- (void)getDianZiZaZhiDataSuccess:(NSArray *)dataArray{
+    //初始化数据
+}
+
+- (void)getDianZiZaZhiDataFailed{
+    
+}
+
+#pragma mark - DianZiZaZhiItemViewDelegate
+- (void)ClickedDianZiZaZhiItemViewIndex:(NSInteger)index{
+    
+}
 @end

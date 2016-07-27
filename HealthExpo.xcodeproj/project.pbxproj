@@ -41,6 +41,9 @@
 		53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */; };
 		53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */; };
 		53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */; };
+		694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB36A1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m */; };
+		694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */; };
+		694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */; };
 		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
 		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
@@ -162,6 +165,11 @@
 		53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Login/RegisterViewController.m; sourceTree = "<group>"; };
 		53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Login/RegisterViewController.xib; sourceTree = "<group>"; };
 		63E82F490416CA25014F41CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		694BB3691D48DB3D007D8ED0 /* DianZiZaZhiItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DianZiZaZhiItemView.h; path = HomePage/DianZiZaZhi/DianZiZaZhiItemView.h; sourceTree = "<group>"; };
+		694BB36A1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DianZiZaZhiItemView.m; path = HomePage/DianZiZaZhi/DianZiZaZhiItemView.m; sourceTree = "<group>"; };
+		694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DianZiZaZhiItemView.xib; path = HomePage/DianZiZaZhi/DianZiZaZhiItemView.xib; sourceTree = "<group>"; };
+		694BB3701D48E32D007D8ED0 /* DianZiZaZhiModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiModelSource.h; sourceTree = "<group>"; };
+		694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiModelSource.m; sourceTree = "<group>"; };
 		69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerMessageItem.h; sourceTree = "<group>"; };
 		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
 		69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JiBingBKModelSource.h; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.h; sourceTree = "<group>"; };
@@ -403,9 +411,12 @@
 		53BC4C711D290E3A009035BC /* DianZiZaZhi */ = {
 			isa = PBXGroup;
 			children = (
+				694BB3681D48DAE3007D8ED0 /* View */,
 				53BC4C791D2915DE009035BC /* DianZiZaZhiViewController.h */,
 				53BC4C7A1D2915DE009035BC /* DianZiZaZhiViewController.m */,
 				53BC4C7B1D2915DE009035BC /* DianZiZaZhiViewController.xib */,
+				694BB3701D48E32D007D8ED0 /* DianZiZaZhiModelSource.h */,
+				694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */,
 			);
 			name = DianZiZaZhi;
 			sourceTree = "<group>";
@@ -455,6 +466,16 @@
 				53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		694BB3681D48DAE3007D8ED0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				694BB3691D48DB3D007D8ED0 /* DianZiZaZhiItemView.h */,
+				694BB36A1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m */,
+				694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
@@ -719,6 +740,7 @@
 				7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */,
 				7C6744501D2CC6F100661276 /* YiMiaoScheduleCell.xib in Resources */,
 				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
+				694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
 				7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */,
 			);
@@ -800,6 +822,7 @@
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				7C6744791D2D25F600661276 /* YiYuanViewController.m in Sources */,
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
+				694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */,
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
@@ -819,6 +842,7 @@
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
+				694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,

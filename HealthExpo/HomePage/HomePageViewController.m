@@ -13,6 +13,7 @@
 #import "GuaHaoViewController.h"
 #import "HomePageModelSource.h"
 #import "SpeakerMessageItem.h"
+#import "DianZiZaZhiViewController.h"
 
 #import "YiLiaoJiGouViewController.h"
 
@@ -66,6 +67,9 @@
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 - (IBAction)onZaZhiClicked:(id)sender {
+    DianZiZaZhiViewController *dzzzVC = [[DianZiZaZhiViewController alloc] initWithNibName:@"DianZiZaZhiViewController" bundle:nil];
+    dzzzVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:dzzzVC animated:YES];
     
 }
 - (IBAction)onGuaHaoClicked:(id)sender {
