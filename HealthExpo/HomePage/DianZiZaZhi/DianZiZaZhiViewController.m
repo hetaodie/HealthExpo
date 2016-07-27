@@ -52,7 +52,7 @@
     [rightBtn setImage:[UIImage imageNamed:@"riqi"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(doRightButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-    self.navigationItem.leftBarButtonItem = rightItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)doBack:(id)sender{
