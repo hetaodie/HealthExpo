@@ -8,8 +8,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneViewController">
             <connections>
+                <outlet property="eighthBanner" destination="hGs-D7-SUk" id="TVd-fj-MEn"/>
+                <outlet property="fifthBanner" destination="Khs-wD-Hyi" id="icv-T9-ciW"/>
+                <outlet property="firstBanner" destination="E8T-OJ-jZl" id="q33-u4-fgZ"/>
+                <outlet property="fourthBanner" destination="XfC-Xu-bDz" id="dii-05-qdp"/>
                 <outlet property="phoneNumLabel" destination="Frq-tp-ICt" id="WCY-0z-fER"/>
+                <outlet property="secondBanner" destination="1Ev-0q-d09" id="NVi-s0-ZLw"/>
+                <outlet property="seventhBanner" destination="Z2z-PV-JFx" id="zQE-7D-Gwd"/>
+                <outlet property="sixthBanner" destination="kzU-XB-cIG" id="yp3-sV-V67"/>
+                <outlet property="thirdBanner" destination="rEL-G7-af0" id="Ly6-zQ-Olf"/>
                 <outlet property="topBannerScrollView" destination="ook-VO-Yl8" id="aAu-d7-8cK"/>
+                <outlet property="topView" destination="QYW-Yh-AIg" id="jhJ-Q6-zO2"/>
+                <outlet property="topbannerContaintView" destination="6hl-tJ-Dzs" id="Dui-Ha-Mp2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -489,22 +499,140 @@
                         <constraint firstItem="112-el-HRI" firstAttribute="width" secondItem="m4I-AF-RI3" secondAttribute="width" constant="-1" id="vPE-Wn-tT9"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ook-VO-Yl8">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-Yh-AIg">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="141"/>
-                </scrollView>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ook-VO-Yl8">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="141"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hl-tJ-Dzs">
+                                    <rect key="frame" x="0.0" y="0.0" width="4800" height="141"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8T-OJ-jZl">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="dhG-bG-oqI"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-0q-d09">
+                                            <rect key="frame" x="600" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="uWC-8J-lsp"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEL-G7-af0">
+                                            <rect key="frame" x="1200" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="Onk-rc-SFQ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfC-Xu-bDz">
+                                            <rect key="frame" x="1800" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="veV-hA-VXr"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khs-wD-Hyi">
+                                            <rect key="frame" x="2400" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="nug-Qo-Iiz"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzU-XB-cIG">
+                                            <rect key="frame" x="3000" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="PMo-1s-DKG"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-PV-JFx">
+                                            <rect key="frame" x="3600" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="4sP-e6-vVy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGs-D7-SUk">
+                                            <rect key="frame" x="4200" y="0.0" width="600" height="141"/>
+                                            <state key="normal" image="banner"/>
+                                            <connections>
+                                                <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="ooH-xp-pyl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Z2z-PV-JFx" secondAttribute="bottom" id="4wC-9D-KkT"/>
+                                        <constraint firstAttribute="bottom" secondItem="XfC-Xu-bDz" secondAttribute="bottom" id="5lU-6d-Naf"/>
+                                        <constraint firstItem="E8T-OJ-jZl" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="6tu-MJ-ne0"/>
+                                        <constraint firstAttribute="bottom" secondItem="kzU-XB-cIG" secondAttribute="bottom" id="Br0-zb-qpY"/>
+                                        <constraint firstItem="kzU-XB-cIG" firstAttribute="leading" secondItem="Khs-wD-Hyi" secondAttribute="trailing" id="Ddl-xX-oIe"/>
+                                        <constraint firstItem="1Ev-0q-d09" firstAttribute="leading" secondItem="E8T-OJ-jZl" secondAttribute="trailing" id="EaJ-1i-bO6"/>
+                                        <constraint firstItem="rEL-G7-af0" firstAttribute="leading" secondItem="1Ev-0q-d09" secondAttribute="trailing" id="FoG-kV-XSU"/>
+                                        <constraint firstAttribute="bottom" secondItem="rEL-G7-af0" secondAttribute="bottom" id="Hsa-EF-8Ig"/>
+                                        <constraint firstItem="hGs-D7-SUk" firstAttribute="leading" secondItem="Z2z-PV-JFx" secondAttribute="trailing" id="JWL-o0-tuP"/>
+                                        <constraint firstItem="kzU-XB-cIG" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="KaJ-db-l7I"/>
+                                        <constraint firstItem="Khs-wD-Hyi" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="LkW-S9-qNI"/>
+                                        <constraint firstItem="Z2z-PV-JFx" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="Loh-LM-CeJ"/>
+                                        <constraint firstItem="Z2z-PV-JFx" firstAttribute="width" secondItem="E8T-OJ-jZl" secondAttribute="width" id="R9L-7l-mQ5"/>
+                                        <constraint firstItem="XfC-Xu-bDz" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="V4M-T7-s7G"/>
+                                        <constraint firstItem="XfC-Xu-bDz" firstAttribute="width" secondItem="E8T-OJ-jZl" secondAttribute="width" id="W8p-Ir-cKt"/>
+                                        <constraint firstItem="kzU-XB-cIG" firstAttribute="width" secondItem="E8T-OJ-jZl" secondAttribute="width" id="XqV-U0-aj2"/>
+                                        <constraint firstItem="hGs-D7-SUk" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="dQi-um-kgQ"/>
+                                        <constraint firstItem="hGs-D7-SUk" firstAttribute="width" secondItem="E8T-OJ-jZl" secondAttribute="width" id="ddo-Fl-Y0a"/>
+                                        <constraint firstItem="Z2z-PV-JFx" firstAttribute="leading" secondItem="kzU-XB-cIG" secondAttribute="trailing" id="e80-3B-odH"/>
+                                        <constraint firstItem="Khs-wD-Hyi" firstAttribute="width" secondItem="E8T-OJ-jZl" secondAttribute="width" id="f68-nn-LTV"/>
+                                        <constraint firstItem="rEL-G7-af0" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="jGt-0X-GgJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="E8T-OJ-jZl" secondAttribute="bottom" id="oZN-Co-tL1"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Ev-0q-d09" secondAttribute="bottom" id="orW-pT-x6C"/>
+                                        <constraint firstItem="Khs-wD-Hyi" firstAttribute="leading" secondItem="XfC-Xu-bDz" secondAttribute="trailing" id="ox1-f5-sq4"/>
+                                        <constraint firstItem="1Ev-0q-d09" firstAttribute="top" secondItem="6hl-tJ-Dzs" secondAttribute="top" id="rsf-Iy-RSy"/>
+                                        <constraint firstItem="1Ev-0q-d09" firstAttribute="width" secondItem="E8T-OJ-jZl" secondAttribute="width" id="u7n-MS-hxM"/>
+                                        <constraint firstAttribute="bottom" secondItem="Khs-wD-Hyi" secondAttribute="bottom" id="w3M-cI-Uyg"/>
+                                        <constraint firstAttribute="bottom" secondItem="hGs-D7-SUk" secondAttribute="bottom" id="w8W-Ue-Siw"/>
+                                        <constraint firstItem="E8T-OJ-jZl" firstAttribute="leading" secondItem="6hl-tJ-Dzs" secondAttribute="leading" id="waa-WD-jcz"/>
+                                        <constraint firstItem="XfC-Xu-bDz" firstAttribute="leading" secondItem="rEL-G7-af0" secondAttribute="trailing" id="yba-Sd-VSg"/>
+                                        <constraint firstItem="rEL-G7-af0" firstAttribute="width" secondItem="1Ev-0q-d09" secondAttribute="width" id="zd9-gy-1zJ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="6hl-tJ-Dzs" secondAttribute="bottom" id="Qqk-Co-5pI"/>
+                                <constraint firstAttribute="trailing" secondItem="6hl-tJ-Dzs" secondAttribute="trailing" id="TY9-S5-9u8"/>
+                                <constraint firstItem="6hl-tJ-Dzs" firstAttribute="top" secondItem="ook-VO-Yl8" secondAttribute="top" id="oGp-hD-o53"/>
+                                <constraint firstItem="6hl-tJ-Dzs" firstAttribute="leading" secondItem="ook-VO-Yl8" secondAttribute="leading" id="zka-Y9-2oK"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ook-VO-Yl8" firstAttribute="leading" secondItem="QYW-Yh-AIg" secondAttribute="leading" id="12X-gk-gsQ"/>
+                        <constraint firstAttribute="trailing" secondItem="ook-VO-Yl8" secondAttribute="trailing" id="1tl-Dm-zre"/>
+                        <constraint firstItem="6hl-tJ-Dzs" firstAttribute="height" secondItem="QYW-Yh-AIg" secondAttribute="height" id="YP1-Dp-tFK"/>
+                        <constraint firstAttribute="bottom" secondItem="ook-VO-Yl8" secondAttribute="bottom" id="bf8-Qq-RRE"/>
+                        <constraint firstItem="6hl-tJ-Dzs" firstAttribute="width" secondItem="QYW-Yh-AIg" secondAttribute="width" multiplier="8" id="fAF-7s-XoQ"/>
+                        <constraint firstItem="E8T-OJ-jZl" firstAttribute="width" secondItem="QYW-Yh-AIg" secondAttribute="width" id="kf8-rv-ENV"/>
+                        <constraint firstItem="ook-VO-Yl8" firstAttribute="top" secondItem="QYW-Yh-AIg" secondAttribute="top" id="w4m-eN-sQ6"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="QYW-Yh-AIg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1QQ-rs-Iai"/>
                 <constraint firstItem="10o-Oh-iqt" firstAttribute="top" secondItem="yfs-u9-pCa" secondAttribute="bottom" constant="10" id="1uw-Jz-44K"/>
                 <constraint firstAttribute="trailing" secondItem="10o-Oh-iqt" secondAttribute="trailing" id="6Xd-Go-uiI"/>
                 <constraint firstItem="h1Y-DF-GOA" firstAttribute="top" secondItem="10o-Oh-iqt" secondAttribute="bottom" id="91X-gd-Olj"/>
-                <constraint firstItem="yfs-u9-pCa" firstAttribute="top" secondItem="ook-VO-Yl8" secondAttribute="bottom" id="DhF-LQ-QJM"/>
-                <constraint firstItem="ook-VO-Yl8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xhx-7h-8bQ"/>
+                <constraint firstAttribute="trailing" secondItem="QYW-Yh-AIg" secondAttribute="trailing" id="Cf9-s8-16i"/>
+                <constraint firstItem="yfs-u9-pCa" firstAttribute="top" secondItem="QYW-Yh-AIg" secondAttribute="bottom" id="DzQ-4W-AhN"/>
                 <constraint firstAttribute="trailing" secondItem="yfs-u9-pCa" secondAttribute="trailing" id="aU6-by-N5U"/>
                 <constraint firstItem="yfs-u9-pCa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cFL-Cl-kBA"/>
                 <constraint firstItem="h1Y-DF-GOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dh4-8w-Nbb"/>
-                <constraint firstItem="ook-VO-Yl8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="goH-I3-0np"/>
-                <constraint firstAttribute="trailing" secondItem="ook-VO-Yl8" secondAttribute="trailing" id="mhv-v6-UDj"/>
+                <constraint firstItem="QYW-Yh-AIg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ogr-Xp-PQt"/>
                 <constraint firstItem="10o-Oh-iqt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oxT-2Z-EFf"/>
                 <constraint firstAttribute="bottom" secondItem="h1Y-DF-GOA" secondAttribute="bottom" constant="49" id="pXl-Rx-qHx"/>
                 <constraint firstAttribute="trailing" secondItem="h1Y-DF-GOA" secondAttribute="trailing" id="zD2-12-MKl"/>
@@ -519,5 +647,6 @@
         <image name="Phoneshanchu" width="28" height="17"/>
         <image name="Phonetongxunlu" width="50" height="50"/>
         <image name="Phonetongxunlu2" width="23" height="23"/>
+        <image name="banner" width="375" height="210"/>
     </resources>
 </document>

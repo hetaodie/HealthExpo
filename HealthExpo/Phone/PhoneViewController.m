@@ -12,7 +12,18 @@
 @interface PhoneViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (nonatomic, strong) NSString *phoneNum;
+@property (strong, nonatomic) IBOutlet UIView *topView;
 @property (strong, nonatomic) IBOutlet UIScrollView *topBannerScrollView;
+@property (strong, nonatomic) IBOutlet UIView *topbannerContaintView;
+@property (nonatomic, strong) NSTimer *bannerTimer;
+@property (strong, nonatomic) IBOutlet UIButton *firstBanner;
+@property (strong, nonatomic) IBOutlet UIButton *secondBanner;
+@property (strong, nonatomic) IBOutlet UIButton *thirdBanner;
+@property (strong, nonatomic) IBOutlet UIButton *fourthBanner;
+@property (strong, nonatomic) IBOutlet UIButton *fifthBanner;
+@property (strong, nonatomic) IBOutlet UIButton *sixthBanner;
+@property (strong, nonatomic) IBOutlet UIButton *seventhBanner;
+@property (strong, nonatomic) IBOutlet UIButton *eighthBanner;
 
 @end
 
@@ -25,6 +36,9 @@
     
     self.phoneNumLabel.layer.cornerRadius = 15;
     self.phoneNumLabel.clipsToBounds = YES;
+    
+    
+    [self bannerCycleSetting];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -86,6 +100,26 @@
         self.phoneNum = [_phoneNum substringToIndex:(_phoneNum.length-1)];
         self.phoneNumLabel.text = _phoneNum;
     }
+}
+
+#pragma mark - banner ScrollView handler
+- (IBAction)onBannerClicked:(id)sender {
+    
+}
+
+
+- (void)bannerCycleSetting{
+    self.bannerTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(cycleShowBanner) userInfo:nil repeats:YES];
+}
+
+- (void)cycleShowBanner{
+    CGFloat offsetX = self.topBannerScrollView.contentOffset.x + self.topBannerScrollView.frame.size.width;
+    if (offsetX >= self.topBannerScrollView.contentSize.width) {
+        offsetX = 0.0;
+         [self.topBannerScrollView setContentOffset:CGPointMake(offsetX, 0.0) animated: NO];
+    } else {
+        [self.topBannerScrollView setContentOffset:CGPointMake(offsetX, 0.0) animated:YES];
+    }    
 }
 
 @end
