@@ -44,6 +44,12 @@
 		694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB36A1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m */; };
 		694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */; };
 		694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */; };
+		69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6A41D5703790064346B /* DiscoverViewController.m */; };
+		69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6A51D5703790064346B /* DiscoverViewController.xib */; };
+		69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AA1D5705190064346B /* TextTableViewCell.m */; };
+		69DBC6AD1D5705190064346B /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6AB1D5705190064346B /* TextTableViewCell.xib */; };
+		69DBC6B11D5705430064346B /* PictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AF1D5705430064346B /* PictureTableViewCell.m */; };
+		69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6B01D5705430064346B /* PictureTableViewCell.xib */; };
 		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
 		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
@@ -170,6 +176,15 @@
 		694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DianZiZaZhiItemView.xib; path = HomePage/DianZiZaZhi/DianZiZaZhiItemView.xib; sourceTree = "<group>"; };
 		694BB3701D48E32D007D8ED0 /* DianZiZaZhiModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiModelSource.h; sourceTree = "<group>"; };
 		694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiModelSource.m; sourceTree = "<group>"; };
+		69DBC6A31D5703790064346B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Phone/DiscoverViewController.h; sourceTree = "<group>"; };
+		69DBC6A41D5703790064346B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Phone/DiscoverViewController.m; sourceTree = "<group>"; };
+		69DBC6A51D5703790064346B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoverViewController.xib; path = Phone/DiscoverViewController.xib; sourceTree = "<group>"; };
+		69DBC6A91D5705190064346B /* TextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextTableViewCell.h; path = Phone/TextTableViewCell.h; sourceTree = "<group>"; };
+		69DBC6AA1D5705190064346B /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextTableViewCell.m; path = Phone/TextTableViewCell.m; sourceTree = "<group>"; };
+		69DBC6AB1D5705190064346B /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextTableViewCell.xib; path = Phone/TextTableViewCell.xib; sourceTree = "<group>"; };
+		69DBC6AE1D5705430064346B /* PictureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureTableViewCell.h; path = Phone/PictureTableViewCell.h; sourceTree = "<group>"; };
+		69DBC6AF1D5705430064346B /* PictureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureTableViewCell.m; path = Phone/PictureTableViewCell.m; sourceTree = "<group>"; };
+		69DBC6B01D5705430064346B /* PictureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PictureTableViewCell.xib; path = Phone/PictureTableViewCell.xib; sourceTree = "<group>"; };
 		69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerMessageItem.h; sourceTree = "<group>"; };
 		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
 		69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JiBingBKModelSource.h; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.h; sourceTree = "<group>"; };
@@ -481,8 +496,25 @@
 		69DBC6A21D57003E0064346B /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				69DBC6A81D5704960064346B /* Cells */,
+				69DBC6A31D5703790064346B /* DiscoverViewController.h */,
+				69DBC6A41D5703790064346B /* DiscoverViewController.m */,
+				69DBC6A51D5703790064346B /* DiscoverViewController.xib */,
 			);
 			name = Discover;
+			sourceTree = "<group>";
+		};
+		69DBC6A81D5704960064346B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				69DBC6A91D5705190064346B /* TextTableViewCell.h */,
+				69DBC6AA1D5705190064346B /* TextTableViewCell.m */,
+				69DBC6AB1D5705190064346B /* TextTableViewCell.xib */,
+				69DBC6AE1D5705430064346B /* PictureTableViewCell.h */,
+				69DBC6AF1D5705430064346B /* PictureTableViewCell.m */,
+				69DBC6B01D5705430064346B /* PictureTableViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
@@ -712,15 +744,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */,
 				7C6744461D2C9ED300661276 /* MessageInfoViewCell.xib in Resources */,
 				7C6744411D2BC3BE00661276 /* MessageInfoView.xib in Resources */,
 				7C6A77C11D2B82C2008A58D7 /* JiBingBKTopView.xib in Resources */,
+				69DBC6AD1D5705190064346B /* TextTableViewCell.xib in Resources */,
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
 				53BC4C781D290EFD009035BC /* GuaHaoViewController.xib in Resources */,
 				7C67447A1D2D25F600661276 /* YiYuanViewController.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
 				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
 				7C67446A1D2D1F7B00661276 /* YiLiaoJiGouRightView.xib in Resources */,
+				69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */,
 				7C67445A1D2CE6A900661276 /* YiMiaoDetailView.xib in Resources */,
 				7C67443C1D2BB34B00661276 /* JiBingInfoView.xib in Resources */,
 				7C67445F1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib in Resources */,
@@ -826,6 +861,7 @@
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
+				69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */,
 				7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */,
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				7C6744791D2D25F600661276 /* YiYuanViewController.m in Sources */,
@@ -838,6 +874,7 @@
 				7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */,
+				69DBC6B11D5705430064346B /* PictureTableViewCell.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
@@ -859,6 +896,7 @@
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 				69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */,
+				69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */,
 				53AD05581D2C03D500557942 /* HomePageNewsItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

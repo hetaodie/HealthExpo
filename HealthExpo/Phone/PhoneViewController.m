@@ -8,6 +8,7 @@
 
 #import "PhoneViewController.h"
 #import "CustomTabBarController.h"
+#import "DiscoverViewController.h"
 
 @interface PhoneViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
@@ -32,8 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:YES];
-    
     self.phoneNumLabel.layer.cornerRadius = 15;
     self.phoneNumLabel.clipsToBounds = YES;
     
@@ -43,6 +42,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -67,7 +67,9 @@
 }
 
 - (IBAction)onDiscoverClicked:(id)sender {
-    [[CustomTabBarController getInstance] clickAtIndex:0];
+    DiscoverViewController *dVC = [[DiscoverViewController alloc] initWithNibName:@"DiscoverViewController" bundle:nil];
+    dVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:dVC animated:YES];
 }
 
 - (IBAction)onChargeClicked:(id)sender {
