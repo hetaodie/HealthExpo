@@ -12,6 +12,7 @@
 @interface PhoneViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (nonatomic, strong) NSString *phoneNum;
+@property (strong, nonatomic) IBOutlet UIScrollView *topBannerScrollView;
 
 @end
 
@@ -20,13 +21,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.navigationController setNavigationBarHidden:YES];
+    
     self.phoneNumLabel.layer.cornerRadius = 15;
     self.phoneNumLabel.clipsToBounds = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark -- button action
@@ -36,6 +50,20 @@
 
 - (IBAction)deleteClicked:(id)sender {
     [self deleteAphoneNum];
+}
+
+- (IBAction)onDiscoverClicked:(id)sender {
+    [[CustomTabBarController getInstance] clickAtIndex:0];
+}
+
+- (IBAction)onChargeClicked:(id)sender {
+}
+
+- (IBAction)onShareClicked:(id)sender {
+}
+
+- (IBAction)onContactsClicked:(id)sender {
+    [[CustomTabBarController getInstance] clickAtIndex:2];
 }
 
 #pragma mark -- phone Num action
