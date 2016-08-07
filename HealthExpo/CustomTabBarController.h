@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomTabBarController : UITabBarController
++ (instancetype)getInstance;
+
+- (void)clickAtIndex:(NSInteger)index;
 
 @end

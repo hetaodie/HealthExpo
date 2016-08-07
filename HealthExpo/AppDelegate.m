@@ -26,7 +26,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.tabBarController = [[CustomTabBarController alloc] init];
+    self.tabBarController = [CustomTabBarController getInstance];
     [self createUItabbarContainViewControllers:self.tabBarController];
     self.window.rootViewController  = self.tabBarController;
     [self.window makeKeyAndVisible];

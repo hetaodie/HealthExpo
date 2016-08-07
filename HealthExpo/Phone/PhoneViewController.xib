@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneViewController">
             <connections>
+                <outlet property="phoneNumLabel" destination="Frq-tp-ICt" id="WCY-0z-fER"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1Y-DF-GOA">
-                    <rect key="frame" x="0.0" y="344" width="600" height="256"/>
+                    <rect key="frame" x="0.0" y="295" width="600" height="256"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-tI-Yaw">
                             <rect key="frame" x="200" y="0.0" width="1" height="256"/>
@@ -60,6 +61,9 @@
                             <state key="normal" title="1">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="4ff-cH-HjA"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRU-iH-O36">
                             <rect key="frame" x="201" y="0.0" width="199" height="64"/>
@@ -67,6 +71,9 @@
                             <state key="normal" title="2">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="jVT-4N-xVf"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-K6-BNL">
                             <rect key="frame" x="401" y="0.0" width="199" height="64"/>
@@ -74,6 +81,9 @@
                             <state key="normal" title="3">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="NaV-Am-SgF"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYn-h7-tUH">
                             <rect key="frame" x="0.0" y="65" width="200" height="63"/>
@@ -81,6 +91,9 @@
                             <state key="normal" title="4">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="AGW-cn-r7Z"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYW-Fh-XpG">
                             <rect key="frame" x="201" y="65" width="199" height="63"/>
@@ -88,6 +101,9 @@
                             <state key="normal" title="5">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="dUy-Ud-HOM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAV-mt-6B7">
                             <rect key="frame" x="401" y="65" width="199" height="63"/>
@@ -95,6 +111,9 @@
                             <state key="normal" title="6">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="hWv-FP-08H"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqb-Wi-lFZ">
                             <rect key="frame" x="0.0" y="129" width="200" height="63"/>
@@ -102,6 +121,9 @@
                             <state key="normal" title="7">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="ify-R7-631"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFv-Te-DBq">
                             <rect key="frame" x="201" y="129" width="199" height="63"/>
@@ -109,6 +131,9 @@
                             <state key="normal" title="8">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="BpR-lK-9kC"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyX-cq-k73">
                             <rect key="frame" x="401" y="129" width="199" height="63"/>
@@ -116,6 +141,9 @@
                             <state key="normal" title="9">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="FyL-Nz-Wmq"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEc-dS-1Bo">
                             <rect key="frame" x="0.0" y="193" width="200" height="63"/>
@@ -123,6 +151,9 @@
                             <state key="normal" title="*">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="9IF-hT-2e1"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvc-H0-qI8">
                             <rect key="frame" x="201" y="193" width="199" height="63"/>
@@ -130,6 +161,9 @@
                             <state key="normal" title="0">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="jsR-zS-LNc"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-fE-ebL">
                             <rect key="frame" x="401" y="193" width="199" height="63"/>
@@ -137,6 +171,9 @@
                             <state key="normal" title="#">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onPhoneNumClicked:" destination="-1" eventType="touchUpInside" id="gTG-Pa-dkW"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,13 +244,68 @@
                         <constraint firstItem="Yqb-Wi-lFZ" firstAttribute="leading" secondItem="h1Y-DF-GOA" secondAttribute="leading" id="yn5-gN-rGY"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10o-Oh-iqt">
+                    <rect key="frame" x="0.0" y="251" width="600" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frq-tp-ICt">
+                            <rect key="frame" x="53" y="7" width="489" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="J7f-m0-sfO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLQ-zw-CMl">
+                            <rect key="frame" x="15" y="11" width="23" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="C4T-5V-GoN"/>
+                                <constraint firstAttribute="width" constant="23" id="JOg-2J-zGc"/>
+                            </constraints>
+                            <state key="normal" image="Phonetongxunlu2"/>
+                            <connections>
+                                <action selector="tongXunLuClicked:" destination="-1" eventType="touchUpInside" id="xf3-Sq-5jP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-rP-XfM">
+                            <rect key="frame" x="557" y="14" width="28" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="bsa-g9-dAI"/>
+                                <constraint firstAttribute="width" constant="28" id="sfX-ru-Fhz"/>
+                            </constraints>
+                            <state key="normal" image="Phoneshanchu"/>
+                            <connections>
+                                <action selector="deleteClicked:" destination="-1" eventType="touchUpInside" id="hqp-Pj-5u4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Frq-tp-ICt" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="CNn-Pp-PzP"/>
+                        <constraint firstItem="xLQ-zw-CMl" firstAttribute="leading" secondItem="10o-Oh-iqt" secondAttribute="leading" constant="15" id="KAU-Qx-C0A"/>
+                        <constraint firstAttribute="height" constant="44" id="bAP-Jx-5po"/>
+                        <constraint firstItem="7eh-rP-XfM" firstAttribute="leading" secondItem="Frq-tp-ICt" secondAttribute="trailing" constant="15" id="cll-DF-b6p"/>
+                        <constraint firstAttribute="trailing" secondItem="7eh-rP-XfM" secondAttribute="trailing" constant="15" id="eLL-Gy-y4W"/>
+                        <constraint firstItem="7eh-rP-XfM" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="jLC-IZ-eHi"/>
+                        <constraint firstItem="xLQ-zw-CMl" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="vPi-o3-ZVr"/>
+                        <constraint firstItem="Frq-tp-ICt" firstAttribute="leading" secondItem="xLQ-zw-CMl" secondAttribute="trailing" constant="15" id="ytx-e3-6KI"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="10o-Oh-iqt" secondAttribute="trailing" id="6Xd-Go-uiI"/>
+                <constraint firstItem="h1Y-DF-GOA" firstAttribute="top" secondItem="10o-Oh-iqt" secondAttribute="bottom" id="91X-gd-Olj"/>
                 <constraint firstItem="h1Y-DF-GOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dh4-8w-Nbb"/>
-                <constraint firstAttribute="bottom" secondItem="h1Y-DF-GOA" secondAttribute="bottom" id="pXl-Rx-qHx"/>
+                <constraint firstItem="10o-Oh-iqt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oxT-2Z-EFf"/>
+                <constraint firstAttribute="bottom" secondItem="h1Y-DF-GOA" secondAttribute="bottom" constant="49" id="pXl-Rx-qHx"/>
                 <constraint firstAttribute="trailing" secondItem="h1Y-DF-GOA" secondAttribute="trailing" id="zD2-12-MKl"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Phoneshanchu" width="28" height="17"/>
+        <image name="Phonetongxunlu2" width="23" height="23"/>
+    </resources>
 </document>
