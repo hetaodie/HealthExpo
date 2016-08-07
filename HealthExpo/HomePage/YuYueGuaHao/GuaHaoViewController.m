@@ -9,6 +9,8 @@
 #import "GuaHaoViewController.h"
 
 @interface GuaHaoViewController ()
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *textViewTopContraint;
 
 @end
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.textViewTopContraint.constant = 0;
+    [self.textView setNeedsLayout];
 }
 
 - (void)didReceiveMemoryWarning {
