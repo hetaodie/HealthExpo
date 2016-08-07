@@ -131,4 +131,13 @@
     self.spearkLabel.text = data.title;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    
+    if (!CGRectContainsPoint(self.searchView.frame, touchPoint)) {
+        [self.searchTextField resignFirstResponder];
+    }
+}
+
 @end

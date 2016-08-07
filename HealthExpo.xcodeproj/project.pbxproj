@@ -478,6 +478,13 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		69DBC6A21D57003E0064346B /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
 		69E4BE4E1D1D0EF800B555FD /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +506,7 @@
 		69E4BE4F1D1D0F0F00B555FD /* Phone */ = {
 			isa = PBXGroup;
 			children = (
+				69DBC6A21D57003E0064346B /* Discover */,
 				69E4BE571D1D108C00B555FD /* PhoneViewController.h */,
 				69E4BE581D1D108C00B555FD /* PhoneViewController.m */,
 				69E4BE591D1D108C00B555FD /* PhoneViewController.xib */,
