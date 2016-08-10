@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ClassifyObject.h"
 
 @interface JiBingBKLeftViewCell : UITableViewCell
 
+
+- (void)showCellWithClassifyObject:(ClassifyObject *)aObject;
 @end

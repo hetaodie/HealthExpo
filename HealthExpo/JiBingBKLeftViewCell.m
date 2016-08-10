@@ -8,16 +8,25 @@
 
 #import "JiBingBKLeftViewCell.h"
 #import "UIColor+HEX.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface JiBingBKLeftViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *Titile;
+@property (strong, nonatomic) ClassifyObject *object;
 
 @end
 
 
 @implementation JiBingBKLeftViewCell
+
+
+
+- (void)showCellWithClassifyObject:(ClassifyObject *)aObject{
+    self.object = aObject;
+    [self showLogoIamge:aObject isSelect:NO];
+}
 
 - (void)awakeFromNib {
     [self noSelectCellColor];
@@ -31,9 +40,11 @@
     [super setSelected:selected animated:animated];
     if (selected) {
         [self selectCellColor];
+         [self showLogoIamge:self.object isSelect:YES];
     }
     else{
         [self noSelectCellColor];
+         [self showLogoIamge:self.object isSelect:NO];
     }
 }
 
@@ -48,4 +59,23 @@
     self.Titile.textColor = [UIColor colorWithHexString:@"0xBBBBBB" alpha:1.0];
 }
 
+
+- (void)showLogoIamge:(ClassifyObject *)aObject isSelect:(BOOL)isSelect{
+    
+    if (isSelect) {
+        if (aObject.selectImage) {
+            [self.logoImageView sd_setImageWithURL:[NSURL URLWithString:aObject.selectImageUrl] placeholderImage:nil];
+        }else{
+            self.logoImageView.image = aObject.selectImage;
+        }
+    }
+    else{
+        if (aObject.defaultImageUrl) {
+            [self.logoImageView sd_setImageWithURL:[NSURL URLWithString:aObject.defaultImageUrl] placeholderImage:nil];
+        }else{
+            self.logoImageView.image = aObject.defaultImage;
+        }
+    }
+
+}
 @end
