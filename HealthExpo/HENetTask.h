@@ -35,6 +35,8 @@ typedef NS_ENUM(NSInteger, HEHttpMethod){
     HE_DELETE
 };
 
+static const NSString *HEHttpServer = @"http://202.75.210.186";//@"http://121.40.79.118/jkbl/";
+
 typedef void(^HENetTaskSuccessBlock)(NSURLSessionDataTask *, id);
 typedef void(^HENetTaskFailedBlock)(NSURLSessionDataTask *, NSError *);
 

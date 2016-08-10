@@ -8,6 +8,7 @@
 
 #import "DianZiZaZhiItemView.h"
 #import "UIImageView+WebCache.h"
+#import "HENetTask.h"
 
 @implementation DianZiZaZhiItemView
 
@@ -22,6 +23,7 @@
 - (void)fillItemWithCoverUrl:(NSString *)aUrl title:(NSString *)title andIndex:(NSInteger)index{
     self.itemIndex = index;
     self.titleLabel.text = title;
+    aUrl = [NSString stringWithFormat:@"%@%@", HEHttpServer, aUrl];
     NSString *placeHolder = [NSString stringWithFormat:@"dianzizazhi%zd", index];
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:aUrl] placeholderImage:[UIImage imageNamed:placeHolder]];
 }

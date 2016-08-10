@@ -9,7 +9,7 @@
 #import "HENetTask.h"
 #import "AFNetworking.h"
 
-static const NSString *HEHttpServer = @"http://202.75.210.186/";//@"http://121.40.79.118/jkbl/";
+//static const NSString *HEHttpServer = @"http://202.75.210.186/";//@"http://121.40.79.118/jkbl/";
 
 @implementation HENetTask
 

@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *fourthItemView;
 
 @property (nonatomic, strong) DianZiZaZhiModelSource *modelSource;
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -69,15 +70,25 @@
 - (IBAction)onHeZuoButtonClicked:(id)sender {
 }
 
-#pragma mark - DianZiZaZhiModelSourceDelegate
-- (void)getDianZiZaZhiDataSuccess:(NSArray *)dataArray{
-    //初始化数据
-}
-
-- (void)getDianZiZaZhiDataFailed{
+- (void)fillData:(NSDictionary *)dict toItemView:(DianZiZaZhiItemView *)itemView{
     
 }
 
+#pragma mark - DianZiZaZhiModelSourceDelegate
+- (void)getDianZiZaZhiListSuccess:(NSArray *)dataArr{
+    
+}
+- (void)getDianZiZaZhiListFailed{
+    
+}
+
+- (void)getDianZiZaZhiListWithIDSuccess:(NSArray *)dataArr{
+    self.dataArray = dataArr;
+}
+
+- (void)getDianZiZaZhiListWithIDFailed{
+    
+}
 #pragma mark - DianZiZaZhiItemViewDelegate
 - (void)ClickedDianZiZaZhiItemViewIndex:(NSInteger)index{
     
