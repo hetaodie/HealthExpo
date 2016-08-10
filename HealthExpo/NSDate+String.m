@@ -13,7 +13,8 @@
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval{
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:timeInterval/1000];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-mm-dd"];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+//    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+0800"]];
     NSString *string = [formatter stringFromDate:date];
     return string;
 }

@@ -28,6 +28,7 @@
     self.timeLabel.text = data.createDate;
     
     self.lookLabel.text = [NSString stringWithFormat:@"%zd", data.viewNum];
+    self.pingLunLabel.text = [NSString stringWithFormat:@"%zd", data.viewNum];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
