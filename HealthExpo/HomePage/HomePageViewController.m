@@ -14,7 +14,8 @@
 #import "HomePageModelSource.h"
 #import "SpeakerMessageItem.h"
 #import "DianZiZaZhiViewController.h"
-
+#import "NewsDetailViewController.h"
+#import "HomePageNewsItem.h"
 #import "YiLiaoJiGouViewController.h"
 
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageModelSourceDelegate>
@@ -110,7 +111,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
+    HomePageNewsItem *item = self.dataArray[indexPath.row];
+    ndVC.newsID = [NSString stringWithFormat:@"%zd", item.ID];
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 #pragma mark - HomePageModelSourceDelegate
