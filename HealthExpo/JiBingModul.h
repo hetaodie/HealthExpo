@@ -13,6 +13,8 @@
 
 - (void)onGetDianXingRenQun:(NSMutableArray *)aArray;
 - (void)onGetKeShiFenLei:(NSMutableArray *)aArray;
+- (void)onGetDianXingRenQunError;
+- (void)onGetKeShiFenLeiError;
 
 - (void)onDianXingRenQunDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
 
@@ -25,6 +27,7 @@
 @end
 
 @interface JiBingModul : NSObject
+@property (nonatomic,weak) id <JiBingModulDelegate>delegate;
 
 - (void)getDianXingRenQun;
 

@@ -16,16 +16,17 @@
     NSString *urlPath = @"/mobile/getCategory.action?catid=6";
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
-    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+    task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
         NSLog(@"%@", responseObject);
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsDetailModelSource:)]) {
-            [weakSelf.delegate getNewsDetailModelSourceSuccess:responseObject];
+        NSMutableArray *array = [self getArrayWithResponstObject:responseObject];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQun:)]) {
+            [weakSelf.delegate onGetDianXingRenQun:array];
         }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsDetailModelSourceFailed)]) {
-            [weakSelf.delegate getNewsDetailModelSourceFailed];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunError)]) {
+            [weakSelf.delegate onGetDianXingRenQunError];
         }
     };
     
@@ -45,7 +46,8 @@
 }
 
 
-- (NSArray *)getArrayWithResponstObject:(NSArray *)aArray{
+- (NSMutableArray *)getArrayWithResponstObject:(NSArray *)aArray{
+    NSMutableArray *array = [NSMutableArray array];
     for (NSDictionary *dic in aArray) {
         ClassifyObject *object = [[ClassifyObject alloc] init];
         object.title = dic[@"title"];
@@ -53,8 +55,14 @@
         object.pid   = [dic[@"pid"] integerValue];
         object.selectImageUrl = dic[@"selectImageUrl"];
         object.defaultImageUrl = dic[@"defaultImageUrl"];
+        
+        object.defaultImage = [self getImageWithTitle:object.title andSelect:NO];
+        object.selectImage = [self getImageWithTitle:object.title andSelect:YES];
+        [array addObject:object];
     }
+    return array;
 }
+
 
 - (UIImage *)getImageWithTitle:(NSString *)aTitle andSelect:(BOOL)aSelect{
     
@@ -93,5 +101,8 @@
             image = [UIImage imageNamed:@"ertong"];
         }
     }
+    
+    return image;
 }
+
 @end
