@@ -9,6 +9,7 @@
 #import "NewsDetailModelSource.h"
 #import "HENetTask.h"
 
+
 @implementation NewsDetailModelSource
 - (void)getNewsDetailModelSource:(NSString *)cID{
     NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%@", cID];
@@ -29,4 +30,5 @@
     
     [task runInMethod:HE_GET];
 }
+
 @end
