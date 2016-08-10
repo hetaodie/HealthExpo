@@ -52,6 +52,8 @@
 		69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6B01D5705430064346B /* PictureTableViewCell.xib */; };
 		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
 		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
+		69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */; };
+		69DD74A81D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
 		69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE541D1D107800B555FD /* HomePageViewController.xib */; };
 		69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE581D1D108C00B555FD /* PhoneViewController.m */; };
@@ -189,6 +191,10 @@
 		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
 		69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JiBingBKModelSource.h; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.h; sourceTree = "<group>"; };
 		69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JiBingBKModelSource.m; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.m; sourceTree = "<group>"; };
+		69DD74A31D5B075100730B94 /* NewsDetailModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailModelSource.h; sourceTree = "<group>"; };
+		69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailModelSource.m; sourceTree = "<group>"; };
+		69DD74A61D5B07C600730B94 /* DianZiZaZhiDetailModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiDetailModelSource.h; sourceTree = "<group>"; };
+		69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiDetailModelSource.m; sourceTree = "<group>"; };
 		69E4BE521D1D107800B555FD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
 		69E4BE531D1D107800B555FD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = HomePage/HomePageViewController.m; sourceTree = "<group>"; };
 		69E4BE541D1D107800B555FD /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = HomePage/HomePageViewController.xib; sourceTree = "<group>"; };
@@ -433,6 +439,8 @@
 				53BC4C7B1D2915DE009035BC /* DianZiZaZhiViewController.xib */,
 				694BB3701D48E32D007D8ED0 /* DianZiZaZhiModelSource.h */,
 				694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */,
+				69DD74A61D5B07C600730B94 /* DianZiZaZhiDetailModelSource.h */,
+				69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */,
 			);
 			name = DianZiZaZhi;
 			sourceTree = "<group>";
@@ -528,6 +536,8 @@
 				69E4BE541D1D107800B555FD /* HomePageViewController.xib */,
 				53AD05531D2C03A300557942 /* HomePageModelSource.h */,
 				53AD05541D2C03A300557942 /* HomePageModelSource.m */,
+				69DD74A31D5B075100730B94 /* NewsDetailModelSource.h */,
+				69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */,
 				53BC4C651D290485009035BC /* YiLiaoBaiKe */,
 				53BC4C721D290E65009035BC /* YiLiaoJiGou */,
 				53BC4C711D290E3A009035BC /* DianZiZaZhi */,
@@ -895,6 +905,7 @@
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
+				69DD74A81D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m in Sources */,
 				694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
@@ -902,6 +913,7 @@
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
 				53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */,
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
+				69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 				69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */,
 				69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */,

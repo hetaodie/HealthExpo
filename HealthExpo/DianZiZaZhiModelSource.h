@@ -7,16 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol DianZiZaZhiModelSourceDelegate<NSObject>
-- (void)getDianZiZaZhiDataSuccess:(NSArray *)dataArray;
-- (void)getDianZiZaZhiDataFailed;
+@protocol DianZiZaZhiModelSourceDelegate <NSObject>
+
+- (void)getDianZiZaZhiListSuccess:(NSArray *)dataArr;
+- (void)getDianZiZaZhiListFailed;
+
+- (void)getDianZiZaZhiListWithIDSuccess:(NSArray *)dataArr;
+- (void)getDianZiZaZhiListWithIDFailed;
 
 @end
 
 @interface DianZiZaZhiModelSource : NSObject
-@property (nonatomic, weak) id <DianZiZaZhiModelSourceDelegate> delegate;
 
-@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, weak) id<DianZiZaZhiModelSourceDelegate> delegate;
 
-- (void)getDianZiZaZhiData;
+- (void)getDianZiZaZhiList;
+
+- (void)getDianZiZaZhiListWithID:(NSString *)cID;
+
 @end

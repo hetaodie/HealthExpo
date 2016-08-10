@@ -10,22 +10,45 @@
 #import "HENetTask.h"
 
 @implementation DianZiZaZhiModelSource
-- (void)getDianZiZaZhiData{
-    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"mobile/getContentList.action?catid=1"];
+
+- (void)getDianZiZaZhiList{
+    
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getCategory.action?catid=4"];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-         weakSelf.dataArray = responseObject;
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiDataSuccess:)]) {
-            [weakSelf.delegate getDianZiZaZhiDataSuccess:responseObject];
+        NSLog(@"%@", responseObject);
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiListSuccess:)]) {
+            [weakSelf.delegate getDianZiZaZhiListSuccess:responseObject];
         }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(getDianZiZaZhiDataFailed)]) {
-            [self.delegate getDianZiZaZhiDataFailed];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiListFailed)]) {
+            [weakSelf.delegate getDianZiZaZhiListFailed];
         }
     };
     
     [task runInMethod:HE_GET];
 }
+
+- (void)getDianZiZaZhiListWithID:(NSString *)cID{
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@", cID];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@", responseObject);
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiListWithIDSuccess:)]) {
+            [weakSelf.delegate getDianZiZaZhiListWithIDSuccess:responseObject];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiListWithIDFailed)]) {
+            [weakSelf.delegate getDianZiZaZhiListWithIDFailed];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
+}
+
 @end
