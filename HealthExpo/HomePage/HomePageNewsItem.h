@@ -19,6 +19,7 @@
 @property (nonatomic, assign) BOOL isShow;
 @property (nonatomic, assign) NSInteger orderNum;
 @property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *picUrl;
 @property (nonatomic, assign) NSInteger pYear;
 @property (nonatomic, strong) NSString *showName;
 @property (nonatomic, strong) NSString *sTitle;

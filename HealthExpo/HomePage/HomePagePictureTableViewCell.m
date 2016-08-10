@@ -9,6 +9,7 @@
 #import "HomePagePictureTableViewCell.h"
 #import "HomePageNewsItem.h"
 #import "UIImageView+WebCache.h"
+#import "HENetTask.h"
 
 @implementation HomePagePictureTableViewCell
 
@@ -22,7 +23,8 @@
 //}
 
 - (void)fillCellWithData:(HomePageNewsItem *)data{
-    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];//image Data
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@", HEHttpServer, data.picUrl];
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];//image Data
     self.titleLabel.text = data.title;
 }
 

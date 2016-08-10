@@ -96,6 +96,7 @@
         item.isShow = [dict[@"isshow"] boolValue];
         item.orderNum = [dict[@"ordernum"] integerValue];
         item.phone = dict[@"phone"];
+        item.picUrl = dict[@"picurl"];
         item.pYear = [dict[@"pyear"] integerValue];
         item.showName = dict[@"showname"];
         item.sTitle = dict[@"stitle"];

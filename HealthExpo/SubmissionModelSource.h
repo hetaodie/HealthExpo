@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SubmissionModelSource : NSObject
+@protocol SubmissionModelSourceDelegate <NSObject>
 
+- (void)getSubmissionDataSuccess:(NSArray *)data;
+- (void)getSubmissionDataFailed;
+
+@end
+
+@interface SubmissionModelSource : NSObject
+@property (nonatomic, weak)id<SubmissionModelSourceDelegate> delegate;
+
+- (void)getSubmissionData;
 @end
