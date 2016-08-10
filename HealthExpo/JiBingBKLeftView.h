@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface JiBingBKLeftView : UIView
 
+- (void)showContentWithArray:(NSArray *)aArray;
 @end
