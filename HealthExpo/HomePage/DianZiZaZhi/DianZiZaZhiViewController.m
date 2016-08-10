@@ -46,7 +46,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    self.navigationItem.title = @"预约挂号";
+    self.navigationItem.title = @"电子杂志";
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 18, 16);
@@ -70,8 +70,12 @@
 - (IBAction)onHeZuoButtonClicked:(id)sender {
 }
 
-- (void)fillData:(NSDictionary *)dict toItemView:(DianZiZaZhiItemView *)itemView{
-    
+- (void)fillDataIndex:(NSInteger)index toItemView:(DianZiZaZhiItemView *)itemView{
+    if (index >= self.dataArray.count) {
+        return;
+    }
+    NSDictionary *dict = [self.dataArray objectAtIndex:index];
+    [itemView fillItemWithCoverUrl:[dict objectForKey:@"picurl"] title:[dict objectForKey:@"title"] andIndex:index];
 }
 
 #pragma mark - DianZiZaZhiModelSourceDelegate
@@ -84,6 +88,12 @@
 
 - (void)getDianZiZaZhiListWithIDSuccess:(NSArray *)dataArr{
     self.dataArray = dataArr;
+    if (!dataArr) {
+        [self fillDataIndex:0 toItemView:self.firstItemView];
+        [self fillDataIndex:1 toItemView:self.secondItemView];
+        [self fillDataIndex:2 toItemView:self.thirdItemView];
+        [self fillDataIndex:3 toItemView:self.fourthItemView];
+    }
 }
 
 - (void)getDianZiZaZhiListWithIDFailed{
@@ -91,6 +101,7 @@
 }
 #pragma mark - DianZiZaZhiItemViewDelegate
 - (void)ClickedDianZiZaZhiItemViewIndex:(NSInteger)index{
+    NSDictionary *dict = [self.dataArray objectAtIndex:index];
     
 }
 @end

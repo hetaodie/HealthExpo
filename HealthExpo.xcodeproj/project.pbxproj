@@ -54,6 +54,16 @@
 		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
 		69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */; };
 		69DD74A81D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */; };
+		69DD74AC1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74AA1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m */; };
+		69DD74AD1D5B258E00730B94 /* DianZiZaZhiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DD74AB1D5B258E00730B94 /* DianZiZaZhiDetailViewController.xib */; };
+		69DD74B11D5B462D00730B94 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74AF1D5B462D00730B94 /* NewsDetailViewController.m */; };
+		69DD74B21D5B462D00730B94 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DD74B01D5B462D00730B94 /* NewsDetailViewController.xib */; };
+		69DD74B61D5B491600730B94 /* SubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74B41D5B491600730B94 /* SubmissionViewController.m */; };
+		69DD74B71D5B491600730B94 /* SubmissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DD74B51D5B491600730B94 /* SubmissionViewController.xib */; };
+		69DD74BA1D5B493900730B94 /* SubmissionModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74B91D5B493900730B94 /* SubmissionModelSource.m */; };
+		69DD74BE1D5B497600730B94 /* CooperateModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74BD1D5B497600730B94 /* CooperateModelSource.m */; };
+		69DD74C21D5B499000730B94 /* CooperateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74C01D5B499000730B94 /* CooperateViewController.m */; };
+		69DD74C31D5B499000730B94 /* CooperateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DD74C11D5B499000730B94 /* CooperateViewController.xib */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
 		69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE541D1D107800B555FD /* HomePageViewController.xib */; };
 		69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE581D1D108C00B555FD /* PhoneViewController.m */; };
@@ -195,6 +205,22 @@
 		69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailModelSource.m; sourceTree = "<group>"; };
 		69DD74A61D5B07C600730B94 /* DianZiZaZhiDetailModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiDetailModelSource.h; sourceTree = "<group>"; };
 		69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiDetailModelSource.m; sourceTree = "<group>"; };
+		69DD74A91D5B258E00730B94 /* DianZiZaZhiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiDetailViewController.h; sourceTree = "<group>"; };
+		69DD74AA1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiDetailViewController.m; sourceTree = "<group>"; };
+		69DD74AB1D5B258E00730B94 /* DianZiZaZhiDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DianZiZaZhiDetailViewController.xib; sourceTree = "<group>"; };
+		69DD74AE1D5B462D00730B94 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsDetailViewController.h; path = HomePage/NewsDetailViewController.h; sourceTree = "<group>"; };
+		69DD74AF1D5B462D00730B94 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsDetailViewController.m; path = HomePage/NewsDetailViewController.m; sourceTree = "<group>"; };
+		69DD74B01D5B462D00730B94 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsDetailViewController.xib; path = HomePage/NewsDetailViewController.xib; sourceTree = "<group>"; };
+		69DD74B31D5B491600730B94 /* SubmissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionViewController.h; sourceTree = "<group>"; };
+		69DD74B41D5B491600730B94 /* SubmissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionViewController.m; sourceTree = "<group>"; };
+		69DD74B51D5B491600730B94 /* SubmissionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmissionViewController.xib; sourceTree = "<group>"; };
+		69DD74B81D5B493900730B94 /* SubmissionModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionModelSource.h; sourceTree = "<group>"; };
+		69DD74B91D5B493900730B94 /* SubmissionModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionModelSource.m; sourceTree = "<group>"; };
+		69DD74BC1D5B497600730B94 /* CooperateModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CooperateModelSource.h; sourceTree = "<group>"; };
+		69DD74BD1D5B497600730B94 /* CooperateModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CooperateModelSource.m; sourceTree = "<group>"; };
+		69DD74BF1D5B499000730B94 /* CooperateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CooperateViewController.h; sourceTree = "<group>"; };
+		69DD74C01D5B499000730B94 /* CooperateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CooperateViewController.m; sourceTree = "<group>"; };
+		69DD74C11D5B499000730B94 /* CooperateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CooperateViewController.xib; sourceTree = "<group>"; };
 		69E4BE521D1D107800B555FD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
 		69E4BE531D1D107800B555FD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = HomePage/HomePageViewController.m; sourceTree = "<group>"; };
 		69E4BE541D1D107800B555FD /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = HomePage/HomePageViewController.xib; sourceTree = "<group>"; };
@@ -439,8 +465,21 @@
 				53BC4C7B1D2915DE009035BC /* DianZiZaZhiViewController.xib */,
 				694BB3701D48E32D007D8ED0 /* DianZiZaZhiModelSource.h */,
 				694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */,
+				69DD74A91D5B258E00730B94 /* DianZiZaZhiDetailViewController.h */,
+				69DD74AA1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m */,
+				69DD74AB1D5B258E00730B94 /* DianZiZaZhiDetailViewController.xib */,
 				69DD74A61D5B07C600730B94 /* DianZiZaZhiDetailModelSource.h */,
 				69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */,
+				69DD74B31D5B491600730B94 /* SubmissionViewController.h */,
+				69DD74B41D5B491600730B94 /* SubmissionViewController.m */,
+				69DD74B51D5B491600730B94 /* SubmissionViewController.xib */,
+				69DD74B81D5B493900730B94 /* SubmissionModelSource.h */,
+				69DD74B91D5B493900730B94 /* SubmissionModelSource.m */,
+				69DD74BF1D5B499000730B94 /* CooperateViewController.h */,
+				69DD74C01D5B499000730B94 /* CooperateViewController.m */,
+				69DD74C11D5B499000730B94 /* CooperateViewController.xib */,
+				69DD74BC1D5B497600730B94 /* CooperateModelSource.h */,
+				69DD74BD1D5B497600730B94 /* CooperateModelSource.m */,
 			);
 			name = DianZiZaZhi;
 			sourceTree = "<group>";
@@ -536,6 +575,9 @@
 				69E4BE541D1D107800B555FD /* HomePageViewController.xib */,
 				53AD05531D2C03A300557942 /* HomePageModelSource.h */,
 				53AD05541D2C03A300557942 /* HomePageModelSource.m */,
+				69DD74AE1D5B462D00730B94 /* NewsDetailViewController.h */,
+				69DD74AF1D5B462D00730B94 /* NewsDetailViewController.m */,
+				69DD74B01D5B462D00730B94 /* NewsDetailViewController.xib */,
 				69DD74A31D5B075100730B94 /* NewsDetailModelSource.h */,
 				69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */,
 				53BC4C651D290485009035BC /* YiLiaoBaiKe */,
@@ -763,6 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */,
+				69DD74C31D5B499000730B94 /* CooperateViewController.xib in Resources */,
 				7C6744461D2C9ED300661276 /* MessageInfoViewCell.xib in Resources */,
 				7C6744411D2BC3BE00661276 /* MessageInfoView.xib in Resources */,
 				7C6A77C11D2B82C2008A58D7 /* JiBingBKTopView.xib in Resources */,
@@ -790,14 +833,17 @@
 				53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */,
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				7C6744551D2CE66300661276 /* YiMiaoDetailViewController.xib in Resources */,
+				69DD74B21D5B462D00730B94 /* NewsDetailViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
 				7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */,
 				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
 				7C6A77AD1D2B5F0F008A58D7 /* JiBingBKLeftView.xib in Resources */,
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
+				69DD74AD1D5B258E00730B94 /* DianZiZaZhiDetailViewController.xib in Resources */,
 				7C6744751D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.xib in Resources */,
 				53BC4C7D1D2915DE009035BC /* DianZiZaZhiViewController.xib in Resources */,
 				7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */,
+				69DD74B71D5B491600730B94 /* SubmissionViewController.xib in Resources */,
 				7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */,
 				7C6744501D2CC6F100661276 /* YiMiaoScheduleCell.xib in Resources */,
 				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
@@ -879,16 +925,20 @@
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
+				69DD74C21D5B499000730B94 /* CooperateViewController.m in Sources */,
+				69DD74BE1D5B497600730B94 /* CooperateModelSource.m in Sources */,
 				69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */,
 				7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */,
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				7C6744791D2D25F600661276 /* YiYuanViewController.m in Sources */,
+				69DD74AC1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m in Sources */,
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */,
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
 				5367D02D1D2D5CF6008BB509 /* NSDate+String.m in Sources */,
+				69DD74B61D5B491600730B94 /* SubmissionViewController.m in Sources */,
 				7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */,
@@ -909,8 +959,10 @@
 				694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
+				69DD74B11D5B462D00730B94 /* NewsDetailViewController.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
+				69DD74BA1D5B493900730B94 /* SubmissionModelSource.m in Sources */,
 				53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */,
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */,
