@@ -14,11 +14,27 @@
 @interface JiBingBKLeftView ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *contentArray;
 
 @end
 
 @implementation JiBingBKLeftView
 
+- (void)showContentWithArray:(NSArray *)aArray{
+    [self.contentArray setArray:aArray];
+    
+    if ([aArray count] ==0) {
+        [self.tableView reloadData];
+    }
+    else{
+        
+        [self.tableView reloadData];
+
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO  scrollPosition:UITableViewScrollPositionTop];
+    }
+
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -37,9 +53,9 @@
     return nil;
 }
 
+
 - (void)awakeFromNib{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:NO  scrollPosition:UITableViewScrollPositionTop];
+    _contentArray = [[NSMutableArray alloc] init];
 }
 
 

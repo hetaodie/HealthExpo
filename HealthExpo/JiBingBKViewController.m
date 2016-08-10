@@ -10,10 +10,13 @@
 #import "JiBingBKLeftView.h"
 #import "JiBingBKRightView.h"
 #import "JiBingDetailViewController.h"
-
-@interface JiBingBKViewController ()<JiBingBKRightViewDelegate>
+#import "JiBingModul.h"
+@interface JiBingBKViewController ()<JiBingBKRightViewDelegate,JiBingModulDelegate>
 @property (weak, nonatomic) IBOutlet JiBingBKLeftView *leftView;
 @property (weak, nonatomic) IBOutlet JiBingBKRightView *rightView;
+
+@property (strong, nonatomic) NSMutableDictionary *contentDic;
+@property (strong, nonatomic) JiBingModul *modul;
 
 @end
 
@@ -30,6 +33,10 @@
     [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
+    
+    _modul = [[JiBingModul alloc] init];
+    self.modul.delegate = self;
+    
 }
 
 
@@ -55,14 +62,17 @@
     [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)onGetDianXingRenQun:(NSMutableArray *)aArray{
+    
 }
-*/
+
+- (void)onGetDianXingRenQunError{
+
+}
+
+- (void)onGetKeShiFenLeiError{
+
+}
 
 @end

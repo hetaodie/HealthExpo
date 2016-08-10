@@ -16,14 +16,14 @@
 - (void)onGetDianXingRenQunError;
 - (void)onGetKeShiFenLeiError;
 
-- (void)onDianXingRenQunDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
+- (void)onGetDianXingRenQunDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
 
-- (void)onKeShiFenLeiDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
+- (void)onGetKeShiFenLeiDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
 
 
-- (void)onDianXingRenQunDetailErrorindex:(NSInteger)aIndex;
+- (void)onGetDianXingRenQunDetailErrorindex:(NSInteger)aIndex;
 
-- (void)onKeShiFenLeiDetailErrorindex:(NSInteger)aIndex;
+- (void)onGetKeShiFenLeiDetailErrorindex:(NSInteger)aIndex;
 @end
 
 @interface JiBingModul : NSObject
