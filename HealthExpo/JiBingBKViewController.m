@@ -64,7 +64,7 @@
 
 
 - (void)onGetDianXingRenQun:(NSMutableArray *)aArray{
-    
+    [self.leftView showContentWithArray:aArray];
 }
 
 - (void)onGetDianXingRenQunError{
