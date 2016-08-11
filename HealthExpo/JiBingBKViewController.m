@@ -37,6 +37,8 @@
     _modul = [[JiBingModul alloc] init];
     self.modul.delegate = self;
     
+    [self.modul getDianXingRenQun];
+    
 }
 
 

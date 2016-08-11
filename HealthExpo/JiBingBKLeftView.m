@@ -69,11 +69,14 @@
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"JiBingBKLeftViewCell" owner:nil options:nil];
         cell = [views firstObject];
     }
+    ClassifyObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    [cell showCellWithClassifyObject:object];
     return  cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    NSInteger count = [self.contentArray count];
+    return count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
