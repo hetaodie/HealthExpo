@@ -26,6 +26,7 @@
 - (void)showCellWithClassifyObject:(ClassifyObject *)aObject{
     self.object = aObject;
     [self showLogoIamge:aObject isSelect:NO];
+    self.Titile.text =  aObject.title;
 }
 
 - (void)awakeFromNib {
@@ -63,7 +64,7 @@
 - (void)showLogoIamge:(ClassifyObject *)aObject isSelect:(BOOL)isSelect{
     
     if (isSelect) {
-        if (aObject.selectImage) {
+        if (aObject.selectImageUrl) {
             [self.logoImageView sd_setImageWithURL:[NSURL URLWithString:aObject.selectImageUrl] placeholderImage:nil];
         }else{
             self.logoImageView.image = aObject.selectImage;
