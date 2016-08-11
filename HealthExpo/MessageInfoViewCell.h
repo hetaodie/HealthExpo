@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiuYanObject.h"
 
 @interface MessageInfoViewCell : UITableViewCell
 
 +(CGFloat)heighCellOfIndex:(NSInteger)aIndex;
+
+- (void)showCellWithObject:(LiuYanObject *)aObject;
 @end

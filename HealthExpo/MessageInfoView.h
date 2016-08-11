@@ -10,4 +10,5 @@
 
 @interface MessageInfoView : UIView
 
+- (void)showViewWithArray:(NSArray *)aArray;
 @end

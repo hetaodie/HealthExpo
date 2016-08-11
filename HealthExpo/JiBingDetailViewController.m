@@ -10,10 +10,13 @@
 #import "JiBingDetailmodul.h"
 #import "JiBingInfoView.h"
 #import "MessageInfoView.h"
+#import "LiuYanModul.h"
 
-@interface JiBingDetailViewController () <JiBingDetailmodulDelegete>
+@interface JiBingDetailViewController () <JiBingDetailmodulDelegete,LiuYanModulDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (strong, nonatomic) JiBingDetailmodul *modul;
+@property (strong, nonatomic) LiuYanModul *liuYanModul;
+
 @property (weak, nonatomic) IBOutlet JiBingInfoView *jibingInfoView;
 @property (weak, nonatomic) IBOutlet MessageInfoView *MessageInfoView;
 
@@ -37,6 +40,12 @@
     self.modul.delegate = self;
     [self.modul getJiBingDetailWithCid:self.cid];
     
+    _liuYanModul = [[LiuYanModul alloc] init];
+    self.liuYanModul.delegate = self;
+
+    [self.liuYanModul getLiyanList:self.cid];
+    [self.liuYanModul setjibingLiuYan:nil];
+    [self.liuYanModul liuYanReply:nil];
     
 }
 
@@ -60,12 +69,19 @@
 }
 
 
-
 - (void)onGetJiBingDetailSeccess:(JiBingDetailObject *)aObject{
     [self.jibingInfoView showViewWithObject:aObject];
 }
 
 - (void)onGetJiBingDetailError{
+
+}
+
+- (void)onGetLiyanListSeccess:(NSMutableArray *)aArray{
+    [self.MessageInfoView showViewWithArray:aArray];
+}
+
+- (void)onGetLiyanListError{
 
 }
 

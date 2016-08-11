@@ -34,7 +34,7 @@
 }
 
 +(CGFloat)heighCellOfIndex:(NSInteger)aIndex{
-    return 166;
+    return 101;
 //    if (aIndex%2) {
 //        return 166;
 //    }
@@ -49,6 +49,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)showCellWithObject:(LiuYanObject *)aObject{
+    self.titleLabel.text = aObject.username;
+    self.fristContentLabel.text = aObject.content;
 }
 
 @end

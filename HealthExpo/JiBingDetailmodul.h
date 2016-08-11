@@ -20,4 +20,5 @@
 @property (nonatomic, weak) id <JiBingDetailmodulDelegete>delegate;
 
 - (void)getJiBingDetailWithCid:(NSInteger)aCid;
+
 @end

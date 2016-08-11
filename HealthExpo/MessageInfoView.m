@@ -17,16 +17,23 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *contentArray;
 
 @end
 
 
 @implementation MessageInfoView
 
+- (void)showViewWithArray:(NSArray *)aArray{
+    [self.contentArray setArray: aArray];
+    [self.tableView reloadData];
+}
+
 - (void)awakeFromNib{
     [super awakeFromNib];
     
     [self setupControlStatus];
+    _contentArray = [[NSMutableArray alloc] init];
 }
 
 
@@ -66,11 +73,16 @@
         cell = [views firstObject];
     }
     
+    LiuYanObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    
+    [cell showCellWithObject:object];
+    
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    NSInteger count = [self.contentArray count];
+    return count;
 }
 @end
