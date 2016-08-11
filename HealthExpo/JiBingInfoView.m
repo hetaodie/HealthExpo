@@ -23,9 +23,13 @@
 
 @implementation JiBingInfoView
 
+- (void)showViewWithObject:(JiBingDetailObject *)aObject{
+    self.titleLabel.text = aObject.title;
+    self.contentLabel.text = aObject.contenttext;
+}
+
 - (void)awakeFromNib{
     [super awakeFromNib];
-    
     [self setupControlStatus];
 }
 

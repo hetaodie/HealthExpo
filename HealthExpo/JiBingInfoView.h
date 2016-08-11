@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JiBingDetailObject.h"
 @interface JiBingInfoView : UIView
-
+- (void)showViewWithObject:(JiBingDetailObject *)aObject;
 @end

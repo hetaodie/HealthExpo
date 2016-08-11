@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface JiBingDetailViewController : UIViewController
-
+@property (assign, nonatomic) NSInteger cid;
 @end

@@ -36,4 +36,7 @@
 - (void)getDianXingRenQunDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex;
 
 - (void)getKeShiFenLeiDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex;
+
+
+
 @end

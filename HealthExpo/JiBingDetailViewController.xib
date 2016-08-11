@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JiBingDetailViewController">
             <connections>
+                <outlet property="MessageInfoView" destination="0p0-Pr-f5m" id="N8t-w3-dnp"/>
+                <outlet property="jibingInfoView" destination="dVn-kl-ntd" id="DaL-Lp-IPq"/>
                 <outlet property="searchView" destination="eJj-r5-wEv" id="C6d-Qh-e22"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

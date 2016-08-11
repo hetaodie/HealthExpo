@@ -7,9 +7,16 @@
 //
 
 #import "JiBingDetailViewController.h"
+#import "JiBingDetailmodul.h"
+#import "JiBingInfoView.h"
+#import "MessageInfoView.h"
 
-@interface JiBingDetailViewController ()
+@interface JiBingDetailViewController () <JiBingDetailmodulDelegete>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
+@property (strong, nonatomic) JiBingDetailmodul *modul;
+@property (weak, nonatomic) IBOutlet JiBingInfoView *jibingInfoView;
+@property (weak, nonatomic) IBOutlet MessageInfoView *MessageInfoView;
+
 
 @end
 
@@ -25,6 +32,11 @@
     [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
+    
+    _modul = [[JiBingDetailmodul alloc] init];
+    self.modul.delegate = self;
+    [self.modul getJiBingDetailWithCid:self.cid];
+    
     
 }
 
@@ -45,6 +57,16 @@
 - (IBAction)houtuiButtonPress:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+
+- (void)onGetJiBingDetailSeccess:(JiBingDetailObject *)aObject{
+    [self.jibingInfoView showViewWithObject:aObject];
+}
+
+- (void)onGetJiBingDetailError{
+
 }
 
 @end

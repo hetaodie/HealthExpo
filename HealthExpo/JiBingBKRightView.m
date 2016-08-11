@@ -83,8 +83,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onSelectIndex:)]) {
-        [self.delegate onSelectIndex:row];
+    
+    ClassifyObject *object = [self.contentArray objectAtIndex:row];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onDidSelectRightView:index:)]) {
+        [self.delegate onDidSelectRightView:object index:row];
     }
 }
 

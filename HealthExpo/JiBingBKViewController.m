@@ -87,8 +87,10 @@
     }
 }
 
-- (void)onSelectIndex:(NSUInteger)aIndex{
+- (void)onDidSelectRightView:(ClassifyObject *)aObject  index:(NSInteger)aIndex;{
     JiBingDetailViewController *jkdeVC = [[JiBingDetailViewController alloc] initWithNibName:@"JiBingDetailViewController" bundle:nil];
+    
+    jkdeVC.cid = aObject.id;
     jkdeVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:jkdeVC animated:YES];
 }

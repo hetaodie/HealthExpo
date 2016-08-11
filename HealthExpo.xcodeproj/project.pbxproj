@@ -82,6 +82,8 @@
 		7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCE1D1A69AF00414252 /* LaunchScreen.storyboard */; };
 		7C05E1331D5B2886006D4EA9 /* JiBingModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1321D5B2886006D4EA9 /* JiBingModul.m */; };
 		7C05E1361D5B295A006D4EA9 /* ClassifyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1351D5B295A006D4EA9 /* ClassifyObject.m */; };
+		7C05E1391D5C28A9006D4EA9 /* JiBingDetailmodul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1381D5C28A9006D4EA9 /* JiBingDetailmodul.m */; };
+		7C05E13C1D5C4C24006D4EA9 /* JiBingDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E13B1D5C4C24006D4EA9 /* JiBingDetailObject.m */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -255,6 +257,10 @@
 		7C05E1321D5B2886006D4EA9 /* JiBingModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingModul.m; sourceTree = "<group>"; };
 		7C05E1341D5B295A006D4EA9 /* ClassifyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyObject.h; sourceTree = "<group>"; };
 		7C05E1351D5B295A006D4EA9 /* ClassifyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyObject.m; sourceTree = "<group>"; };
+		7C05E1371D5C28A9006D4EA9 /* JiBingDetailmodul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailmodul.h; sourceTree = "<group>"; };
+		7C05E1381D5C28A9006D4EA9 /* JiBingDetailmodul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailmodul.m; sourceTree = "<group>"; };
+		7C05E13A1D5C4C24006D4EA9 /* JiBingDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailObject.h; sourceTree = "<group>"; };
+		7C05E13B1D5C4C24006D4EA9 /* JiBingDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailObject.m; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -740,6 +746,10 @@
 				7C05E1321D5B2886006D4EA9 /* JiBingModul.m */,
 				7C05E1341D5B295A006D4EA9 /* ClassifyObject.h */,
 				7C05E1351D5B295A006D4EA9 /* ClassifyObject.m */,
+				7C05E1371D5C28A9006D4EA9 /* JiBingDetailmodul.h */,
+				7C05E1381D5C28A9006D4EA9 /* JiBingDetailmodul.m */,
+				7C05E13A1D5C4C24006D4EA9 /* JiBingDetailObject.h */,
+				7C05E13B1D5C4C24006D4EA9 /* JiBingDetailObject.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -953,6 +963,7 @@
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */,
 				69DBC6B11D5705430064346B /* PictureTableViewCell.m in Sources */,
+				7C05E1391D5C28A9006D4EA9 /* JiBingDetailmodul.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
@@ -971,6 +982,7 @@
 				694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
+				7C05E13C1D5C4C24006D4EA9 /* JiBingDetailObject.m in Sources */,
 				69DD74B11D5B462D00730B94 /* NewsDetailViewController.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ClassifyObject.h"
 
 @protocol JiBingBKRightViewDelegate <NSObject>
-
+- (void)onDidSelectRightView:(ClassifyObject *)aObject  index:(NSInteger)aIndex;
 - (void)onSelectIndex:(NSUInteger)aIndex;
 
 @end
