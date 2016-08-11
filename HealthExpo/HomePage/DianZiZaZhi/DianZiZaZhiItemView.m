@@ -12,8 +12,15 @@
 
 @implementation DianZiZaZhiItemView
 
-+ (instancetype)viewFromNib{
-    return [[[NSBundle mainBundle] loadNibNamed:@"DianZiZaZhiItemView" owner:nil options:nil]firstObject];
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        NSString *className = NSStringFromClass([self class]);
+        self.containtView = [[[NSBundle mainBundle] loadNibNamed:className owner:self options:nil] firstObject];
+        [self addSubview:self.containtView];
+        return self;
+    }
+    return nil;
 }
 
 - (void)awakeFromNib{

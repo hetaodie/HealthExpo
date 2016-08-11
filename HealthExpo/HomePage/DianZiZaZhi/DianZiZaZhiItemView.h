@@ -15,13 +15,11 @@
 @interface DianZiZaZhiItemView : UIView
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIView *containtView;
 
 @property (nonatomic, assign) NSInteger itemIndex;
 
 @property (nonatomic, weak) IBOutlet id <DianZiZaZhiItemViewDelegate>delegate;
-
-
-+ (instancetype)viewFromNib;
 
 - (void)fillItemWithCoverUrl:(NSString *)aUrl title:(NSString *)title andIndex:(NSInteger) index;
 @end

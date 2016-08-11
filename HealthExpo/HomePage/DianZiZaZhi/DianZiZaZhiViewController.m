@@ -9,6 +9,9 @@
 #import "DianZiZaZhiViewController.h"
 #import "DianZiZaZhiItemView.h"
 #import "DianZiZaZhiModelSource.h"
+#import "DianZiZaZhiDetailViewController.h"
+#import "SubmissionViewController.h"
+#import "CooperateViewController.h"
 
 @interface DianZiZaZhiViewController ()<DianZiZaZhiItemViewDelegate, DianZiZaZhiModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *firstItemView;
@@ -26,10 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
-    self.firstItemView = [DianZiZaZhiItemView viewFromNib];
-    self.secondItemView = [DianZiZaZhiItemView viewFromNib];
-    self.thirdItemView = [DianZiZaZhiItemView viewFromNib];
-    self.fourthItemView = [DianZiZaZhiItemView viewFromNib];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,9 +64,15 @@
 }
 
 - (IBAction)onTougaoButtonClicked:(id)sender {
+    SubmissionViewController *sVC = [[SubmissionViewController alloc] initWithNibName:@"SubmissionViewController" bundle:nil];
+    sVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:sVC animated:YES];
 }
 
 - (IBAction)onHeZuoButtonClicked:(id)sender {
+    CooperateViewController *cVC = [[CooperateViewController alloc] initWithNibName:@"CooperateViewController" bundle:nil];
+    cVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cVC animated:YES];
 }
 
 - (void)fillDataIndex:(NSInteger)index toItemView:(DianZiZaZhiItemView *)itemView{
@@ -102,6 +107,9 @@
 #pragma mark - DianZiZaZhiItemViewDelegate
 - (void)ClickedDianZiZaZhiItemViewIndex:(NSInteger)index{
     NSDictionary *dict = [self.dataArray objectAtIndex:index];
-    
+    DianZiZaZhiDetailViewController *dzzzdVC = [[DianZiZaZhiDetailViewController alloc] initWithNibName:@"DianZiZaZhiDetailViewController" bundle:nil];
+    [dzzzdVC fillDetailID:dict[@"id"] andTitle:dict[@"title"]];
+    dzzzdVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:dzzzdVC animated:YES];
 }
 @end
