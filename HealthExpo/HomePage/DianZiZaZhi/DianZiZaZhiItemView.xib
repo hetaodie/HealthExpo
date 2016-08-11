@@ -5,9 +5,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DianZiZaZhiItemView">
+            <connections>
+                <outlet property="containtView" destination="iN0-l3-epB" id="Faz-Gn-LUj"/>
+                <outlet property="coverImageView" destination="EBT-Gd-j2I" id="Pmy-AS-b4Q"/>
+                <outlet property="titleLabel" destination="trK-1w-Ehs" id="TrE-f3-Fv9"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DianZiZaZhiItemView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="188" height="224"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -30,7 +36,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-Ge-BPF">
                     <rect key="frame" x="0.0" y="0.0" width="188" height="224"/>
                     <connections>
-                        <action selector="ItemClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="TMI-Rn-JmN"/>
+                        <action selector="ItemClicked:" destination="-1" eventType="touchUpInside" id="plg-TP-LJk"/>
                     </connections>
                 </button>
             </subviews>
@@ -48,10 +54,6 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="coverImageView" destination="EBT-Gd-j2I" id="HKZ-Do-F0I"/>
-                <outlet property="titleLabel" destination="trK-1w-Ehs" id="s0S-h4-XHF"/>
-            </connections>
         </view>
     </objects>
 </document>

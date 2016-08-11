@@ -114,6 +114,7 @@
     NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
     HomePageNewsItem *item = self.dataArray[indexPath.row];
     ndVC.newsID = [NSString stringWithFormat:@"%zd", item.ID];
+    ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 }
 
