@@ -34,22 +34,16 @@
 }
 
 - (void)setjibingLiuYan:(LiuYanObject *)aObject{
-    return;
-    NSString *urlPath =[NSString stringWithFormat:@"/mobile/newCommentInfo.action?cid=%ld&username=%@phone=%@&content=%@",(long)aObject.id,aObject.username,aObject.phone,aObject.content];
+    NSString *urlPath =[NSString stringWithFormat:@"/mobile/newCommentInfo.action?cid=%ld&username=%@&phone=%@&content=%@",(long)aObject.id,aObject.username,aObject.phone,aObject.content];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSLog(@"%@", responseObject);
-        //        JiBingDetailObject *object = [self getDetailObjectFromDictionary:responseObject];
-        //        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetJiBingDetailSeccess:)]) {
-        //            [weakSelf.delegate onGetJiBingDetailSeccess:object];
-        //        }
+
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-        //        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetJiBingDetailError)]) {
-        //            [weakSelf.delegate onGetJiBingDetailError];
-        //        }
+ 
     };
     
     [task runInMethod:HE_GET];

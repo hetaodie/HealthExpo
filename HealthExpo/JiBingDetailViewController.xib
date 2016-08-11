@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="MessageInfoView" destination="0p0-Pr-f5m" id="N8t-w3-dnp"/>
                 <outlet property="jibingInfoView" destination="dVn-kl-ntd" id="DaL-Lp-IPq"/>
+                <outlet property="messageReplyView" destination="cVj-Zw-bEm" id="fU5-EW-b8g"/>
                 <outlet property="searchView" destination="eJj-r5-wEv" id="C6d-Qh-e22"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-Ob-hEf">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-Ob-hEf" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibw-Gh-u76">
@@ -83,14 +84,22 @@
                     <rect key="frame" x="0.0" y="279" width="600" height="321"/>
                     <color key="backgroundColor" red="0.72946259469999997" green="0.42235293499999998" blue="0.060168584999999997" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVj-Zw-bEm" customClass="MessageReplyView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="0p0-Pr-f5m" secondAttribute="trailing" id="318-l3-dd1"/>
+                <constraint firstItem="cVj-Zw-bEm" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="bottom" id="9Fd-4t-dzU"/>
+                <constraint firstAttribute="trailing" secondItem="cVj-Zw-bEm" secondAttribute="trailing" id="BnD-XH-TDO"/>
                 <constraint firstAttribute="trailing" secondItem="oWq-Ob-hEf" secondAttribute="trailing" id="DOo-bF-sKX"/>
                 <constraint firstItem="0p0-Pr-f5m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wjp-3f-R4x"/>
                 <constraint firstItem="dVn-kl-ntd" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="bottom" id="Xj1-rw-XcF"/>
                 <constraint firstItem="oWq-Ob-hEf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aUD-nu-FxO"/>
+                <constraint firstItem="cVj-Zw-bEm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aVi-jh-eGM"/>
+                <constraint firstAttribute="bottom" secondItem="cVj-Zw-bEm" secondAttribute="bottom" id="cor-3E-PRS"/>
                 <constraint firstAttribute="bottom" secondItem="0p0-Pr-f5m" secondAttribute="bottom" id="gfP-LE-jFO"/>
                 <constraint firstItem="oWq-Ob-hEf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hMW-4v-ldQ"/>
                 <constraint firstItem="0p0-Pr-f5m" firstAttribute="top" secondItem="dVn-kl-ntd" secondAttribute="bottom" id="nYr-Gx-Hei"/>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageReplyView">
+            <connections>
+                <outlet property="contentView" destination="QfN-wi-5Pp" id="2Kg-fU-xqQ"/>
+                <outlet property="textView" destination="nph-gD-tV3" id="1Bs-jQ-dvu"/>
+                <outlet property="textViewBottomContraint" destination="PGX-wY-5Ev" id="gAO-15-ZTb"/>
+                <outlet property="textViewHeightConstraint" destination="vPW-ya-0r8" id="sIt-iw-Dzp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QfN-wi-5Pp">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jd9-7L-tkz">
+                    <rect key="frame" x="0.0" y="525" width="600" height="75"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1111111" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nph-gD-tV3">
+                    <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                    <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="AhH-1m-gVD"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="v07-g7-KUN"/>
+                        <constraint firstAttribute="height" priority="800" constant="30" id="vPW-ya-0r8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ5-Zs-0Er">
+                    <rect key="frame" x="15" y="525" width="30" height="30"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnCannelPress:" destination="-1" eventType="touchUpInside" id="akv-YN-guc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFs-2C-ZL7">
+                    <rect key="frame" x="555" y="525" width="30" height="30"/>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSendPress:" destination="-1" eventType="touchUpInside" id="UL5-7e-GcA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nph-gD-tV3" secondAttribute="bottom" id="PGX-wY-5Ev"/>
+                <constraint firstItem="nph-gD-tV3" firstAttribute="leading" secondItem="QfN-wi-5Pp" secondAttribute="leading" id="SIu-pC-T0z"/>
+                <constraint firstItem="BJ5-Zs-0Er" firstAttribute="leading" secondItem="QfN-wi-5Pp" secondAttribute="leading" constant="15" id="cE5-Vw-LSu"/>
+                <constraint firstItem="Jd9-7L-tkz" firstAttribute="leading" secondItem="QfN-wi-5Pp" secondAttribute="leading" id="db9-gR-7zF"/>
+                <constraint firstAttribute="bottom" secondItem="Jd9-7L-tkz" secondAttribute="bottom" id="eYE-Wr-Az4"/>
+                <constraint firstItem="Jd9-7L-tkz" firstAttribute="top" secondItem="BJ5-Zs-0Er" secondAttribute="top" id="kS7-8t-kbn"/>
+                <constraint firstAttribute="trailing" secondItem="Jd9-7L-tkz" secondAttribute="trailing" id="mCi-Lf-wM2"/>
+                <constraint firstItem="nph-gD-tV3" firstAttribute="top" secondItem="BJ5-Zs-0Er" secondAttribute="bottom" constant="15" id="r8O-A9-kML"/>
+                <constraint firstAttribute="trailing" secondItem="jFs-2C-ZL7" secondAttribute="trailing" constant="15" id="riJ-Jr-6Tf"/>
+                <constraint firstItem="nph-gD-tV3" firstAttribute="top" secondItem="jFs-2C-ZL7" secondAttribute="bottom" constant="15" id="sbl-P0-QG7"/>
+                <constraint firstAttribute="trailing" secondItem="nph-gD-tV3" secondAttribute="trailing" id="syU-Vq-QHl"/>
+            </constraints>
+            <point key="canvasLocation" x="394" y="413"/>
+        </view>
+    </objects>
+</document>

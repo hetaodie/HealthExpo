@@ -86,6 +86,8 @@
 		7C05E13C1D5C4C24006D4EA9 /* JiBingDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E13B1D5C4C24006D4EA9 /* JiBingDetailObject.m */; };
 		7C05E13F1D5C5B0C006D4EA9 /* LiuYanModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E13E1D5C5B0C006D4EA9 /* LiuYanModul.m */; };
 		7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1411D5C6431006D4EA9 /* LiuYanObject.m */; };
+		7C05E1451D5C7D1A006D4EA9 /* MessageReplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1441D5C7D1A006D4EA9 /* MessageReplyView.m */; };
+		7C05E1471D5C7DB6006D4EA9 /* MessageReplyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E1461D5C7DB6006D4EA9 /* MessageReplyView.xib */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -267,6 +269,9 @@
 		7C05E13E1D5C5B0C006D4EA9 /* LiuYanModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuYanModul.m; sourceTree = "<group>"; };
 		7C05E1401D5C6431006D4EA9 /* LiuYanObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiuYanObject.h; sourceTree = "<group>"; };
 		7C05E1411D5C6431006D4EA9 /* LiuYanObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiuYanObject.m; sourceTree = "<group>"; };
+		7C05E1431D5C7D1A006D4EA9 /* MessageReplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageReplyView.h; sourceTree = "<group>"; };
+		7C05E1441D5C7D1A006D4EA9 /* MessageReplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageReplyView.m; sourceTree = "<group>"; };
+		7C05E1461D5C7DB6006D4EA9 /* MessageReplyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageReplyView.xib; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -738,6 +743,9 @@
 				7C67443D1D2BC3B100661276 /* MessageInfoView.h */,
 				7C67443E1D2BC3B100661276 /* MessageInfoView.m */,
 				7C6744401D2BC3BE00661276 /* MessageInfoView.xib */,
+				7C05E1431D5C7D1A006D4EA9 /* MessageReplyView.h */,
+				7C05E1441D5C7D1A006D4EA9 /* MessageReplyView.m */,
+				7C05E1461D5C7DB6006D4EA9 /* MessageReplyView.xib */,
 				7C6744561D2CE68E00661276 /* YiMiaoDetailView.h */,
 				7C6744571D2CE68E00661276 /* YiMiaoDetailView.m */,
 				7C6744591D2CE6A900661276 /* YiMiaoDetailView.xib */,
@@ -879,6 +887,7 @@
 				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
 				694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
+				7C05E1471D5C7DB6006D4EA9 /* MessageReplyView.xib in Resources */,
 				7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,6 +972,7 @@
 				7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */,
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				7C6744791D2D25F600661276 /* YiYuanViewController.m in Sources */,
+				7C05E1451D5C7D1A006D4EA9 /* MessageReplyView.m in Sources */,
 				69DD74AC1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m in Sources */,
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */,

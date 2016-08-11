@@ -11,14 +11,17 @@
 #import "JiBingInfoView.h"
 #import "MessageInfoView.h"
 #import "LiuYanModul.h"
+#import "MessageReplyView.h"
+#import "LiuYanObject.h"
 
-@interface JiBingDetailViewController () <JiBingDetailmodulDelegete,LiuYanModulDelegate>
+@interface JiBingDetailViewController () <JiBingDetailmodulDelegete,LiuYanModulDelegate,MessageInfoViewDelegate,MessageReplyViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (strong, nonatomic) JiBingDetailmodul *modul;
 @property (strong, nonatomic) LiuYanModul *liuYanModul;
 
 @property (weak, nonatomic) IBOutlet JiBingInfoView *jibingInfoView;
 @property (weak, nonatomic) IBOutlet MessageInfoView *MessageInfoView;
+@property (weak, nonatomic) IBOutlet MessageReplyView *messageReplyView;
 
 
 @end
@@ -44,8 +47,11 @@
     self.liuYanModul.delegate = self;
 
     [self.liuYanModul getLiyanList:self.cid];
-    [self.liuYanModul setjibingLiuYan:nil];
-    [self.liuYanModul liuYanReply:nil];
+//    [self.liuYanModul setjibingLiuYan:nil];
+//    [self.liuYanModul liuYanReply:nil];
+    
+    self.MessageInfoView.delegate = self;
+    self.messageReplyView.delegate = self;
     
 }
 
@@ -85,4 +91,19 @@
 
 }
 
+
+- (void)onBtnMessagePress{
+    self.messageReplyView.hidden = NO;
+}
+
+- (void)onSendMessageBtnPress:(NSString *)content{
+    LiuYanObject *object = [[LiuYanObject alloc] init];
+    object.id =self.cid;
+    object.username = @"weixu";
+    object.phone = @"15067152144";
+    object.content = content;
+    
+    [self.liuYanModul setjibingLiuYan:object];
+    [self.messageReplyView setHidden:YES];
+}
 @end

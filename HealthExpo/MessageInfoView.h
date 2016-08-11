@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MessageInfoViewDelegate <NSObject>
+
+- (void)onBtnMessagePress;
+
+@end
+
 @interface MessageInfoView : UIView
+@property (nonatomic, weak) id <MessageInfoViewDelegate>delegate;
 
 - (void)showViewWithArray:(NSArray *)aArray;
 @end

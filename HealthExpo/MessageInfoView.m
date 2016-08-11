@@ -36,6 +36,11 @@
     _contentArray = [[NSMutableArray alloc] init];
 }
 
+- (IBAction)btnMessage:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onBtnMessagePress)]) {
+        [self.delegate onBtnMessagePress];
+    }
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
