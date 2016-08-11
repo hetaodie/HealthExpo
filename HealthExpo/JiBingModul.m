@@ -34,7 +34,24 @@
 }
 
 - (void)getKeShiFenLei{
-
+    NSString *urlPath = @"/mobile/getCategory.action?catid=9";
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
+        NSLog(@"%@", responseObject);
+        NSMutableArray *array = [self getArrayWithResponstObject:responseObject];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetKeShiFenLei:)]) {
+            [weakSelf.delegate onGetKeShiFenLei:array];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetKeShiFenLeiError)]) {
+            [weakSelf.delegate onGetKeShiFenLeiError];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
 }
 
 - (void)getDianXingRenQunDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex{
@@ -60,7 +77,24 @@
 }
 
 - (void)getKeShiFenLeiDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex{
-
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList1.action?catid=%ld",(long)aObject.id];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
+        NSLog(@"%@", responseObject);
+        NSMutableArray *array = [self getArrayWithResponstObject:responseObject];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetKeShiFenLeiDetailSeccess:index:)]) {
+            [weakSelf.delegate onGetKeShiFenLeiDetailSeccess:array index:aIndex];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetKeShiFenLeiDetailErrorindex:)]) {
+            [weakSelf.delegate onGetKeShiFenLeiDetailErrorindex:aIndex];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
 }
 
 
@@ -101,6 +135,9 @@
         else if ([aTitle isEqualToString:@"儿童"]) {
             image = [UIImage imageNamed:@"ertong2"];
         }
+        else{
+            image = [UIImage imageNamed:@"nanxing2"];
+        }
     }
     else{
         if ([aTitle isEqualToString:@"上班族"]) {
@@ -117,6 +154,9 @@
         }
         else if ([aTitle isEqualToString:@"儿童"]) {
             image = [UIImage imageNamed:@"ertong"];
+        }
+        else{
+            image = [UIImage imageNamed:@"nanxing"];
         }
     }
     

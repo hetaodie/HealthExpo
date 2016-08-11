@@ -11,12 +11,16 @@
 #import "JiBingBKRightView.h"
 #import "JiBingDetailViewController.h"
 #import "JiBingModul.h"
-@interface JiBingBKViewController ()<JiBingBKRightViewDelegate,JiBingModulDelegate>
+#import "JiBingBKTopView.h"
+
+@interface JiBingBKViewController ()<JiBingBKRightViewDelegate,JiBingModulDelegate,JiBingBKLeftViewDelegate,JiBingBKTopViewDelegate>
 @property (weak, nonatomic) IBOutlet JiBingBKLeftView *leftView;
 @property (weak, nonatomic) IBOutlet JiBingBKRightView *rightView;
 
 @property (strong, nonatomic) NSMutableDictionary *contentDic;
 @property (strong, nonatomic) JiBingModul *modul;
+@property (weak, nonatomic) IBOutlet JiBingBKTopView *topView;
+@property (nonatomic, assign) NSInteger selectIndex;
 
 @end
 
@@ -24,8 +28,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.navigationItem.title = @"疾病百科";
+    
+    self.selectIndex = 0;
+    
+    self.navigationItem.title = @"疾病百科";
+    
     self.rightView.delegate = self;
+    self.leftView.delegate = self;
+    self.topView.delegate = self;
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 12, 21);
@@ -40,7 +50,6 @@
     [self.modul getDianXingRenQun];
     
 }
-
 
 
 - (void)doBack:(id)sender{
@@ -58,6 +67,26 @@
 
 #pragma mark - Navigation
 
+- (void)onSelectButtonOfIndex:(NSInteger)aIndex{
+    self.selectIndex = aIndex;
+    
+    if (aIndex == 0) {
+        [self.modul getDianXingRenQun];
+    }
+    else{
+         [self.modul getKeShiFenLei];
+    }
+}
+
+- (void)onDidSelectLeftView:(ClassifyObject *)aObject index:(NSInteger)aIndex{
+    if (self.selectIndex == 0) {
+        [self.modul getDianXingRenQunDetail:aObject index:aIndex];
+    }
+    else{
+        [self.modul getKeShiFenLeiDetail:aObject index:aIndex];
+    }
+}
+
 - (void)onSelectIndex:(NSUInteger)aIndex{
     JiBingDetailViewController *jkdeVC = [[JiBingDetailViewController alloc] initWithNibName:@"JiBingDetailViewController" bundle:nil];
     jkdeVC.hidesBottomBarWhenPushed = YES;
@@ -69,11 +98,27 @@
     [self.leftView showContentWithArray:aArray];
 }
 
-- (void)onGetDianXingRenQunError{
+- (void)onGetKeShiFenLei:(NSMutableArray *)aArray{
+     [self.leftView showContentWithArray:aArray];
+}
 
+- (void)onGetDianXingRenQunError{
+    
 }
 
 - (void)onGetKeShiFenLeiError{
+
+}
+
+- (void)onGetDianXingRenQunDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex{
+    [self.rightView showContentWithArray:aArray];
+}
+
+- (void)onGetKeShiFenLeiDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex{
+     [self.rightView showContentWithArray:aArray];
+}
+
+- (void)onGetDianXingRenQunDetailErrorindex:(NSInteger)aIndex{
 
 }
 

@@ -24,4 +24,9 @@
 
 }
 
+
+- (void)showCellWithClassifyObject:(ClassifyObject *)aObject{
+    self.titleLabel.text = aObject.title;
+
+}
 @end

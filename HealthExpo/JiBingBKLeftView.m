@@ -32,6 +32,10 @@
 
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.tableView selectRowAtIndexPath:indexPath animated:NO  scrollPosition:UITableViewScrollPositionTop];
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onDidSelectLeftView:index:)]) {
+            [self.delegate onDidSelectLeftView:[aArray objectAtIndex:0] index:0];
+        }
     }
 
 }
@@ -80,6 +84,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
     
+    ClassifyObject *object = [self.contentArray objectAtIndex:row];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onDidSelectLeftView:index:)]) {
+        [self.delegate onDidSelectLeftView:object index:row];
+    }
 }
 @end

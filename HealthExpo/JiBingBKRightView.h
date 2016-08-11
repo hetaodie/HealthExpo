@@ -17,4 +17,5 @@
 @interface JiBingBKRightView : UIView
 @property (nonatomic, weak) id <JiBingBKRightViewDelegate>delegate;
 
+- (void)showContentWithArray:(NSArray *)aArray;
 @end

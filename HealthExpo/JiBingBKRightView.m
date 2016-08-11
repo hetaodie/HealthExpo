@@ -16,11 +16,25 @@
 
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *contentArray;
 
 @end
 
 
 @implementation JiBingBKRightView
+
+- (void)showContentWithArray:(NSArray *)aArray{
+
+    [self.contentArray setArray:aArray];
+    
+    [self.tableView reloadData];
+}
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    
+    _contentArray = [[NSMutableArray alloc] init];
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -55,11 +69,15 @@
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"JiBingBKRightViewCell" owner:nil options:nil];
         cell = [views firstObject];
     }
+    
+    ClassifyObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    [cell showCellWithClassifyObject:object];
     return  cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    NSInteger count = [self.contentArray count];
+    return count;
 }
 
 

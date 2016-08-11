@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="leftView" destination="uzi-fx-l7U" id="uMa-PA-eKI"/>
                 <outlet property="rightView" destination="Ktr-4R-6mZ" id="b3B-G1-FBV"/>
+                <outlet property="topView" destination="F1k-tO-ZJa" id="6Hw-8V-BeU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
