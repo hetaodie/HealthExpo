@@ -46,6 +46,7 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(onSendMessageBtnPress:)]) {
         [self.delegate onSendMessageBtnPress:self.textView.text];
     }
+    self.textView.text = @"";
 }
 - (void)layoutSubviews{
     [super layoutSubviews];

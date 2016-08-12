@@ -14,6 +14,10 @@
 
 - (void)onGetLiyanListError;
 
+- (void)oncexiaoSeccess;
+
+- (void)oncexiaoError;
+
 @end
 
 @interface LiuYanModul : NSObject

@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "LiuYanObject.h"
 
+@protocol MessageInfoViewCellDelegate <NSObject>
+
+- (void)onDeleteMessageBtnPress:(LiuYanObject *)aObject;
+
+- (void)onReplayMessageBtnPress:(LiuYanObject *)aObject;
+
+@end
+
 @interface MessageInfoViewCell : UITableViewCell
+@property (nonatomic, weak) id <MessageInfoViewCellDelegate>delegate;
 
 +(CGFloat)heighCellOfIndex:(NSInteger)aIndex;
 

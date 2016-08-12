@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiuYanObject.h"
 
 @protocol MessageInfoViewDelegate <NSObject>
 
 - (void)onBtnMessagePress;
+
+- (void)onDeleteMessageWithObject:(LiuYanObject *)aObject;
+
+- (void)onReplayMessageWithObject:(LiuYanObject *)aObject;
 
 @end
 

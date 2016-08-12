@@ -22,9 +22,11 @@
                     <rect key="frame" x="0.0" y="525" width="600" height="75"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="80_button_hollow_normal" translatesAutoresizingMaskIntoConstraints="NO" id="gfC-0j-h7C">
+                    <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1111111" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nph-gD-tV3">
                     <rect key="frame" x="0.0" y="570" width="600" height="30"/>
-                    <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="AhH-1m-gVD"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="v07-g7-KUN"/>
@@ -54,8 +56,12 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="gfC-0j-h7C" firstAttribute="trailing" secondItem="nph-gD-tV3" secondAttribute="trailing" id="0Si-JK-aWl"/>
+                <constraint firstItem="gfC-0j-h7C" firstAttribute="bottom" secondItem="nph-gD-tV3" secondAttribute="bottom" id="6Xd-zN-aEX"/>
+                <constraint firstItem="gfC-0j-h7C" firstAttribute="leading" secondItem="nph-gD-tV3" secondAttribute="leading" id="CJf-Iv-GAu"/>
                 <constraint firstAttribute="bottom" secondItem="nph-gD-tV3" secondAttribute="bottom" id="PGX-wY-5Ev"/>
                 <constraint firstItem="nph-gD-tV3" firstAttribute="leading" secondItem="QfN-wi-5Pp" secondAttribute="leading" id="SIu-pC-T0z"/>
+                <constraint firstItem="gfC-0j-h7C" firstAttribute="top" secondItem="nph-gD-tV3" secondAttribute="top" id="T0Z-41-WWM"/>
                 <constraint firstItem="BJ5-Zs-0Er" firstAttribute="leading" secondItem="QfN-wi-5Pp" secondAttribute="leading" constant="15" id="cE5-Vw-LSu"/>
                 <constraint firstItem="Jd9-7L-tkz" firstAttribute="leading" secondItem="QfN-wi-5Pp" secondAttribute="leading" id="db9-gR-7zF"/>
                 <constraint firstAttribute="bottom" secondItem="Jd9-7L-tkz" secondAttribute="bottom" id="eYE-Wr-Az4"/>
@@ -69,4 +75,7 @@
             <point key="canvasLocation" x="394" y="413"/>
         </view>
     </objects>
+    <resources>
+        <image name="80_button_hollow_normal" width="165" height="40"/>
+    </resources>
 </document>

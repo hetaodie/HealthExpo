@@ -11,7 +11,7 @@
 #import "UIColor+HEX.h"
 
 
-@interface MessageInfoView()<UITableViewDelegate,UITableViewDataSource>
+@interface MessageInfoView()<UITableViewDelegate,UITableViewDataSource,MessageInfoViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *leaveMessageButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -76,6 +76,7 @@
     if (!cell) {
         NSArray *views =[[NSBundle mainBundle] loadNibNamed:@"MessageInfoViewCell" owner:nil options:nil];
         cell = [views firstObject];
+        cell.delegate = self;
     }
     
     LiuYanObject *object = [self.contentArray objectAtIndex:indexPath.row];
@@ -89,5 +90,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger count = [self.contentArray count];
     return count;
+}
+
+- (void)onReplayMessageBtnPress:(LiuYanObject *)aObject{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onReplayMessageWithObject:)]) {
+        [self.delegate onReplayMessageWithObject:aObject];
+    }
+}
+
+- (void)onDeleteMessageBtnPress:(LiuYanObject *)aObject{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onDeleteMessageWithObject:)]) {
+        [self.delegate onDeleteMessageWithObject:aObject];
+    }
 }
 @end

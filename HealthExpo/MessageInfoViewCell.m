@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @property (weak, nonatomic) IBOutlet UIView *middeView;
+@property (strong, nonatomic) LiuYanObject *object;
 @end
 
 @implementation MessageInfoViewCell
@@ -52,8 +53,21 @@
 }
 
 - (void)showCellWithObject:(LiuYanObject *)aObject{
+    self.object = aObject;
     self.titleLabel.text = aObject.username;
     self.fristContentLabel.text = aObject.content;
+}
+
+- (IBAction)deleteBtnPRess:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onDeleteMessageBtnPress:)]) {
+        [self.delegate onDeleteMessageBtnPress:self.object];
+    }
+}
+
+- (IBAction)pingLunBtnPress:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onReplayMessageBtnPress:)]) {
+        [self.delegate onReplayMessageBtnPress:self.object];
+    }
 }
 
 @end

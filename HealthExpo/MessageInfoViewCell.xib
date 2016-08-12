@@ -95,6 +95,9 @@
                             <constraint firstAttribute="height" constant="15" id="WkP-tu-tPP"/>
                         </constraints>
                         <state key="normal" image="shanchu"/>
+                        <connections>
+                            <action selector="deleteBtnPRess:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gi5-6B-mfF"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj2-0k-WvJ">
                         <rect key="frame" x="290" y="71" width="15" height="14"/>
@@ -103,6 +106,9 @@
                             <constraint firstAttribute="height" constant="14" id="zjE-Sg-xbF"/>
                         </constraints>
                         <state key="normal" image="pinglun"/>
+                        <connections>
+                            <action selector="pingLunBtnPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b1G-XO-1oB"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

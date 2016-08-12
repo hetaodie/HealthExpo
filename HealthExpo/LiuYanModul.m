@@ -50,7 +50,23 @@
 }
 
 - (void)cexiaoLiuYan:(LiuYanObject *)aObject{
-
+    NSString *urlPath =[NSString stringWithFormat:@"/mobile/delCommentInfo.action?cmid=%ld",(long)aObject.id];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject);
+        if (self.delegate && [self.delegate respondsToSelector:@selector(oncexiaoSeccess)]) {
+            [self.delegate oncexiaoSeccess];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(oncexiaoError)]) {
+            [self.delegate oncexiaoError];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
 }
 
 - (void)liuYanReply:(LiuYanObject *)aObject{
@@ -78,7 +94,7 @@
     NSMutableArray *array = [NSMutableArray array];
     for (NSDictionary *dic in aArray){
         LiuYanObject *object = [[LiuYanObject alloc] init];
-        object.id    = dic[@"id"];
+        object.id    = [dic[@"id"] integerValue];
         object.username = dic[@"username"];
         object.dateLong = [dic[@"createdDate"] longLongValue];
         object.phone = dic[@"phone"];

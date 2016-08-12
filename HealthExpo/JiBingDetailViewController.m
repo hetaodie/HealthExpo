@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet JiBingInfoView *jibingInfoView;
 @property (weak, nonatomic) IBOutlet MessageInfoView *MessageInfoView;
 @property (weak, nonatomic) IBOutlet MessageReplyView *messageReplyView;
+@property (assign, nonatomic) NSInteger messageOrReplay;   // 0 表示是留言， 1 表示是回复
+@property (strong, nonatomic) LiuYanObject *replayLiuYanObject;
 
 
 @end
@@ -94,16 +96,44 @@
 
 - (void)onBtnMessagePress{
     self.messageReplyView.hidden = NO;
+    self.messageOrReplay = 0;
 }
 
 - (void)onSendMessageBtnPress:(NSString *)content{
-    LiuYanObject *object = [[LiuYanObject alloc] init];
-    object.id =self.cid;
-    object.username = @"weixu";
-    object.phone = @"15067152144";
-    object.content = content;
     
-    [self.liuYanModul setjibingLiuYan:object];
-    [self.messageReplyView setHidden:YES];
+    if (self.messageOrReplay == 0) {
+        LiuYanObject *object = [[LiuYanObject alloc] init];
+        object.id =self.cid;
+        object.username = @"weixu";
+        object.phone = @"15067152144";
+        object.content = content;
+        
+        [self.liuYanModul setjibingLiuYan:object];
+        [self.messageReplyView setHidden:YES];
+    }
+    else{
+
+        self.replayLiuYanObject.content = content;
+        [self.liuYanModul liuYanReply:self.replayLiuYanObject];
+        [self.messageReplyView setHidden:YES];
+    }
+
+}
+
+- (void)onDeleteMessageWithObject:(LiuYanObject *)aObject{
+    [self.liuYanModul cexiaoLiuYan:aObject];
+}
+
+- (void)onReplayMessageWithObject:(LiuYanObject *)aObject{
+    self.messageOrReplay = 1;
+    self.replayLiuYanObject = aObject;
+}
+
+- (void)oncexiaoSeccess{
+     [self.liuYanModul getLiyanList:self.cid];
+}
+
+- (void)oncexiaoError{
+
 }
 @end
