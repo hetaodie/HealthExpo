@@ -8,9 +8,20 @@
 
 #import "DianZiZaZhiDetailViewController.h"
 #import "DianZiZaZhiDetailModelSource.h"
+#import "HENetTask.h"
+#import "UIImageView+WebCache.h"
 
 @interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate>
 @property DianZiZaZhiDetailModelSource *modelSource;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UILabel *oneLabel;
+@property (strong, nonatomic) IBOutlet UILabel *twoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *threeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *fourLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *fiveLabel;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation DianZiZaZhiDetailViewController
@@ -61,8 +72,14 @@
 
 
 #pragma mark -- DianZiZaZhiDetailModelSourceDelegate
-- (void)getDianZiZaZhiDetailSuccess:(NSArray *)dataArr{
-    
+- (void)getDianZiZaZhiDetailSuccess:(NSDictionary *)dict{
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@", HEHttpServer, dict[@"picurl"]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"dianzizazhi1"]];
+    self.oneLabel.text = dict[@"content1"];
+    self.twoLabel.text = dict[@"content2"];
+    self.threeLabel.text = dict[@"content3"];
+    self.fourLabel.text = dict[@"content4"];
+    self.fiveLabel.text = dict[@"contenttext"];
 }
 
 - (void)getDianZiZaZhiDetailFailed{

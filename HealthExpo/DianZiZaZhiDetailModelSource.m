@@ -15,7 +15,6 @@
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiDetailSuccess:)]) {
             [weakSelf.delegate getDianZiZaZhiDetailSuccess:responseObject];
         }

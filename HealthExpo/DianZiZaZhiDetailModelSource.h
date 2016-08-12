@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @protocol DianZiZaZhiDetailModelSourceDelegate <NSObject>
-- (void)getDianZiZaZhiDetailSuccess:(NSArray *)dataArr;
+- (void)getDianZiZaZhiDetailSuccess:(NSDictionary *)dict;
 - (void)getDianZiZaZhiDetailFailed;
 
 @end
@@ -17,4 +17,5 @@
 @property (nonatomic, weak)id <DianZiZaZhiDetailModelSourceDelegate>delegate;
 
 - (void)getDianZiZaZhiDetailWithID:(NSString *)cID;
+
 @end
