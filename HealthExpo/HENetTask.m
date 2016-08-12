@@ -28,6 +28,14 @@
     return self;
 }
 
+- (instancetype)initWithTotalUrlString:(NSString *)aUrl{
+    self = [super init];
+    if (self) {
+        self.urlString = aUrl;
+    }
+    return self;
+}
+
 - (void)runInMethod:(HEHttpMethod)method{
     NSURL *url = [NSURL URLWithString:self.urlString];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

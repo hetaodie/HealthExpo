@@ -62,6 +62,14 @@ typedef void(^HENetTaskFailedBlock)(NSURLSessionDataTask *, NSError *);
  */
 - (instancetype)initWithUrlString:(NSString *)aPath;
 /**
+ *  初始化方法，由完整的url string 创建
+ *
+ *  @param aUrl url
+ *
+ *  @return 创建对象
+ */
+- (instancetype)initWithTotalUrlString:(NSString *)aUrl;
+/**
  *  发起Http请求
  *
  *  @param method HTTP请求方法

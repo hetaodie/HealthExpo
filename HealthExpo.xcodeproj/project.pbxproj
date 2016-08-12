@@ -50,6 +50,8 @@
 		69DBC6AD1D5705190064346B /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6AB1D5705190064346B /* TextTableViewCell.xib */; };
 		69DBC6B11D5705430064346B /* PictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AF1D5705430064346B /* PictureTableViewCell.m */; };
 		69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6B01D5705430064346B /* PictureTableViewCell.xib */; };
+		69DC279E1D5DF386006EEF68 /* PhoneModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */; };
+		69DC27A11D5DF3AC006EEF68 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC27A01D5DF3AC006EEF68 /* NSString+MD5.m */; };
 		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
 		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
 		69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */; };
@@ -210,6 +212,10 @@
 		69DBC6AE1D5705430064346B /* PictureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureTableViewCell.h; path = Phone/PictureTableViewCell.h; sourceTree = "<group>"; };
 		69DBC6AF1D5705430064346B /* PictureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureTableViewCell.m; path = Phone/PictureTableViewCell.m; sourceTree = "<group>"; };
 		69DBC6B01D5705430064346B /* PictureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PictureTableViewCell.xib; path = Phone/PictureTableViewCell.xib; sourceTree = "<group>"; };
+		69DC279C1D5DF386006EEF68 /* PhoneModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneModelSource.h; sourceTree = "<group>"; };
+		69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneModelSource.m; sourceTree = "<group>"; };
+		69DC279F1D5DF3AC006EEF68 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		69DC27A01D5DF3AC006EEF68 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerMessageItem.h; sourceTree = "<group>"; };
 		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
 		69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JiBingBKModelSource.h; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.h; sourceTree = "<group>"; };
@@ -554,6 +560,8 @@
 			children = (
 				53BC4C7F1D291CB3009035BC /* HENetTask.h */,
 				53BC4C801D291CB3009035BC /* HENetTask.m */,
+				69DC279F1D5DF3AC006EEF68 /* NSString+MD5.h */,
+				69DC27A01D5DF3AC006EEF68 /* NSString+MD5.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -635,6 +643,8 @@
 				69E4BE571D1D108C00B555FD /* PhoneViewController.h */,
 				69E4BE581D1D108C00B555FD /* PhoneViewController.m */,
 				69E4BE591D1D108C00B555FD /* PhoneViewController.xib */,
+				69DC279C1D5DF386006EEF68 /* PhoneModelSource.h */,
+				69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */,
 			);
 			name = Phone;
 			sourceTree = "<group>";
@@ -1022,10 +1032,12 @@
 				53AD055B1D2C072F00557942 /* HEDataCategory.m in Sources */,
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				7C67443F1D2BC3B100661276 /* MessageInfoView.m in Sources */,
+				69DC279E1D5DF386006EEF68 /* PhoneModelSource.m in Sources */,
 				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
 				7C67445E1D2D1E0A00661276 /* YiLiaoJiGouViewController.m in Sources */,
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
+				69DC27A11D5DF3AC006EEF68 /* NSString+MD5.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				7C05E1331D5B2886006D4EA9 /* JiBingModul.m in Sources */,
 				69DD74A81D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m in Sources */,
