@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController">
             <connections>
+                <outlet property="contextView" destination="7fV-KS-RjW" id="eBw-4h-xcB"/>
+                <outlet property="imageView" destination="Ewz-uT-xgm" id="34f-CY-7h5"/>
+                <outlet property="titleLabel" destination="RbA-Yh-Tsy" id="pO3-y9-wfJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +17,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-uT-xgm">
+                    <rect key="frame" x="15" y="79" width="570" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="xtd-CT-sA8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbA-Yh-Tsy">
+                    <rect key="frame" x="15" y="249" width="570" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="UPa-SL-ATH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fV-KS-RjW">
+                    <rect key="frame" x="15" y="290" width="570" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="Wf7-2W-aU9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ewz-uT-xgm" secondAttribute="trailing" constant="15" id="0WN-Dx-Fq8"/>
+                <constraint firstAttribute="trailing" secondItem="7fV-KS-RjW" secondAttribute="trailing" constant="15" id="AH7-5u-Ryz"/>
+                <constraint firstItem="7fV-KS-RjW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Ht5-Z3-mjv"/>
+                <constraint firstAttribute="trailing" secondItem="RbA-Yh-Tsy" secondAttribute="trailing" constant="15" id="Nvv-E2-1xq"/>
+                <constraint firstItem="Ewz-uT-xgm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="UyU-g4-WJh"/>
+                <constraint firstItem="RbA-Yh-Tsy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Xo4-he-OxI"/>
+                <constraint firstItem="7fV-KS-RjW" firstAttribute="top" secondItem="RbA-Yh-Tsy" secondAttribute="bottom" constant="20" id="Zje-fW-epH"/>
+                <constraint firstItem="Ewz-uT-xgm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="yJT-XU-v56"/>
+                <constraint firstItem="RbA-Yh-Tsy" firstAttribute="top" secondItem="Ewz-uT-xgm" secondAttribute="bottom" constant="20" id="zMr-Ua-hfs"/>
+            </constraints>
+            <point key="canvasLocation" x="13" y="276"/>
         </view>
     </objects>
 </document>

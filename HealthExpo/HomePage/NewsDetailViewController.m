@@ -8,8 +8,13 @@
 
 #import "NewsDetailViewController.h"
 #import "NewsDetailModelSource.h"
+#import "HENetTask.h"
+#import "UIImageView+WebCache.h"
 
 @interface NewsDetailViewController ()<NewsDetailModelSourceDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *contextView;
 
 @property (nonatomic, strong)NewsDetailModelSource *modelSource;
 @property (nonatomic, strong)NSArray *dataArray;
@@ -48,7 +53,12 @@
 }
 
 #pragma mark -- NewsDetailModelSourceDelegate
-- (void)getNewsDetailModelSourceSuccess:(NSArray *)dataArr{
+- (void)getNewsDetailModelSourceSuccess:(NSDictionary *)dict{
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@", HEHttpServer, dict[@"picurl"]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];
+    
+    self.titleLabel.text = dict[@"title"];
+    self.contextView.text = dict[@"contenttext"];
     
 }
 

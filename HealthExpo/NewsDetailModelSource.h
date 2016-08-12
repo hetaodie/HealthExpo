@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @protocol NewsDetailModelSourceDelegate <NSObject>
-- (void)getNewsDetailModelSourceSuccess:(NSArray *)dataArr;
+- (void)getNewsDetailModelSourceSuccess:(NSDictionary *)dict;
 - (void)getNewsDetailModelSourceFailed;
 @end
 

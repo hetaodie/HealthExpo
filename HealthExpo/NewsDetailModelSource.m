@@ -17,7 +17,7 @@
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@", responseObject);
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsDetailModelSource:)]) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsDetailModelSourceSuccess:)]) {
             [weakSelf.delegate getNewsDetailModelSourceSuccess:responseObject];
         }
     };
