@@ -88,7 +88,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     
-    ClassifyObject *object = [self.contentArray objectAtIndex:row];
+    DiQunObject *object = [self.contentArray objectAtIndex:row];
     if (self.delegate && [self.delegate respondsToSelector:@selector(onDidSelectLeftView:index:)]) {
         [self.delegate onDidSelectLeftView:object index:row];
     }

@@ -55,22 +55,22 @@
     [task runInMethod:HE_GET];
 }
 
-- (void)getDianXingRenQunDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex{
+- (void)getDiQuDetail:(DiQunObject *)aObject index:(NSInteger)aIndex{
     NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%ld",(long)aObject.id];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
         NSLog(@"%@", responseObject);
         NSMutableArray *array = [self getArrayWithResponstObject:responseObject];
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunDetailSeccess:index:)]) {
-            [weakSelf.delegate onGetDianXingRenQunDetailSeccess:array index:aIndex];
-        }
+//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunDetailSeccess:index:)]) {
+//            [weakSelf.delegate onGetDianXingRenQunDetailSeccess:array index:aIndex];
+//        }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunDetailErrorindex:)]) {
-            [weakSelf.delegate onGetDianXingRenQunDetailErrorindex:aIndex];
-        }
+//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunDetailErrorindex:)]) {
+//            [weakSelf.delegate onGetDianXingRenQunDetailErrorindex:aIndex];
+//        }
     };
     
     [task runInMethod:HE_GET];

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ClassifyObject.h"
+#import "DiQunObject.h"
 
 @protocol YiLiaoJiGouModulDelegate  <NSObject>
 
@@ -17,12 +17,12 @@
 - (void)onGetDiQuError;
 - (void)onGetKeShiFenLeiError;
 
-- (void)onGetDianXingRenQunDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
+- (void)onGetDiQuDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
 
 - (void)onGetKeShiFenLeiDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
 
 
-- (void)onGetDianXingRenQunDetailErrorindex:(NSInteger)aIndex;
+- (void)onGetDiQuDetailErrorindex:(NSInteger)aIndex;
 
 - (void)onGetKeShiFenLeiDetailErrorindex:(NSInteger)aIndex;
 @end
@@ -34,9 +34,9 @@
 
 - (void)getKeShiFenLei;
 
-- (void)getDianXingRenQunDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex;
+- (void)getDiQuDetail:(DiQunObject *)aObject index:(NSInteger)aIndex;
 
-- (void)getKeShiFenLeiDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex;
+- (void)getKeShiFenLeiDetail:(DiQunObject *)aObject index:(NSInteger)aIndex;
 
 
 

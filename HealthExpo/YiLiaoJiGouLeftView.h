@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ClassifyObject.h"
+#import "DiQunObject.h"
 @protocol YiLiaoJiGouLeftViewDelegate <NSObject>
 
 
-- (void)onDidSelectLeftView:(ClassifyObject *)aObject  index:(NSInteger)aIndex;
+- (void)onDidSelectLeftView:(DiQunObject *)aObject  index:(NSInteger)aIndex;
 
 @end
 

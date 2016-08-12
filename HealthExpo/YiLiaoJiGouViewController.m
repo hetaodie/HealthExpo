@@ -79,16 +79,16 @@
     }
 }
 
-- (void)onDidSelectLeftView:(ClassifyObject *)aObject index:(NSInteger)aIndex{
+- (void)onDidSelectLeftView:(DiQunObject *)aObject index:(NSInteger)aIndex{
     if (self.selectIndex == 0) {
-        [self.modul getDianXingRenQunDetail:aObject index:aIndex];
+        [self.modul getDiQuDetail:aObject index:aIndex];
     }
     else{
         [self.modul getKeShiFenLeiDetail:aObject index:aIndex];
     }
 }
 
-- (void)onDidSelectRightView:(ClassifyObject *)aObject  index:(NSInteger)aIndex;{
+- (void)onDidSelectRightView:(DiQunObject *)aObject  index:(NSInteger)aIndex;{
 //    JiBingDetailViewController *jkdeVC = [[JiBingDetailViewController alloc] initWithNibName:@"JiBingDetailViewController" bundle:nil];
 //    
 //    jkdeVC.cid = aObject.id;
