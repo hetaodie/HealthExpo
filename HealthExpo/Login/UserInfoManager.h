@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "UserInfo.h"
+#import "UserCenterModelSource.h"
 
 @interface UserInfoManager : NSObject
 @property (nonatomic, strong) UserInfo *userInfo;
+
 
 + (instancetype)shareManager;
 /**

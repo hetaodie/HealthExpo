@@ -8,8 +8,7 @@
 
 #import "UserInfoManager.h"
 #import "HENotificationKey.h"
-//登陆token
-#define HELoginTokenKey @"HELoginTokenKey"
+
 #define HEUserCover @"HEUserCover"
 #define HEUserName @"HEUserName"
 #define HEUserPhoneNum @"HEUserPhoneNum"
@@ -17,6 +16,15 @@
 #define HEUserBirthday @"HEUserBirthday"
 #define HEUserEmail @"HEUserEmail"
 #define HEUserAddress @"HEUserAddress"
+
+//登陆token
+#define HELoginTokenKeyPhone @"HELoginTokenKeyPhone"
+#define HELoginTokenKeyPwd @"HELoginTokenKeyPwd"
+#define HELoginTokenKeyUid @"HELoginTokenKeyUid"
+
+@interface UserInfoManager ()
+//@property (nonatomic, strong) UserCenterModelSource *modelSource;
+@end
 
 @implementation UserInfoManager
 
@@ -53,10 +61,16 @@
 }
 
 - (void)checkLoginKeyAvailable{
-    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKey];
+    NSString *phone = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPhone];
+//    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyUid];
+    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPwd];
     //TODO 发送token进行校验，返回后发送通知
+    if (!phone || !pwd) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_failed_Notifocation object:nil];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_Success_Notification object:nil];
+    }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_failed_Notifocation object:nil];
 }
 
 #pragma mark - UserInfo
