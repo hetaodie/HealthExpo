@@ -27,7 +27,7 @@
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-BB-OYM">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-BB-OYM">
                         <rect key="frame" x="63" y="47" width="31" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,6 +54,10 @@
                     <constraint firstItem="S63-eC-vme" firstAttribute="leading" secondItem="zvB-18-iNE" secondAttribute="trailing" constant="15" id="xsD-Mm-BeU"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="desLabel" destination="oxa-BB-OYM" id="Vwc-vc-biv"/>
+                <outlet property="titleLabel" destination="S63-eC-vme" id="hZA-5a-dDw"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

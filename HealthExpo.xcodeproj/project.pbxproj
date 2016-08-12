@@ -88,6 +88,11 @@
 		7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1411D5C6431006D4EA9 /* LiuYanObject.m */; };
 		7C05E1451D5C7D1A006D4EA9 /* MessageReplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1441D5C7D1A006D4EA9 /* MessageReplyView.m */; };
 		7C05E1471D5C7DB6006D4EA9 /* MessageReplyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E1461D5C7DB6006D4EA9 /* MessageReplyView.xib */; };
+		7C05E14A1D5D63E5006D4EA9 /* YiMiaoModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1491D5D63E5006D4EA9 /* YiMiaoModul.m */; };
+		7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E14C1D5D6AD9006D4EA9 /* YiMiaoObject.m */; };
+		7C05E15C1D5DD7D6006D4EA9 /* YiMiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E15A1D5DD7D6006D4EA9 /* YiMiaoViewController.m */; };
+		7C05E15D1D5DD7D6006D4EA9 /* YiMiaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E15B1D5DD7D6006D4EA9 /* YiMiaoViewController.xib */; };
+		7C05E1601D5DDCEC006D4EA9 /* YiMiaoDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E15F1D5DDCEC006D4EA9 /* YiMiaoDetailObject.m */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -272,6 +277,15 @@
 		7C05E1431D5C7D1A006D4EA9 /* MessageReplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageReplyView.h; sourceTree = "<group>"; };
 		7C05E1441D5C7D1A006D4EA9 /* MessageReplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageReplyView.m; sourceTree = "<group>"; };
 		7C05E1461D5C7DB6006D4EA9 /* MessageReplyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageReplyView.xib; sourceTree = "<group>"; };
+		7C05E1481D5D63E5006D4EA9 /* YiMiaoModul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoModul.h; sourceTree = "<group>"; };
+		7C05E1491D5D63E5006D4EA9 /* YiMiaoModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoModul.m; sourceTree = "<group>"; };
+		7C05E14B1D5D6AD9006D4EA9 /* YiMiaoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoObject.h; sourceTree = "<group>"; };
+		7C05E14C1D5D6AD9006D4EA9 /* YiMiaoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoObject.m; sourceTree = "<group>"; };
+		7C05E1591D5DD7D6006D4EA9 /* YiMiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoViewController.h; sourceTree = "<group>"; };
+		7C05E15A1D5DD7D6006D4EA9 /* YiMiaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoViewController.m; sourceTree = "<group>"; };
+		7C05E15B1D5DD7D6006D4EA9 /* YiMiaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YiMiaoViewController.xib; sourceTree = "<group>"; };
+		7C05E15E1D5DDCEC006D4EA9 /* YiMiaoDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiMiaoDetailObject.h; sourceTree = "<group>"; };
+		7C05E15F1D5DDCEC006D4EA9 /* YiMiaoDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiMiaoDetailObject.m; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -450,6 +464,9 @@
 				7C6744471D2CC41E00661276 /* YiMiaoScheduleViewController.h */,
 				7C6744481D2CC41E00661276 /* YiMiaoScheduleViewController.m */,
 				7C6744491D2CC41E00661276 /* YiMiaoScheduleViewController.xib */,
+				7C05E1591D5DD7D6006D4EA9 /* YiMiaoViewController.h */,
+				7C05E15A1D5DD7D6006D4EA9 /* YiMiaoViewController.m */,
+				7C05E15B1D5DD7D6006D4EA9 /* YiMiaoViewController.xib */,
 				7C6744511D2CE66300661276 /* YiMiaoDetailViewController.h */,
 				7C6744521D2CE66300661276 /* YiMiaoDetailViewController.m */,
 				7C6744531D2CE66300661276 /* YiMiaoDetailViewController.xib */,
@@ -768,6 +785,12 @@
 				7C05E13E1D5C5B0C006D4EA9 /* LiuYanModul.m */,
 				7C05E1401D5C6431006D4EA9 /* LiuYanObject.h */,
 				7C05E1411D5C6431006D4EA9 /* LiuYanObject.m */,
+				7C05E1481D5D63E5006D4EA9 /* YiMiaoModul.h */,
+				7C05E1491D5D63E5006D4EA9 /* YiMiaoModul.m */,
+				7C05E14B1D5D6AD9006D4EA9 /* YiMiaoObject.h */,
+				7C05E14C1D5D6AD9006D4EA9 /* YiMiaoObject.m */,
+				7C05E15E1D5DDCEC006D4EA9 /* YiMiaoDetailObject.h */,
+				7C05E15F1D5DDCEC006D4EA9 /* YiMiaoDetailObject.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -874,6 +897,7 @@
 				69DD74B21D5B462D00730B94 /* NewsDetailViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
 				7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */,
+				7C05E15D1D5DD7D6006D4EA9 /* YiMiaoViewController.xib in Resources */,
 				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
 				7C6A77AD1D2B5F0F008A58D7 /* JiBingBKLeftView.xib in Resources */,
 				69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */,
@@ -954,11 +978,14 @@
 				69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */,
 				69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */,
 				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
+				7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */,
 				7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */,
 				7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */,
+				7C05E14A1D5D63E5006D4EA9 /* YiMiaoModul.m in Sources */,
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */,
 				53BC4C811D291CB3009035BC /* HENetTask.m in Sources */,
+				7C05E1601D5DDCEC006D4EA9 /* YiMiaoDetailObject.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				7C6A77C51D2B9348008A58D7 /* JiBingBKRightViewCell.m in Sources */,
 				7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */,
@@ -977,6 +1004,7 @@
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */,
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
+				7C05E15C1D5DD7D6006D4EA9 /* YiMiaoViewController.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
 				5367D02D1D2D5CF6008BB509 /* NSDate+String.m in Sources */,

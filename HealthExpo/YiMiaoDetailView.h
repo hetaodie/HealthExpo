@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YiMiaoDetailObject.h"
 
 @interface YiMiaoDetailView : UIView
 
+- (void)showViewWithData:(YiMiaoDetailObject *)aObject;
 @end

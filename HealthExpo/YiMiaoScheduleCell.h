@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YiMiaoObject.h"
 
 @interface YiMiaoScheduleCell : UITableViewCell
 
+- (void)showCellWithData:(YiMiaoObject *)aObject;
 @end

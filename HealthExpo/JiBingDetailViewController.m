@@ -49,8 +49,7 @@
     self.liuYanModul.delegate = self;
 
     [self.liuYanModul getLiyanList:self.cid];
-//    [self.liuYanModul setjibingLiuYan:nil];
-//    [self.liuYanModul liuYanReply:nil];
+
     
     self.MessageInfoView.delegate = self;
     self.messageReplyView.delegate = self;

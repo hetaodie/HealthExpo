@@ -7,9 +7,25 @@
 //
 
 #import "YiMiaoDetailViewController.h"
+#import "YiMiaoModul.h"
+#import "MessageInfoView.h"
+#import "YiMiaoDetailView.h"
+#import "LiuYanModul.h"
+#import "MessageReplyView.h"
 
-@interface YiMiaoDetailViewController ()
+
+@interface YiMiaoDetailViewController () <YiMiaoModulDelegate,MessageInfoViewDelegate,LiuYanModulDelegate,MessageReplyViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
+
+@property (strong, nonatomic) YiMiaoModul *yimiaoModul;
+@property (strong, nonatomic) NSMutableArray *contentArray;
+@property (weak, nonatomic) IBOutlet YiMiaoDetailView *detailView;
+@property (weak, nonatomic) IBOutlet MessageInfoView *MessageInfoView;
+
+@property (strong, nonatomic) LiuYanModul *liuYanModul;
+@property (weak, nonatomic) IBOutlet MessageReplyView *messageReplyView;
+@property (assign, nonatomic) NSInteger messageOrReplay;   // 0 表示是留言， 1 表示是回复
+@property (strong, nonatomic) LiuYanObject *replayLiuYanObject;
 
 @end
 
@@ -25,9 +41,22 @@
     [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
+    
+    _yimiaoModul = [[YiMiaoModul alloc] init];
+    self.yimiaoModul.delegate = self;
+    
+    [self.yimiaoModul getyimiaoDetail:self.cid];
+    
+    _liuYanModul = [[LiuYanModul alloc] init];
+    self.liuYanModul.delegate = self;
+    
+    [self.liuYanModul getLiyanList:self.cid];
+    
+    self.MessageInfoView.delegate = self;
+    self.messageReplyView.delegate = self;
 }
 
-- (void)doBack:(id)sender{
+- (IBAction)doBack:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -37,19 +66,73 @@
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+     [self.navigationController setNavigationBarHidden:NO];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)onGetyimiaoDetailSeccess:(YiMiaoDetailObject *)aObject{
+    [self.detailView showViewWithData:aObject];
 }
-*/
 
+- (void)onGetyimiaoDetailError{
+    
+}
+
+- (void)onGetLiyanListSeccess:(NSMutableArray *)aArray{
+    [self.MessageInfoView showViewWithArray:aArray];
+}
+
+- (void)onGetLiyanListError{
+    
+}
+
+
+- (void)onBtnMessagePress{
+    self.messageReplyView.hidden = NO;
+    self.messageOrReplay = 0;
+}
+
+- (void)onSendMessageBtnPress:(NSString *)content{
+    
+    if (self.messageOrReplay == 0) {
+        LiuYanObject *object = [[LiuYanObject alloc] init];
+        object.id =self.cid;
+        object.username = @"weixu";
+        object.phone = @"15067152144";
+        object.content = content;
+        
+        [self.liuYanModul setjibingLiuYan:object];
+        [self.messageReplyView setHidden:YES];
+    }
+    else{
+        
+        self.replayLiuYanObject.content = content;
+        [self.liuYanModul liuYanReply:self.replayLiuYanObject];
+        [self.messageReplyView setHidden:YES];
+    }
+    
+}
+
+- (void)onDeleteMessageWithObject:(LiuYanObject *)aObject{
+    [self.liuYanModul cexiaoLiuYan:aObject];
+}
+
+- (void)onReplayMessageWithObject:(LiuYanObject *)aObject{
+    self.messageOrReplay = 1;
+    self.replayLiuYanObject = aObject;
+}
+
+- (void)oncexiaoSeccess{
+    [self.liuYanModul getLiyanList:self.cid];
+}
+
+- (void)oncexiaoError{
+    
+}
 @end

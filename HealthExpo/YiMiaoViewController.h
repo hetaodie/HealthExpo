@@ -1,5 +1,5 @@
 //
-//  YiMiaoDetailViewController.h
+//  YiMiaoScheduleViewController.h
 //  HealthExpo
 //
 //  Created by Weixu on 16/7/6.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YiMiaoDetailViewController : UIViewController
-@property (nonatomic, assign) NSInteger cid;
-
+@interface YiMiaoViewController : UIViewController
+@property (nonatomic ,assign) NSInteger cid;
 @end

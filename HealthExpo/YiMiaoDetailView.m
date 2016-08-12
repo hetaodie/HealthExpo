@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *duixiangLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+
+
 @end
 
 @implementation YiMiaoDetailView
@@ -43,6 +45,22 @@
     return nil;
 }
 
+- (void)showViewWithData:(YiMiaoDetailObject *)aObject{
+    self.yimiaoNameLabel.text = aObject.title;
+    self.numberLabel.text =[self numberFromString:aObject.strCount];
+    
+    self.yumangLabel.text = aObject.yumangJIbing;
+    self.tishiLabel.text = aObject.tishi;
+    self.duixiangLabel.text = aObject.duixiang;
+}
 
+
+- (NSString *)numberFromString:(NSString *)aString{
+    NSArray *array = [aString componentsSeparatedByString:@"/"];
+    [array objectAtIndex:0];
+    
+    NSString *string = [NSString stringWithFormat:@"第%@次/共%@次",[array objectAtIndex:0],[array objectAtIndex:1]];
+    return string;
+}
 
 @end

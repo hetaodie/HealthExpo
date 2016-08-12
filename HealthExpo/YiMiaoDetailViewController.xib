@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YiMiaoDetailViewController">
             <connections>
+                <outlet property="MessageInfoView" destination="TeF-Dg-qz7" id="ksi-BL-rji"/>
+                <outlet property="detailView" destination="OUT-fX-JYa" id="Ube-d8-biv"/>
+                <outlet property="messageReplyView" destination="O5x-ml-cVh" id="sRS-td-Dki"/>
                 <outlet property="searchView" destination="nCp-hH-gz0" id="f5h-FU-ijV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,6 +29,9 @@
                                 <constraint firstAttribute="height" constant="22" id="O5T-1u-krp"/>
                             </constraints>
                             <state key="normal" image="houtui"/>
+                            <connections>
+                                <action selector="doBack:" destination="-1" eventType="touchUpInside" id="h8v-SJ-1iy"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCp-hH-gz0">
                             <rect key="frame" x="57" y="26" width="255" height="29"/>
@@ -78,19 +84,27 @@
                     <rect key="frame" x="0.0" y="402" width="600" height="198"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5x-ml-cVh" customClass="MessageReplyView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="TeF-Dg-qz7" secondAttribute="trailing" id="0ma-nO-5tR"/>
                 <constraint firstAttribute="trailing" secondItem="OUT-fX-JYa" secondAttribute="trailing" id="2kG-lj-Jp2"/>
+                <constraint firstItem="O5x-ml-cVh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Lc-sL-itH"/>
                 <constraint firstItem="6wR-kG-Di4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EGA-ej-DvR"/>
                 <constraint firstItem="TeF-Dg-qz7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GdO-ZC-G41"/>
                 <constraint firstItem="6wR-kG-Di4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OFi-cf-yw6"/>
                 <constraint firstItem="OUT-fX-JYa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RRC-s8-Tiz"/>
+                <constraint firstAttribute="trailing" secondItem="O5x-ml-cVh" secondAttribute="trailing" id="Tu0-Sf-1HK"/>
                 <constraint firstItem="TeF-Dg-qz7" firstAttribute="top" secondItem="OUT-fX-JYa" secondAttribute="bottom" id="VUl-rz-ZDc"/>
                 <constraint firstItem="OUT-fX-JYa" firstAttribute="top" secondItem="6wR-kG-Di4" secondAttribute="bottom" id="eOV-xe-RUT"/>
                 <constraint firstAttribute="trailing" secondItem="6wR-kG-Di4" secondAttribute="trailing" id="ljk-bt-cP9"/>
                 <constraint firstAttribute="bottom" secondItem="TeF-Dg-qz7" secondAttribute="bottom" id="nCF-eg-27W"/>
+                <constraint firstItem="O5x-ml-cVh" firstAttribute="top" secondItem="6wR-kG-Di4" secondAttribute="bottom" id="wsO-Ce-Sav"/>
+                <constraint firstAttribute="bottom" secondItem="O5x-ml-cVh" secondAttribute="bottom" id="xqd-44-VYH"/>
             </constraints>
         </view>
     </objects>

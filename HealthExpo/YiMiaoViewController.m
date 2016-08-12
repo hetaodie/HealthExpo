@@ -6,25 +6,25 @@
 //  Copyright © 2016年 AllWantsLab. All rights reserved.
 //
 
-#import "YiMiaoScheduleViewController.h"
-#import "YiMiaoScheduleCell.h"
 #import "YiMiaoViewController.h"
+#import "YiMiaoScheduleCell.h"
+#import "YiMiaoDetailViewController.h"
 #import "YiMiaoModul.h"
 
 #define YIMiaoCellHeight 75
 
-@interface YiMiaoScheduleViewController ()<UITableViewDataSource,UITableViewDelegate,YiMiaoModulDelegate>
+@interface YiMiaoViewController ()<UITableViewDataSource,UITableViewDelegate,YiMiaoModulDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) YiMiaoModul *yimiaoModul;
 @property (strong, nonatomic) NSMutableArray *contentArray;
 @end
 
-@implementation YiMiaoScheduleViewController
+@implementation YiMiaoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.navigationItem.title = @"疫苗时间表";
+     self.navigationItem.title = @"疫苗表";
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 12, 21);
@@ -36,10 +36,10 @@
     _yimiaoModul = [[YiMiaoModul alloc] init];
     self.yimiaoModul.delegate = self;
     
-    [self.yimiaoModul getYIMiaoTimeList];
-    
     _contentArray = [[NSMutableArray alloc] init];
-  
+    
+    [self.yimiaoModul getYImiaoList:self.cid];
+    
 
 }
 
@@ -77,8 +77,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    YiMiaoViewController *jkbkVC = [[YiMiaoViewController alloc] initWithNibName:@"YiMiaoViewController" bundle:nil];
-    YiMiaoObject *object =[self.contentArray objectAtIndex:indexPath.row];
+    YiMiaoDetailViewController *jkbkVC = [[YiMiaoDetailViewController alloc] initWithNibName:@"YiMiaoDetailViewController" bundle:nil];
+    
+    YiMiaoObject *object = [self.contentArray objectAtIndex:indexPath.row];
     
     jkbkVC.cid = object.id;
     
@@ -86,7 +87,7 @@
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 
-- (void)onGetYIMiaoTimeListSeccess:(NSArray *)aArray{
+- (void)onGetYIMiaoListSeccess:(NSArray *)aArray{
     [self.contentArray setArray:aArray];
     [self.tableView reloadData];
 }
