@@ -87,4 +87,12 @@
     self.bottomView.backgroundColor = [UIColor colorWithHexString:@"0xDCDCDC" alpha:1.0];
     self.middleLine.backgroundColor = [UIColor colorWithHexString:@"0xDCDCDC" alpha:1.0];
 }
+
+- (void)setViewLeftName:(NSString *)leftName andRightName:(NSString *)rightname{
+    [self.leftButton setTitle:leftName forState:UIControlStateNormal];
+    [self.leftButton setTitle:leftName forState:UIControlStateSelected];
+    
+    [self.rightButton setTitle:rightname forState:UIControlStateNormal];
+    [self.rightButton setTitle:rightname forState:UIControlStateSelected];
+}
 @end

@@ -63,7 +63,7 @@
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }
 - (IBAction)onJiGouClicked:(id)sender {
-    YiLiaoJiGouViewController *jkbkVC = [[YiLiaoJiGouViewController alloc] initWithNibName:@"YiLiaoJiGuoViewController" bundle:nil];
+    YiLiaoJiGouViewController *jkbkVC = [[YiLiaoJiGouViewController alloc] initWithNibName:@"YiLiaoJiGouViewController" bundle:nil];
     jkbkVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:jkbkVC animated:YES];
 }

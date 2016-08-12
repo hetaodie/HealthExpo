@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YiLiaoJiGouViewController">
             <connections>
+                <outlet property="leftView" destination="PkC-WU-AZy" id="U8v-Vh-JYm"/>
+                <outlet property="rightView" destination="ga9-rq-RoS" id="eAe-j6-TGZ"/>
+                <outlet property="topView" destination="fJx-B3-Tvz" id="uED-76-yx3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yiLiaoJiGouView" destination="ga9-rq-RoS" id="ACH-VT-6XH"/>
             </connections>
@@ -23,7 +26,7 @@
                         <constraint firstAttribute="height" constant="30" id="2UN-6c-jl5"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkC-WU-AZy" customClass="JiBingBKLeftView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkC-WU-AZy" customClass="YiLiaoJiGouLeftView">
                     <rect key="frame" x="0.0" y="94" width="100" height="506"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>

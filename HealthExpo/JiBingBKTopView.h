@@ -16,4 +16,5 @@
 
 @property (nonatomic, weak) id<JiBingBKTopViewDelegate>delegate;
 
+- (void)setViewLeftName:(NSString *)leftName andRightName:(NSString *)rightname;
 @end
