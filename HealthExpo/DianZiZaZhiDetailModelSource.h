@@ -10,6 +10,8 @@
 @protocol DianZiZaZhiDetailModelSourceDelegate <NSObject>
 - (void)getDianZiZaZhiDetailSuccess:(NSDictionary *)dict;
 - (void)getDianZiZaZhiDetailFailed;
+- (void)getDianZiZaZhiDetailListSuccess:(NSArray *)array;
+- (void)getDianZiZaZhiDetailListFailed;
 
 @end
 
@@ -18,4 +20,5 @@
 
 - (void)getDianZiZaZhiDetailWithID:(NSString *)cID;
 
+- (void)getDianZiZaZhiDetailListWithID:(NSString *)cID;
 @end

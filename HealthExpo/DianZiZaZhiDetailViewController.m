@@ -11,7 +11,7 @@
 #import "HENetTask.h"
 #import "UIImageView+WebCache.h"
 
-@interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate>
+@interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate, UITableViewDelegate, UITableViewDataSource>
 @property DianZiZaZhiDetailModelSource *modelSource;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *oneLabel;
@@ -22,6 +22,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *fiveLabel;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *listArray;
 @end
 
 @implementation DianZiZaZhiDetailViewController
@@ -34,6 +36,10 @@
     self.modelSource = [[DianZiZaZhiDetailModelSource alloc] init];
     self.modelSource.delegate = self;
     [self.modelSource getDianZiZaZhiDetailWithID:self.detailID];
+    [self.modelSource getDianZiZaZhiDetailListWithID:self.detailID];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,4 +91,32 @@
 - (void)getDianZiZaZhiDetailFailed{
     
 }
+
+- (void)getDianZiZaZhiDetailListSuccess:(NSArray *)array{
+    self.listArray = array;
+    [self.tableView reloadData];
+}
+
+- (void)getDianZiZaZhiDetailListFailed{
+    
+}
+
+#pragma mark -- UItableViewDelegate && UItableViewDataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 25;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.listArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ListCell"];
+    }
+    
+    return cell;
+}
+
 @end
