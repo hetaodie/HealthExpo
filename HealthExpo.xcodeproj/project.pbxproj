@@ -52,6 +52,9 @@
 		69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6B01D5705430064346B /* PictureTableViewCell.xib */; };
 		69DC279E1D5DF386006EEF68 /* PhoneModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */; };
 		69DC27A11D5DF3AC006EEF68 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC27A01D5DF3AC006EEF68 /* NSString+MD5.m */; };
+		69DC27A41D5DF58D006EEF68 /* RegisterModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC27A31D5DF58D006EEF68 /* RegisterModelSource.m */; };
+		69DC27A71D5DF754006EEF68 /* LoginModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC27A61D5DF754006EEF68 /* LoginModelSource.m */; };
+		69DC27AA1D5DF7A3006EEF68 /* UserCenterModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC27A91D5DF7A3006EEF68 /* UserCenterModelSource.m */; };
 		69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */; };
 		69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DC9ADF1D35293A00CF4140 /* JiBingBKModelSource.m */; };
 		69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74A41D5B075100730B94 /* NewsDetailModelSource.m */; };
@@ -216,6 +219,12 @@
 		69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneModelSource.m; sourceTree = "<group>"; };
 		69DC279F1D5DF3AC006EEF68 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		69DC27A01D5DF3AC006EEF68 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		69DC27A21D5DF58D006EEF68 /* RegisterModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterModelSource.h; path = Login/RegisterModelSource.h; sourceTree = "<group>"; };
+		69DC27A31D5DF58D006EEF68 /* RegisterModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterModelSource.m; path = Login/RegisterModelSource.m; sourceTree = "<group>"; };
+		69DC27A51D5DF754006EEF68 /* LoginModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginModelSource.h; path = Login/LoginModelSource.h; sourceTree = "<group>"; };
+		69DC27A61D5DF754006EEF68 /* LoginModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginModelSource.m; path = Login/LoginModelSource.m; sourceTree = "<group>"; };
+		69DC27A81D5DF7A3006EEF68 /* UserCenterModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserCenterModelSource.h; path = User/UserCenterModelSource.h; sourceTree = "<group>"; };
+		69DC27A91D5DF7A3006EEF68 /* UserCenterModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserCenterModelSource.m; path = User/UserCenterModelSource.m; sourceTree = "<group>"; };
 		69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerMessageItem.h; sourceTree = "<group>"; };
 		69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerMessageItem.m; sourceTree = "<group>"; };
 		69DC9ADE1D35293A00CF4140 /* JiBingBKModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JiBingBKModelSource.h; path = HomePage/YiLiaoBaiKe/JiBingBKModelSource.h; sourceTree = "<group>"; };
@@ -384,6 +393,8 @@
 				53A34BC81D1FC4A60043144E /* UserViewController.h */,
 				53A34BC91D1FC4A60043144E /* UserViewController.m */,
 				53A34BCA1D1FC4A60043144E /* UserViewController.xib */,
+				69DC27A81D5DF7A3006EEF68 /* UserCenterModelSource.h */,
+				69DC27A91D5DF7A3006EEF68 /* UserCenterModelSource.m */,
 				532405231D22BDAB004A1A43 /* UserSettingViewController.h */,
 				532405241D22BDAB004A1A43 /* UserSettingViewController.m */,
 				532405251D22BDAB004A1A43 /* UserSettingViewController.xib */,
@@ -572,9 +583,13 @@
 				53F36E211D1ADADB00C8DBB2 /* LoginViewController.h */,
 				53F36E221D1ADADB00C8DBB2 /* LoginViewController.m */,
 				53F36E231D1ADADB00C8DBB2 /* LoginViewController.xib */,
+				69DC27A51D5DF754006EEF68 /* LoginModelSource.h */,
+				69DC27A61D5DF754006EEF68 /* LoginModelSource.m */,
 				53F36E261D1AE2E000C8DBB2 /* RegisterViewController.h */,
 				53F36E271D1AE2E000C8DBB2 /* RegisterViewController.m */,
 				53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */,
+				69DC27A21D5DF58D006EEF68 /* RegisterModelSource.h */,
+				69DC27A31D5DF58D006EEF68 /* RegisterModelSource.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -984,6 +999,7 @@
 				53A34BDA1D2014D10043144E /* UserInfo.m in Sources */,
 				7C6744541D2CE66300661276 /* YiMiaoDetailViewController.m in Sources */,
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,
+				69DC27A41D5DF58D006EEF68 /* RegisterModelSource.m in Sources */,
 				7C6744691D2D1F7B00661276 /* YiLiaoJiGouRightView.m in Sources */,
 				69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */,
 				69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */,
@@ -1002,6 +1018,7 @@
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */,
 				7C05E13F1D5C5B0C006D4EA9 /* LiuYanModul.m in Sources */,
+				69DC27A71D5DF754006EEF68 /* LoginModelSource.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
 				69DD74C21D5B499000730B94 /* CooperateViewController.m in Sources */,
 				69DD74BE1D5B497600730B94 /* CooperateModelSource.m in Sources */,
@@ -1045,6 +1062,7 @@
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
 				7C05E13C1D5C4C24006D4EA9 /* JiBingDetailObject.m in Sources */,
+				69DC27AA1D5DF7A3006EEF68 /* UserCenterModelSource.m in Sources */,
 				69DD74B11D5B462D00730B94 /* NewsDetailViewController.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
