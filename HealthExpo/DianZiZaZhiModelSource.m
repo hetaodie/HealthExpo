@@ -16,7 +16,6 @@
     HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getCategory.action?catid=4"];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiListSuccess:)]) {
             [weakSelf.delegate getDianZiZaZhiListSuccess:responseObject];
         }
@@ -36,7 +35,6 @@
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiListWithIDSuccess:)]) {
             [weakSelf.delegate getDianZiZaZhiListWithIDSuccess:responseObject];
         }

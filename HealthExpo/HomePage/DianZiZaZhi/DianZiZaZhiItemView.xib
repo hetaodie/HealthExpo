@@ -24,7 +24,7 @@
                         <constraint firstAttribute="height" constant="185" id="nHT-Ge-Uwp"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康博览" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trK-1w-Ehs">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trK-1w-Ehs">
                     <rect key="frame" x="0.0" y="195" width="188" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="14w-0s-bza"/>

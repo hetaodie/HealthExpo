@@ -29,6 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
+    
+    self.modelSource = [[DianZiZaZhiModelSource alloc] init];
+    self.modelSource.delegate = self;
+    
+    [self.modelSource getDianZiZaZhiList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,7 +90,12 @@
 
 #pragma mark - DianZiZaZhiModelSourceDelegate
 - (void)getDianZiZaZhiListSuccess:(NSArray *)dataArr{
-    
+    for (NSDictionary *dict in dataArr) {
+        NSString *title = dict[@"title"];
+        if ([title containsString:@"2016"]) {
+            [self.modelSource getDianZiZaZhiListWithID:dict[@"id"]];
+        }
+    }
 }
 - (void)getDianZiZaZhiListFailed{
     
@@ -93,7 +103,7 @@
 
 - (void)getDianZiZaZhiListWithIDSuccess:(NSArray *)dataArr{
     self.dataArray = dataArr;
-    if (!dataArr) {
+    if (dataArr) {
         [self fillDataIndex:0 toItemView:self.firstItemView];
         [self fillDataIndex:1 toItemView:self.secondItemView];
         [self fillDataIndex:2 toItemView:self.thirdItemView];
