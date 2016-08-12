@@ -10,13 +10,17 @@
 
 @protocol SubmissionModelSourceDelegate <NSObject>
 
-- (void)getSubmissionDataSuccess:(NSArray *)data;
+- (void)getSubmissionDataSuccess:(NSDictionary *)data;
 - (void)getSubmissionDataFailed;
 
+- (void)getCooperateDataSuccess:(NSDictionary *)data;
+- (void)getCooperateDataFailed;
 @end
 
 @interface SubmissionModelSource : NSObject
 @property (nonatomic, weak)id<SubmissionModelSourceDelegate> delegate;
 
 - (void)getSubmissionData;
+
+- (void)getCooperateData;
 @end

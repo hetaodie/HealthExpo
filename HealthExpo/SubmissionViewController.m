@@ -12,6 +12,11 @@
 @interface SubmissionViewController ()<SubmissionModelSourceDelegate>
 
 @property (nonatomic, strong)SubmissionModelSource *modelSource;
+
+@property (nonatomic, strong) NSString *titleText;
+@property (nonatomic, assign) BOOL isSubMission;//yes 为我要投稿，no 为广告合作。
+@property (strong, nonatomic) IBOutlet UILabel *descLabel;
+
 //@property (nonatomic, strong)
 
 @end
@@ -24,12 +29,21 @@
     
     self.modelSource = [[SubmissionModelSource alloc] init];
     self.modelSource.delegate = self;
-    [self.modelSource getSubmissionData];
+    if (self.isSubMission) {
+        [self.modelSource getSubmissionData];
+    } else {
+        [self.modelSource getCooperateData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)fillTitle:(NSString *)title andIsSubssion:(BOOL)isSub{
+    self.titleText = title;
+    self.isSubMission = isSub;
 }
 
 - (void)adjustNavigationBar{
@@ -42,7 +56,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    self.navigationItem.title = @"我要投稿";
+    self.navigationItem.title = self.titleText;
 }
 
 - (void)doBack:(id)sender{
@@ -50,11 +64,19 @@
 }
 
 #pragma mark -- SubmissionModelSourceDelegate
-- (void)getSubmissionDataSuccess:(NSArray *)data{
-    
+- (void)getSubmissionDataSuccess:(NSDictionary *)data{
+    self.descLabel.text = data[@"contenttext"];
 }
 
 - (void)getSubmissionDataFailed{
+    
+}
+
+- (void)getCooperateDataSuccess:(NSDictionary *)data{
+    self.descLabel.text = data[@"contenttext"];
+}
+
+- (void)getCooperateDataFailed{
     
 }
 

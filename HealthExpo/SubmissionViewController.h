@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @interface SubmissionViewController : UIViewController
+- (void)fillTitle:(NSString *)title andIsSubssion:(BOOL)isSub;
 
 @end

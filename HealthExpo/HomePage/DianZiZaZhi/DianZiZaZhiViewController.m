@@ -70,14 +70,19 @@
 
 - (IBAction)onTougaoButtonClicked:(id)sender {
     SubmissionViewController *sVC = [[SubmissionViewController alloc] initWithNibName:@"SubmissionViewController" bundle:nil];
+    [sVC fillTitle:@"我要投稿" andIsSubssion:YES];
     sVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:sVC animated:YES];
 }
 
 - (IBAction)onHeZuoButtonClicked:(id)sender {
-    CooperateViewController *cVC = [[CooperateViewController alloc] initWithNibName:@"CooperateViewController" bundle:nil];
-    cVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:cVC animated:YES];
+    SubmissionViewController *sVC = [[SubmissionViewController alloc] initWithNibName:@"SubmissionViewController" bundle:nil];
+    [sVC fillTitle:@"我要投稿" andIsSubssion:NO];
+    sVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:sVC animated:YES];
+//    CooperateViewController *cVC = [[CooperateViewController alloc] initWithNibName:@"CooperateViewController" bundle:nil];
+//    cVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:cVC animated:YES];
 }
 
 - (void)fillDataIndex:(NSInteger)index toItemView:(DianZiZaZhiItemView *)itemView{
