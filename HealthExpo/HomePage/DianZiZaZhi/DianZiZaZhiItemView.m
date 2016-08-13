@@ -36,7 +36,7 @@
     self.itemIndex = index;
     self.titleLabel.text = title;
     aUrl = [NSString stringWithFormat:@"%@%@", HEHttpServer, aUrl];
-    NSString *placeHolder = [NSString stringWithFormat:@"dianzizazhi%zd", index];
+    NSString *placeHolder = [NSString stringWithFormat:@"dianzizazhi%zd", (index + 1)];
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:aUrl] placeholderImage:[UIImage imageNamed:placeHolder]];
 }
 - (IBAction)ItemClicked:(id)sender {

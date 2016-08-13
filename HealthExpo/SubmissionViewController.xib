@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubmissionViewController">
             <connections>
+                <outlet property="MessageInfoView" destination="rlz-tJ-tqW" id="sId-lE-Nfc"/>
                 <outlet property="descLabel" destination="Pjq-bF-wcc" id="Jo3-xd-vxA"/>
+                <outlet property="messageReplyView" destination="9Hb-B7-s8e" id="m7b-KJ-q1r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,12 +29,28 @@
                     <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-tJ-tqW" customClass="MessageInfoView">
+                    <rect key="frame" x="0.0" y="95" width="600" height="505"/>
+                    <color key="backgroundColor" red="0.72946259469999997" green="0.42235293499999998" blue="0.060168584999999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-B7-s8e" customClass="MessageReplyView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Pjq-bF-wcc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="5ml-Ux-hhu"/>
                 <constraint firstAttribute="trailing" secondItem="Pjq-bF-wcc" secondAttribute="trailing" constant="15" id="af2-WI-2jM"/>
+                <constraint firstAttribute="bottom" secondItem="9Hb-B7-s8e" secondAttribute="bottom" id="bFO-ED-OQU"/>
+                <constraint firstItem="rlz-tJ-tqW" firstAttribute="top" secondItem="Pjq-bF-wcc" secondAttribute="bottom" id="d6r-Tk-Yot"/>
+                <constraint firstItem="9Hb-B7-s8e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dd5-kk-PHS"/>
+                <constraint firstAttribute="bottom" secondItem="rlz-tJ-tqW" secondAttribute="bottom" id="jVa-nt-cMg"/>
+                <constraint firstItem="rlz-tJ-tqW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lHh-Gh-FNG"/>
+                <constraint firstAttribute="trailing" secondItem="rlz-tJ-tqW" secondAttribute="trailing" id="m59-NI-dPo"/>
                 <constraint firstItem="Pjq-bF-wcc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="oXc-2k-OcY"/>
+                <constraint firstAttribute="trailing" secondItem="9Hb-B7-s8e" secondAttribute="trailing" id="q9g-BA-Mne"/>
+                <constraint firstItem="9Hb-B7-s8e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="xQX-5a-CEN"/>
             </constraints>
             <point key="canvasLocation" x="130" y="261"/>
         </view>

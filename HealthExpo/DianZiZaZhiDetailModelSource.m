@@ -30,7 +30,7 @@
 }
 
 - (void)getDianZiZaZhiDetailListWithID:(NSString *)cID{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList2.action?catid=%@", cID];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@", cID];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {

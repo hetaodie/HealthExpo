@@ -15,6 +15,11 @@
 
 - (void)getCooperateDataSuccess:(NSDictionary *)data;
 - (void)getCooperateDataFailed;
+
+//- (void)getSubmissionMessageSuccess:(NSArray *)dataArray;
+//- (void)getSubmissionMessageFailed;
+//- (void)getCooperateMessageSuccess:(NSArray *)dataArray;
+//- (void)getCooperateMessageFailed;
 @end
 
 @interface SubmissionModelSource : NSObject
@@ -23,4 +28,8 @@
 - (void)getSubmissionData;
 
 - (void)getCooperateData;
+
+//- (void)getSubmissionMessage;
+//
+//- (void)getCooperateMessage;
 @end
