@@ -12,8 +12,10 @@
 #import "YiLiaoJiGouModul.h"
 #import "YiLiaoJiGouLeftView.h"
 #import "YiLiaoJiGouRightView.h"
+#import "YiYuanViewController.h"
+#import "JiBingBKTopView.h"
 
-@interface YiLiaoJiGouViewController ()<YiLiaoJiGouRightViewDelegate,YiLiaoJiGouModulDelegate,YiLiaoJiGouLeftViewDelegate,YiLiaoJiGouRightViewDelegate>
+@interface YiLiaoJiGouViewController ()<YiLiaoJiGouRightViewDelegate,YiLiaoJiGouModulDelegate,YiLiaoJiGouLeftViewDelegate,YiLiaoJiGouRightViewDelegate,JiBingBKTopViewDelegate>
 
 @property (weak, nonatomic) IBOutlet YiLiaoJiGouRightView *yiLiaoJiGouView;
 @property (weak, nonatomic) IBOutlet JiBingBKTopView *topView;
@@ -33,10 +35,27 @@
     
     self.selectIndex = 0;
     
+    self.navigationItem.title = @"医疗机构";
+    
+    self.rightView.delegate = self;
+    self.leftView.delegate = self;
+
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 12, 21);
+    [backBtn setImage:[UIImage imageNamed:@"houtui"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    
+
+    
     self.yiLiaoJiGouView.delegate = self;
     
+
     [self.topView setViewLeftName:@"按地区" andRightName:@"按科室"];
     
+    self.topView.delegate = self;
+
     self.leftView.delegate = self;
     self.rightView.delegate = self;
     
@@ -45,6 +64,11 @@
     
     [self.modul getDiQu];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +89,10 @@
 - (void)onGetDiQuError{
 
 
+}
+
+- (IBAction)doBack:(id)sender {
+     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -88,12 +116,12 @@
     }
 }
 
-- (void)onDidSelectRightView:(DiQunObject *)aObject  index:(NSInteger)aIndex;{
-//    JiBingDetailViewController *jkdeVC = [[JiBingDetailViewController alloc] initWithNibName:@"JiBingDetailViewController" bundle:nil];
-//    
-//    jkdeVC.cid = aObject.id;
-//    jkdeVC.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:jkdeVC animated:YES];
+- (void)onYiLiaoJiGouRightView:(JiGouRightObject *)aObject SelectIndex:(NSUInteger)aIndex{
+    YiYuanViewController *jkdeVC = [[YiYuanViewController alloc] initWithNibName:@"YiYuanViewController" bundle:nil];
+    
+    jkdeVC.cid = aObject.id;
+    jkdeVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 
 
@@ -113,15 +141,15 @@
     
 }
 
-- (void)onGetDianXingRenQunDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex{
-//    [self.rightView showContentWithArray:aArray];
+- (void)onGetDiQuDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex{
+    [self.rightView showContentWithArray:aArray];
 }
 
 - (void)onGetKeShiFenLeiDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex{
-//    [self.rightView showContentWithArray:aArray];
+    [self.rightView showContentWithArray:aArray];
 }
 
-- (void)onGetDianXingRenQunDetailErrorindex:(NSInteger)aIndex{
+- (void)onGetDiQuDetailErrorindex:(NSInteger)aIndex{
     
 }
 @end

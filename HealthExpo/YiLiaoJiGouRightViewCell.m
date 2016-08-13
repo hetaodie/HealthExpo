@@ -27,4 +27,11 @@
 
 }
 
+- (void)showCellWithData:(JiGouRightObject *)aObject{
+    self.titleLabel.text = aObject.title;
+    self.dizhiLabel.text = aObject.dizhi;
+    self.dianHuaLabel.text = aObject.dianhua;
+    self.jibieLabel.text =aObject.dengji;
+    
+}
 @end

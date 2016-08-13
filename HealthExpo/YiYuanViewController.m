@@ -9,6 +9,15 @@
 #import "YiYuanViewController.h"
 
 @interface YiYuanViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *dengjiLabel;
+@property (weak, nonatomic) IBOutlet UILabel *type;
+@property (weak, nonatomic) IBOutlet UILabel *menzhen;
+@property (weak, nonatomic) IBOutlet UILabel *dizhiLabel;
+@property (weak, nonatomic) IBOutlet UIButton *dianhuaButton;
+@property (weak, nonatomic) IBOutlet UITextView *desc;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxb-zA-CTA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxb-zA-CTA">
                         <rect key="frame" x="30" y="40" width="40" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,6 +24,8 @@
                 <constraints>
                     <constraint firstItem="wxb-zA-CTA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ce5-hg-wrS"/>
                     <constraint firstItem="wxb-zA-CTA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bQ5-Y1-aFN"/>
+                    <constraint firstAttribute="trailing" secondItem="wxb-zA-CTA" secondAttribute="trailing" constant="5" id="dsf-cw-e4S"/>
+                    <constraint firstItem="wxb-zA-CTA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ltN-nz-Z1j"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

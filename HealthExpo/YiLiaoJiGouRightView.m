@@ -16,11 +16,21 @@
 
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSMutableArray *contentArray;
 @end
 
 
 @implementation YiLiaoJiGouRightView
+
+- (void)showContentWithArray:(NSArray *)aArray{
+    [self.contentArray setArray:aArray];
+    [self.tableView reloadData];
+}
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _contentArray = [[NSMutableArray alloc] init];
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -55,18 +65,24 @@
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"YiLiaoJiGouRightViewCell" owner:nil options:nil];
         cell = [views firstObject];
     }
+    
+    JiGouRightObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    [cell showCellWithData:object];
     return  cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    NSInteger count = [self.contentArray count];
+    return count;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onYiLiaoJiGouRightViewSelectIndex:)]) {
-        [self.delegate onYiLiaoJiGouRightViewSelectIndex:row];
+    
+    JiGouRightObject *object = [self.contentArray objectAtIndex:row];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onYiLiaoJiGouRightView:SelectIndex:)]) {
+        [self.delegate onYiLiaoJiGouRightView:object SelectIndex:row];
     }
 }
 

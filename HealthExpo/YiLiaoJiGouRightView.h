@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JiGouRightObject.h"
 
 @protocol YiLiaoJiGouRightViewDelegate <NSObject>
 
-- (void)onYiLiaoJiGouRightViewSelectIndex:(NSUInteger)aIndex;
+- (void)onYiLiaoJiGouRightView:(JiGouRightObject *)aObject SelectIndex:(NSUInteger)aIndex;
 
 @end
 
 @interface YiLiaoJiGouRightView : UIView
 @property (nonatomic, weak) id <YiLiaoJiGouRightViewDelegate>delegate;
 
+- (void)showContentWithArray:(NSArray *)aArray;
 @end

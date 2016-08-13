@@ -10,6 +10,7 @@
 #import "HENetTask.h"
 #import "ClassifyObject.h"
 #import "DiQunObject.h"
+#import "JiGouRightObject.h"
 
 
 @implementation YiLiaoJiGouModul
@@ -61,16 +62,16 @@
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
         NSLog(@"%@", responseObject);
-        NSMutableArray *array = [self getArrayWithResponstObject:responseObject];
-//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunDetailSeccess:index:)]) {
-//            [weakSelf.delegate onGetDianXingRenQunDetailSeccess:array index:aIndex];
-//        }
+        NSMutableArray *array = [self getYiyuanArrayWithResponstObject:responseObject];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDiQuDetailSeccess:index:)]) {
+            [weakSelf.delegate onGetDiQuDetailSeccess:array index:aIndex];
+        }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDianXingRenQunDetailErrorindex:)]) {
-//            [weakSelf.delegate onGetDianXingRenQunDetailErrorindex:aIndex];
-//        }
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetDiQuDetailErrorindex:)]) {
+            [weakSelf.delegate onGetDiQuDetailErrorindex:aIndex];
+        }
     };
     
     [task runInMethod:HE_GET];
@@ -83,7 +84,7 @@
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
         NSLog(@"%@", responseObject);
-        NSMutableArray *array = [self getArrayWithResponstObject:responseObject];
+        NSMutableArray *array = [self getYiyuanArrayWithResponstObject:responseObject];
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetKeShiFenLeiDetailSeccess:index:)]) {
             [weakSelf.delegate onGetKeShiFenLeiDetailSeccess:array index:aIndex];
         }
@@ -106,62 +107,26 @@
         object.title = dic[@"title"];
         object.id    = [dic[@"id"] integerValue];
         object.pid   = [dic[@"pid"] integerValue];
-//        object.selectImageUrl = dic[@"selectImageUrl"];
-//        object.defaultImageUrl = dic[@"defaultImageUrl"];
-//        
-//        object.defaultImage = [self getImageWithTitle:object.title andSelect:NO];
-//        object.selectImage = [self getImageWithTitle:object.title andSelect:YES];
         [array addObject:object];
     }
     return array;
 }
 
 
-//- (UIImage *)getImageWithTitle:(NSString *)aTitle andSelect:(BOOL)aSelect{
-//    
-//    UIImage *image = nil;
-//    if (aSelect) {
-//        if ([aTitle isEqualToString:@"上班族"]) {
-//            image = [UIImage imageNamed:@"shangbanzu-1"];
-//        }
-//        else if ([aTitle isEqualToString:@"男性"]) {
-//            image = [UIImage imageNamed:@"nanxing2"];
-//        }
-//        else if ([aTitle isEqualToString:@"女性"]) {
-//            image = [UIImage imageNamed:@"nvxing2"];
-//        }
-//        else if ([aTitle isEqualToString:@"老人"]) {
-//            image = [UIImage imageNamed:@"laoren2"];
-//        }
-//        else if ([aTitle isEqualToString:@"儿童"]) {
-//            image = [UIImage imageNamed:@"ertong2"];
-//        }
-//        else{
-//            image = [UIImage imageNamed:@"nanxing2"];
-//        }
-//    }
-//    else{
-//        if ([aTitle isEqualToString:@"上班族"]) {
-//            image = [UIImage imageNamed:@"shangbanzu"];
-//        }
-//        else if ([aTitle isEqualToString:@"男性"]) {
-//            image = [UIImage imageNamed:@"nanxing"];
-//        }
-//        else if ([aTitle isEqualToString:@"女性"]) {
-//            image = [UIImage imageNamed:@"nvxing"];
-//        }
-//        else if ([aTitle isEqualToString:@"老人"]) {
-//            image = [UIImage imageNamed:@"laoren"];
-//        }
-//        else if ([aTitle isEqualToString:@"儿童"]) {
-//            image = [UIImage imageNamed:@"ertong"];
-//        }
-//        else{
-//            image = [UIImage imageNamed:@"nanxing"];
-//        }
-//    }
-//    
-//    return image;
-//}
+- (NSMutableArray *)getYiyuanArrayWithResponstObject:(NSArray *)aArray{
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSDictionary *dic in aArray) {
+        JiGouRightObject *object = [[JiGouRightObject alloc] init];
+        object.title = dic[@"title"];
+        object.dizhi = dic[@"content2"];
+        object.dengji = dic[@"content1"];
+        object.dianhua = dic[@"phone"];
+        
+        object.id    = [dic[@"id"] integerValue];
+        object.pid   = [dic[@"pid"] integerValue];
+        [array addObject:object];
+    }
+    return array;
+}
 
 @end

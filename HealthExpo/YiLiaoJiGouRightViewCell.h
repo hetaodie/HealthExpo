@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JiGouRightObject.h"
 
 @interface YiLiaoJiGouRightViewCell : UITableViewCell
 
+- (void)showCellWithData:(JiGouRightObject *)aObject;
 @end

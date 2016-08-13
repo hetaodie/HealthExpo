@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YiYuanViewController : UIViewController
+@property (nonatomic, assign) NSInteger cid;
 
 @end
