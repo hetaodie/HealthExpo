@@ -27,6 +27,11 @@
     [super awakeFromNib];
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.containtView.frame = self.bounds;
+}
+
 - (void)fillItemWithCoverUrl:(NSString *)aUrl title:(NSString *)title andIndex:(NSInteger)index{
     self.itemIndex = index;
     self.titleLabel.text = title;
