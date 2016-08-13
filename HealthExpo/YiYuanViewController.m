@@ -7,8 +7,10 @@
 //
 
 #import "YiYuanViewController.h"
+#import "YiyuanDetailObject.h"
+#import "YiYuanDetailModul.h"
 
-@interface YiYuanViewController ()
+@interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *dengjiLabel;
@@ -18,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *dianhuaButton;
 @property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) YiYuanDetailModul *modul;
+
+@property (strong, nonatomic) NSMutableArray *miyiArray;
 
 @end
 
@@ -25,7 +30,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    _modul = [[YiYuanDetailModul alloc] init];
+    self.modul.delegate = self;
+    
+    [self.modul getYiYuanDetailWithID:self.cid];
+    [self.modul getMingYIListWithID:self.cid];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,14 +43,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (void)onGetYiYuanDetailError{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+- (void)onGetYiYuanDetailSeccess:(YiyuanDetailObject *)aObject{
+    self.titleLabel.text = aObject.title;
+    self.dengjiLabel.text = aObject.dengji;
+    self.type.text = aObject.type;
+    self.menzhen.text = aObject.menzhen;
+    self.dizhiLabel.text = aObject.dizhi;
+    [self.dianhuaButton setTitle:aObject.dianhua forState:UIControlStateNormal];
+    
+    self.desc.text = aObject.desc;
+
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    return 75;
+}
 
 @end
