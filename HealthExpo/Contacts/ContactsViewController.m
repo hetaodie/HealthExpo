@@ -233,4 +233,10 @@
 {
     return index;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+     ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.section][indexPath.row];
+    NSString *phone = object.phone;
+    
+}
 @end

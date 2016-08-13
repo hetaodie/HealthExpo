@@ -10,6 +10,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ContactsViewController <NSObject>
+
+<#methods#>
+
+@end
+
 
 @interface ContactsViewController : UIViewController
 

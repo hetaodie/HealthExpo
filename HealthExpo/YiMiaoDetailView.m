@@ -58,8 +58,15 @@
 - (NSString *)numberFromString:(NSString *)aString{
     NSArray *array = [aString componentsSeparatedByString:@"/"];
     [array objectAtIndex:0];
+    NSString *string;
     
-    NSString *string = [NSString stringWithFormat:@"第%@次/共%@次",[array objectAtIndex:0],[array objectAtIndex:1]];
+    if ([array count] >=2) {
+        string = [NSString stringWithFormat:@"第%@次/共%@次",[array objectAtIndex:0],[array objectAtIndex:1]];
+    }
+    else{
+     string = @"";
+    }
+//    NSString *string = [NSString stringWithFormat:@"第%@次/共%@次",[array objectAtIndex:0],[array objectAtIndex:1]];
     return string;
 }
 
