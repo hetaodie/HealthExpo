@@ -108,6 +108,7 @@
 		7C05E1871D5EDF53006D4EA9 /* YiyuanDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1861D5EDF53006D4EA9 /* YiyuanDetailObject.m */; };
 		7C05E18A1D5EDF6F006D4EA9 /* YiYuanDetailModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1891D5EDF6F006D4EA9 /* YiYuanDetailModul.m */; };
 		7C05E18D1D5EFA61006D4EA9 /* MingShiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E18C1D5EFA61006D4EA9 /* MingShiObject.m */; };
+		7C05E1911D5F18FE006D4EA9 /* ContactPersonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1901D5F18FE006D4EA9 /* ContactPersonObject.m */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -329,6 +330,8 @@
 		7C05E1891D5EDF6F006D4EA9 /* YiYuanDetailModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiYuanDetailModul.m; sourceTree = "<group>"; };
 		7C05E18B1D5EFA61006D4EA9 /* MingShiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingShiObject.h; sourceTree = "<group>"; };
 		7C05E18C1D5EFA61006D4EA9 /* MingShiObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingShiObject.m; sourceTree = "<group>"; };
+		7C05E18F1D5F18FE006D4EA9 /* ContactPersonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPersonObject.h; sourceTree = "<group>"; };
+		7C05E1901D5F18FE006D4EA9 /* ContactPersonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPersonObject.m; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -696,6 +699,7 @@
 		69E4BE501D1D0F2A00B555FD /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				7C05E18E1D5F18DC006D4EA9 /* mudul */,
 				69E4BE661D1D10DF00B555FD /* ContactsViewController.h */,
 				69E4BE671D1D10DF00B555FD /* ContactsViewController.m */,
 				69E4BE681D1D10DF00B555FD /* ContactsViewController.xib */,
@@ -793,6 +797,15 @@
 				7C05E18C1D5EFA61006D4EA9 /* MingShiObject.m */,
 			);
 			name = MUODUL;
+			sourceTree = "<group>";
+		};
+		7C05E18E1D5F18DC006D4EA9 /* mudul */ = {
+			isa = PBXGroup;
+			children = (
+				7C05E18F1D5F18FE006D4EA9 /* ContactPersonObject.h */,
+				7C05E1901D5F18FE006D4EA9 /* ContactPersonObject.m */,
+			);
+			name = mudul;
 			sourceTree = "<group>";
 		};
 		7C6744651D2D1F7100661276 /* views */ = {
@@ -917,7 +930,7 @@
 				TargetAttributes = {
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XWV65WS8FZ;
+						DevelopmentTeam = 9UL567ZJ57;
 					};
 				};
 			};
@@ -1112,6 +1125,7 @@
 				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
 				7C67445E1D2D1E0A00661276 /* YiLiaoJiGouViewController.m in Sources */,
 				7C05E1691D5DF5DF006D4EA9 /* YiLiaoJiGouLeftView.m in Sources */,
+				7C05E1911D5F18FE006D4EA9 /* ContactPersonObject.m in Sources */,
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
 				69DC27A11D5DF3AC006EEF68 /* NSString+MD5.m in Sources */,
@@ -1252,7 +1266,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HealthExpo123;
+				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.xuxuxu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1273,7 +1287,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HealthExpo123;
+				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.xuxuxu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
