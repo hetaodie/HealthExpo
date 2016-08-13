@@ -13,4 +13,6 @@
 
 - (void)clickAtIndex:(NSInteger)index;
 
+- (void)showLoginViewController;
+
 @end

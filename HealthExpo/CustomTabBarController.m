@@ -11,6 +11,7 @@
 #import "HENotificationKey.h"
 @interface CustomTabBarController()
 @property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, strong) UINavigationController *loginNaVc;
 @end
 
 @implementation CustomTabBarController
@@ -33,7 +34,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess:) name:HELogin_Success_Notification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginFailed:) name:HELogin_Failed_Notification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:HELogout_Notification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTokenSuccess:) name:HECheck_Token_Success_Notification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTokenFailed:) name:HECheck_Token_failed_Notifocation object:nil];
 }
@@ -45,15 +46,17 @@
 #pragma mark - Notification Handler
 - (void)loginSuccess:(NSNotification *)aNotification{
     self.isLogin = YES;
+    [self hiddenLoginViewController];
 }
 
-- (void)loginFailed:(NSNotification *)aNotification{
+- (void)logout:(NSNotification *)aNotification{
     self.isLogin = NO;
     [self showLoginViewController];
 }
 
 - (void)checkTokenSuccess:(NSNotification *)aNotification{
     self.isLogin = YES;
+    [self hiddenLoginViewController];
 }
 - (void)checkTokenFailed:(NSNotification *)aNotification{
     self.isLogin = NO;
@@ -61,12 +64,17 @@
 }
 
 - (void)showLoginViewController{
-    LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    UINavigationController *navLogin = [[UINavigationController alloc] initWithRootViewController:logVC];
-    UINavigationController *nav4 = self.viewControllers[0];
-    [nav4 presentViewController:navLogin animated:YES completion:^{
-        
-    }];
+    if (!self.loginNaVc) {
+        LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        self.loginNaVc = [[UINavigationController alloc] initWithRootViewController:logVC];    }
+    
+    [self presentViewController:self.loginNaVc animated:YES completion:^{}];
 
+}
+
+- (void)hiddenLoginViewController{
+    if(self.loginNaVc){
+        [self.loginNaVc dismissViewControllerAnimated:YES completion:^{ }];
+    }
 }
 @end

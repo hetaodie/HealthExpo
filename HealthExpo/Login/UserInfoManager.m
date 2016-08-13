@@ -49,23 +49,52 @@
         _userInfo.gender = @"男";
         _userInfo.birthday = @"2016年6月26日";
         _userInfo.email = @"XXXXXX@163.com";
-        _userInfo.address = @"杭州市滨江区网商路599号";        
+        _userInfo.address = @"杭州市滨江区网商路599号";
+        [self saveEditedUserInfo:_userInfo];
+        [self initLoginKeys];
     }
     return self;
 }
-
+- (void)initLoginKeys{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *phone = [defaults objectForKey:HELoginTokenKeyPhone];
+    NSString *uid = [defaults objectForKey:HELoginTokenKeyUid];
+    NSString *pwd = [defaults objectForKey:HELoginTokenKeyPwd];
+    
+    if (!phone) {
+         [defaults setObject:@"-1" forKey:HELoginTokenKeyPhone];
+    }
+    if (!uid) {
+        [defaults setObject:@"-1" forKey:HELoginTokenKeyUid];
+    }
+    if (!pwd) {
+        [defaults setObject:@"-1" forKey:HELoginTokenKeyPwd];
+    }
+    [defaults synchronize];
+}
 
 #pragma mark 登陆
-- (void)loginWithUserName:(NSString *)userName andPassword:(NSString *)password{
-    //TODO 发送账号和密码进行校验，返回后发送通知，成功则在本地保存token 获取userinfo
+- (void)registerSuccessWithUserName:(NSString *)userName andPassword:(NSString *)password andUID:(NSString *)uID{
+    if (!userName || !password || !uID) {
+        return;
+    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:userName forKey:HELoginTokenKeyPhone];
+    [defaults setObject:password forKey:HELoginTokenKeyPwd];
+    [defaults setObject:uID forKey:HELoginTokenKeyUid];
+    [defaults synchronize];
+    
+    self.userInfo.phone = userName;
+    self.userInfo.userName = userName;
+    [self saveEditedUserInfo:self.userInfo];
 }
 
 - (void)checkLoginKeyAvailable{
     NSString *phone = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPhone];
-//    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyUid];
+    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyUid];
     NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPwd];
     //TODO 发送token进行校验，返回后发送通知
-    if (!phone || !pwd) {
+    if ([phone isEqualToString:@"-1"] || [pwd isEqualToString:@"-1"] /*|| [uid isEqualToString:@"-1"]*/) {
         [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_failed_Notifocation object:nil];
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_Success_Notification object:nil];
@@ -74,7 +103,7 @@
 }
 
 #pragma mark - UserInfo
-- (UserInfo *)UserInfoFromUserDefaults{
+- (UserInfo *)userInfoFromUserDefaults{
     UserInfo *info = [[UserInfo alloc] init];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *imageData = [defaults objectForKey:HEUserCover];

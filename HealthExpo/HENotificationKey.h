@@ -11,7 +11,7 @@
 
 //login
 #define HELogin_Success_Notification @"HELogin_Success_Notification"
-#define HELogin_Failed_Notification @"HELogin_Failed_Notification"
+#define HELogout_Notification @"HELogout_Notification"
 #define HECheck_Token_Success_Notification @"HECheck_Token_Success_Notification"
 #define HECheck_Token_failed_Notifocation @"HECheck_Token_failed_Notifocation"
 

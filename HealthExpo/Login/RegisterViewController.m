@@ -9,8 +9,11 @@
 #import "RegisterViewController.h"
 #import "UIColor+HEX.h"
 #import "UIButton+CountDown.h"
+#import "RegisterModelSource.h"
+#import "UserInfoManager.h"
+#import "HENotificationKey.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<RegisterModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *registerPhoneNumBackgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *registerPhoneNumImage;
 @property (weak, nonatomic) IBOutlet UITextField *registerPhoneNumTextField;
@@ -23,6 +26,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *getCheckNumButton;
 
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *password;
+
+@property (nonatomic, strong) RegisterModelSource *modelSource;
+
 @end
 
 @implementation RegisterViewController
@@ -31,6 +39,9 @@
     [super viewDidLoad];
     [self refreshUI];
     [self adjustNavigationBar];
+    
+    self.modelSource = [[RegisterModelSource alloc] init];
+    self.modelSource.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +86,10 @@
 }
 
 - (IBAction)onRegisterButtonClicked:(id)sender {
+    self.password = self.registerPasswordTextField.text;
+    self.userName = self.registerPhoneNumTextField.text;
+    
+    [self.modelSource registerWithPhoneNum:self.userName andPwd:self.password];
 }
 
 - (void)refreshUI{
@@ -93,4 +108,25 @@
     self.registerButton.layer.cornerRadius = 5.0;
     self.getCheckNumButton.layer.cornerRadius = 5.0;
 }
+
+#pragma mark -- RegisterModelSourceDelegate
+- (void)onRegisterSuccess:(NSDictionary *)dict{
+//    [self.modelSource registerICallWithPhoneNum:self.userName andPwd:self.password];
+    //需要换成上面的继续注册
+    [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:@"-1"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+}
+
+- (void)onRegisterFailed{
+    
+}
+
+- (void)onRegisterICallSuccess:(NSDictionary *)data{
+//    [UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:
+}
+
+- (void)onRegisterICallFailed{
+    
+}
+
 @end

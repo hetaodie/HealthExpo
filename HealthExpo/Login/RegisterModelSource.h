@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @protocol RegisterModelSourceDelegate <NSObject>
-- (void)onRegisterSuccess:(NSArray *)data;
+- (void)onRegisterSuccess:(NSDictionary *)dict;
 - (void)onRegisterFailed;
 
 - (void)onRegisterICallSuccess:(NSDictionary *)data;
@@ -19,5 +19,7 @@
 @property (nonatomic, weak) id <RegisterModelSourceDelegate> delegate;
 
 - (void)registerWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd;
+
+- (void)registerICallWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd;
 
 @end

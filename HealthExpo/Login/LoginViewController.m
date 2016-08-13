@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "UIColor+HEX.h"
-
+#import "HENotificationKey.h"
 #import "rescourceDown.h"
 
 @interface LoginViewController ()<rescourceDelegate>
@@ -85,11 +85,6 @@
     rescourceDown *rD = [[rescourceDown alloc] init];
     rD.delegate = self;
     [rD requestForRegistNum:@"sdkceshi" andPwd:@"888888" withAgentId:@"1"];
-}
-
-//测试icallsdk
-- (void)registResult:(NSDictionary *)resultDic withError:(NSString *)errMsg{
-    NSLog(@"resultDic desc %@, errMsg is %@", resultDic.description, errMsg);
 }
 
 - (void)refreshUI{

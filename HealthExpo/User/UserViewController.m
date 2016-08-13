@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.userInfo = [[UserInfoManager shareManager] userInfo];
+    self.userInfo = [[UserInfoManager shareManager] userInfoFromUserDefaults];
     
     [self refreshTopView];
     [self adjustNavigationBar];

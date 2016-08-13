@@ -15,13 +15,8 @@
 
 
 + (instancetype)shareManager;
-/**
- *  通过用户名和账号登陆
- *
- *  @param userName 用户名
- *  @param password 账号
- */
-- (void)loginWithUserName:(NSString *)userName andPassword:(NSString *)password;
+//登陆成功存储用户信息。
+- (void)registerSuccessWithUserName:(NSString *)userName andPassword:(NSString *)password andUID:(NSString *)cID;
 
 /**
  *  校验登陆token是否失效。
@@ -31,4 +26,10 @@
  *  保存编辑后的userinfo
  */
 - (void)saveEditedUserInfo;
+/**
+ *  获取userInfo
+ *
+ *  @return userInfo
+ */
+- (UserInfo *)userInfoFromUserDefaults;
 @end
