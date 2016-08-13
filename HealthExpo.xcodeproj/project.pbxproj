@@ -930,7 +930,7 @@
 				TargetAttributes = {
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9UL567ZJ57;
+						DevelopmentTeam = XWV65WS8FZ;
 					};
 				};
 			};
@@ -1266,7 +1266,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.xuxuxu;
+				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HEexpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1287,7 +1287,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.xuxuxu;
+				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HEexpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

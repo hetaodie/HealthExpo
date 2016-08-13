@@ -3,10 +3,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="checkNumBackgroundView" destination="exz-Jt-ZeC" id="cEF-tm-qTa"/>
+                <outlet property="checkNumImage" destination="HvP-ye-Aav" id="DxC-2X-pdP"/>
+                <outlet property="checkNumTextField" destination="vZL-TD-5f1" id="Rk9-gM-0oj"/>
+                <outlet property="getCheckNumButton" destination="7gB-Zn-N90" id="Pxk-0n-0ZM"/>
                 <outlet property="registerButton" destination="dp7-NM-Inx" id="yRJ-70-2su"/>
                 <outlet property="registerPasswordBackgroundView" destination="zld-oa-ccO" id="63F-J4-4HQ"/>
                 <outlet property="registerPasswordImage" destination="bTg-UD-Bfy" id="QBS-ka-WID"/>
@@ -58,8 +63,44 @@
                         <constraint firstItem="Vh0-aV-q6D" firstAttribute="leading" secondItem="hHi-IP-Ew6" secondAttribute="trailing" constant="13" id="fIp-bw-dIU"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exz-Jt-ZeC">
+                    <rect key="frame" x="15" y="138" width="371" height="44"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yanzhengma" translatesAutoresizingMaskIntoConstraints="NO" id="HvP-ye-Aav">
+                            <rect key="frame" x="14" y="14" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="785-86-jTL"/>
+                                <constraint firstAttribute="width" constant="16" id="Wb4-c2-e0D"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyU-yU-DQK">
+                            <rect key="frame" x="45" y="5" width="1" height="34"/>
+                            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="H63-aU-pfW"/>
+                                <constraint firstAttribute="height" constant="34" id="yb7-2L-KIC"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZL-TD-5f1">
+                            <rect key="frame" x="59" y="0.0" width="312" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="HvP-ye-Aav" firstAttribute="leading" secondItem="exz-Jt-ZeC" secondAttribute="leading" constant="14" id="2EU-OM-lP1"/>
+                        <constraint firstItem="HvP-ye-Aav" firstAttribute="centerY" secondItem="exz-Jt-ZeC" secondAttribute="centerY" id="6WC-SU-w4b"/>
+                        <constraint firstAttribute="bottom" secondItem="vZL-TD-5f1" secondAttribute="bottom" id="8Rt-c4-nqC"/>
+                        <constraint firstItem="vZL-TD-5f1" firstAttribute="top" secondItem="exz-Jt-ZeC" secondAttribute="top" id="ELA-hY-Xs0"/>
+                        <constraint firstAttribute="trailing" secondItem="vZL-TD-5f1" secondAttribute="trailing" id="MhM-VW-PAI"/>
+                        <constraint firstItem="vZL-TD-5f1" firstAttribute="leading" secondItem="QyU-yU-DQK" secondAttribute="trailing" constant="13" id="QGr-1v-lxw"/>
+                        <constraint firstAttribute="height" constant="44" id="bVK-Zo-K9s"/>
+                        <constraint firstItem="QyU-yU-DQK" firstAttribute="centerY" secondItem="exz-Jt-ZeC" secondAttribute="centerY" id="bhI-tD-XCS"/>
+                        <constraint firstItem="QyU-yU-DQK" firstAttribute="leading" secondItem="exz-Jt-ZeC" secondAttribute="leading" constant="45" id="ccQ-xS-2x6"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zld-oa-ccO">
-                    <rect key="frame" x="15" y="143" width="570" height="44"/>
+                    <rect key="frame" x="15" y="197" width="570" height="44"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mima" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-UD-Bfy">
                             <rect key="frame" x="16" y="14" width="14" height="16"/>
@@ -95,7 +136,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp7-NM-Inx">
-                    <rect key="frame" x="15" y="217" width="570" height="44"/>
+                    <rect key="frame" x="15" y="271" width="570" height="44"/>
                     <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="mff-1o-TIc"/>
@@ -105,23 +146,42 @@
                         <action selector="onRegisterButtonClicked:" destination="-1" eventType="touchUpInside" id="tIY-TR-GLY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-Zn-N90">
+                    <rect key="frame" x="396" y="138" width="189" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="GRA-y5-P3c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="获取验证码"/>
+                    <connections>
+                        <action selector="onGetCheckNumButtonClicked:" destination="-1" eventType="touchUpInside" id="bel-dX-YUq"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="zld-oa-ccO" firstAttribute="top" secondItem="E16-8R-d5L" secondAttribute="bottom" constant="20" id="FhB-Xw-393"/>
+                <constraint firstItem="7gB-Zn-N90" firstAttribute="top" secondItem="E16-8R-d5L" secondAttribute="bottom" constant="15" id="2qS-Gp-q2W"/>
                 <constraint firstItem="dp7-NM-Inx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fhc-kB-IPz"/>
                 <constraint firstItem="zld-oa-ccO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hgr-vd-OSo"/>
+                <constraint firstItem="exz-Jt-ZeC" firstAttribute="leading" secondItem="E16-8R-d5L" secondAttribute="leading" id="NOQ-24-KLQ"/>
+                <constraint firstItem="zld-oa-ccO" firstAttribute="top" secondItem="7gB-Zn-N90" secondAttribute="bottom" constant="15" id="OBg-Gj-MXx"/>
+                <constraint firstItem="exz-Jt-ZeC" firstAttribute="width" secondItem="E16-8R-d5L" secondAttribute="width" multiplier="0.65" id="VMW-kz-Cde"/>
                 <constraint firstItem="E16-8R-d5L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="VoA-Vl-HT1"/>
                 <constraint firstItem="dp7-NM-Inx" firstAttribute="width" secondItem="E16-8R-d5L" secondAttribute="width" id="bVE-J7-fQQ"/>
+                <constraint firstItem="exz-Jt-ZeC" firstAttribute="top" secondItem="E16-8R-d5L" secondAttribute="bottom" constant="15" id="gFK-Oe-8q2"/>
                 <constraint firstItem="dp7-NM-Inx" firstAttribute="top" secondItem="zld-oa-ccO" secondAttribute="bottom" constant="30" id="kZU-Fs-qNK"/>
                 <constraint firstItem="E16-8R-d5L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="lgA-B2-gEb"/>
+                <constraint firstItem="7gB-Zn-N90" firstAttribute="leading" secondItem="exz-Jt-ZeC" secondAttribute="trailing" constant="10" id="nbd-nF-v3g"/>
                 <constraint firstAttribute="trailing" secondItem="E16-8R-d5L" secondAttribute="trailing" constant="15" id="oMC-p9-mSL"/>
                 <constraint firstItem="zld-oa-ccO" firstAttribute="width" secondItem="E16-8R-d5L" secondAttribute="width" id="oaU-nK-xAG"/>
+                <constraint firstItem="7gB-Zn-N90" firstAttribute="trailing" secondItem="E16-8R-d5L" secondAttribute="trailing" id="ofk-ey-30Q"/>
             </constraints>
         </view>
     </objects>
     <resources>
         <image name="mima" width="13" height="16"/>
+        <image name="yanzhengma" width="17" height="17"/>
         <image name="zhanghao" width="17" height="17"/>
     </resources>
 </document>

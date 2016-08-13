@@ -9,6 +9,9 @@
 #import "CustomTabBarController.h"
 #import "LoginViewController.h"
 #import "HENotificationKey.h"
+@interface CustomTabBarController()
+@property (nonatomic, assign) BOOL isLogin;
+@end
 
 @implementation CustomTabBarController
 + (instancetype)getInstance{
@@ -41,20 +44,29 @@
 
 #pragma mark - Notification Handler
 - (void)loginSuccess:(NSNotification *)aNotification{
-    
+    self.isLogin = YES;
 }
 
 - (void)loginFailed:(NSNotification *)aNotification{
-    
+    self.isLogin = NO;
+    [self showLoginViewController];
 }
 
 - (void)checkTokenSuccess:(NSNotification *)aNotification{
-    
+    self.isLogin = YES;
 }
 - (void)checkTokenFailed:(NSNotification *)aNotification{
-    [self setSelectedIndex:4];//登陆界面
+    self.isLogin = NO;
+    [self showLoginViewController];
+}
+
+- (void)showLoginViewController{
     LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    UINavigationController *nav4 = self.viewControllers[4];
-    [nav4 pushViewController:logVC animated:YES];
+    UINavigationController *navLogin = [[UINavigationController alloc] initWithRootViewController:logVC];
+    UINavigationController *nav4 = self.viewControllers[0];
+    [nav4 presentViewController:navLogin animated:YES completion:^{
+        
+    }];
+
 }
 @end

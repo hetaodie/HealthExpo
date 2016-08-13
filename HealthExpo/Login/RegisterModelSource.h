@@ -10,6 +10,9 @@
 @protocol RegisterModelSourceDelegate <NSObject>
 - (void)onRegisterSuccess:(NSArray *)data;
 - (void)onRegisterFailed;
+
+- (void)onRegisterICallSuccess:(NSDictionary *)data;
+- (void)onRegisterICallFailed;
 @end
 
 @interface RegisterModelSource : NSObject
