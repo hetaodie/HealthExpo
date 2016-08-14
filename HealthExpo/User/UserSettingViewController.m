@@ -10,6 +10,7 @@
 #import "UserSettingTableViewCell.h"
 #import "HENotificationKey.h"
 #import "UserInfoManager.h"
+#import "UserEditViewController.h"
 
 @interface UserSettingViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -83,6 +84,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.row == 0) {
+        UserEditViewController *ueVC = [[UserEditViewController alloc] initWithNibName:@"UserEditViewController" bundle:nil];
+        ueVC.hidesBottomBarWhenPushed = YES;
+        ueVC.editType = HEEditPhone;
+        ueVC.editTitle = @"电话";
+        [self.navigationController pushViewController:ueVC animated:YES];
+    }
 }
 @end
