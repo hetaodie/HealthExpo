@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -80,7 +80,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBH-cJ-azg">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huafei" translatesAutoresizingMaskIntoConstraints="NO" id="etI-ec-sPU">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection" translatesAutoresizingMaskIntoConstraints="NO" id="etI-ec-sPU">
                                     <rect key="frame" x="145" y="5" width="11" height="17"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="17" id="QRr-9t-GGo"/>
@@ -94,16 +94,26 @@
                                         <constraint firstAttribute="height" constant="13" id="Jhr-21-FVt"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX2-Fv-6Ja">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <connections>
+                                        <action selector="onCollectionClicked:" destination="-1" eventType="touchUpInside" id="4Qw-Vl-N3w"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="etI-ec-sPU" firstAttribute="centerX" secondItem="hBH-cJ-azg" secondAttribute="centerX" id="QwP-UA-hbR"/>
                                 <constraint firstItem="ZFR-Gl-V2p" firstAttribute="top" secondItem="etI-ec-sPU" secondAttribute="bottom" constant="5" id="UE1-Lj-ttl"/>
+                                <constraint firstAttribute="bottom" secondItem="uX2-Fv-6Ja" secondAttribute="bottom" id="eaG-vK-D4u"/>
                                 <constraint firstItem="ZFR-Gl-V2p" firstAttribute="centerX" secondItem="hBH-cJ-azg" secondAttribute="centerX" id="gye-Fw-Bmq"/>
+                                <constraint firstAttribute="trailing" secondItem="uX2-Fv-6Ja" secondAttribute="trailing" id="mUd-hk-cQt"/>
+                                <constraint firstItem="uX2-Fv-6Ja" firstAttribute="leading" secondItem="hBH-cJ-azg" secondAttribute="leading" id="tLR-V8-y9T"/>
                                 <constraint firstItem="etI-ec-sPU" firstAttribute="top" secondItem="hBH-cJ-azg" secondAttribute="top" constant="5" id="vqT-Ie-8Pf"/>
+                                <constraint firstItem="uX2-Fv-6Ja" firstAttribute="top" secondItem="hBH-cJ-azg" secondAttribute="top" id="wou-Hc-xMI"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-X5-lYE">
@@ -123,15 +133,25 @@
                                         <constraint firstAttribute="height" constant="13" id="Vxn-D9-CRE"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-Mj-uvx">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <connections>
+                                        <action selector="onCallDetailClicked:" destination="-1" eventType="touchUpInside" id="Lyv-6B-iXP"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="RG2-Mj-uvx" secondAttribute="bottom" id="5r3-Zp-yPb"/>
+                                <constraint firstItem="RG2-Mj-uvx" firstAttribute="leading" secondItem="eWf-X5-lYE" secondAttribute="leading" id="AiL-fP-Ex2"/>
                                 <constraint firstItem="cQR-KN-x98" firstAttribute="top" secondItem="kMz-rW-EOJ" secondAttribute="bottom" constant="5" id="CiW-38-o00"/>
                                 <constraint firstItem="cQR-KN-x98" firstAttribute="centerX" secondItem="eWf-X5-lYE" secondAttribute="centerX" id="fml-5I-oV0"/>
+                                <constraint firstItem="RG2-Mj-uvx" firstAttribute="top" secondItem="eWf-X5-lYE" secondAttribute="top" id="i82-A8-bFO"/>
                                 <constraint firstItem="kMz-rW-EOJ" firstAttribute="top" secondItem="eWf-X5-lYE" secondAttribute="top" constant="5" id="jRT-kj-Pbz"/>
+                                <constraint firstAttribute="trailing" secondItem="RG2-Mj-uvx" secondAttribute="trailing" id="oq9-0i-Ftk"/>
                                 <constraint firstItem="kMz-rW-EOJ" firstAttribute="centerX" secondItem="eWf-X5-lYE" secondAttribute="centerX" id="riV-Bc-F9P"/>
                             </constraints>
                         </view>
@@ -190,6 +210,7 @@
         </view>
     </objects>
     <resources>
+        <image name="collection" width="10" height="17"/>
         <image name="huafei" width="11" height="17"/>
         <image name="touxiang" width="45" height="45"/>
     </resources>

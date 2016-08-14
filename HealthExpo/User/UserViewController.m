@@ -12,6 +12,8 @@
 #import "UserInfoManager.h"
 #import "UserSettingViewController.h"
 #import "HENotificationKey.h"
+#import "CollectionViewController.h"
+#import "CallDetailViewController.h"
 
 @interface UserViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *topUserCover;
@@ -37,6 +39,18 @@
     [self adjustNavigationBar];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+}
+
+- (IBAction)onCollectionClicked:(id)sender {
+    CollectionViewController *cVC = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
+    cVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cVC animated:YES];
+}
+
+- (IBAction)onCallDetailClicked:(id)sender {
+    CallDetailViewController *cdVC = [[CallDetailViewController alloc] initWithNibName:@"CallDetailViewController" bundle:nil];
+    cdVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cdVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

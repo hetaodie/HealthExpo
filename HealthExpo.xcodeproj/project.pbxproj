@@ -48,6 +48,12 @@
 		69DA4C731D6017B70027A504 /* CheckInModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C721D6017B70027A504 /* CheckInModelSource.m */; };
 		69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C751D6019120027A504 /* UserLoginInfo.m */; };
 		69DA4C791D6020420027A504 /* PhoneCallModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C781D6020420027A504 /* PhoneCallModelSource.m */; };
+		69DA4C7D1D60481A0027A504 /* CallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C7B1D60481A0027A504 /* CallDetailViewController.m */; };
+		69DA4C7E1D60481A0027A504 /* CallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DA4C7C1D60481A0027A504 /* CallDetailViewController.xib */; };
+		69DA4C821D6048820027A504 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C801D6048820027A504 /* CollectionViewController.m */; };
+		69DA4C831D6048820027A504 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DA4C811D6048820027A504 /* CollectionViewController.xib */; };
+		69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C851D6049B20027A504 /* CollectionModelSource.m */; };
+		69DA4C891D6050DF0027A504 /* CallDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C881D6050DF0027A504 /* CallDetailModelSource.m */; };
 		69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6A41D5703790064346B /* DiscoverViewController.m */; };
 		69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6A51D5703790064346B /* DiscoverViewController.xib */; };
 		69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AA1D5705190064346B /* TextTableViewCell.m */; };
@@ -229,6 +235,16 @@
 		69DA4C751D6019120027A504 /* UserLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginInfo.m; sourceTree = "<group>"; };
 		69DA4C771D6020420027A504 /* PhoneCallModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneCallModelSource.h; sourceTree = "<group>"; };
 		69DA4C781D6020420027A504 /* PhoneCallModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneCallModelSource.m; sourceTree = "<group>"; };
+		69DA4C7A1D60481A0027A504 /* CallDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallDetailViewController.h; path = User/CallDetailViewController.h; sourceTree = "<group>"; };
+		69DA4C7B1D60481A0027A504 /* CallDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallDetailViewController.m; path = User/CallDetailViewController.m; sourceTree = "<group>"; };
+		69DA4C7C1D60481A0027A504 /* CallDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallDetailViewController.xib; path = User/CallDetailViewController.xib; sourceTree = "<group>"; };
+		69DA4C7F1D6048820027A504 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewController.h; path = User/CollectionViewController.h; sourceTree = "<group>"; };
+		69DA4C801D6048820027A504 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewController.m; path = User/CollectionViewController.m; sourceTree = "<group>"; };
+		69DA4C811D6048820027A504 /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionViewController.xib; path = User/CollectionViewController.xib; sourceTree = "<group>"; };
+		69DA4C841D6049B20027A504 /* CollectionModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionModelSource.h; path = User/CollectionModelSource.h; sourceTree = "<group>"; };
+		69DA4C851D6049B20027A504 /* CollectionModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionModelSource.m; path = User/CollectionModelSource.m; sourceTree = "<group>"; };
+		69DA4C871D6050DF0027A504 /* CallDetailModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallDetailModelSource.h; path = User/CallDetailModelSource.h; sourceTree = "<group>"; };
+		69DA4C881D6050DF0027A504 /* CallDetailModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallDetailModelSource.m; path = User/CallDetailModelSource.m; sourceTree = "<group>"; };
 		69DBC6A31D5703790064346B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Phone/DiscoverViewController.h; sourceTree = "<group>"; };
 		69DBC6A41D5703790064346B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Phone/DiscoverViewController.m; sourceTree = "<group>"; };
 		69DBC6A51D5703790064346B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoverViewController.xib; path = Phone/DiscoverViewController.xib; sourceTree = "<group>"; };
@@ -440,6 +456,16 @@
 				53A34BCA1D1FC4A60043144E /* UserViewController.xib */,
 				69DC27A81D5DF7A3006EEF68 /* UserCenterModelSource.h */,
 				69DC27A91D5DF7A3006EEF68 /* UserCenterModelSource.m */,
+				69DA4C7F1D6048820027A504 /* CollectionViewController.h */,
+				69DA4C801D6048820027A504 /* CollectionViewController.m */,
+				69DA4C811D6048820027A504 /* CollectionViewController.xib */,
+				69DA4C841D6049B20027A504 /* CollectionModelSource.h */,
+				69DA4C851D6049B20027A504 /* CollectionModelSource.m */,
+				69DA4C7A1D60481A0027A504 /* CallDetailViewController.h */,
+				69DA4C7B1D60481A0027A504 /* CallDetailViewController.m */,
+				69DA4C7C1D60481A0027A504 /* CallDetailViewController.xib */,
+				69DA4C871D6050DF0027A504 /* CallDetailModelSource.h */,
+				69DA4C881D6050DF0027A504 /* CallDetailModelSource.m */,
 				532405231D22BDAB004A1A43 /* UserSettingViewController.h */,
 				532405241D22BDAB004A1A43 /* UserSettingViewController.m */,
 				532405251D22BDAB004A1A43 /* UserSettingViewController.xib */,
@@ -1010,6 +1036,7 @@
 				7C6744551D2CE66300661276 /* YiMiaoDetailViewController.xib in Resources */,
 				69DD74B21D5B462D00730B94 /* NewsDetailViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
+				69DA4C7E1D60481A0027A504 /* CallDetailViewController.xib in Resources */,
 				7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */,
 				7C05E15D1D5DD7D6006D4EA9 /* YiMiaoViewController.xib in Resources */,
 				5324052C1D22C12D004A1A43 /* UserSettingTableViewCell.xib in Resources */,
@@ -1020,6 +1047,7 @@
 				53BC4C7D1D2915DE009035BC /* DianZiZaZhiViewController.xib in Resources */,
 				7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */,
 				69DD74B71D5B491600730B94 /* SubmissionViewController.xib in Resources */,
+				69DA4C831D6048820027A504 /* CollectionViewController.xib in Resources */,
 				7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */,
 				7C6744501D2CC6F100661276 /* YiMiaoScheduleCell.xib in Resources */,
 				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
@@ -1096,6 +1124,7 @@
 				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
 				7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */,
 				7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */,
+				69DA4C891D6050DF0027A504 /* CallDetailModelSource.m in Sources */,
 				7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */,
 				69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */,
 				7C05E14A1D5D63E5006D4EA9 /* YiMiaoModul.m in Sources */,
@@ -1150,6 +1179,7 @@
 				7C67445E1D2D1E0A00661276 /* YiLiaoJiGouViewController.m in Sources */,
 				7C05E1691D5DF5DF006D4EA9 /* YiLiaoJiGouLeftView.m in Sources */,
 				7C05E1911D5F18FE006D4EA9 /* ContactPersonObject.m in Sources */,
+				69DA4C821D6048820027A504 /* CollectionViewController.m in Sources */,
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
 				69DC27A11D5DF3AC006EEF68 /* NSString+MD5.m in Sources */,
@@ -1164,6 +1194,7 @@
 				69DD74B11D5B462D00730B94 /* NewsDetailViewController.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
+				69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */,
 				7C05E17B1D5DF6D3006D4EA9 /* YiLiaoJiGouModul.m in Sources */,
 				69DD74BA1D5B493900730B94 /* SubmissionModelSource.m in Sources */,
 				7C05E17E1D5DF855006D4EA9 /* DiQunObject.m in Sources */,
@@ -1176,6 +1207,7 @@
 				69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */,
 				53AD05581D2C03D500557942 /* HomePageNewsItem.m in Sources */,
 				7C05E18A1D5EDF6F006D4EA9 /* YiYuanDetailModul.m in Sources */,
+				69DA4C7D1D60481A0027A504 /* CallDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
