@@ -15,8 +15,9 @@
 #import "CollectionViewController.h"
 #import "CallDetailViewController.h"
 #import "UserEditViewController.h"
+#import "UserInfoManager.h"
 
-@interface UserViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface UserViewController ()<UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *topUserCover;
 @property (weak, nonatomic) IBOutlet UILabel *topUserName;
 @property (weak, nonatomic) IBOutlet UILabel *topUserPhoneNum;
@@ -101,6 +102,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        [self onOpenAlbum];
+    }
+    
     NSString *editText = nil;
     EditType editType = HEEditName;
     if (indexPath.row == 1) {
@@ -164,5 +169,88 @@
     
     [self.tableView reloadData];
 }
+
+#pragma mark - coverImage
+- (void)onOpenAlbum{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"选择图片源" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self pickFromCamera];
+    }];
+    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self pickFromAlbum];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [controller addAction:cameraAction];
+    [controller addAction:albumAction];
+    [controller addAction:cancelAction];
+    
+    [self presentViewController:controller animated:YES completion:^{
+        
+    }];
+}
+#pragma mark -- camera && album
+- (void)pickFromAlbum{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+        pickerController.delegate = self;
+        pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        pickerController.allowsEditing = NO;
+        
+        //model show
+        [pickerController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+        [self presentViewController:pickerController animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"通知" message:@"无法获取相册" delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+- (void)pickFromCamera{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+        pickerController.delegate = self;
+        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        pickerController.allowsEditing = NO;
+        
+        //model show
+        [pickerController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+        [self presentViewController:pickerController animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"通知" message:@"无法获取相机" delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
+#pragma mark -- ActionSheet Delegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (actionSheet.tag == 10000) {
+        if (buttonIndex == [actionSheet firstOtherButtonIndex]) {
+            [self pickFromAlbum];
+        }
+        else if(buttonIndex == [actionSheet firstOtherButtonIndex] +1){
+            [self pickFromCamera];
+        }
+        else{
+            NULL;
+        }
+    }
+}
+
+#pragma mark -- UIImagePickerController Delegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *originImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.userInfo.cover = originImage;
+    [[UserInfoManager shareManager] saveEditedUserInfo:self.userInfo];
+    
+    [self refreshUserInformation];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
 
 @end
