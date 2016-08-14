@@ -111,10 +111,7 @@
 
 #pragma mark -- RegisterModelSourceDelegate
 - (void)onRegisterSuccess:(NSDictionary *)dict{
-//    [self.modelSource registerICallWithPhoneNum:self.userName andPwd:self.password];
-    //需要换成上面的继续注册
-    [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:@"-1"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+    [self.modelSource registerICallWithPhoneNum:self.userName andPwd:self.password];
 }
 
 - (void)onRegisterFailed{
@@ -122,7 +119,10 @@
 }
 
 - (void)onRegisterICallSuccess:(NSDictionary *)data{
-//    [UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:
+    if([data[@"err_code"] integerValue] == 0){
+        [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:[data[@"uid"] stringValue]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+    }
 }
 
 - (void)onRegisterICallFailed{

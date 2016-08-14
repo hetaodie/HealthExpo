@@ -31,9 +31,9 @@
 }
 
 - (void)registerICallWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd{
-//    NSString *key = [phone stringByAppendingString:@"gytx@#$.com"];
-//    NSString *url= [NSString stringWithFormat:@"http://biz.scback.cn/appreg.php?phone=%@&pwd=%@&key=%@&agentid=1", phone, pwd, key.MD5];
-    HENetTask *task = [[HENetTask alloc] initWithTotalUrlString:@"http://biz.scback.cn/appreg.php?phone=18871430809&pwd=333333&key=603bb67294391ffe043b56603a89ec58&agentid=1"];
+    NSString *key = [phone stringByAppendingString:@"gytx@#$.com"];
+    NSString *url= [NSString stringWithFormat:@"http://202.75.210.180/appreg.php?pwd=%@&phone=%@&key=%@&agentid=1", pwd, phone, key.MD5];
+    HENetTask *task = [[HENetTask alloc] initWithTotalUrlString:url];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onRegisterICallSuccess:)]) {
@@ -47,7 +47,7 @@
         }
     };
     
-    [task runInMethod:HE_GET];
+    [task runInMethod:HE_POST];
 }
 
 @end

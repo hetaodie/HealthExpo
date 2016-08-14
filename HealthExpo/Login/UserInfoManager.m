@@ -92,7 +92,7 @@
 - (void)clearLoginKeys{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"-1" forKey:HELoginTokenKeyPhone];
-//    [defaults setObject:@"-1" forKey:HELoginTokenKeyUid];
+    [defaults setObject:@"-1" forKey:HELoginTokenKeyUid];
     [defaults setObject:@"-1" forKey:HELoginTokenKeyPwd];
   
     [defaults synchronize];
@@ -104,7 +104,7 @@
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyUid];
     NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPwd];
     //TODO 发送token进行校验，返回后发送通知
-    if ([phone isEqualToString:@"-1"] || [pwd isEqualToString:@"-1"] /*|| [uid isEqualToString:@"-1"]*/) {
+    if ([phone isEqualToString:@"-1"] || [pwd isEqualToString:@"-1"] || [uid isEqualToString:@"-1"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_failed_Notifocation object:nil];
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:HECheck_Token_Success_Notification object:nil];

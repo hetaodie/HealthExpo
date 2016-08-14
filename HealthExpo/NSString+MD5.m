@@ -20,7 +20,7 @@
         [result appendFormat:@"%02X", digest[i]];
     }
 
-    return result;
+    return [result lowercaseString];
 }
 
 + (NSString*)get_pwd:(NSString*)tmpIn
