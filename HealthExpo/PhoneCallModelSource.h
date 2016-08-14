@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @protocol PhoneCallModelSourceDelegate <NSObject>
 
-- (void)onPhoneCallSuccess:(NSDictionary *)dict;
+- (void)onPhoneCallSuccess:(NSString *)tipString;
 - (void)onPhoneCallFailed;
 
 @end

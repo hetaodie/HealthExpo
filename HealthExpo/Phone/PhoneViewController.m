@@ -149,6 +149,14 @@
     
 }
 
-#pragma mark -- 
+#pragma mark -- PhoneCallModelSourceDelegate
+- (void)onPhoneCallSuccess:(NSString *)tipString{
+    [self.view makeToast:tipString duration:0.8 position:CSToastPositionCenter];
+}
+
+- (void)onPhoneCallFailed{
+    [self.view makeToast:@"呼叫失败" duration:0.8 position:CSToastPositionCenter];
+
+}
 
 @end

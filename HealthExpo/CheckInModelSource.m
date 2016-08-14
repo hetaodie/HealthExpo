@@ -12,7 +12,12 @@
 #import "UserLoginInfo.h"
 #import "UserInfoManager.h"
 
+
+
 @implementation CheckInModelSource
+
+
+
 - (void)onCheckInRequst{
     UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
     NSString *key = [info.uid stringByAppendingString:@"gytx@#$.com"];
