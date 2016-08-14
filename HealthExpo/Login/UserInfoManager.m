@@ -89,6 +89,16 @@
     [self saveEditedUserInfo:self.userInfo];
 }
 
+- (void)clearLoginKeys{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"-1" forKey:HELoginTokenKeyPhone];
+//    [defaults setObject:@"-1" forKey:HELoginTokenKeyUid];
+    [defaults setObject:@"-1" forKey:HELoginTokenKeyPwd];
+  
+    [defaults synchronize];
+
+}
+
 - (void)checkLoginKeyAvailable{
     NSString *phone = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPhone];
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyUid];

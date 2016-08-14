@@ -8,6 +8,8 @@
 
 #import "UserSettingViewController.h"
 #import "UserSettingTableViewCell.h"
+#import "HENotificationKey.h"
+#import "UserInfoManager.h"
 
 @interface UserSettingViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -45,6 +47,8 @@
 }
 
 - (IBAction)onLogOutButtonClicked:(id)sender {
+    [[UserInfoManager shareManager] clearLoginKeys];
+    [[NSNotificationCenter defaultCenter] postNotificationName:HELogout_Notification object:nil userInfo:nil];
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
