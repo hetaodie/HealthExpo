@@ -105,6 +105,9 @@
     if (indexPath.row == 0) {
         [self onOpenAlbum];
     }
+    if (indexPath.row == 3) {
+        [self onGenderSetting];
+    }
     
     NSString *editText = nil;
     EditType editType = HEEditName;
@@ -134,7 +137,6 @@
 }
 
 #pragma mark - private Func
-
 - (void)adjustNavigationBar{
     self.navigationItem.title = @"我 的";
     
@@ -252,5 +254,36 @@
     }];
 }
 
+#pragma mark - gender setting
+- (void)onGenderSetting{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"设置性别" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self onGenderChoosed:YES];
+    }];
+    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self onGenderChoosed:NO];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [controller addAction:cameraAction];
+    [controller addAction:albumAction];
+    [controller addAction:cancelAction];
+    
+    [self presentViewController:controller animated:YES completion:^{
+        
+    }];
+
+}
+
+- (void)onGenderChoosed:(BOOL)isMale{
+    if (isMale) {
+        self.userInfo.gender = @"男";
+    } else {
+        self.userInfo.gender = @"女";
+    }
+    [[UserInfoManager shareManager] saveEditedUserInfo:self.userInfo];
+    [self refreshUserInformation];
+}
 
 @end
