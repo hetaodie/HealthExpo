@@ -11,6 +11,7 @@
 #import "UserInfoImageTableViewCell.h"
 #import "UserInfoManager.h"
 #import "UserSettingViewController.h"
+#import "HENotificationKey.h"
 
 @interface UserViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *topUserCover;
@@ -28,10 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess:) name:HELogin_Success_Notification object:nil];
     
     self.userInfo = [[UserInfoManager shareManager] userInfoFromUserDefaults];
-    
     [self refreshTopView];
+    
     [self adjustNavigationBar];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -105,6 +107,13 @@
     self.topUserCover.image = _userInfo.cover;
     self.topUserName.text = _userInfo.userName;
     self.topUserPhoneNum.text = _userInfo.phone;
+}
+
+- (void)loginSuccess:(NSNotification *)notification{
+    self.userInfo = [[UserInfoManager shareManager] userInfoFromUserDefaults];
+    [self refreshTopView];
+    
+    [self.tableView reloadData];
 }
 
 @end

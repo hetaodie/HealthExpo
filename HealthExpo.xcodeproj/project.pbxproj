@@ -44,6 +44,7 @@
 		694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB36A1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m */; };
 		694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */; };
 		694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */; };
+		69DA4C701D6011680027A504 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C6F1D6011680027A504 /* UIView+Toast.m */; };
 		69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6A41D5703790064346B /* DiscoverViewController.m */; };
 		69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6A51D5703790064346B /* DiscoverViewController.xib */; };
 		69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AA1D5705190064346B /* TextTableViewCell.m */; };
@@ -217,6 +218,8 @@
 		694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DianZiZaZhiItemView.xib; path = HomePage/DianZiZaZhi/DianZiZaZhiItemView.xib; sourceTree = "<group>"; };
 		694BB3701D48E32D007D8ED0 /* DianZiZaZhiModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiModelSource.h; sourceTree = "<group>"; };
 		694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiModelSource.m; sourceTree = "<group>"; };
+		69DA4C6E1D6011680027A504 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		69DA4C6F1D6011680027A504 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		69DBC6A31D5703790064346B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Phone/DiscoverViewController.h; sourceTree = "<group>"; };
 		69DBC6A41D5703790064346B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Phone/DiscoverViewController.m; sourceTree = "<group>"; };
 		69DBC6A51D5703790064346B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoverViewController.xib; path = Phone/DiscoverViewController.xib; sourceTree = "<group>"; };
@@ -726,6 +729,8 @@
 				69E684841D1E96CE0092F031 /* UIColor+HEX.m */,
 				5367D02B1D2D5CF6008BB509 /* NSDate+String.h */,
 				5367D02C1D2D5CF6008BB509 /* NSDate+String.m */,
+				69DA4C6E1D6011680027A504 /* UIView+Toast.h */,
+				69DA4C6F1D6011680027A504 /* UIView+Toast.m */,
 			);
 			name = UICategory;
 			sourceTree = "<group>";
@@ -1081,6 +1086,7 @@
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */,
 				7C05E1731D5DF643006D4EA9 /* YiLiaoJiGouLeftViewCell.m in Sources */,
+				69DA4C701D6011680027A504 /* UIView+Toast.m in Sources */,
 				53BC4C811D291CB3009035BC /* HENetTask.m in Sources */,
 				7C05E1601D5DDCEC006D4EA9 /* YiMiaoDetailObject.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,

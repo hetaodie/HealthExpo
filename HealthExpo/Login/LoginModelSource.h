@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol LoginModelSourceDelegate <NSObject>
+- (void)loginSuccess:(NSDictionary *)dict;
+- (void)loginFailed;
 
+@end
 @interface LoginModelSource : NSObject
+@property (nonatomic, weak) id <LoginModelSourceDelegate> delegate;
 
+- (void)loginWithUserName:(NSString *)userName andPwd:(NSString *)pwd;
 @end

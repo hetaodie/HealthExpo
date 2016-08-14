@@ -75,6 +75,7 @@
 - (void)hiddenLoginViewController{
     if(self.loginNaVc){
         [self.loginNaVc dismissViewControllerAnimated:YES completion:^{ }];
+        self.loginNaVc = nil;
     }
 }
 @end

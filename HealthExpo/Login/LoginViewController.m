@@ -11,8 +11,11 @@
 #import "UIColor+HEX.h"
 #import "HENotificationKey.h"
 #import "rescourceDown.h"
+#import "LoginModelSource.h"
+#import "UserInfoManager.h"
+#import "UIView+Toast.h"
 
-@interface LoginViewController ()<rescourceDelegate>
+@interface LoginViewController ()<LoginModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *phoneNumBackgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *phoneNumImage;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
@@ -22,6 +25,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+@property (nonatomic, strong) LoginModelSource *modelSource;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *password;
 @end
 
 @implementation LoginViewController
@@ -31,6 +37,9 @@
     [self.navigationController setNavigationBarHidden:NO];
     [self adjustNavigationBar];
     [self refreshUI];
+    
+    self.modelSource = [[ LoginModelSource alloc] init];
+    self.modelSource.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,15 +85,9 @@
 }
 
 - (IBAction)onLoginButtonClicked:(id)sender {
-    NSString *userName = self.phoneNumTextField.text;
-    NSString *password = self.passwordTextField.text;
-    //TODO 校验 跳转
-    
-    
-    //测试登录
-    rescourceDown *rD = [[rescourceDown alloc] init];
-    rD.delegate = self;
-    [rD requestForRegistNum:@"sdkceshi" andPwd:@"888888" withAgentId:@"1"];
+    self.userName = self.phoneNumTextField.text;
+    self.password = self.passwordTextField.text;
+    [self.modelSource loginWithUserName:self.userName andPwd:self.password];
 }
 
 - (void)refreshUI{
@@ -97,6 +100,31 @@
     self.passwordBackgroundView.layer.cornerRadius = 5.0;
     
     self.loginButton.layer.cornerRadius = 5.0;
+}
+
+#pragma mark -- LoginModelSourceDelegate
+- (void)loginSuccess:(NSDictionary *)dict{
+    if([dict[@"err_code"] integerValue] == 0){
+        id tempKey = dict[@"uid"];
+        NSString *key = @"-1";
+        if ([tempKey isKindOfClass:[NSNumber class]]) {
+            key = [tempKey stringValue];
+        } else {
+            key = tempKey;
+        }
+        [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:key];
+        [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+    } else {
+        [self loginFailedToast];
+    }
+}
+
+- (void)loginFailed{
+    [self loginFailedToast];
+}
+
+- (void)loginFailedToast{
+    [self.view makeToast:@"登陆失败，请检查登陆名和密码" duration:0.8 position:CSToastPositionCenter];
 }
 
 @end

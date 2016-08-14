@@ -12,6 +12,7 @@
 #import "RegisterModelSource.h"
 #import "UserInfoManager.h"
 #import "HENotificationKey.h"
+#import "UIView+Toast.h"
 
 @interface RegisterViewController ()<RegisterModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *registerPhoneNumBackgroundView;
@@ -115,18 +116,30 @@
 }
 
 - (void)onRegisterFailed{
-    
+    [self registerFailedToast];
 }
 
 - (void)onRegisterICallSuccess:(NSDictionary *)data{
     if([data[@"err_code"] integerValue] == 0){
-        [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:[data[@"uid"] stringValue]];
+        id tempKey = data[@"uid"];
+        NSString *key = @"-1";
+        if ([tempKey isKindOfClass:[NSNumber class]]) {
+            key = [tempKey stringValue];
+        } else {
+            key = tempKey;
+        }
+        [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:key];
         [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+    } else {
+        [self registerFailedToast];
     }
 }
 
 - (void)onRegisterICallFailed{
-    
+    [self registerFailedToast];
 }
 
+- (void)registerFailedToast{
+    [self.view makeToast:@"注册失败" duration:0.8 position:CSToastPositionCenter];
+}
 @end

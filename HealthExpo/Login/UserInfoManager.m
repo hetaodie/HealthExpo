@@ -40,17 +40,17 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-//        self.userInfo = [self UserInfoFromUserDefaults];
+        self.userInfo = [self userInfoFromUserDefaults];
         //for test
-        _userInfo = [[UserInfo alloc] init];
-        _userInfo.cover = [UIImage imageNamed:@"touxiang2"];
-        _userInfo.userName = @"测试";
-        _userInfo.phone = @"15657113218";
-        _userInfo.gender = @"男";
-        _userInfo.birthday = @"2016年6月26日";
-        _userInfo.email = @"XXXXXX@163.com";
-        _userInfo.address = @"杭州市滨江区网商路599号";
-        [self saveEditedUserInfo:_userInfo];
+//        _userInfo = [[UserInfo alloc] init];
+//        _userInfo.cover = [UIImage imageNamed:@"touxiang2"];
+//        _userInfo.userName = @"测试";
+//        _userInfo.phone = @"15657113218";
+//        _userInfo.gender = @"男";
+//        _userInfo.birthday = @"2016年6月26日";
+//        _userInfo.email = @"XXXXXX@163.com";
+//        _userInfo.address = @"杭州市滨江区网商路599号";
+//        [self saveEditedUserInfo:_userInfo];
         [self initLoginKeys];
     }
     return self;
