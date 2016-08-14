@@ -27,7 +27,7 @@
 /**
  *  保存编辑后的userinfo
  */
-- (void)saveEditedUserInfo;
+- (void)saveEditedUserInfo:(UserInfo *)info;
 /**
  *  获取userInfo
  *

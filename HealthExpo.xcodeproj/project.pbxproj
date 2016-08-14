@@ -54,6 +54,8 @@
 		69DA4C831D6048820027A504 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DA4C811D6048820027A504 /* CollectionViewController.xib */; };
 		69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C851D6049B20027A504 /* CollectionModelSource.m */; };
 		69DA4C891D6050DF0027A504 /* CallDetailModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C881D6050DF0027A504 /* CallDetailModelSource.m */; };
+		69DA4C8D1D6056280027A504 /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C8B1D6056280027A504 /* UserEditViewController.m */; };
+		69DA4C8E1D6056280027A504 /* UserEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DA4C8C1D6056280027A504 /* UserEditViewController.xib */; };
 		69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6A41D5703790064346B /* DiscoverViewController.m */; };
 		69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6A51D5703790064346B /* DiscoverViewController.xib */; };
 		69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AA1D5705190064346B /* TextTableViewCell.m */; };
@@ -245,6 +247,9 @@
 		69DA4C851D6049B20027A504 /* CollectionModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionModelSource.m; path = User/CollectionModelSource.m; sourceTree = "<group>"; };
 		69DA4C871D6050DF0027A504 /* CallDetailModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallDetailModelSource.h; path = User/CallDetailModelSource.h; sourceTree = "<group>"; };
 		69DA4C881D6050DF0027A504 /* CallDetailModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallDetailModelSource.m; path = User/CallDetailModelSource.m; sourceTree = "<group>"; };
+		69DA4C8A1D6056280027A504 /* UserEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserEditViewController.h; path = User/UserEditViewController.h; sourceTree = "<group>"; };
+		69DA4C8B1D6056280027A504 /* UserEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserEditViewController.m; path = User/UserEditViewController.m; sourceTree = "<group>"; };
+		69DA4C8C1D6056280027A504 /* UserEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserEditViewController.xib; path = User/UserEditViewController.xib; sourceTree = "<group>"; };
 		69DBC6A31D5703790064346B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Phone/DiscoverViewController.h; sourceTree = "<group>"; };
 		69DBC6A41D5703790064346B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Phone/DiscoverViewController.m; sourceTree = "<group>"; };
 		69DBC6A51D5703790064346B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoverViewController.xib; path = Phone/DiscoverViewController.xib; sourceTree = "<group>"; };
@@ -469,6 +474,9 @@
 				532405231D22BDAB004A1A43 /* UserSettingViewController.h */,
 				532405241D22BDAB004A1A43 /* UserSettingViewController.m */,
 				532405251D22BDAB004A1A43 /* UserSettingViewController.xib */,
+				69DA4C8A1D6056280027A504 /* UserEditViewController.h */,
+				69DA4C8B1D6056280027A504 /* UserEditViewController.m */,
+				69DA4C8C1D6056280027A504 /* UserEditViewController.xib */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -1003,6 +1011,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DA4C8E1D6056280027A504 /* UserEditViewController.xib in Resources */,
 				69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */,
 				69DD74C31D5B499000730B94 /* CooperateViewController.xib in Resources */,
 				7C6744461D2C9ED300661276 /* MessageInfoViewCell.xib in Resources */,
@@ -1168,6 +1177,7 @@
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
+				69DA4C8D1D6056280027A504 /* UserEditViewController.m in Sources */,
 				7C05E1361D5B295A006D4EA9 /* ClassifyObject.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
 				53AD055B1D2C072F00557942 /* HEDataCategory.m in Sources */,

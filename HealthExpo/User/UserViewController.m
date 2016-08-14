@@ -14,6 +14,7 @@
 #import "HENotificationKey.h"
 #import "CollectionViewController.h"
 #import "CallDetailViewController.h"
+#import "UserEditViewController.h"
 
 @interface UserViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *topUserCover;
@@ -33,12 +34,14 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess:) name:HELogin_Success_Notification object:nil];
     
-    self.userInfo = [[UserInfoManager shareManager] userInfoFromUserDefaults];
-    [self refreshTopView];
-    
     [self adjustNavigationBar];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self refreshUserInformation];
 }
 
 - (IBAction)onCollectionClicked:(id)sender {
@@ -97,7 +100,35 @@
     }
 }
 
-#pragma mark - private Func 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *editText = nil;
+    EditType editType = HEEditName;
+    if (indexPath.row == 1) {
+        editText = @"名字";
+        editType = HEEditName;
+    } else if (indexPath.row == 2){
+        editText = @"电话";
+        editType = HEEditPhone;
+    } else if (indexPath.row == 4){
+        editText = @"生日";
+        editType = HEEditBirthday;
+    } else if (indexPath.row == 5){
+        editText = @"邮箱";
+        editType = HEEditEmail;
+    } else if (indexPath.row == 6){
+        editText = @"地址";
+        editType = HEEditAddress;
+    }
+    if (editText) {
+        UserEditViewController *ueVC = [[UserEditViewController alloc] initWithNibName:@"UserEditViewController" bundle:nil];
+        ueVC.hidesBottomBarWhenPushed = YES;
+        ueVC.editType = editType;
+        ueVC.editTitle = editText;
+        [self.navigationController pushViewController:ueVC animated:YES];
+    }
+}
+
+#pragma mark - private Func
 
 - (void)adjustNavigationBar{
     self.navigationItem.title = @"我 的";
@@ -124,6 +155,10 @@
 }
 
 - (void)loginSuccess:(NSNotification *)notification{
+    [self refreshUserInformation];
+}
+
+- (void)refreshUserInformation{
     self.userInfo = [[UserInfoManager shareManager] userInfoFromUserDefaults];
     [self refreshTopView];
     
