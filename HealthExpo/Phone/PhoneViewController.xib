@@ -8,15 +8,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneViewController">
             <connections>
-                <outlet property="eighthBanner" destination="hGs-D7-SUk" id="TVd-fj-MEn"/>
-                <outlet property="fifthBanner" destination="Khs-wD-Hyi" id="icv-T9-ciW"/>
-                <outlet property="firstBanner" destination="E8T-OJ-jZl" id="q33-u4-fgZ"/>
-                <outlet property="fourthBanner" destination="XfC-Xu-bDz" id="dii-05-qdp"/>
+                <outlet property="banner0" destination="E8T-OJ-jZl" id="BvM-M8-1fL"/>
+                <outlet property="banner1" destination="1Ev-0q-d09" id="z9g-sT-2Ea"/>
+                <outlet property="banner2" destination="rEL-G7-af0" id="97Z-Zj-dN9"/>
+                <outlet property="banner3" destination="XfC-Xu-bDz" id="hAg-DB-VVe"/>
+                <outlet property="banner4" destination="Khs-wD-Hyi" id="tia-Nu-Vug"/>
+                <outlet property="banner5" destination="kzU-XB-cIG" id="eXq-fn-jGs"/>
+                <outlet property="banner6" destination="Z2z-PV-JFx" id="nor-Zd-zfR"/>
+                <outlet property="banner7" destination="hGs-D7-SUk" id="EdP-Zw-0je"/>
                 <outlet property="phoneNumLabel" destination="Frq-tp-ICt" id="WCY-0z-fER"/>
-                <outlet property="secondBanner" destination="1Ev-0q-d09" id="NVi-s0-ZLw"/>
-                <outlet property="seventhBanner" destination="Z2z-PV-JFx" id="zQE-7D-Gwd"/>
-                <outlet property="sixthBanner" destination="kzU-XB-cIG" id="yp3-sV-V67"/>
-                <outlet property="thirdBanner" destination="rEL-G7-af0" id="Ly6-zQ-Olf"/>
                 <outlet property="topBannerScrollView" destination="ook-VO-Yl8" id="aAu-d7-8cK"/>
                 <outlet property="topView" destination="QYW-Yh-AIg" id="jhJ-Q6-zO2"/>
                 <outlet property="topbannerContaintView" destination="6hl-tJ-Dzs" id="Dui-Ha-Mp2"/>

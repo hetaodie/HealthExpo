@@ -20,9 +20,10 @@
     HENetTask *task = [[HENetTask alloc] initWithTotalUrlString:url];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
+//        NSLog(@"%@", responseObject);
+        NSDictionary *dict = [self handerBannersResponse:responseObject];
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getADBannersSuccess:)]) {
-            [weakSelf.delegate getADBannersSuccess:responseObject];
+            [weakSelf.delegate getADBannersSuccess:dict];
         }
     };
     
@@ -35,6 +36,23 @@
     [task runInMethod:HE_GET];
 }
 
+
+- (NSDictionary *)handerBannersResponse:(NSDictionary *)dict{
+    NSMutableDictionary *retDict = [NSMutableDictionary dictionary];
+    NSDictionary *data = dict[@"data"];
+    NSArray *arr = data[@"pic"];
+    for (NSDictionary *tempDict in arr) {
+        NSArray *contentArr = tempDict[@"content"];
+        NSArray *urlArr = tempDict[@"url"];
+        for (NSInteger i = 0; i < contentArr.count; i++) {
+            if (i >= urlArr.count || [contentArr[i] length] == 0 || [urlArr[i] length] == 0) {
+                break;
+            }
+            retDict[contentArr[i]] = urlArr[i];
+        }
+    }
+    return retDict;
+}
 
 
 

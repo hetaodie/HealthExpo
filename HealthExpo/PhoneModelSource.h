@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol PhoneModelSourceDelegate <NSObject>
-- (void)getADBannersSuccess:(NSArray *)dataArr;
+- (void)getADBannersSuccess:(NSDictionary *)dict;
 - (void)getADBannersFailed;
 
 

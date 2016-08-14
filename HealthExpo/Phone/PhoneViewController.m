@@ -12,6 +12,7 @@
 #import "PhoneModelSource.h"
 #import "PhoneCallModelSource.h"
 #import "UIView+Toast.h"
+#import "UIButton+WebCache.h"
 
 @interface PhoneViewController ()<PhoneModelSourceDelegate, PhoneCallModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
@@ -20,17 +21,19 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *topBannerScrollView;
 @property (strong, nonatomic) IBOutlet UIView *topbannerContaintView;
 @property (nonatomic, strong) NSTimer *bannerTimer;
-@property (strong, nonatomic) IBOutlet UIButton *firstBanner;
-@property (strong, nonatomic) IBOutlet UIButton *secondBanner;
-@property (strong, nonatomic) IBOutlet UIButton *thirdBanner;
-@property (strong, nonatomic) IBOutlet UIButton *fourthBanner;
-@property (strong, nonatomic) IBOutlet UIButton *fifthBanner;
-@property (strong, nonatomic) IBOutlet UIButton *sixthBanner;
-@property (strong, nonatomic) IBOutlet UIButton *seventhBanner;
-@property (strong, nonatomic) IBOutlet UIButton *eighthBanner;
+@property (strong, nonatomic) IBOutlet UIButton *banner0;
+@property (strong, nonatomic) IBOutlet UIButton *banner1;
+@property (strong, nonatomic) IBOutlet UIButton *banner2;
+@property (strong, nonatomic) IBOutlet UIButton *banner3;
+@property (strong, nonatomic) IBOutlet UIButton *banner4;
+@property (strong, nonatomic) IBOutlet UIButton *banner5;
+@property (strong, nonatomic) IBOutlet UIButton *banner6;
+@property (strong, nonatomic) IBOutlet UIButton *banner7;
 
 @property (nonatomic, strong) PhoneModelSource *modelSource;
 @property (nonatomic, strong) PhoneCallModelSource *callModelSource;
+
+@property (nonatomic, strong) NSDictionary *bannersDict;
 
 @end
 
@@ -121,8 +124,12 @@
 }
 
 #pragma mark - banner ScrollView handler
-- (IBAction)onBannerClicked:(id)sender {
+- (IBAction)onBannerClicked:(UIButton *)sender {
+    NSArray *allUrls = [self.bannersDict allValues];
     
+    if (sender.tag < allUrls.count) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:allUrls[sender.tag]]];
+    }    
 }
 
 
@@ -141,7 +148,16 @@
 }
 
 #pragma mark -- PhoneModelSourceDelegate
-- (void)getADBannersSuccess:(NSArray *)dataArr{
+- (void)getADBannersSuccess:(NSDictionary *)dict{
+    self.bannersDict = dict;
+    NSArray *allPics = [dict allKeys];
+    UIImage *placeHolderImage = [UIImage imageNamed:@"banner"];
+    for (NSInteger i = 0; i < allPics.count; i ++) {
+        NSString *buttonName = [NSString stringWithFormat:@"banner%zd",i];
+        UIButton *button = [self valueForKey:buttonName];
+        
+        [button sd_setImageWithURL:allPics[i] forState:UIControlStateNormal placeholderImage:placeHolderImage];
+    }
     
 }
 
