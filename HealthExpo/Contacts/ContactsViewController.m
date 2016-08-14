@@ -10,12 +10,16 @@
 
 #import "ContactPersonObject.h"
 #import <AddressBook/AddressBook.h>
+#import "UIView+Toast.h"
+#import "PhoneCallModelSource.h"
 
-@interface ContactsViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ContactsViewController ()<UITableViewDataSource,UITableViewDelegate, PhoneCallModelSourceDelegate>
 @property (nonatomic, strong) ContactPersonObject *personObject;
 @property (nonatomic, strong) NSMutableArray *personArray;
 @property (nonatomic, strong) NSMutableArray *titleArray;  //索引数组
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) PhoneCallModelSource *modelSource;
 
 @end
 
@@ -23,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.modelSource = [[PhoneCallModelSource alloc] init];
+    self.modelSource.delegate = self;
     
     _personObject = [[ContactPersonObject alloc] init];
     _personArray = [[NSMutableArray alloc] init];
@@ -58,7 +64,7 @@
             ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error1);
             [self copyAddressBook:addressBook];
         } else {
-            NSLog(@"授权失败!");
+            [self.view makeToast:@"通讯录授权失败，无法显示此页面" duration:0.8 position:CSToastPositionCenter];
         }
     });
     CFRelease(addressBook);
@@ -235,8 +241,19 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-     ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.section][indexPath.row];
+    ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.section][indexPath.row];
     NSString *phone = object.phone;
+    [self.modelSource onPhoneCallWithPhoneNum:phone];
+}
+
+
+#pragma mark -- PhoneCallModelSourceDelegate
+- (void)onPhoneCallSuccess:(NSString *)tipString{
+    [self.view makeToast:tipString duration:0.8 position:CSToastPositionCenter];
+}
+
+- (void)onPhoneCallFailed{
+    [self.view makeToast:@"呼叫失败" duration:0.8 position:CSToastPositionCenter];
     
 }
 @end
