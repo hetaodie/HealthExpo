@@ -8,6 +8,7 @@
 
 #import "CheckInViewController.h"
 #import "CheckInModelSource.h"
+#import "UIView+Toast.h"
 
 @interface CheckInViewController ()<CheckInModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
@@ -49,7 +50,7 @@
 
 #pragma mark -- CheckInModelSourceDelegate
 - (void)onCheckInSuccess:(NSDictionary *)dict{
-    
+    [self.view makeToast:dict[@"err_msg"] duration:0.8 position:CSToastPositionCenter];
 }
 
 - (void)onCheckInFailed{

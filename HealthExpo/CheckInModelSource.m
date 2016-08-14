@@ -16,7 +16,7 @@
 - (void)onCheckInRequst{
     UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
     NSString *key = [info.uid stringByAppendingString:@"gytx@#$.com"];
-    NSString *url= [NSString stringWithFormat:@"http://biz.scback.cn/checkin.php?uid=%@&pwd=%@&code=%@", info.uid, info.passWord, key.MD5];
+    NSString *url= [NSString stringWithFormat:@"http://biz.scback.cn/checkin.php?uid=%@&pwd=%@&code=%@", info.uid, info.pwmPassWord, key.MD5];
     HENetTask *task = [[HENetTask alloc] initWithTotalUrlString:url];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {

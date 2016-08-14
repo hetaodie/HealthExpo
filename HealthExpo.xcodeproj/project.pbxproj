@@ -47,6 +47,7 @@
 		69DA4C701D6011680027A504 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C6F1D6011680027A504 /* UIView+Toast.m */; };
 		69DA4C731D6017B70027A504 /* CheckInModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C721D6017B70027A504 /* CheckInModelSource.m */; };
 		69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C751D6019120027A504 /* UserLoginInfo.m */; };
+		69DA4C791D6020420027A504 /* PhoneCallModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C781D6020420027A504 /* PhoneCallModelSource.m */; };
 		69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6A41D5703790064346B /* DiscoverViewController.m */; };
 		69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6A51D5703790064346B /* DiscoverViewController.xib */; };
 		69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AA1D5705190064346B /* TextTableViewCell.m */; };
@@ -226,6 +227,8 @@
 		69DA4C721D6017B70027A504 /* CheckInModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInModelSource.m; sourceTree = "<group>"; };
 		69DA4C741D6019120027A504 /* UserLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginInfo.h; sourceTree = "<group>"; };
 		69DA4C751D6019120027A504 /* UserLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginInfo.m; sourceTree = "<group>"; };
+		69DA4C771D6020420027A504 /* PhoneCallModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneCallModelSource.h; sourceTree = "<group>"; };
+		69DA4C781D6020420027A504 /* PhoneCallModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneCallModelSource.m; sourceTree = "<group>"; };
 		69DBC6A31D5703790064346B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Phone/DiscoverViewController.h; sourceTree = "<group>"; };
 		69DBC6A41D5703790064346B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Phone/DiscoverViewController.m; sourceTree = "<group>"; };
 		69DBC6A51D5703790064346B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoverViewController.xib; path = Phone/DiscoverViewController.xib; sourceTree = "<group>"; };
@@ -703,6 +706,8 @@
 				69E4BE591D1D108C00B555FD /* PhoneViewController.xib */,
 				69DC279C1D5DF386006EEF68 /* PhoneModelSource.h */,
 				69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */,
+				69DA4C771D6020420027A504 /* PhoneCallModelSource.h */,
+				69DA4C781D6020420027A504 /* PhoneCallModelSource.m */,
 			);
 			name = Phone;
 			sourceTree = "<group>";
@@ -1121,6 +1126,7 @@
 				694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */,
 				53BC4C7C1D2915DE009035BC /* DianZiZaZhiViewController.m in Sources */,
 				7C05E15C1D5DD7D6006D4EA9 /* YiMiaoViewController.m in Sources */,
+				69DA4C791D6020420027A504 /* PhoneCallModelSource.m in Sources */,
 				69E4BE641D1D10B300B555FD /* CheckInViewController.m in Sources */,
 				53AD05551D2C03A300557942 /* HomePageModelSource.m in Sources */,
 				5367D02D1D2D5CF6008BB509 /* NSDate+String.m in Sources */,

@@ -10,8 +10,10 @@
 #import "CustomTabBarController.h"
 #import "DiscoverViewController.h"
 #import "PhoneModelSource.h"
+#import "PhoneCallModelSource.h"
+#import "UIView+Toast.h"
 
-@interface PhoneViewController ()<PhoneModelSourceDelegate>
+@interface PhoneViewController ()<PhoneModelSourceDelegate, PhoneCallModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (nonatomic, strong) NSString *phoneNum;
 @property (strong, nonatomic) IBOutlet UIView *topView;
@@ -28,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *eighthBanner;
 
 @property (nonatomic, strong) PhoneModelSource *modelSource;
+@property (nonatomic, strong) PhoneCallModelSource *callModelSource;
 
 @end
 
@@ -42,6 +45,10 @@
     self.modelSource = [[PhoneModelSource alloc] init];
     self.modelSource.delegate = self;
     [self.modelSource getADBanners];
+    
+    self.callModelSource = [[PhoneCallModelSource alloc] init];
+    self.callModelSource.delegate = self;
+    
     
     [self bannerCycleSetting];
 }
@@ -65,7 +72,10 @@
 
 #pragma mark -- button action
 - (IBAction)tongXunLuClicked:(id)sender {
-    [[CustomTabBarController getInstance] clickAtIndex:2];
+//    [[CustomTabBarController getInstance] clickAtIndex:2];
+    if (self.phoneNum.length == 11) {
+        [self.callModelSource onPhoneCallWithPhoneNum:self.phoneNum];
+    }
 }
 
 - (IBAction)deleteClicked:(id)sender {
@@ -138,5 +148,7 @@
 - (void)getADBannersFailed{
     
 }
+
+#pragma mark -- 
 
 @end
