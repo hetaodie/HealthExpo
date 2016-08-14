@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UserInfo.h"
 #import "UserCenterModelSource.h"
+#import "UserLoginInfo.h"
 
 @interface UserInfoManager : NSObject
 @property (nonatomic, strong) UserInfo *userInfo;
@@ -33,4 +34,6 @@
  *  @return userInfo
  */
 - (UserInfo *)userInfoFromUserDefaults;
+
+- (UserLoginInfo *)getUserLoginInfo;
 @end

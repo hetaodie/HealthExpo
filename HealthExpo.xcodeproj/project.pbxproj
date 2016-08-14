@@ -45,6 +45,8 @@
 		694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BB36E1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib */; };
 		694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */; };
 		69DA4C701D6011680027A504 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C6F1D6011680027A504 /* UIView+Toast.m */; };
+		69DA4C731D6017B70027A504 /* CheckInModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C721D6017B70027A504 /* CheckInModelSource.m */; };
+		69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA4C751D6019120027A504 /* UserLoginInfo.m */; };
 		69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6A41D5703790064346B /* DiscoverViewController.m */; };
 		69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DBC6A51D5703790064346B /* DiscoverViewController.xib */; };
 		69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBC6AA1D5705190064346B /* TextTableViewCell.m */; };
@@ -220,6 +222,10 @@
 		694BB3711D48E32D007D8ED0 /* DianZiZaZhiModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiModelSource.m; sourceTree = "<group>"; };
 		69DA4C6E1D6011680027A504 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		69DA4C6F1D6011680027A504 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		69DA4C711D6017B70027A504 /* CheckInModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInModelSource.h; sourceTree = "<group>"; };
+		69DA4C721D6017B70027A504 /* CheckInModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInModelSource.m; sourceTree = "<group>"; };
+		69DA4C741D6019120027A504 /* UserLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginInfo.h; sourceTree = "<group>"; };
+		69DA4C751D6019120027A504 /* UserLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginInfo.m; sourceTree = "<group>"; };
 		69DBC6A31D5703790064346B /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Phone/DiscoverViewController.h; sourceTree = "<group>"; };
 		69DBC6A41D5703790064346B /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Phone/DiscoverViewController.m; sourceTree = "<group>"; };
 		69DBC6A51D5703790064346B /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoverViewController.xib; path = Phone/DiscoverViewController.xib; sourceTree = "<group>"; };
@@ -424,6 +430,8 @@
 				69E4BE6C1D1D1E6800B555FD /* UserInfoManager.m */,
 				53A34BD81D2014D10043144E /* UserInfo.h */,
 				53A34BD91D2014D10043144E /* UserInfo.m */,
+				69DA4C741D6019120027A504 /* UserLoginInfo.h */,
+				69DA4C751D6019120027A504 /* UserLoginInfo.m */,
 				53A34BC81D1FC4A60043144E /* UserViewController.h */,
 				53A34BC91D1FC4A60043144E /* UserViewController.m */,
 				53A34BCA1D1FC4A60043144E /* UserViewController.xib */,
@@ -716,6 +724,8 @@
 				69E4BE611D1D10B300B555FD /* CheckInViewController.h */,
 				69E4BE621D1D10B300B555FD /* CheckInViewController.m */,
 				69E4BE631D1D10B300B555FD /* CheckInViewController.xib */,
+				69DA4C711D6017B70027A504 /* CheckInModelSource.h */,
+				69DA4C721D6017B70027A504 /* CheckInModelSource.m */,
 			);
 			name = CheckIn;
 			sourceTree = "<group>";
@@ -1082,6 +1092,7 @@
 				7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */,
 				7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */,
 				7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */,
+				69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */,
 				7C05E14A1D5D63E5006D4EA9 /* YiMiaoModul.m in Sources */,
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */,
@@ -1099,6 +1110,7 @@
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
 				69DD74C21D5B499000730B94 /* CooperateViewController.m in Sources */,
 				69DD74BE1D5B497600730B94 /* CooperateModelSource.m in Sources */,
+				69DA4C731D6017B70027A504 /* CheckInModelSource.m in Sources */,
 				69DBC6A61D5703790064346B /* DiscoverViewController.m in Sources */,
 				7C6A77BF1D2B82B2008A58D7 /* JiBingBKTopView.m in Sources */,
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,

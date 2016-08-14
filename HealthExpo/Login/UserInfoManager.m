@@ -141,4 +141,13 @@
     [defaults synchronize];
 }
 
+- (UserLoginInfo *)getUserLoginInfo{
+    UserLoginInfo *info = [[UserLoginInfo alloc] init];
+    info.phone = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPhone];
+    info.uid = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyUid];
+    info.passWord = [[NSUserDefaults standardUserDefaults] objectForKey:HELoginTokenKeyPwd];
+    
+    return info;
+}
+
 @end

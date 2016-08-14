@@ -9,8 +9,9 @@
 #import "PhoneViewController.h"
 #import "CustomTabBarController.h"
 #import "DiscoverViewController.h"
+#import "PhoneModelSource.h"
 
-@interface PhoneViewController ()
+@interface PhoneViewController ()<PhoneModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (nonatomic, strong) NSString *phoneNum;
 @property (strong, nonatomic) IBOutlet UIView *topView;
@@ -26,6 +27,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *seventhBanner;
 @property (strong, nonatomic) IBOutlet UIButton *eighthBanner;
 
+@property (nonatomic, strong) PhoneModelSource *modelSource;
+
 @end
 
 @implementation PhoneViewController
@@ -36,6 +39,9 @@
     self.phoneNumLabel.layer.cornerRadius = 15;
     self.phoneNumLabel.clipsToBounds = YES;
     
+    self.modelSource = [[PhoneModelSource alloc] init];
+    self.modelSource.delegate = self;
+    [self.modelSource getADBanners];
     
     [self bannerCycleSetting];
 }
@@ -122,6 +128,15 @@
     } else {
         [self.topBannerScrollView setContentOffset:CGPointMake(offsetX, 0.0) animated:YES];
     }    
+}
+
+#pragma mark -- PhoneModelSourceDelegate
+- (void)getADBannersSuccess:(NSArray *)dataArr{
+    
+}
+
+- (void)getADBannersFailed{
+    
 }
 
 @end

@@ -7,10 +7,13 @@
 //
 
 #import "CheckInViewController.h"
+#import "CheckInModelSource.h"
 
-@interface CheckInViewController ()
+@interface CheckInViewController ()<CheckInModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) IBOutlet UILabel *descLabel;
+
+@property (nonatomic, strong) CheckInModelSource *modelSouce;
 
 @end
 
@@ -19,7 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
-    self.descLabel.text = @"1.每日只能签到一次\n2.签到后会有随机的话费奖励";
+    self.descLabel.text = @"1.每个用户每日只能签到一次\n2.签到后会有随机的话费奖励";
+    
+    self.modelSouce = [[CheckInModelSource alloc] init];
+    self.modelSouce.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +44,16 @@
 }
 
 - (IBAction)checkInButtonClicked:(id)sender {
+    [self.modelSouce onCheckInRequst];
+}
+
+#pragma mark -- CheckInModelSourceDelegate
+- (void)onCheckInSuccess:(NSDictionary *)dict{
+    
+}
+
+- (void)onCheckInFailed{
+    
 }
 
 @end

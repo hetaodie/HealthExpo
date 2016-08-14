@@ -9,14 +9,14 @@
 #import "PhoneModelSource.h"
 #import "HENetTask.h"
 #import "NSString+MD5.h"
+#import "UserInfoManager.h"
 
 @implementation PhoneModelSource
 //http://biz.scback.cn/adapi.php?uid=609232&password=1864323443&code=md5(uid+gytx@#$.com)
 - (void)getADBanners{
-    NSString *code = @"609232gytx@#$.com";
-    code = [code MD5];
-    NSString *pwd = [NSString get_pwd: @"1864323443"];
-    NSString *url = [NSString stringWithFormat:@"http://biz.scback.cn/adapi.php?uid=609232&password=%@&code=%@", pwd, code];
+    UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
+    NSString *key = [info.uid stringByAppendingString:@"gytx@#$.com"];
+    NSString *url = [NSString stringWithFormat:@"http://biz.scback.cn/adapi.php?uid=%@&password=%@&code=%@", info.uid, info.pwmPassWord, key.MD5];
     HENetTask *task = [[HENetTask alloc] initWithTotalUrlString:url];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
