@@ -21,7 +21,7 @@
 @property (nonatomic, weak) id <HomePageModelSourceDelegate>delegate;
 
 - (void)getHomePageNews;
-
+- (void)getSpeakerMessage;
 - (NSArray *)getDataArray;
 
 @end

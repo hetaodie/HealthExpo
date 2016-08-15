@@ -26,6 +26,8 @@
 @property (nonatomic, strong) HomePageModelSource *dataSource;
 @property (nonatomic, strong) NSArray *dataArray;
 
+@property (nonatomic, strong) SpeakerMessageItem *speakerData;
+
 @end
 
 @implementation HomePageViewController
@@ -40,6 +42,7 @@
     self.dataSource = [[HomePageModelSource alloc] init];
     self.dataSource.delegate = self;
     [self.dataSource getHomePageNews];
+    [self.dataSource getSpeakerMessage];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -56,6 +59,12 @@
 #pragma mark - UIButtonClickedAction
 
 - (IBAction)onTopMsgClicked:(id)sender {
+    NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
+    
+    ndVC.newsID = [NSString stringWithFormat:@"%zd", self.speakerData.ID];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+    
 }
 - (IBAction)onBaiKeClicked:(id)sender {
     JianKangBKViewController *jkbkVC = [[JianKangBKViewController alloc] initWithNibName:@"JianKangBKViewController" bundle:nil];
@@ -133,6 +142,7 @@
 }
 
 - (void)getSpearkMessageSuccess:(SpeakerMessageItem *)data{
+    self.speakerData = data;
     self.spearkLabel.text = data.title;
 }
 
