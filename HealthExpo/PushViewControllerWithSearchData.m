@@ -63,8 +63,8 @@
             break;
         }
         case ZASHIMULU: {
-            JiBingDetailViewController *vc = [[JiBingDetailViewController alloc] initWithNibName:@"JiBingDetailViewController" bundle:nil];
-            vc.cid =aObject.id;
+            DianZiZaZhiDetailViewController *vc = [[DianZiZaZhiDetailViewController alloc] initWithNibName:@"DianZiZaZhiDetailViewController" bundle:nil];
+            [vc fillDetailID:[NSString stringWithFormat:@"%ld",aObject.id] andTitle:aObject.title];
             vc.hidesBottomBarWhenPushed = YES;
             [aViewController.navigationController pushViewController:vc animated:YES];
             break;
