@@ -44,7 +44,7 @@
                                         <constraint firstAttribute="height" constant="18" id="YSB-Ip-MLx"/>
                                     </constraints>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索疾病" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvZ-Sx-290">
+                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索疾病" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvZ-Sx-290">
                                     <rect key="frame" x="37" y="7" width="208" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="Oc0-k0-hCc"/>
