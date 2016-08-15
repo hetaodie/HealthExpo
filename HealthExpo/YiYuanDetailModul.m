@@ -9,6 +9,7 @@
 #import "YiYuanDetailModul.h"
 #import "HENetTask.h"
 #import "YiyuanDetailObject.h"
+#import "MingYiObject.h"
 
 @implementation YiYuanDetailModul
 
@@ -53,24 +54,41 @@
 }
 
 - (void)getMingYIListWithID:(NSInteger)aid{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=11"];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList2.action?cid=%ld",aid];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
-    task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+    task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
         NSLog(@"%@", responseObject);
-//        YiyuanDetailObject *object = [self getYiyuanDetailObjectFromDictionary:responseObject];
-//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetYiYuanDetailSeccess:)]) {
-//            [weakSelf.delegate onGetYiYuanDetailSeccess:object];
-//        }
+        NSArray  *array = [self getMingYiListFromArray:responseObject];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetMingYIListSeccess:)]) {
+            [weakSelf.delegate onGetMingYIListSeccess:array];
+        }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetYiYuanDetailError)]) {
-//            [weakSelf.delegate onGetYiYuanDetailError];
-//        }
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetMingYIListError)]) {
+            [weakSelf.delegate onGetMingYIListError];
+        }
     };
     
     [task runInMethod:HE_GET];
     
+}
+
+- (NSArray *)getMingYiListFromArray:(NSArray *)aArray{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSDictionary  *aDic in aArray) {
+        MingYiObject  *object = [[MingYiObject alloc] init];
+        object.id    = [aDic[@"id"] integerValue];
+        
+        object.zhicheng = aDic[@"stitle"];
+        object.picUrl = aDic[@"picurl"];
+        object.shanchang = aDic[@"content2"];
+        object.title =aDic[@"title"];
+        [array addObject:object];
+    }
+    
+    return array;
 }
 @end

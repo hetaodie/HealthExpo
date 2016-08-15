@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MingYICell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Qf-2D-Yco">
+                        <rect key="frame" x="15" y="10" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="R8o-Uu-IdG"/>
+                            <constraint firstAttribute="height" constant="55" id="Xdd-T2-bPq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNL-Ja-QHy">
+                        <rect key="frame" x="85" y="10" width="31" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REV-St-cZk">
+                        <rect key="frame" x="131" y="10" width="31" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egy-9F-0fD">
+                        <rect key="frame" x="85" y="50" width="31" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yNL-Ja-QHy" firstAttribute="leading" secondItem="6Qf-2D-Yco" secondAttribute="trailing" constant="15" id="1J3-Wt-fDP"/>
+                    <constraint firstItem="egy-9F-0fD" firstAttribute="bottom" secondItem="6Qf-2D-Yco" secondAttribute="bottom" id="ADa-yz-gVw"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="egy-9F-0fD" secondAttribute="trailing" constant="15" id="Kw3-lj-Pmy"/>
+                    <constraint firstItem="6Qf-2D-Yco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OQh-TR-AWf"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="REV-St-cZk" secondAttribute="trailing" constant="15" id="SXq-d3-Mxn"/>
+                    <constraint firstItem="REV-St-cZk" firstAttribute="leading" secondItem="yNL-Ja-QHy" secondAttribute="trailing" constant="15" id="cFx-Z7-nrf"/>
+                    <constraint firstItem="egy-9F-0fD" firstAttribute="leading" secondItem="yNL-Ja-QHy" secondAttribute="leading" id="dgS-TN-X6R"/>
+                    <constraint firstItem="yNL-Ja-QHy" firstAttribute="top" secondItem="6Qf-2D-Yco" secondAttribute="top" id="gt2-dc-wNF"/>
+                    <constraint firstItem="REV-St-cZk" firstAttribute="top" secondItem="yNL-Ja-QHy" secondAttribute="top" id="hz1-A6-aAn"/>
+                    <constraint firstItem="6Qf-2D-Yco" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="k6D-cn-KFz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headImageView" destination="6Qf-2D-Yco" id="H2x-BX-y6T"/>
+                <outlet property="titleLabel" destination="yNL-Ja-QHy" id="MPa-xF-z3f"/>
+                <outlet property="zhichengLabel" destination="REV-St-cZk" id="pxJ-bz-Ouj"/>
+                <outlet property="zhuangchangLabel" destination="egy-9F-0fD" id="jsc-hO-fNw"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

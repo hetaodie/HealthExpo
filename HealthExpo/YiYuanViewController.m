@@ -9,6 +9,7 @@
 #import "YiYuanViewController.h"
 #import "YiyuanDetailObject.h"
 #import "YiYuanDetailModul.h"
+#import "MingYICell.h"
 
 @interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -22,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) YiYuanDetailModul *modul;
 
-@property (strong, nonatomic) NSMutableArray *miyiArray;
+@property (strong, nonatomic) NSMutableArray *mingyiArray;
 
 @end
 
@@ -32,6 +33,8 @@
     [super viewDidLoad];
     
     _modul = [[YiYuanDetailModul alloc] init];
+    _mingyiArray = [[NSMutableArray alloc] init];
+    
     self.modul.delegate = self;
     
     [self.modul getYiYuanDetailWithID:self.cid];
@@ -59,9 +62,40 @@
 
 }
 
+- (void)onGetMingYIListSeccess:(NSArray *)aArray{
+    [self.mingyiArray setArray:aArray];
+    [self.tableView reloadData];
+}
+
+- (void)onGetMingYIListError{
+    
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     return 75;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MingYICell *cell = [tableView dequeueReusableCellWithIdentifier:@"MingYICell"];
+    if (!cell) {
+        NSArray *cells = [[NSBundle mainBundle] loadNibNamed:@"MingYICell" owner:nil options:nil];
+        cell = [cells firstObject];
+    }
+    
+    MingYiObject *object = [self.mingyiArray objectAtIndex:indexPath.row];
+    [cell showCellWithData:object];
+    
+    return cell;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSInteger count = [self.mingyiArray count];
+    return count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+
+}
 @end

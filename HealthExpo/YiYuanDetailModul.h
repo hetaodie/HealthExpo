@@ -14,7 +14,7 @@
 - (void)onGetYiYuanDetailError;
 
 
-- (void)onGetMingYIListSeccess:(NSMutableArray *)aArray;
+- (void)onGetMingYIListSeccess:(NSArray *)aArray;
 - (void)onGetMingYIListError;
 @end
 
