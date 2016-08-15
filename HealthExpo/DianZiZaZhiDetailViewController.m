@@ -10,6 +10,7 @@
 #import "DianZiZaZhiDetailModelSource.h"
 #import "HENetTask.h"
 #import "UIImageView+WebCache.h"
+#import "UIColor+HEX.h"
 
 @interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate, UITableViewDelegate, UITableViewDataSource>
 @property DianZiZaZhiDetailModelSource *modelSource;
@@ -115,7 +116,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ListCell"];
     }
-    
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd. %@",(indexPath.row + 1), self.listArray[indexPath.row]];
+    cell.textLabel.textColor = [UIColor colorWithHex:0x333333 alpha:1];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
     return cell;
 }
 

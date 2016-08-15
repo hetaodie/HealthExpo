@@ -30,12 +30,13 @@
 }
 
 - (void)getDianZiZaZhiDetailListWithID:(NSString *)cID{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@", cID];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList2.action?cid=%@", cID];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *array = [self convertResponseArray:responseObject];
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiDetailListSuccess:)]) {
-            [weakSelf.delegate getDianZiZaZhiDetailListSuccess:responseObject];
+            [weakSelf.delegate getDianZiZaZhiDetailListSuccess:array];
         }
     };
     
@@ -46,5 +47,17 @@
     };
     
     [task runInMethod:HE_GET];
+}
+
+- (NSArray *)convertResponseArray:(NSArray *)response{
+    NSMutableArray *retArray = [NSMutableArray array];
+    for (NSDictionary *dict in response) {
+        NSString *title = dict[@"title"];
+        if (title) {
+            [retArray addObject:title];
+        }
+    }
+    
+    return retArray;
 }
 @end
