@@ -76,7 +76,7 @@
 #pragma mark -- button action
 - (IBAction)tongXunLuClicked:(id)sender {
 //    [[CustomTabBarController getInstance] clickAtIndex:2];
-    if (self.phoneNum.length == 11) {
+    if (self.phoneNum.length >= 2 && self.phoneNum.length <= 11) {
         [self.callModelSource onPhoneCallWithPhoneNum:self.phoneNum];
     }
 }
