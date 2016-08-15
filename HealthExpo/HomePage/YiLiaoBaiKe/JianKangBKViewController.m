@@ -10,11 +10,14 @@
 #import "JianKangBKTableViewCell.h"
 #import "JiBingBKViewController.h"
 #import "YiMiaoScheduleViewController.h"
+#import "SearchView.h"
+#import "PushViewControllerWithSearchData.h"
 
-@interface JianKangBKViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface JianKangBKViewController ()<UITableViewDataSource, UITableViewDelegate,SearchViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet SearchView *searchViewShow;
 
 @end
 
@@ -24,6 +27,7 @@
     [super viewDidLoad];
     [self adjustNavigationBar];
     self.searchView.layer.cornerRadius = 15;
+    self.searchViewShow.delegate = self;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -50,6 +54,11 @@
 
 - (void)doBack:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)searchBtnPress:(id)sender {
+    [self.searchViewShow showSearchView];
+     [self.navigationController setNavigationBarHidden:YES];
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
@@ -86,5 +95,15 @@
         yimiaoVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:yimiaoVC animated:YES];
     }
+}
+
+- (void)onSelectSearchData:(SearchObject *)aObject{
+     [self.navigationController setNavigationBarHidden:NO];
+    
+    [PushViewControllerWithSearchData pushViewControllerWithdata:aObject oldViewController:self];
+}
+
+- (void)onCancelSearch{
+    [self.navigationController setNavigationBarHidden:NO];
 }
 @end

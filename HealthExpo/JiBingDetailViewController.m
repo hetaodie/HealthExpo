@@ -15,9 +15,10 @@
 #import "LiuYanObject.h"
 #import "UserInfoManager.h"
 #import "UserInfo.h"
+#import "SearchView.h"
+#import "PushViewControllerWithSearchData.h"
 
-@interface JiBingDetailViewController () <JiBingDetailmodulDelegete,LiuYanModulDelegate,MessageInfoViewDelegate,MessageReplyViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *searchView;
+@interface JiBingDetailViewController () <JiBingDetailmodulDelegete,LiuYanModulDelegate,MessageInfoViewDelegate,MessageReplyViewDelegate,SearchViewDelegate>
 @property (strong, nonatomic) JiBingDetailmodul *modul;
 @property (strong, nonatomic) LiuYanModul *liuYanModul;
 
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet MessageReplyView *messageReplyView;
 @property (assign, nonatomic) NSInteger messageOrReplay;   // 0 表示是留言， 1 表示是回复
 @property (strong, nonatomic) LiuYanObject *replayLiuYanObject;
+@property (weak, nonatomic) IBOutlet SearchView *searchView;
 
 
 @end
@@ -51,13 +53,17 @@
     self.liuYanModul.delegate = self;
 
     [self.liuYanModul getLiyanList:self.cid];
+    
 
     
     self.MessageInfoView.delegate = self;
     self.messageReplyView.delegate = self;
+    self.searchView.delegate = self;
     
 }
 - (IBAction)seachBtnPRess:(id)sender {
+    
+    [self.searchView showSearchView];
 }
 
 - (void)doBack:(id)sender{
@@ -140,5 +146,9 @@
 
 - (void)oncexiaoError{
 
+}
+
+- (void)onSelectSearchData:(SearchObject *)aObject{
+    [PushViewControllerWithSearchData pushViewControllerWithdata:aObject oldViewController:self];
 }
 @end

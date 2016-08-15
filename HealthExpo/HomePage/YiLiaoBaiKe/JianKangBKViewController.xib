@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JianKangBKViewController">
             <connections>
                 <outlet property="searchTextField" destination="Vow-MH-eec" id="doQ-gl-mXv"/>
-                <outlet property="searchView" destination="1TX-rE-7L8" id="gwl-SO-1SG"/>
+                <outlet property="searchViewShow" destination="SwD-M7-35T" id="1YB-eN-hQu"/>
                 <outlet property="tableView" destination="wQ8-hw-8pB" id="HN7-zQ-ihn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,15 +36,28 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-jY-hnz">
+                            <rect key="frame" x="0.0" y="0.0" width="570" height="29"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="searchBtnPress:" destination="-1" eventType="touchUpInside" id="iSZ-hQ-8Q7"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="2mI-lG-VDK"/>
+                        <constraint firstItem="TYl-jY-hnz" firstAttribute="leading" secondItem="1TX-rE-7L8" secondAttribute="leading" id="2qh-I5-JD2"/>
                         <constraint firstItem="WUM-ke-QWe" firstAttribute="leading" secondItem="1TX-rE-7L8" secondAttribute="leading" constant="10" id="4yx-zW-PJE"/>
                         <constraint firstItem="Vow-MH-eec" firstAttribute="leading" secondItem="WUM-ke-QWe" secondAttribute="trailing" constant="10" id="EaZ-z8-5ul"/>
                         <constraint firstAttribute="trailing" secondItem="Vow-MH-eec" secondAttribute="trailing" constant="10" id="Naf-d5-80k"/>
+                        <constraint firstAttribute="bottom" secondItem="TYl-jY-hnz" secondAttribute="bottom" id="Tzv-VX-VEg"/>
+                        <constraint firstAttribute="trailing" secondItem="TYl-jY-hnz" secondAttribute="trailing" id="m3B-4X-rIe"/>
                         <constraint firstItem="WUM-ke-QWe" firstAttribute="centerY" secondItem="1TX-rE-7L8" secondAttribute="centerY" id="on1-qq-U3S"/>
                         <constraint firstItem="Vow-MH-eec" firstAttribute="centerY" secondItem="1TX-rE-7L8" secondAttribute="centerY" id="rCM-JD-ncS"/>
+                        <constraint firstItem="TYl-jY-hnz" firstAttribute="top" secondItem="1TX-rE-7L8" secondAttribute="top" id="xi8-Ki-KGF"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wQ8-hw-8pB">
@@ -53,6 +66,10 @@
                     <color key="separatorColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SwD-M7-35T" customClass="SearchView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -62,7 +79,11 @@
                 <constraint firstAttribute="bottom" secondItem="wQ8-hw-8pB" secondAttribute="bottom" id="EU4-KM-n4W"/>
                 <constraint firstItem="wQ8-hw-8pB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KB4-8X-sjh"/>
                 <constraint firstItem="1TX-rE-7L8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="TQv-8W-86F"/>
+                <constraint firstAttribute="trailing" secondItem="SwD-M7-35T" secondAttribute="trailing" id="hbq-nn-90o"/>
                 <constraint firstItem="1TX-rE-7L8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="hc1-eL-zOl"/>
+                <constraint firstItem="SwD-M7-35T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nmC-Sp-AS6"/>
+                <constraint firstAttribute="bottom" secondItem="SwD-M7-35T" secondAttribute="bottom" id="nuQ-X4-8zv"/>
+                <constraint firstItem="SwD-M7-35T" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sCj-jV-YL6"/>
             </constraints>
         </view>
     </objects>

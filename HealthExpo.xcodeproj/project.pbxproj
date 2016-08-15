@@ -127,6 +127,11 @@
 		7C05E19B1D6165F8006D4EA9 /* MIngYiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E1991D6165F8006D4EA9 /* MIngYiViewController.xib */; };
 		7C05E1A11D616E9E006D4EA9 /* MingYIDetailModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1A01D616E9E006D4EA9 /* MingYIDetailModul.m */; };
 		7C05E1A41D616FAD006D4EA9 /* MingYiDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1A31D616FAD006D4EA9 /* MingYiDetailObject.m */; };
+		7C05E1A71D619A71006D4EA9 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1A61D619A71006D4EA9 /* SearchView.m */; };
+		7C05E1A91D619A93006D4EA9 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E1A81D619A93006D4EA9 /* SearchView.xib */; };
+		7C05E1AC1D619CDB006D4EA9 /* SearchModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1AB1D619CDB006D4EA9 /* SearchModul.m */; };
+		7C05E1AF1D61BCA8006D4EA9 /* SearchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1AE1D61BCA8006D4EA9 /* SearchObject.m */; };
+		7C05E1B21D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1B11D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -381,6 +386,15 @@
 		7C05E1A01D616E9E006D4EA9 /* MingYIDetailModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingYIDetailModul.m; sourceTree = "<group>"; };
 		7C05E1A21D616FAD006D4EA9 /* MingYiDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingYiDetailObject.h; sourceTree = "<group>"; };
 		7C05E1A31D616FAD006D4EA9 /* MingYiDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingYiDetailObject.m; sourceTree = "<group>"; };
+		7C05E1A51D619A71006D4EA9 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		7C05E1A61D619A71006D4EA9 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		7C05E1A81D619A93006D4EA9 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		7C05E1AA1D619CDB006D4EA9 /* SearchModul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModul.h; sourceTree = "<group>"; };
+		7C05E1AB1D619CDB006D4EA9 /* SearchModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModul.m; sourceTree = "<group>"; };
+		7C05E1AD1D61BCA8006D4EA9 /* SearchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchObject.h; sourceTree = "<group>"; };
+		7C05E1AE1D61BCA8006D4EA9 /* SearchObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchObject.m; sourceTree = "<group>"; };
+		7C05E1B01D61C1FE006D4EA9 /* PushViewControllerWithSearchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewControllerWithSearchData.h; sourceTree = "<group>"; };
+		7C05E1B11D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewControllerWithSearchData.m; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -917,6 +931,9 @@
 		7C6A77A81D2B5EC1008A58D7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7C05E1A51D619A71006D4EA9 /* SearchView.h */,
+				7C05E1A61D619A71006D4EA9 /* SearchView.m */,
+				7C05E1A81D619A93006D4EA9 /* SearchView.xib */,
 				7C6A77A91D2B5EFC008A58D7 /* JiBingBKLeftView.h */,
 				7C6A77AA1D2B5EFC008A58D7 /* JiBingBKLeftView.m */,
 				7C6A77AC1D2B5F0F008A58D7 /* JiBingBKLeftView.xib */,
@@ -963,6 +980,12 @@
 				7C05E14C1D5D6AD9006D4EA9 /* YiMiaoObject.m */,
 				7C05E15E1D5DDCEC006D4EA9 /* YiMiaoDetailObject.h */,
 				7C05E15F1D5DDCEC006D4EA9 /* YiMiaoDetailObject.m */,
+				7C05E1AA1D619CDB006D4EA9 /* SearchModul.h */,
+				7C05E1AB1D619CDB006D4EA9 /* SearchModul.m */,
+				7C05E1AD1D61BCA8006D4EA9 /* SearchObject.h */,
+				7C05E1AE1D61BCA8006D4EA9 /* SearchObject.m */,
+				7C05E1B01D61C1FE006D4EA9 /* PushViewControllerWithSearchData.h */,
+				7C05E1B11D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -1010,7 +1033,7 @@
 				TargetAttributes = {
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XWV65WS8FZ;
+						DevelopmentTeam = 9UL567ZJ57;
 					};
 				};
 			};
@@ -1045,6 +1068,7 @@
 				7C6A77C11D2B82C2008A58D7 /* JiBingBKTopView.xib in Resources */,
 				69DBC6AD1D5705190064346B /* TextTableViewCell.xib in Resources */,
 				53F36E251D1ADADB00C8DBB2 /* LoginViewController.xib in Resources */,
+				7C05E1A91D619A93006D4EA9 /* SearchView.xib in Resources */,
 				7C05E1741D5DF643006D4EA9 /* YiLiaoJiGouLeftViewCell.xib in Resources */,
 				53BC4C781D290EFD009035BC /* GuaHaoViewController.xib in Resources */,
 				7C67447A1D2D25F600661276 /* YiYuanViewController.xib in Resources */,
@@ -1161,6 +1185,7 @@
 				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
 				7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */,
 				7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */,
+				7C05E1AC1D619CDB006D4EA9 /* SearchModul.m in Sources */,
 				69DA4C891D6050DF0027A504 /* CallDetailModelSource.m in Sources */,
 				7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */,
 				69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */,
@@ -1230,9 +1255,11 @@
 				694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
+				7C05E1A71D619A71006D4EA9 /* SearchView.m in Sources */,
 				7C05E13C1D5C4C24006D4EA9 /* JiBingDetailObject.m in Sources */,
 				69DC27AA1D5DF7A3006EEF68 /* UserCenterModelSource.m in Sources */,
 				69DD74B11D5B462D00730B94 /* NewsDetailViewController.m in Sources */,
+				7C05E1AF1D61BCA8006D4EA9 /* SearchObject.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
 				69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */,
@@ -1243,6 +1270,7 @@
 				7C05E1871D5EDF53006D4EA9 /* YiyuanDetailObject.m in Sources */,
 				53ABCD921D26B72300A424F0 /* HomePagePictureTableViewCell.m in Sources */,
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
+				7C05E1B21D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m in Sources */,
 				69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 				69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */,
@@ -1364,7 +1392,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HEexpo;
+				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.xuxuxu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1385,7 +1413,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.HEexpo;
+				PRODUCT_BUNDLE_IDENTIFIER = xu.wei.xuxuxu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

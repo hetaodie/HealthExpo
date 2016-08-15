@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView">
+            <connections>
+                <outlet property="cancelButton" destination="xh7-lZ-5WV" id="z1F-7Q-MHp"/>
+                <outlet property="contentView" destination="o23-6s-JcG" id="Brv-pE-JMB"/>
+                <outlet property="searchButton" destination="2i8-OK-wEj" id="96a-Vg-nfk"/>
+                <outlet property="searchTextLabel" destination="ZJq-ga-vPt" id="fDR-p5-KpN"/>
+                <outlet property="tableView" destination="RUU-1W-ME5" id="5zl-DG-ekn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="o23-6s-JcG">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-Lg-UES" userLabel="top">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh7-lZ-5WV">
+                            <rect key="frame" x="15" y="29" width="12" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="6ST-I6-pA7"/>
+                                <constraint firstAttribute="width" constant="12" id="sQK-NZ-XjE"/>
+                            </constraints>
+                            <state key="normal" image="houtui"/>
+                            <connections>
+                                <action selector="canclButton:" destination="-1" eventType="touchUpInside" id="7cw-TD-HUd"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roi-a7-uCa">
+                            <rect key="frame" x="57" y="26" width="458" height="29"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sousuo" translatesAutoresizingMaskIntoConstraints="NO" id="bGw-QX-A8f">
+                                    <rect key="frame" x="10" y="6" width="17" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="87g-i2-njH"/>
+                                        <constraint firstAttribute="width" constant="17" id="u4F-zc-hlf"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索疾病" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJq-ga-vPt">
+                                    <rect key="frame" x="37" y="7" width="411" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="gwW-N8-hJm"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ZJq-ga-vPt" firstAttribute="centerY" secondItem="roi-a7-uCa" secondAttribute="centerY" id="Jbp-xS-Uao"/>
+                                <constraint firstAttribute="trailing" secondItem="ZJq-ga-vPt" secondAttribute="trailing" constant="10" id="eQ3-kC-i0z"/>
+                                <constraint firstItem="ZJq-ga-vPt" firstAttribute="leading" secondItem="bGw-QX-A8f" secondAttribute="trailing" constant="10" id="ekh-KC-2Dq"/>
+                                <constraint firstAttribute="height" constant="29" id="k6e-ap-tsW"/>
+                                <constraint firstItem="bGw-QX-A8f" firstAttribute="leading" secondItem="roi-a7-uCa" secondAttribute="leading" constant="10" id="qqT-4r-5mf"/>
+                                <constraint firstItem="bGw-QX-A8f" firstAttribute="centerY" secondItem="roi-a7-uCa" secondAttribute="centerY" id="xxI-7W-zew"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i8-OK-wEj">
+                            <rect key="frame" x="545" y="27" width="40" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Wak-bM-mC5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="搜索"/>
+                            <connections>
+                                <action selector="searchBtnPress:" destination="-1" eventType="touchUpInside" id="rOh-lP-lYg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="2i8-OK-wEj" firstAttribute="leading" secondItem="roi-a7-uCa" secondAttribute="trailing" constant="30" id="Dfh-od-iER"/>
+                        <constraint firstItem="roi-a7-uCa" firstAttribute="leading" secondItem="xh7-lZ-5WV" secondAttribute="trailing" constant="30" id="Ee8-He-ptY"/>
+                        <constraint firstItem="xh7-lZ-5WV" firstAttribute="top" secondItem="eVg-Lg-UES" secondAttribute="top" constant="29" id="Krt-Db-ojF"/>
+                        <constraint firstItem="roi-a7-uCa" firstAttribute="top" secondItem="eVg-Lg-UES" secondAttribute="top" constant="26" id="LIN-5V-MH5"/>
+                        <constraint firstAttribute="trailing" secondItem="2i8-OK-wEj" secondAttribute="trailing" constant="15" id="d7K-ab-eJr"/>
+                        <constraint firstAttribute="height" constant="64" id="ihi-lv-mX8"/>
+                        <constraint firstItem="xh7-lZ-5WV" firstAttribute="leading" secondItem="eVg-Lg-UES" secondAttribute="leading" constant="15" id="pcm-SS-zpq"/>
+                        <constraint firstItem="2i8-OK-wEj" firstAttribute="centerY" secondItem="ZJq-ga-vPt" secondAttribute="centerY" id="sH9-eF-qRn"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RUU-1W-ME5">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="S7Q-3J-SIK"/>
+                        <outlet property="delegate" destination="-1" id="mEd-Yb-7LH"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RUU-1W-ME5" secondAttribute="trailing" id="6yW-uJ-81w"/>
+                <constraint firstItem="RUU-1W-ME5" firstAttribute="leading" secondItem="o23-6s-JcG" secondAttribute="leading" id="E5w-5S-D9g"/>
+                <constraint firstItem="eVg-Lg-UES" firstAttribute="leading" secondItem="o23-6s-JcG" secondAttribute="leading" id="GZ1-J2-iSo"/>
+                <constraint firstItem="eVg-Lg-UES" firstAttribute="top" secondItem="o23-6s-JcG" secondAttribute="top" id="Jve-E3-MJM"/>
+                <constraint firstAttribute="trailing" secondItem="eVg-Lg-UES" secondAttribute="trailing" id="UdK-TI-h6w"/>
+                <constraint firstItem="RUU-1W-ME5" firstAttribute="top" secondItem="eVg-Lg-UES" secondAttribute="bottom" id="b0Q-zI-H4y"/>
+                <constraint firstAttribute="bottom" secondItem="RUU-1W-ME5" secondAttribute="bottom" id="d9N-Ad-LuJ"/>
+            </constraints>
+            <point key="canvasLocation" x="690" y="385"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="houtui" width="12" height="21"/>
+        <image name="sousuo" width="16" height="17"/>
+    </resources>
+</document>
