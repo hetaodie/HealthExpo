@@ -10,6 +10,7 @@
                 <outlet property="MessageInfoView" destination="TeF-Dg-qz7" id="ksi-BL-rji"/>
                 <outlet property="detailView" destination="OUT-fX-JYa" id="Ube-d8-biv"/>
                 <outlet property="messageReplyView" destination="O5x-ml-cVh" id="sRS-td-Dki"/>
+                <outlet property="searchContentView" destination="x5y-QQ-IAr" id="L0i-hW-Mkc"/>
                 <outlet property="searchView" destination="nCp-hH-gz0" id="f5h-FU-ijV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -51,15 +52,25 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTY-d1-1oW">
+                                    <rect key="frame" x="0.0" y="0.0" width="255" height="29"/>
+                                    <connections>
+                                        <action selector="searchBtnPress:" destination="-1" eventType="touchUpInside" id="gIX-qf-w91"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="XTY-d1-1oW" secondAttribute="bottom" id="97T-EL-tnb"/>
                                 <constraint firstAttribute="height" constant="29" id="Kf5-Xz-WDB"/>
+                                <constraint firstItem="XTY-d1-1oW" firstAttribute="leading" secondItem="nCp-hH-gz0" secondAttribute="leading" id="PPL-44-yqD"/>
                                 <constraint firstAttribute="trailing" secondItem="tvZ-Sx-290" secondAttribute="trailing" constant="10" id="WNa-jY-dcT"/>
+                                <constraint firstAttribute="trailing" secondItem="XTY-d1-1oW" secondAttribute="trailing" id="XUV-Dj-0wm"/>
                                 <constraint firstAttribute="width" constant="255" id="d8r-sM-kSF"/>
                                 <constraint firstItem="tvZ-Sx-290" firstAttribute="leading" secondItem="7Cn-39-DqU" secondAttribute="trailing" constant="10" id="dcP-TY-RrS"/>
                                 <constraint firstItem="7Cn-39-DqU" firstAttribute="leading" secondItem="nCp-hH-gz0" secondAttribute="leading" constant="10" id="jz0-tP-t3O"/>
                                 <constraint firstItem="7Cn-39-DqU" firstAttribute="centerY" secondItem="nCp-hH-gz0" secondAttribute="centerY" id="naP-nb-U4j"/>
+                                <constraint firstItem="XTY-d1-1oW" firstAttribute="top" secondItem="nCp-hH-gz0" secondAttribute="top" id="wue-0i-3Be"/>
                                 <constraint firstItem="tvZ-Sx-290" firstAttribute="centerY" secondItem="nCp-hH-gz0" secondAttribute="centerY" id="xNg-6k-pqG"/>
                             </constraints>
                         </view>
@@ -88,6 +99,10 @@
                     <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-QQ-IAr" customClass="SearchView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -97,10 +112,14 @@
                 <constraint firstItem="6wR-kG-Di4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EGA-ej-DvR"/>
                 <constraint firstItem="TeF-Dg-qz7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GdO-ZC-G41"/>
                 <constraint firstItem="6wR-kG-Di4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OFi-cf-yw6"/>
+                <constraint firstAttribute="trailing" secondItem="x5y-QQ-IAr" secondAttribute="trailing" id="Pfk-M3-mxE"/>
                 <constraint firstItem="OUT-fX-JYa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RRC-s8-Tiz"/>
                 <constraint firstAttribute="trailing" secondItem="O5x-ml-cVh" secondAttribute="trailing" id="Tu0-Sf-1HK"/>
+                <constraint firstItem="x5y-QQ-IAr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U0q-cE-vj8"/>
                 <constraint firstItem="TeF-Dg-qz7" firstAttribute="top" secondItem="OUT-fX-JYa" secondAttribute="bottom" id="VUl-rz-ZDc"/>
+                <constraint firstItem="x5y-QQ-IAr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZnH-AX-2xu"/>
                 <constraint firstItem="OUT-fX-JYa" firstAttribute="top" secondItem="6wR-kG-Di4" secondAttribute="bottom" id="eOV-xe-RUT"/>
+                <constraint firstAttribute="bottom" secondItem="x5y-QQ-IAr" secondAttribute="bottom" id="lWN-57-OlR"/>
                 <constraint firstAttribute="trailing" secondItem="6wR-kG-Di4" secondAttribute="trailing" id="ljk-bt-cP9"/>
                 <constraint firstAttribute="bottom" secondItem="TeF-Dg-qz7" secondAttribute="bottom" id="nCF-eg-27W"/>
                 <constraint firstItem="O5x-ml-cVh" firstAttribute="top" secondItem="6wR-kG-Di4" secondAttribute="bottom" id="wsO-Ce-Sav"/>

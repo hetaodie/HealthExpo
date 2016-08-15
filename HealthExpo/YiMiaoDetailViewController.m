@@ -15,8 +15,10 @@
 #import "UserInfoManager.h"
 #import "UserInfo.h"
 #import "UIView+Toast.h"
+#import "SearchView.h"
+#import "PushViewControllerWithSearchData.h"
 
-@interface YiMiaoDetailViewController () <YiMiaoModulDelegate,MessageInfoViewDelegate,LiuYanModulDelegate,MessageReplyViewDelegate>
+@interface YiMiaoDetailViewController () <YiMiaoModulDelegate,MessageInfoViewDelegate,LiuYanModulDelegate,MessageReplyViewDelegate,SearchViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 
 @property (strong, nonatomic) YiMiaoModul *yimiaoModul;
@@ -29,6 +31,7 @@
 @property (assign, nonatomic) NSInteger messageOrReplay;   // 0 表示是留言， 1 表示是回复
 @property (strong, nonatomic) LiuYanObject *replayLiuYanObject;
 
+@property (weak, nonatomic) IBOutlet SearchView *searchContentView;
 @end
 
 @implementation YiMiaoDetailViewController
@@ -56,6 +59,8 @@
     
     self.MessageInfoView.delegate = self;
     self.messageReplyView.delegate = self;
+    
+    self.searchContentView.delegate = self;
 }
 
 - (IBAction)doBack:(id)sender{
@@ -94,6 +99,9 @@
     
 }
 
+- (IBAction)searchBtnPress:(id)sender {
+    [self.searchContentView showSearchView];
+}
 
 - (void)onBtnMessagePress{
     self.messageReplyView.hidden = NO;
@@ -148,6 +156,10 @@
 - (void)onPhoneCallFailed{
     [self.view makeToast:@"呼叫失败" duration:0.8 position:CSToastPositionCenter];
     
+}
+
+- (void)onSelectSearchData:(SearchObject *)aObject{
+    [PushViewControllerWithSearchData pushViewControllerWithdata:aObject oldViewController:self];
 }
 
 @end
