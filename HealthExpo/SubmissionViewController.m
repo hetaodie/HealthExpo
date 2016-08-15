@@ -11,7 +11,8 @@
 #import "LiuYanModul.h"
 #import "MessageInfoView.h"
 #import "MessageReplyView.h"
-
+#import "UserInfo.h"
+#import "UserInfoManager.h"
 @interface SubmissionViewController ()<SubmissionModelSourceDelegate, LiuYanModulDelegate, MessageInfoViewDelegate, MessageReplyViewDelegate>
 
 @property (nonatomic, strong)SubmissionModelSource *modelSource;
@@ -127,9 +128,12 @@
 - (void)onSendMessageBtnPress:(NSString *)content{    
     if (self.messageOrReplay == 0) {
         LiuYanObject *object = [[LiuYanObject alloc] init];
+        
+        UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
         object.id =self.cid;
-        object.username = @"weixu";
-        object.phone = @"15067152144";
+        object.username = info.userName;
+        object.phone = info.phone;
+        
         object.content = content;
         
         [self.liuYanModul setjibingLiuYan:object];

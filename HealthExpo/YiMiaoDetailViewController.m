@@ -12,7 +12,9 @@
 #import "YiMiaoDetailView.h"
 #import "LiuYanModul.h"
 #import "MessageReplyView.h"
-
+#import "UserInfoManager.h"
+#import "UserInfo.h"
+#import "UIView+Toast.h"
 
 @interface YiMiaoDetailViewController () <YiMiaoModulDelegate,MessageInfoViewDelegate,LiuYanModulDelegate,MessageReplyViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
@@ -102,9 +104,11 @@
     
     if (self.messageOrReplay == 0) {
         LiuYanObject *object = [[LiuYanObject alloc] init];
+        
+        UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
         object.id =self.cid;
-        object.username = @"weixu";
-        object.phone = @"15067152144";
+        object.username = info.userName;
+        object.phone = info.phone;
         object.content = content;
         
         [self.liuYanModul setjibingLiuYan:object];
@@ -135,4 +139,15 @@
 - (void)oncexiaoError{
     
 }
+
+#pragma mark -- PhoneCallModelSourceDelegate
+- (void)onPhoneCallSuccess:(NSString *)tipString{
+    [self.view makeToast:tipString duration:0.8 position:CSToastPositionCenter];
+}
+
+- (void)onPhoneCallFailed{
+    [self.view makeToast:@"呼叫失败" duration:0.8 position:CSToastPositionCenter];
+    
+}
+
 @end

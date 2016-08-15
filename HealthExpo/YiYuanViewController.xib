@@ -118,6 +118,9 @@
                     <state key="normal" title="0571-87151966">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
+                    <connections>
+                        <action selector="dianhuaPress:" destination="-1" eventType="touchUpInside" id="8Gc-hT-vHg"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-vt-dOq">
                     <rect key="frame" x="188" y="233" width="88" height="27"/>
@@ -216,13 +219,6 @@
                 <constraint firstItem="IB4-hM-ka8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zLl-w1-NPW"/>
             </constraints>
         </view>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T10-36-htP">
-            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-            <nil key="highlightedColor"/>
-        </label>
     </objects>
     <resources>
         <image name="01" width="240" height="140"/>

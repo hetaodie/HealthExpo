@@ -13,6 +13,8 @@
 #import "LiuYanModul.h"
 #import "MessageReplyView.h"
 #import "LiuYanObject.h"
+#import "UserInfoManager.h"
+#import "UserInfo.h"
 
 @interface JiBingDetailViewController () <JiBingDetailmodulDelegete,LiuYanModulDelegate,MessageInfoViewDelegate,MessageReplyViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *searchView;
@@ -101,10 +103,12 @@
 - (void)onSendMessageBtnPress:(NSString *)content{
     
     if (self.messageOrReplay == 0) {
+        
+        UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
         LiuYanObject *object = [[LiuYanObject alloc] init];
         object.id =self.cid;
-        object.username = @"weixu";
-        object.phone = @"15067152144";
+        object.username = info.userName;
+        object.phone = info.phone;
         object.content = content;
         
         [self.liuYanModul setjibingLiuYan:object];

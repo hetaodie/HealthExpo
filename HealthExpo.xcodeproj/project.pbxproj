@@ -123,6 +123,10 @@
 		7C05E1911D5F18FE006D4EA9 /* ContactPersonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1901D5F18FE006D4EA9 /* ContactPersonObject.m */; };
 		7C05E1951D6159C6006D4EA9 /* MingYICell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1931D6159C6006D4EA9 /* MingYICell.m */; };
 		7C05E1961D6159C6006D4EA9 /* MingYICell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E1941D6159C6006D4EA9 /* MingYICell.xib */; };
+		7C05E19A1D6165F8006D4EA9 /* MIngYiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1981D6165F8006D4EA9 /* MIngYiViewController.m */; };
+		7C05E19B1D6165F8006D4EA9 /* MIngYiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E1991D6165F8006D4EA9 /* MIngYiViewController.xib */; };
+		7C05E1A11D616E9E006D4EA9 /* MingYIDetailModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1A01D616E9E006D4EA9 /* MingYIDetailModul.m */; };
+		7C05E1A41D616FAD006D4EA9 /* MingYiDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1A31D616FAD006D4EA9 /* MingYiDetailObject.m */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -370,6 +374,13 @@
 		7C05E1921D6159C6006D4EA9 /* MingYICell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingYICell.h; sourceTree = "<group>"; };
 		7C05E1931D6159C6006D4EA9 /* MingYICell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingYICell.m; sourceTree = "<group>"; };
 		7C05E1941D6159C6006D4EA9 /* MingYICell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingYICell.xib; sourceTree = "<group>"; };
+		7C05E1971D6165F8006D4EA9 /* MIngYiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIngYiViewController.h; sourceTree = "<group>"; };
+		7C05E1981D6165F8006D4EA9 /* MIngYiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIngYiViewController.m; sourceTree = "<group>"; };
+		7C05E1991D6165F8006D4EA9 /* MIngYiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIngYiViewController.xib; sourceTree = "<group>"; };
+		7C05E19F1D616E9E006D4EA9 /* MingYIDetailModul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingYIDetailModul.h; sourceTree = "<group>"; };
+		7C05E1A01D616E9E006D4EA9 /* MingYIDetailModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingYIDetailModul.m; sourceTree = "<group>"; };
+		7C05E1A21D616FAD006D4EA9 /* MingYiDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingYiDetailObject.h; sourceTree = "<group>"; };
+		7C05E1A31D616FAD006D4EA9 /* MingYiDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingYiDetailObject.m; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -637,6 +648,9 @@
 				7C6744761D2D25F600661276 /* YiYuanViewController.h */,
 				7C6744771D2D25F600661276 /* YiYuanViewController.m */,
 				7C6744781D2D25F600661276 /* YiYuanViewController.xib */,
+				7C05E1971D6165F8006D4EA9 /* MIngYiViewController.h */,
+				7C05E1981D6165F8006D4EA9 /* MIngYiViewController.m */,
+				7C05E1991D6165F8006D4EA9 /* MIngYiViewController.xib */,
 			);
 			name = YiLiaoJiGou;
 			sourceTree = "<group>";
@@ -852,6 +866,10 @@
 				7C05E1891D5EDF6F006D4EA9 /* YiYuanDetailModul.m */,
 				7C05E1851D5EDF53006D4EA9 /* YiyuanDetailObject.h */,
 				7C05E1861D5EDF53006D4EA9 /* YiyuanDetailObject.m */,
+				7C05E19F1D616E9E006D4EA9 /* MingYIDetailModul.h */,
+				7C05E1A01D616E9E006D4EA9 /* MingYIDetailModul.m */,
+				7C05E1A21D616FAD006D4EA9 /* MingYiDetailObject.h */,
+				7C05E1A31D616FAD006D4EA9 /* MingYiDetailObject.m */,
 				7C05E18B1D5EFA61006D4EA9 /* MingYiObject.h */,
 				7C05E18C1D5EFA61006D4EA9 /* MingYiObject.m */,
 			);
@@ -1072,6 +1090,7 @@
 				694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */,
 				69E4BE651D1D10B300B555FD /* CheckInViewController.xib in Resources */,
 				7C05E1471D5C7DB6006D4EA9 /* MessageReplyView.xib in Resources */,
+				7C05E19B1D6165F8006D4EA9 /* MIngYiViewController.xib in Resources */,
 				7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1189,6 +1208,7 @@
 				69DA4C8D1D6056280027A504 /* UserEditViewController.m in Sources */,
 				7C05E1361D5B295A006D4EA9 /* ClassifyObject.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
+				7C05E1A41D616FAD006D4EA9 /* MingYiDetailObject.m in Sources */,
 				53AD055B1D2C072F00557942 /* HEDataCategory.m in Sources */,
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				7C05E1951D6159C6006D4EA9 /* MingYICell.m in Sources */,
@@ -1206,6 +1226,7 @@
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				7C05E1331D5B2886006D4EA9 /* JiBingModul.m in Sources */,
 				69DD74A81D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m in Sources */,
+				7C05E1A11D616E9E006D4EA9 /* MingYIDetailModul.m in Sources */,
 				694BB3721D48E32D007D8ED0 /* DianZiZaZhiModelSource.m in Sources */,
 				53A34BD11D2011380043144E /* UserInfoCommonTableViewCell.m in Sources */,
 				53BC4C771D290EFD009035BC /* GuaHaoViewController.m in Sources */,
@@ -1216,6 +1237,7 @@
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
 				69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */,
 				7C05E17B1D5DF6D3006D4EA9 /* YiLiaoJiGouModul.m in Sources */,
+				7C05E19A1D6165F8006D4EA9 /* MIngYiViewController.m in Sources */,
 				69DD74BA1D5B493900730B94 /* SubmissionModelSource.m in Sources */,
 				7C05E17E1D5DF855006D4EA9 /* DiQunObject.m in Sources */,
 				7C05E1871D5EDF53006D4EA9 /* YiyuanDetailObject.m in Sources */,

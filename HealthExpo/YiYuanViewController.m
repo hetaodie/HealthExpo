@@ -10,8 +10,10 @@
 #import "YiyuanDetailObject.h"
 #import "YiYuanDetailModul.h"
 #import "MingYICell.h"
+#import "MIngYiViewController.h"
+#import "PhoneCallModelSource.h"
 
-@interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate,PhoneCallModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *dengjiLabel;
@@ -24,6 +26,7 @@
 @property (strong, nonatomic) YiYuanDetailModul *modul;
 
 @property (strong, nonatomic) NSMutableArray *mingyiArray;
+@property (strong, nonatomic) NSString *yiyuantitle;
 
 @end
 
@@ -31,6 +34,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 12, 21);
+    [backBtn setImage:[UIImage imageNamed:@"houtui"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
     
     _modul = [[YiYuanDetailModul alloc] init];
     _mingyiArray = [[NSMutableArray alloc] init];
@@ -46,11 +56,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)dianhuaPress:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    NSString *title = [button titleForState:UIControlStateNormal];
+
+    PhoneCallModelSource *souce = [[PhoneCallModelSource alloc] init];
+    souce.delegate = self;
+    [souce onPhoneCallWithPhoneNum:title];
+    
+}
+
+- (void)doBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (void)onGetYiYuanDetailError{
 
 }
 
 - (void)onGetYiYuanDetailSeccess:(YiyuanDetailObject *)aObject{
+    self.yiyuantitle = aObject.title;
     self.titleLabel.text = aObject.title;
     self.dengjiLabel.text = aObject.dengji;
     self.type.text = aObject.type;
@@ -96,6 +122,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-
+    
+    MingYiObject *object = [self.mingyiArray objectAtIndex:indexPath.row];
+    
+    MIngYiViewController *jkdeVC = [[MIngYiViewController alloc] initWithNibName:@"MIngYiViewController" bundle:nil];
+    
+    jkdeVC.cid = object.id;
+    jkdeVC.yiyuanTitle = self.yiyuantitle;
+    
+    jkdeVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 @end
