@@ -137,6 +137,8 @@
 		7C05E2101D630BC8006D4EA9 /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E20D1D630BC8006D4EA9 /* KCAnnotation.m */; };
 		7C05E2121D630BD8006D4EA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */; };
 		7C05E2141D630BDF006D4EA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E2131D630BDF006D4EA9 /* MapKit.framework */; };
+		7C05E2181D631483006D4EA9 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E2161D631483006D4EA9 /* CallViewController.m */; };
+		7C05E2191D631483006D4EA9 /* CallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E2171D631483006D4EA9 /* CallViewController.xib */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -407,6 +409,9 @@
 		7C05E20D1D630BC8006D4EA9 /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnnotation.m; sourceTree = "<group>"; };
 		7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7C05E2131D630BDF006D4EA9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7C05E2151D631483006D4EA9 /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
+		7C05E2161D631483006D4EA9 /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
+		7C05E2171D631483006D4EA9 /* CallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallViewController.xib; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -924,6 +929,9 @@
 				7C05E20B1D630BC8006D4EA9 /* MapViewController.xib */,
 				7C05E20C1D630BC8006D4EA9 /* KCAnnotation.h */,
 				7C05E20D1D630BC8006D4EA9 /* KCAnnotation.m */,
+				7C05E2151D631483006D4EA9 /* CallViewController.h */,
+				7C05E2161D631483006D4EA9 /* CallViewController.m */,
+				7C05E2171D631483006D4EA9 /* CallViewController.xib */,
 			);
 			name = otherVC;
 			sourceTree = "<group>";
@@ -1125,6 +1133,7 @@
 				69E4BE6A1D1D10DF00B555FD /* ContactsViewController.xib in Resources */,
 				7C6744551D2CE66300661276 /* YiMiaoDetailViewController.xib in Resources */,
 				69DD74B21D5B462D00730B94 /* NewsDetailViewController.xib in Resources */,
+				7C05E2191D631483006D4EA9 /* CallViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
 				69DA4C7E1D60481A0027A504 /* CallDetailViewController.xib in Resources */,
 				7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */,
@@ -1271,6 +1280,7 @@
 				7C05E1951D6159C6006D4EA9 /* MingYICell.m in Sources */,
 				7C67443F1D2BC3B100661276 /* MessageInfoView.m in Sources */,
 				69DC279E1D5DF386006EEF68 /* PhoneModelSource.m in Sources */,
+				7C05E2181D631483006D4EA9 /* CallViewController.m in Sources */,
 				7C05E18D1D5EFA61006D4EA9 /* MingYiObject.m in Sources */,
 				7C6A77AB1D2B5EFC008A58D7 /* JiBingBKLeftView.m in Sources */,
 				7C67445E1D2D1E0A00661276 /* YiLiaoJiGouViewController.m in Sources */,

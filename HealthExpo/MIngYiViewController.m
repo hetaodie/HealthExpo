@@ -10,7 +10,7 @@
 #import "MingYIDetailModul.h"
 #import "PhoneCallModelSource.h"
 #import "UIView+Toast.h"
-
+#import "CallViewController.h"
 @interface MIngYiViewController ()<MingYIDetailModulDelegate,PhoneCallModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
