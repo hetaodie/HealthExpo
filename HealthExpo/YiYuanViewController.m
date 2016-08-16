@@ -12,6 +12,7 @@
 #import "MingYICell.h"
 #import "MIngYiViewController.h"
 #import "PhoneCallModelSource.h"
+#import "MapViewController.h"
 
 @interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate,PhoneCallModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -27,7 +28,7 @@
 
 @property (strong, nonatomic) NSMutableArray *mingyiArray;
 @property (strong, nonatomic) NSString *yiyuantitle;
-
+@property (strong, nonatomic) YiyuanDetailObject *yiyuanDetailObject;
 @end
 
 @implementation YiYuanViewController
@@ -41,6 +42,13 @@
     [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
+    
+    UIButton *dituBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    dituBtn.frame = CGRectMake(0, 0, 40, 21);
+    [dituBtn setTitle:@"地图" forState:UIControlStateNormal];
+    [dituBtn addTarget:self action:@selector(showMap:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *dituItem = [[UIBarButtonItem alloc] initWithCustomView:dituBtn];
+    self.navigationItem.rightBarButtonItem = dituItem;
     
     _modul = [[YiYuanDetailModul alloc] init];
     _mingyiArray = [[NSMutableArray alloc] init];
@@ -71,11 +79,19 @@
 }
 
 
+- (void)showMap:(id)sender {
+    MapViewController *jkdeVC = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    jkdeVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:jkdeVC animated:YES];
+    [jkdeVC addLocationToMap:self.yiyuanDetailObject.zhuobiao1 longitude:self.yiyuanDetailObject.zhuobiao2 title:self.yiyuanDetailObject.title dizhi:self.yiyuanDetailObject.dizhi];
+}
+
 - (void)onGetYiYuanDetailError{
 
 }
 
 - (void)onGetYiYuanDetailSeccess:(YiyuanDetailObject *)aObject{
+    self.yiyuanDetailObject = aObject;
     self.yiyuantitle = aObject.title;
     self.titleLabel.text = aObject.title;
     self.dengjiLabel.text = aObject.dengji;

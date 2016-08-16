@@ -132,6 +132,11 @@
 		7C05E1AC1D619CDB006D4EA9 /* SearchModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1AB1D619CDB006D4EA9 /* SearchModul.m */; };
 		7C05E1AF1D61BCA8006D4EA9 /* SearchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1AE1D61BCA8006D4EA9 /* SearchObject.m */; };
 		7C05E1B21D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1B11D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m */; };
+		7C05E20E1D630BC8006D4EA9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E20A1D630BC8006D4EA9 /* MapViewController.m */; };
+		7C05E20F1D630BC8006D4EA9 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E20B1D630BC8006D4EA9 /* MapViewController.xib */; };
+		7C05E2101D630BC8006D4EA9 /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E20D1D630BC8006D4EA9 /* KCAnnotation.m */; };
+		7C05E2121D630BD8006D4EA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */; };
+		7C05E2141D630BDF006D4EA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E2131D630BDF006D4EA9 /* MapKit.framework */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -395,6 +400,13 @@
 		7C05E1AE1D61BCA8006D4EA9 /* SearchObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchObject.m; sourceTree = "<group>"; };
 		7C05E1B01D61C1FE006D4EA9 /* PushViewControllerWithSearchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewControllerWithSearchData.h; sourceTree = "<group>"; };
 		7C05E1B11D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewControllerWithSearchData.m; sourceTree = "<group>"; };
+		7C05E2091D630BC8006D4EA9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7C05E20A1D630BC8006D4EA9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7C05E20B1D630BC8006D4EA9 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		7C05E20C1D630BC8006D4EA9 /* KCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnnotation.h; sourceTree = "<group>"; };
+		7C05E20D1D630BC8006D4EA9 /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnnotation.m; sourceTree = "<group>"; };
+		7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7C05E2131D630BDF006D4EA9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -458,6 +470,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C05E2141D630BDF006D4EA9 /* MapKit.framework in Frameworks */,
+				7C05E2121D630BD8006D4EA9 /* CoreLocation.framework in Frameworks */,
 				53A34BE81D20258B0043144E /* libStatus.a in Frameworks */,
 				9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */,
 			);
@@ -469,6 +483,8 @@
 		34861F2DFE51E919EB04A2E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C05E2131D630BDF006D4EA9 /* MapKit.framework */,
+				7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */,
 				53A34BE71D20258B0043144E /* libStatus.a */,
 				F403DA16C4CB879B3CB0AE82 /* libPods.a */,
 			);
@@ -838,6 +854,7 @@
 		7C04FBBF1D1A69AF00414252 /* HealthExpo */ = {
 			isa = PBXGroup;
 			children = (
+				7C05E2081D630B88006D4EA9 /* otherVC */,
 				53BC4C7E1D291C78009035BC /* Tools */,
 				53A34BDB1D2025160043144E /* iCallSDK */,
 				69E6847F1D1E875C0092F031 /* UICategory */,
@@ -897,6 +914,18 @@
 				7C05E1901D5F18FE006D4EA9 /* ContactPersonObject.m */,
 			);
 			name = mudul;
+			sourceTree = "<group>";
+		};
+		7C05E2081D630B88006D4EA9 /* otherVC */ = {
+			isa = PBXGroup;
+			children = (
+				7C05E2091D630BC8006D4EA9 /* MapViewController.h */,
+				7C05E20A1D630BC8006D4EA9 /* MapViewController.m */,
+				7C05E20B1D630BC8006D4EA9 /* MapViewController.xib */,
+				7C05E20C1D630BC8006D4EA9 /* KCAnnotation.h */,
+				7C05E20D1D630BC8006D4EA9 /* KCAnnotation.m */,
+			);
+			name = otherVC;
 			sourceTree = "<group>";
 		};
 		7C6744651D2D1F7100661276 /* views */ = {
@@ -1085,6 +1114,7 @@
 				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
 				7C6A77BC1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib in Resources */,
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
+				7C05E20F1D630BC8006D4EA9 /* MapViewController.xib in Resources */,
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				7C05E16A1D5DF5DF006D4EA9 /* YiLiaoJiGouLeftView.xib in Resources */,
@@ -1201,6 +1231,7 @@
 				7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */,
+				7C05E20E1D630BC8006D4EA9 /* MapViewController.m in Sources */,
 				7C05E13F1D5C5B0C006D4EA9 /* LiuYanModul.m in Sources */,
 				69DC27A71D5DF754006EEF68 /* LoginModelSource.m in Sources */,
 				5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */,
@@ -1225,6 +1256,7 @@
 				7C6744741D2D1FBC00661276 /* YiLiaoJiGouRightViewCell.m in Sources */,
 				7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */,
 				69DC9AE01D35293A00CF4140 /* JiBingBKModelSource.m in Sources */,
+				7C05E2101D630BC8006D4EA9 /* KCAnnotation.m in Sources */,
 				69DBC6B11D5705430064346B /* PictureTableViewCell.m in Sources */,
 				7C05E1391D5C28A9006D4EA9 /* JiBingDetailmodul.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
