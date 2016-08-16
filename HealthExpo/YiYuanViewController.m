@@ -147,6 +147,8 @@
     jkdeVC.yiyuanTitle = self.yiyuantitle;
     
     jkdeVC.hidesBottomBarWhenPushed = YES;
+    
+
     [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 @end

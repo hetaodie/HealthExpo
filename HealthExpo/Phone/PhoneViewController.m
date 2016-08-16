@@ -56,7 +56,7 @@
     [self bannerCycleSetting];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)vieDidAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
 }

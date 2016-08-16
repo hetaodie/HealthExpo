@@ -90,6 +90,26 @@
     
     tbController.viewControllers = @[nav1, nav2, nav3, nav4, nav5];
     
+    if ([nav1 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        nav1.interactivePopGestureRecognizer.delegate = nil;
+    }
+    
+    if ([nav2 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        nav2.interactivePopGestureRecognizer.delegate = nil;
+    }
+    
+    if ([nav3 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        nav3.interactivePopGestureRecognizer.delegate = nil;
+    }
+    
+    if ([nav4 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        nav4.interactivePopGestureRecognizer.delegate = nil;
+    }
+    
+    if ([nav5 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        nav5.interactivePopGestureRecognizer.delegate = nil;
+    }
+    
 //    //改变tabBar 上title的颜色 和 字体大小
 //    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:102/255.0 green:122/255.0 blue:143/255.0 alpha:1.0f], NSForegroundColorAttributeName, [UIFont systemFontOfSize:14], NSFontAttributeName, nil nil] forState:UIControlStateNormal];
 //    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0/255.0 green:198/255.0 blue:255/255.0 alpha:1.0f], NSForegroundColorAttributeName, [UIFont systemFontOfSize:14], NSFontAttributeName,nil] forState:UIControlStateSelected];

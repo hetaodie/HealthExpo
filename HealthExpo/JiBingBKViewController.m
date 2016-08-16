@@ -56,8 +56,8 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
 }
 - (void)didReceiveMemoryWarning {
