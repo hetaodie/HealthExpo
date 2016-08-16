@@ -13,7 +13,7 @@
 @implementation CollectionModelSource
 - (void)getCollectionRequest{
     UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
-    NSString *path = [NSString stringWithFormat:@"/mobile/getCollectInfoList.action?username=15088618617"];//, info.userName];
+    NSString *path = [NSString stringWithFormat:@"/mobile/getCollectInfoList.action?username=%@", info.userName];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:path];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
