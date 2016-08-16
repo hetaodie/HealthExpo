@@ -31,6 +31,8 @@
                          self.alpha = 1.0;
                      } completion:^(BOOL finished) {
                      }];
+    
+    [self.searchTextLabel becomeFirstResponder];
 }
 
 - (void)layoutSubviews{
@@ -101,6 +103,7 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(onCancelSearch)]) {
         [self.delegate onCancelSearch];
     }
+    [self.searchTextLabel resignFirstResponder];
 }
 
 - (IBAction)searchBtnPress:(id)sender {
@@ -108,6 +111,7 @@
     if ([text length] >0) {
         [self.modul seachText:text];
     }
+    [self.searchTextLabel resignFirstResponder];
     
 }
 

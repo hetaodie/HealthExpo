@@ -17,8 +17,10 @@
 #import "NewsDetailViewController.h"
 #import "HomePageNewsItem.h"
 #import "YiLiaoJiGouViewController.h"
+#import "SearchView.h"
+#import "PushViewControllerWithSearchData.h"
 
-@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageModelSourceDelegate>
+@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageModelSourceDelegate,SearchViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *searchView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
@@ -26,6 +28,7 @@
 @property (nonatomic, strong) HomePageModelSource *dataSource;
 @property (nonatomic, strong) NSArray *dataArray;
 
+@property (weak, nonatomic) IBOutlet SearchView *searchContentView;
 @property (nonatomic, strong) SpeakerMessageItem *speakerData;
 
 @end
@@ -43,6 +46,8 @@
     self.dataSource.delegate = self;
     [self.dataSource getHomePageNews];
     [self.dataSource getSpeakerMessage];
+    
+    self.searchContentView.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -127,6 +132,10 @@
     [self.navigationController pushViewController:ndVC animated:YES];
 }
 
+- (IBAction)searchBtnPress:(id)sender {
+    [self.searchContentView showSearchView];
+}
+
 #pragma mark - HomePageModelSourceDelegate
 - (void)getHomePageNewsFailed{
     
@@ -153,6 +162,10 @@
     if (!CGRectContainsPoint(self.searchView.frame, touchPoint)) {
         [self.searchTextField resignFirstResponder];
     }
+}
+
+-(void)onSelectSearchData:(SearchObject *)aObject{
+    [PushViewControllerWithSearchData pushViewControllerWithdata:aObject oldViewController:self];
 }
 
 @end
