@@ -92,13 +92,8 @@
      [self.reCallButton setHidden:YES];
 }
 
-<<<<<<< HEAD
 - (void)onPhoneCallFailed:(NSString *)tipString{
-        self.tishiLabel.text = [NSString stringWithFormat:@"%@",tipString];
-=======
-- (void)onPhoneCallFailed{
-    self.tishiLabel.text = @"链接失败，请重试";
->>>>>>> origin/master
+    self.tishiLabel.text = [NSString stringWithFormat:@"%@",tipString];
     [self.reCallButton setHidden:NO];
 }
 
