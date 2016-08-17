@@ -25,6 +25,7 @@
 - (void)monitorCallCenter{
     
     __weak __typeof(self) weakSelf = self;
+    
     _callCenter = [[CTCallCenter alloc] init];
     self.callCenter.callEventHandler = ^(CTCall* call) {
         if ([call.callState isEqualToString:CTCallStateDisconnected])
