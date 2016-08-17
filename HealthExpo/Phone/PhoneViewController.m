@@ -15,7 +15,8 @@
 #import "CallViewController.h"
 
 @interface PhoneViewController ()<PhoneModelSourceDelegate>
-@property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
+@property (strong, nonatomic) IBOutlet UITextField *phoneNumText;
+
 @property (nonatomic, strong) NSString *phoneNum;
 @property (strong, nonatomic) IBOutlet UIView *topView;
 @property (strong, nonatomic) IBOutlet UIScrollView *topBannerScrollView;
@@ -41,8 +42,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.phoneNumLabel.layer.cornerRadius = 15;
-    self.phoneNumLabel.clipsToBounds = YES;
+//    self.phoneNumLabel.layer.cornerRadius = 15;
+//    self.phoneNumLabel.clipsToBounds = YES;
     
     self.modelSource = [[PhoneModelSource alloc] init];
     self.modelSource.delegate = self;
@@ -55,6 +56,10 @@
         
         button.imageView.contentMode = UIViewContentModeScaleToFill;
     }
+    
+    UIView* dummyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+    dummyView.backgroundColor = [UIColor clearColor];
+    self.phoneNumText.inputView = dummyView;//不显示键盘，显示光标。
 
     [self bannerCycleSetting];
 }
@@ -118,13 +123,13 @@
     }
     if (_phoneNum.length <= 11) {
         self.phoneNum = [_phoneNum stringByAppendingString:aNum];
-        self.phoneNumLabel.text = _phoneNum;
+        self.phoneNumText.text = _phoneNum;
     }
 }
 - (void)deleteAphoneNum{
     if(_phoneNum.length > 0){
         self.phoneNum = [_phoneNum substringToIndex:(_phoneNum.length-1)];
-        self.phoneNumLabel.text = _phoneNum;
+        self.phoneNumText.text = _phoneNum;
     }
 }
 

@@ -16,7 +16,7 @@
                 <outlet property="banner5" destination="kzU-XB-cIG" id="eXq-fn-jGs"/>
                 <outlet property="banner6" destination="Z2z-PV-JFx" id="nor-Zd-zfR"/>
                 <outlet property="banner7" destination="hGs-D7-SUk" id="EdP-Zw-0je"/>
-                <outlet property="phoneNumLabel" destination="Frq-tp-ICt" id="WCY-0z-fER"/>
+                <outlet property="phoneNumText" destination="kqi-eI-Vkr" id="Qeu-l1-p8Y"/>
                 <outlet property="topBannerScrollView" destination="ook-VO-Yl8" id="aAu-d7-8cK"/>
                 <outlet property="topView" destination="QYW-Yh-AIg" id="jhJ-Q6-zO2"/>
                 <outlet property="topbannerContaintView" destination="6hl-tJ-Dzs" id="Dui-Ha-Mp2"/>
@@ -258,16 +258,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10o-Oh-iqt">
                     <rect key="frame" x="0.0" y="251" width="600" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frq-tp-ICt">
-                            <rect key="frame" x="60" y="7" width="482" height="30"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="J7f-m0-sfO"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLQ-zw-CMl">
                             <rect key="frame" x="15" y="7" width="30" height="30"/>
                             <constraints>
@@ -290,17 +280,25 @@
                                 <action selector="deleteClicked:" destination="-1" eventType="touchUpInside" id="hqp-Pj-5u4"/>
                             </connections>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-eI-Vkr">
+                            <rect key="frame" x="60" y="7" width="482" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="qJI-iA-Kct"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="Frq-tp-ICt" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="CNn-Pp-PzP"/>
+                        <constraint firstItem="kqi-eI-Vkr" firstAttribute="leading" secondItem="xLQ-zw-CMl" secondAttribute="trailing" constant="15" id="G2f-hq-yLa"/>
                         <constraint firstItem="xLQ-zw-CMl" firstAttribute="leading" secondItem="10o-Oh-iqt" secondAttribute="leading" constant="15" id="KAU-Qx-C0A"/>
                         <constraint firstAttribute="height" constant="44" id="bAP-Jx-5po"/>
-                        <constraint firstItem="7eh-rP-XfM" firstAttribute="leading" secondItem="Frq-tp-ICt" secondAttribute="trailing" constant="15" id="cll-DF-b6p"/>
                         <constraint firstAttribute="trailing" secondItem="7eh-rP-XfM" secondAttribute="trailing" constant="15" id="eLL-Gy-y4W"/>
+                        <constraint firstItem="7eh-rP-XfM" firstAttribute="leading" secondItem="kqi-eI-Vkr" secondAttribute="trailing" constant="15" id="h6x-w2-J8F"/>
                         <constraint firstItem="7eh-rP-XfM" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="jLC-IZ-eHi"/>
                         <constraint firstItem="xLQ-zw-CMl" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="vPi-o3-ZVr"/>
-                        <constraint firstItem="Frq-tp-ICt" firstAttribute="leading" secondItem="xLQ-zw-CMl" secondAttribute="trailing" constant="15" id="ytx-e3-6KI"/>
+                        <constraint firstItem="kqi-eI-Vkr" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="xca-Mc-0fN"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfs-u9-pCa">
