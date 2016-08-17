@@ -43,7 +43,7 @@
 
 - (IBAction)reCallBtnPress:(id)sender {
     [self.callModel onPhoneCallWithPhoneNum:self.phoneNum];
-    self.tishiLabel.text =@"正在链接，请稍等...";
+    self.tishiLabel.text =@"正在连接，请稍等...";
     [self.reCallButton setHidden:YES];
 }
 
@@ -58,7 +58,7 @@
 }
 
 - (void)onPhoneCallFailed{
-    self.tishiLabel.text = @"链接是吧，请重试";
+    self.tishiLabel.text = @"链接失败，请重试";
     [self.reCallButton setHidden:NO];
 }
 
