@@ -9,8 +9,6 @@
             <connections>
                 <outlet property="contentLabel" destination="aco-Dp-wjF" id="dNN-gf-5Vh"/>
                 <outlet property="contentView" destination="mc9-LC-frT" id="Lbj-zR-caD"/>
-                <outlet property="lookMoreLabel" destination="LWa-uh-IXL" id="cQF-7S-EHB"/>
-                <outlet property="lookMoreTopView" destination="7Vw-VF-7J2" id="b9k-Zt-Ad7"/>
                 <outlet property="titleBottomView" destination="w5Z-RB-6jD" id="Gr0-bp-oy3"/>
                 <outlet property="titleLabel" destination="lTW-NZ-DEL" id="kIy-1n-cSW"/>
             </connections>
@@ -20,51 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="215"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-J9-Lth">
-                    <rect key="frame" x="0.0" y="171" width="600" height="44"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看更多疾病信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWa-uh-IXL">
-                            <rect key="frame" x="15" y="15" width="96" height="15"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vw-VF-7J2">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="e1F-ml-bpt"/>
-                            </constraints>
-                        </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Infojiantou" translatesAutoresizingMaskIntoConstraints="NO" id="1cV-xo-d0d">
-                            <rect key="frame" x="576" y="14" width="9" height="16"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="16" id="lq0-OY-6wo"/>
-                                <constraint firstAttribute="width" constant="9" id="rYy-QN-x0c"/>
-                            </constraints>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-QB-WSi">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <connections>
-                                <action selector="moreInfoButtonPress:" destination="-1" eventType="touchUpInside" id="Bwe-zB-QPJ"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="7Vw-VF-7J2" firstAttribute="top" secondItem="QPG-J9-Lth" secondAttribute="top" id="4Sb-gm-Bzp"/>
-                        <constraint firstAttribute="height" constant="44" id="C2e-Z5-x0G"/>
-                        <constraint firstItem="LWa-uh-IXL" firstAttribute="leading" secondItem="QPG-J9-Lth" secondAttribute="leading" constant="15" id="DVJ-ds-gu8"/>
-                        <constraint firstAttribute="trailing" secondItem="Ssl-QB-WSi" secondAttribute="trailing" id="H3W-RF-9Tj"/>
-                        <constraint firstItem="Ssl-QB-WSi" firstAttribute="leading" secondItem="QPG-J9-Lth" secondAttribute="leading" id="INl-70-Cpl"/>
-                        <constraint firstItem="LWa-uh-IXL" firstAttribute="top" secondItem="QPG-J9-Lth" secondAttribute="top" constant="15" id="Kan-0a-Sfn"/>
-                        <constraint firstItem="1cV-xo-d0d" firstAttribute="centerY" secondItem="QPG-J9-Lth" secondAttribute="centerY" id="Lka-6I-kbS"/>
-                        <constraint firstAttribute="trailing" secondItem="1cV-xo-d0d" secondAttribute="trailing" constant="15" id="OkD-WT-t5m"/>
-                        <constraint firstAttribute="trailing" secondItem="7Vw-VF-7J2" secondAttribute="trailing" id="Tlw-o1-kRs"/>
-                        <constraint firstItem="Ssl-QB-WSi" firstAttribute="top" secondItem="QPG-J9-Lth" secondAttribute="top" id="XHU-7L-sBp"/>
-                        <constraint firstAttribute="bottom" secondItem="Ssl-QB-WSi" secondAttribute="bottom" id="gFh-Wq-8bk"/>
-                        <constraint firstItem="7Vw-VF-7J2" firstAttribute="leading" secondItem="QPG-J9-Lth" secondAttribute="leading" id="t3S-qr-uRZ"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vn-9X-aut">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
                     <subviews>
@@ -91,7 +44,7 @@
                         <constraint firstItem="w5Z-RB-6jD" firstAttribute="leading" secondItem="6Vn-9X-aut" secondAttribute="leading" id="th2-cb-ZbG"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aco-Dp-wjF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aco-Dp-wjF">
                     <rect key="frame" x="15" y="52" width="570" height="96"/>
                     <string key="text">痤疮的发生主要与皮脂分泌过多、毛囊皮脂腺导管堵塞、细菌感染和炎症反应等因素密切相关。进入青春期后人体内雄激素特别是睾酮的水平迅速升高，促进皮脂腺发育并产生大量皮脂。同时毛囊皮脂腺导管的角化异常造成导管堵塞，皮脂排出障碍，形成角质栓即微粉刺。毛囊中多种微生物尤其是痤疮丙酸杆菌大量繁殖，痤疮丙酸杆菌产生的脂酶分解皮脂生成游离脂肪酸，同时趋化炎症细胞和介质，最终诱导并加重炎症反应。
 皮损好发于面部及上胸背部。痤疮的非炎症性皮损表现为开放性和闭合性粉刺。闭合性粉刺（又称白头）的典型皮损是约1毫米大小的肤色丘疹，无明显毛囊开口。开放性粉刺（又称黑头）表现为圆顶状丘疹伴显著扩张的毛囊开口。粉刺进一步发展会演变成各种炎症性皮损，表现为炎性丘疹、脓疱、结节和囊肿。炎性丘疹呈红色，直径1～5毫米不等；脓疱大小一致，其中充满了白色脓液；结节直径</string>
@@ -102,23 +55,17 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="QPG-J9-Lth" secondAttribute="trailing" id="CVK-lf-5aI"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aco-Dp-wjF" secondAttribute="bottom" constant="25" id="1GV-ia-Jow"/>
                 <constraint firstItem="aco-Dp-wjF" firstAttribute="top" secondItem="6Vn-9X-aut" secondAttribute="bottom" constant="23" id="I4e-PK-lO9"/>
                 <constraint firstAttribute="trailing" secondItem="6Vn-9X-aut" secondAttribute="trailing" id="PGg-UF-gWy"/>
-                <constraint firstItem="QPG-J9-Lth" firstAttribute="top" secondItem="aco-Dp-wjF" secondAttribute="bottom" constant="23" id="SFY-Ax-sba"/>
                 <constraint firstItem="6Vn-9X-aut" firstAttribute="leading" secondItem="mc9-LC-frT" secondAttribute="leading" id="ZCq-z7-lEd"/>
                 <constraint firstItem="aco-Dp-wjF" firstAttribute="leading" secondItem="mc9-LC-frT" secondAttribute="leading" constant="15" id="i0z-Q3-Voa"/>
-                <constraint firstAttribute="bottom" secondItem="QPG-J9-Lth" secondAttribute="bottom" id="j3F-S6-Est"/>
                 <constraint firstAttribute="trailing" secondItem="aco-Dp-wjF" secondAttribute="trailing" constant="15" id="k33-Un-J3U"/>
                 <constraint firstItem="6Vn-9X-aut" firstAttribute="top" secondItem="mc9-LC-frT" secondAttribute="top" id="qPW-LA-32f"/>
-                <constraint firstItem="QPG-J9-Lth" firstAttribute="leading" secondItem="mc9-LC-frT" secondAttribute="leading" id="xbm-f7-DmJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="146" y="330"/>
+            <point key="canvasLocation" x="146" y="329.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="Infojiantou" width="17" height="32"/>
-    </resources>
 </document>
