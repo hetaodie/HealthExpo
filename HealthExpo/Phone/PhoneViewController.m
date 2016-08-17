@@ -10,11 +10,11 @@
 #import "CustomTabBarController.h"
 #import "DiscoverViewController.h"
 #import "PhoneModelSource.h"
-#import "PhoneCallModelSource.h"
 #import "UIView+Toast.h"
 #import "UIButton+WebCache.h"
+#import "CallViewController.h"
 
-@interface PhoneViewController ()<PhoneModelSourceDelegate, PhoneCallModelSourceDelegate>
+@interface PhoneViewController ()<PhoneModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (nonatomic, strong) NSString *phoneNum;
 @property (strong, nonatomic) IBOutlet UIView *topView;
@@ -31,7 +31,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *banner7;
 
 @property (nonatomic, strong) PhoneModelSource *modelSource;
-@property (nonatomic, strong) PhoneCallModelSource *callModelSource;
 
 @property (nonatomic, strong) NSDictionary *bannersDict;
 
@@ -48,9 +47,6 @@
     self.modelSource = [[PhoneModelSource alloc] init];
     self.modelSource.delegate = self;
     [self.modelSource getADBanners];
-    
-    self.callModelSource = [[PhoneCallModelSource alloc] init];
-    self.callModelSource.delegate = self;
     
     
     [self bannerCycleSetting];
@@ -77,7 +73,9 @@
 - (IBAction)tongXunLuClicked:(id)sender {
 //    [[CustomTabBarController getInstance] clickAtIndex:2];
     if (self.phoneNum.length >= 2 && self.phoneNum.length <= 11) {
-        [self.callModelSource onPhoneCallWithPhoneNum:self.phoneNum];
+        CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
+        vc.phoneNum = self.phoneNum;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

@@ -139,6 +139,7 @@
 		7C05E2141D630BDF006D4EA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E2131D630BDF006D4EA9 /* MapKit.framework */; };
 		7C05E2181D631483006D4EA9 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E2161D631483006D4EA9 /* CallViewController.m */; };
 		7C05E2191D631483006D4EA9 /* CallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E2171D631483006D4EA9 /* CallViewController.xib */; };
+		7C05E21B1D63F8C9006D4EA9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E21A1D63F8C9006D4EA9 /* CoreTelephony.framework */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -412,6 +413,7 @@
 		7C05E2151D631483006D4EA9 /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
 		7C05E2161D631483006D4EA9 /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
 		7C05E2171D631483006D4EA9 /* CallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallViewController.xib; sourceTree = "<group>"; };
+		7C05E21A1D63F8C9006D4EA9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C05E21B1D63F8C9006D4EA9 /* CoreTelephony.framework in Frameworks */,
 				7C05E2141D630BDF006D4EA9 /* MapKit.framework in Frameworks */,
 				7C05E2121D630BD8006D4EA9 /* CoreLocation.framework in Frameworks */,
 				53A34BE81D20258B0043144E /* libStatus.a in Frameworks */,
@@ -488,6 +491,7 @@
 		34861F2DFE51E919EB04A2E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C05E21A1D63F8C9006D4EA9 /* CoreTelephony.framework */,
 				7C05E2131D630BDF006D4EA9 /* MapKit.framework */,
 				7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */,
 				53A34BE71D20258B0043144E /* libStatus.a */,

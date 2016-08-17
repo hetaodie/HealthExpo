@@ -8,10 +8,9 @@
 
 #import "MIngYiViewController.h"
 #import "MingYIDetailModul.h"
-#import "PhoneCallModelSource.h"
 #import "UIView+Toast.h"
 #import "CallViewController.h"
-@interface MIngYiViewController ()<MingYIDetailModulDelegate,PhoneCallModelSourceDelegate>
+@interface MIngYiViewController ()<MingYIDetailModulDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *zhichengLabel;
@@ -57,9 +56,10 @@
     UIButton *button = (UIButton *)sender;
     NSString *title = [button titleForState:UIControlStateNormal];
     
-    PhoneCallModelSource *souce = [[PhoneCallModelSource alloc] init];
-    souce.delegate = self;
-    [souce onPhoneCallWithPhoneNum:title];
+    
+    CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
+    vc.phoneNum = title;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)onGetMingYiDetialSeccess:(MingYiDetailObject *)aObject{
@@ -76,16 +76,6 @@
 
 - (void)onGetMingYiDetialError{
 
-}
-
-#pragma mark -- PhoneCallModelSourceDelegate
-- (void)onPhoneCallSuccess:(NSString *)tipString{
-    [self.view makeToast:tipString duration:0.8 position:CSToastPositionCenter];
-}
-
-- (void)onPhoneCallFailed{
-    [self.view makeToast:@"呼叫失败" duration:0.8 position:CSToastPositionCenter];
-    
 }
 
 @end

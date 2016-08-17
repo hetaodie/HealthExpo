@@ -46,13 +46,20 @@
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         NSString *tipString = self.resultDict[responseObject[@"result"]];
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onPhoneCallSuccess:)]) {
-            [weakSelf.delegate onPhoneCallSuccess:tipString];
+            NSString *responseID = responseObject[@"result"];
+            if ([responseID isEqualToString:@"0"]) {
+                [weakSelf.delegate onPhoneCallSuccess:tipString];
+            }
+            else{
+               [weakSelf.delegate onPhoneCallFailed:tipString];
+            }
+
         }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onPhoneCallFailed)]) {
-            [weakSelf.delegate onPhoneCallFailed];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onPhoneCallFailed:)]) {
+            [weakSelf.delegate onPhoneCallFailed:@"网络连接失败"];
         }
     };
     

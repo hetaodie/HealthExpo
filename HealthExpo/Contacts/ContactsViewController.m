@@ -11,16 +11,15 @@
 #import "ContactPersonObject.h"
 #import <AddressBook/AddressBook.h>
 #import "UIView+Toast.h"
-#import "PhoneCallModelSource.h"
+#import "CallViewController.h"
 
 
-@interface ContactsViewController ()<UITableViewDataSource,UITableViewDelegate, PhoneCallModelSourceDelegate>
+@interface ContactsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) ContactPersonObject *personObject;
 @property (nonatomic, strong) NSMutableArray *personArray;
 @property (nonatomic, strong) NSMutableArray *titleArray;  //索引数组
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) PhoneCallModelSource *modelSource;
 
 @end
 
@@ -28,9 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.modelSource = [[PhoneCallModelSource alloc] init];
-    self.modelSource.delegate = self;
-    
     [self adjustNavigationBar];
     
     _personObject = [[ContactPersonObject alloc] init];
@@ -247,17 +243,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.section][indexPath.row];
     NSString *phone = object.phone;
-    [self.modelSource onPhoneCallWithPhoneNum:phone];
-}
-
-
-#pragma mark -- PhoneCallModelSourceDelegate
-- (void)onPhoneCallSuccess:(NSString *)tipString{
-    [self.view makeToast:tipString duration:0.8 position:CSToastPositionCenter];
-}
-
-- (void)onPhoneCallFailed{
-    [self.view makeToast:@"呼叫失败" duration:0.8 position:CSToastPositionCenter];
     
+    CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
+    vc.phoneNum = phone;
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
+
 @end

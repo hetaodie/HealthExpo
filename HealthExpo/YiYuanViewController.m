@@ -11,10 +11,10 @@
 #import "YiYuanDetailModul.h"
 #import "MingYICell.h"
 #import "MIngYiViewController.h"
-#import "PhoneCallModelSource.h"
 #import "MapViewController.h"
+#import "CallViewController.h"
 
-@interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate,PhoneCallModelSourceDelegate>
+@interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *dengjiLabel;
@@ -68,9 +68,9 @@
     UIButton *button = (UIButton *)sender;
     NSString *title = [button titleForState:UIControlStateNormal];
 
-    PhoneCallModelSource *souce = [[PhoneCallModelSource alloc] init];
-    souce.delegate = self;
-    [souce onPhoneCallWithPhoneNum:title];
+    CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
+    vc.phoneNum = title;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
