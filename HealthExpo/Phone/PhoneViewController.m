@@ -48,6 +48,19 @@
     self.modelSource.delegate = self;
     [self.modelSource getADBanners];
     
+<<<<<<< HEAD
+=======
+    self.callModelSource = [[PhoneCallModelSource alloc] init];
+    self.callModelSource.delegate = self;
+    
+    for (NSInteger i = 0; i < 7; i ++) {
+        NSString *buttonName = [NSString stringWithFormat:@"banner%zd",i];
+        UIButton *button = [self valueForKey:buttonName];
+        
+        button.imageView.contentMode = UIViewContentModeScaleToFill;
+    }
+
+>>>>>>> origin/master
     
     [self bannerCycleSetting];
 }
