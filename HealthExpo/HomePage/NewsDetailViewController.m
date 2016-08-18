@@ -14,7 +14,7 @@
 @interface NewsDetailViewController ()<NewsDetailModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *contextView;
+@property (strong, nonatomic) IBOutlet UITextView *contextView;
 
 @property (nonatomic, strong)NewsDetailModelSource *modelSource;
 @property (nonatomic, strong)NSArray *dataArray;
