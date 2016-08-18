@@ -11,6 +11,7 @@
 #import "HENetTask.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+HEX.h"
+#import "NewsDetailViewController.h"
 
 @interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate, UITableViewDelegate, UITableViewDataSource>
 @property DianZiZaZhiDetailModelSource *modelSource;
@@ -116,10 +117,20 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ListCell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd. %@",(indexPath.row + 1), self.listArray[indexPath.row]];
+    NSDictionary *dict = self.listArray[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd. %@",(indexPath.row + 1), dict[@"title"]];
     cell.textLabel.textColor = [UIColor colorWithHex:0x333333 alpha:1];
     [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
+    NSDictionary *item = self.listArray[indexPath.row];
+    ndVC.newsID = [item[@"id"] stringValue];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 @end
