@@ -41,16 +41,7 @@
     self = [super init];
     if (self) {
         self.userInfo = [self userInfoFromUserDefaults];
-        //for test
-//        _userInfo = [[UserInfo alloc] init];
-//        _userInfo.cover = [UIImage imageNamed:@"touxiang2"];
-//        _userInfo.userName = @"测试";
-//        _userInfo.phone = @"15657113218";
-//        _userInfo.gender = @"男";
-//        _userInfo.birthday = @"2016年6月26日";
-//        _userInfo.email = @"XXXXXX@163.com";
-//        _userInfo.address = @"杭州市滨江区网商路599号";
-//        [self saveEditedUserInfo:_userInfo];
+       [self saveEditedUserInfo:_userInfo];
         [self initLoginKeys];
     }
     return self;
@@ -118,12 +109,29 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *imageData = [defaults objectForKey:HEUserCover];
     info.cover = [UIImage imageWithData:imageData];
+    if(!info.cover){
+        info.cover = [UIImage imageNamed:@"touxiang2"];
+    }
     info.userName = [defaults objectForKey:HEUserName];
     info.phone = [defaults objectForKey:HEUserPhoneNum];
     info.birthday = [defaults objectForKey:HEUserBirthday];
+    if(!info.birthday){
+        info.birthday = @"2016-06-26";
+    }
     info.gender = [defaults objectForKey:HEUserGender];
+    if (!info.gender) {
+        info.gender = @"男";
+    }
     info.email = [defaults objectForKey:HEUserEmail];
-    info.address = [defaults objectForKey:HEUserAddress];
+    info.address = [defaults objectForKey:HEUserAddress];    
+    //        _userInfo = [[UserInfo alloc] init];
+    //        _userInfo.cover = [UIImage imageNamed:@"touxiang2"];
+    //        _userInfo.userName = @"测试";
+    //        _userInfo.phone = @"15657113218";
+    //        _userInfo.gender = @"男";
+    //        _userInfo.birthday = @"2016年6月26日";
+    //        _userInfo.email = @"XXXXXX@163.com";
+    //        _userInfo.address = @"杭州市滨江区网商路599号";
     return info;
 }
 

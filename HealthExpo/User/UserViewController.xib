@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserViewController">
             <connections>
+                <outlet property="birthEditView" destination="NMK-4m-AIu" id="fQH-pQ-iea"/>
+                <outlet property="datePicker" destination="DUa-v2-25S" id="15I-lT-eLv"/>
                 <outlet property="phoneFareLabel" destination="cQR-KN-x98" id="ejv-Ca-RLS"/>
                 <outlet property="storeNumLabel" destination="ZFR-Gl-V2p" id="U18-V0-6ip"/>
                 <outlet property="tableView" destination="cKS-8U-Afw" id="D0X-yQ-ijb"/>
@@ -80,11 +82,11 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBH-cJ-azg">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection" translatesAutoresizingMaskIntoConstraints="NO" id="etI-ec-sPU">
-                                    <rect key="frame" x="145" y="5" width="11" height="17"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection1" translatesAutoresizingMaskIntoConstraints="NO" id="etI-ec-sPU">
+                                    <rect key="frame" x="141" y="5" width="18" height="17"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="17" id="QRr-9t-GGo"/>
-                                        <constraint firstAttribute="width" constant="11" id="hg4-0I-1E6"/>
+                                        <constraint firstAttribute="width" constant="18" id="hg4-0I-1E6"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFR-Gl-V2p">
@@ -193,6 +195,58 @@
                     <rect key="frame" x="0.0" y="211" width="600" height="340"/>
                     <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMK-4m-AIu">
+                    <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-v2-25S">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="196"/>
+                            <date key="date" timeIntervalSinceReferenceDate="493194861.17075598">
+                                <!--2016-08-18 06:34:21 +0000-->
+                            </date>
+                            <connections>
+                                <action selector="birthEditEnd:" destination="-1" eventType="valueChanged" id="ccI-HQ-ukB"/>
+                            </connections>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1W0-Sv-4TZ">
+                            <rect key="frame" x="10" y="8" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="mCX-Ae-PTB"/>
+                                <constraint firstAttribute="height" constant="30" id="pnF-hC-kTr"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onBirthEditCancel:" destination="-1" eventType="touchUpInside" id="2Ks-4F-hIy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC7-5S-gG3">
+                            <rect key="frame" x="544" y="8" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="j0K-ig-7hI"/>
+                                <constraint firstAttribute="width" constant="46" id="ji4-NM-gJh"/>
+                            </constraints>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onBirthEditSure:" destination="-1" eventType="touchUpInside" id="7ka-Zu-QXd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1W0-Sv-4TZ" firstAttribute="top" secondItem="NMK-4m-AIu" secondAttribute="top" constant="8" id="13f-de-miA"/>
+                        <constraint firstAttribute="height" constant="216" id="6BK-u1-9Wf"/>
+                        <constraint firstItem="1W0-Sv-4TZ" firstAttribute="leading" secondItem="NMK-4m-AIu" secondAttribute="leading" constant="10" id="7fK-2I-O8j"/>
+                        <constraint firstItem="DUa-v2-25S" firstAttribute="leading" secondItem="NMK-4m-AIu" secondAttribute="leading" id="GGN-Jh-rID"/>
+                        <constraint firstItem="wC7-5S-gG3" firstAttribute="top" secondItem="NMK-4m-AIu" secondAttribute="top" constant="8" id="Kq0-r0-6z4"/>
+                        <constraint firstItem="DUa-v2-25S" firstAttribute="top" secondItem="NMK-4m-AIu" secondAttribute="top" id="bFw-Sl-c3w"/>
+                        <constraint firstAttribute="trailing" secondItem="DUa-v2-25S" secondAttribute="trailing" id="bon-FQ-flk"/>
+                        <constraint firstAttribute="trailing" secondItem="wC7-5S-gG3" secondAttribute="trailing" constant="10" id="quE-l7-dIz"/>
+                        <constraint firstAttribute="bottom" secondItem="DUa-v2-25S" secondAttribute="bottom" constant="20" id="rXA-tB-bOO"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -201,8 +255,11 @@
                 <constraint firstItem="cKS-8U-Afw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dk7-xO-orn"/>
                 <constraint firstItem="0f9-fG-pTC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dnf-QF-Z97"/>
                 <constraint firstAttribute="trailing" secondItem="cKS-8U-Afw" secondAttribute="trailing" id="MAH-ea-Yx8"/>
+                <constraint firstAttribute="trailing" secondItem="NMK-4m-AIu" secondAttribute="trailing" id="bXK-Ge-BD3"/>
+                <constraint firstAttribute="bottom" secondItem="NMK-4m-AIu" secondAttribute="bottom" id="gM1-hd-Swc"/>
                 <constraint firstAttribute="bottom" secondItem="cKS-8U-Afw" secondAttribute="bottom" constant="49" id="gN3-1o-DP4"/>
                 <constraint firstItem="0f9-fG-pTC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="i1e-Vz-bN5"/>
+                <constraint firstItem="NMK-4m-AIu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ibk-IZ-NZr"/>
                 <constraint firstItem="8wB-lT-ze5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kIM-Qw-f7A"/>
                 <constraint firstItem="8wB-lT-ze5" firstAttribute="top" secondItem="0f9-fG-pTC" secondAttribute="bottom" id="qpY-XU-un1"/>
                 <constraint firstAttribute="trailing" secondItem="0f9-fG-pTC" secondAttribute="trailing" id="swc-ZG-z03"/>
@@ -210,7 +267,7 @@
         </view>
     </objects>
     <resources>
-        <image name="collection" width="10" height="17"/>
+        <image name="collection1" width="35" height="33"/>
         <image name="huafei" width="11" height="17"/>
         <image name="touxiang" width="45" height="45"/>
     </resources>

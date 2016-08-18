@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *storeNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneFareLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *birthEditView;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+
+@property (nonatomic, strong) NSDate *editedBirth;
 
 @property (nonatomic, strong) UserInfo *userInfo;
 
@@ -38,6 +42,16 @@
     [self adjustNavigationBar];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    _datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+    _datePicker.datePickerMode = UIDatePickerModeDate;
+    NSDate *minDate = [[NSDate alloc] initWithTimeIntervalSince1970:0];
+    
+    NSDate *maxDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    _datePicker.minimumDate = minDate;
+    _datePicker.maximumDate = maxDate;
+    
+    self.birthEditView.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -110,6 +124,13 @@
         [self onGenderSetting];
     }
     
+    if (indexPath.row == 4) {
+        self.birthEditView.hidden = NO;
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        self.datePicker.date = [formatter dateFromString:self.userInfo.birthday];
+    }
+    
     NSString *editText = nil;
     EditType editType = HEEditName;
     if (indexPath.row == 1) {
@@ -118,9 +139,6 @@
     } else if (indexPath.row == 2){
         editText = @"电话";
         editType = HEEditPhone;
-    } else if (indexPath.row == 4){
-        editText = @"生日";
-        editType = HEEditBirthday;
     } else if (indexPath.row == 5){
         editText = @"邮箱";
         editType = HEEditEmail;
@@ -275,6 +293,22 @@
         
     }];
 
+}
+- (IBAction)onBirthEditSure:(id)sender {
+    self.birthEditView.hidden = YES;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    //    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+0800"]];
+    NSString *string = [formatter stringFromDate:self.editedBirth];
+    self.userInfo.birthday = string;
+    [[UserInfoManager shareManager] saveEditedUserInfo:self.userInfo];
+    [self refreshUserInformation];
+}
+- (IBAction)onBirthEditCancel:(id)sender {
+    self.birthEditView.hidden = YES;
+}
+- (IBAction)birthEditEnd:(UIDatePicker *)sender {
+    self.editedBirth = sender.date;
 }
 
 - (void)onGenderChoosed:(BOOL)isMale{
