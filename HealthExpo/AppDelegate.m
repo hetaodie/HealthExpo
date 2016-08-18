@@ -74,8 +74,10 @@
     
     PhoneViewController *phoneVC = [[PhoneViewController alloc] initWithNibName:@"PhoneViewController" bundle:nil];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:phoneVC];
-    nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"电话" image:[UIImage imageNamed:@"dianhua"] selectedImage:[UIImage imageNamed:@"dianhua2"]];
     
+    UIImage *dianhuaImage = [[UIImage imageNamed:@"dianhua"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"电话" image:dianhuaImage selectedImage:dianhuaImage];
+   
     ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:contactsVC];
     nav3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"通讯录" image:[UIImage imageNamed:@"tongxunlu"] selectedImage:[UIImage imageNamed:@"tongxunlu2"]];

@@ -366,6 +366,6 @@
         <image name="sousuo" width="16" height="17"/>
         <image name="yiliaobaike" width="60" height="60"/>
         <image name="yiliaojigou" width="60" height="60"/>
-        <image name="yuyueguahao" width="60" height="60"/>
+        <image name="yuyueguahao" width="120" height="120"/>
     </resources>
 </document>
