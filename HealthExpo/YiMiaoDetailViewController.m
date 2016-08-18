@@ -108,15 +108,14 @@
     self.messageOrReplay = 0;
 }
 
-- (void)onSendMessageBtnPress:(NSString *)content{
+- (void)onSendMessageBtnPressName:(NSString *)name phone:(NSString *)phone content:(NSString *)content{
     
     if (self.messageOrReplay == 0) {
         LiuYanObject *object = [[LiuYanObject alloc] init];
-        
-        UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
+
         object.id =self.cid;
-        object.username = info.userName;
-        object.phone = info.phone;
+        object.username = name;
+        object.phone = phone;
         object.content = content;
         
         [self.liuYanModul setjibingLiuYan:object];

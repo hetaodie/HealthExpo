@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewBottomContraint;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end
 
@@ -38,14 +40,24 @@
 
 - (IBAction)btnCannelPress:(id)sender {
     
-    [self.textView setText:@""];
+    self.nameTextField.text = @"";
+    self.phoneTextField.text = @"";
+    self.textView.text = @"";
+    
     [self setHidden:YES];
 }
 
 - (IBAction)btnSendPress:(id)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onSendMessageBtnPress:)]) {
-        [self.delegate onSendMessageBtnPress:self.textView.text];
+    
+    [self.nameTextField resignFirstResponder];
+    [self.phoneTextField resignFirstResponder];
+    [self.textView resignFirstResponder];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onSendMessageBtnPressName:phone:content:)]) {
+        [self.delegate onSendMessageBtnPressName:self.nameTextField.text phone:self.phoneTextField.text content:self.textView.text];
     }
+    self.nameTextField.text = @"";
+    self.phoneTextField.text = @"";
     self.textView.text = @"";
 }
 - (void)layoutSubviews{
@@ -62,10 +74,24 @@
     
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewDidChange) name:UITextViewTextDidChangeNotification object:nil];
     
-    UIColor *bgColor = [UIColor colorWithHue:0.f saturation:0.f brightness:0.f alpha:0.4f];
     self.backgroundColor = [UIColor clearColor];
     
-    self.contentView.backgroundColor = bgColor;
+    self.contentView.backgroundColor = [UIColor whiteColor];
+    
+    self.nameTextField.layer.cornerRadius = 10.0f;
+    self.nameTextField.layer.masksToBounds = YES;
+    self.nameTextField.layer.borderWidth = 2;
+    self.nameTextField.layer.borderColor = [UIColor colorWithRed:0 green:0.7 blue:0.54 alpha:1.0].CGColor;
+    
+    self.phoneTextField.layer.cornerRadius = 10.0f;
+    self.phoneTextField.layer.masksToBounds = YES;
+    self.phoneTextField.layer.borderWidth = 2;
+    self.phoneTextField.layer.borderColor = [UIColor colorWithRed:0 green:0.7 blue:0.54 alpha:1.0].CGColor;
+    
+    self.textView.layer.cornerRadius = 10.0f;
+    self.textView.layer.masksToBounds = YES;
+    self.textView.layer.borderWidth = 2;
+    self.textView.layer.borderColor = [UIColor colorWithRed:0 green:0.7 blue:0.54 alpha:1.0].CGColor;
 }
 
 - (void)textViewDidChange{

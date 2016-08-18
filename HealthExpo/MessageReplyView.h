@@ -10,7 +10,7 @@
 
 @protocol MessageReplyViewDelegate <NSObject>
 
-- (void)onSendMessageBtnPress:(NSString *)content;
+- (void)onSendMessageBtnPressName:(NSString *)name phone:(NSString *)phone content:(NSString *)content;
 
 @end
 @interface MessageReplyView : UIView

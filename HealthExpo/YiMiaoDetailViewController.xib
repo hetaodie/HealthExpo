@@ -96,7 +96,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5x-ml-cVh" customClass="MessageReplyView">
-                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-QQ-IAr" customClass="SearchView">
@@ -111,6 +111,7 @@
                 <constraint firstItem="O5x-ml-cVh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Lc-sL-itH"/>
                 <constraint firstItem="6wR-kG-Di4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EGA-ej-DvR"/>
                 <constraint firstItem="TeF-Dg-qz7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GdO-ZC-G41"/>
+                <constraint firstItem="O5x-ml-cVh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OAT-dF-nex"/>
                 <constraint firstItem="6wR-kG-Di4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OFi-cf-yw6"/>
                 <constraint firstAttribute="trailing" secondItem="x5y-QQ-IAr" secondAttribute="trailing" id="Pfk-M3-mxE"/>
                 <constraint firstItem="OUT-fX-JYa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RRC-s8-Tiz"/>
@@ -122,7 +123,6 @@
                 <constraint firstAttribute="bottom" secondItem="x5y-QQ-IAr" secondAttribute="bottom" id="lWN-57-OlR"/>
                 <constraint firstAttribute="trailing" secondItem="6wR-kG-Di4" secondAttribute="trailing" id="ljk-bt-cP9"/>
                 <constraint firstAttribute="bottom" secondItem="TeF-Dg-qz7" secondAttribute="bottom" id="nCF-eg-27W"/>
-                <constraint firstItem="O5x-ml-cVh" firstAttribute="top" secondItem="6wR-kG-Di4" secondAttribute="bottom" id="wsO-Ce-Sav"/>
                 <constraint firstAttribute="bottom" secondItem="O5x-ml-cVh" secondAttribute="bottom" id="xqd-44-VYH"/>
             </constraints>
         </view>

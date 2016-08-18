@@ -35,7 +35,9 @@
 
 - (void)setjibingLiuYan:(LiuYanObject *)aObject{
     NSString *urlPath =[NSString stringWithFormat:@"/mobile/newCommentInfo.action?cid=%ld&username=%@&phone=%@&content=%@",(long)aObject.id,aObject.username,aObject.phone,aObject.content];
-    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    
+    NSString *urlPathUtf = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPathUtf];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSLog(@"%@", responseObject);
