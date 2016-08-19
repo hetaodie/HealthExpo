@@ -34,9 +34,9 @@
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSArray *array = [self convertResponseArray:responseObject];
+//        NSArray *array = [self convertResponseArray:responseObject];
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getDianZiZaZhiDetailListSuccess:)]) {
-            [weakSelf.delegate getDianZiZaZhiDetailListSuccess:array];
+            [weakSelf.delegate getDianZiZaZhiDetailListSuccess:responseObject];
         }
     };
     
@@ -49,15 +49,15 @@
     [task runInMethod:HE_GET];
 }
 
-- (NSArray *)convertResponseArray:(NSArray *)response{
-    NSMutableArray *retArray = [NSMutableArray array];
-    for (NSDictionary *dict in response) {
-        NSString *title = dict[@"title"];
-        if (title) {
-            [retArray addObject:title];
-        }
-    }
-    
-    return retArray;
-}
+//- (NSArray *)convertResponseArray:(NSArray *)response{
+//    NSMutableArray *retArray = [NSMutableArray array];
+//    for (NSDictionary *dict in response) {
+//        NSString *title = dict[@"title"];
+//        if (title) {
+//            [retArray addObject:title];
+//        }
+//    }
+//    
+//    return retArray;
+//}
 @end

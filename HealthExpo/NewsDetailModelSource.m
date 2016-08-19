@@ -8,6 +8,7 @@
 
 #import "NewsDetailModelSource.h"
 #import "HENetTask.h"
+#import "UserInfoManager.h"
 
 
 @implementation NewsDetailModelSource
@@ -24,6 +25,46 @@
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsDetailModelSourceFailed)]) {
             [weakSelf.delegate getNewsDetailModelSourceFailed];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
+}
+
+- (void)collectionNewsWithID:(NSString *)cID{
+    UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/newCollectInfo.action?cid=%@&username=%@", cID, info.userName];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(collectionNewsSuccess:)]) {
+            [weakSelf.delegate collectionNewsSuccess:responseObject];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(collectionNewsFailed)]) {
+            [weakSelf.delegate collectionNewsFailed];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
+}
+
+- (void)getNewIsCollectioned:(NSString *)cID{
+    UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/isContentCollected.action?cid=%@&username=%@", cID, info.userName];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsIsCollectionSuccession:)]) {
+            [weakSelf.delegate getNewsIsCollectionSuccession:responseObject];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(getNewsIsCollectionFailed)]) {
+            [weakSelf.delegate getNewsIsCollectionFailed];
         }
     };
     
