@@ -81,8 +81,6 @@
 		69DD74BE1D5B497600730B94 /* CooperateModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74BD1D5B497600730B94 /* CooperateModelSource.m */; };
 		69DD74C21D5B499000730B94 /* CooperateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD74C01D5B499000730B94 /* CooperateViewController.m */; };
 		69DD74C31D5B499000730B94 /* CooperateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DD74C11D5B499000730B94 /* CooperateViewController.xib */; };
-		69E43C0A1D65E80900AB20CE /* TouGaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E43C081D65E80900AB20CE /* TouGaoViewController.m */; };
-		69E43C0B1D65E80900AB20CE /* TouGaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E43C091D65E80900AB20CE /* TouGaoViewController.xib */; };
 		69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE531D1D107800B555FD /* HomePageViewController.m */; };
 		69E4BE561D1D107900B555FD /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BE541D1D107800B555FD /* HomePageViewController.xib */; };
 		69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E4BE581D1D108C00B555FD /* PhoneViewController.m */; };
@@ -314,9 +312,6 @@
 		69DD74BF1D5B499000730B94 /* CooperateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CooperateViewController.h; sourceTree = "<group>"; };
 		69DD74C01D5B499000730B94 /* CooperateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CooperateViewController.m; sourceTree = "<group>"; };
 		69DD74C11D5B499000730B94 /* CooperateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CooperateViewController.xib; sourceTree = "<group>"; };
-		69E43C071D65E80900AB20CE /* TouGaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouGaoViewController.h; path = HomePage/DianZiZaZhi/TouGaoViewController.h; sourceTree = "<group>"; };
-		69E43C081D65E80900AB20CE /* TouGaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouGaoViewController.m; path = HomePage/DianZiZaZhi/TouGaoViewController.m; sourceTree = "<group>"; };
-		69E43C091D65E80900AB20CE /* TouGaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TouGaoViewController.xib; path = HomePage/DianZiZaZhi/TouGaoViewController.xib; sourceTree = "<group>"; };
 		69E4BE521D1D107800B555FD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
 		69E4BE531D1D107800B555FD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = HomePage/HomePageViewController.m; sourceTree = "<group>"; };
 		69E4BE541D1D107800B555FD /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = HomePage/HomePageViewController.xib; sourceTree = "<group>"; };
@@ -666,9 +661,6 @@
 				69DD74AB1D5B258E00730B94 /* DianZiZaZhiDetailViewController.xib */,
 				69DD74A61D5B07C600730B94 /* DianZiZaZhiDetailModelSource.h */,
 				69DD74A71D5B07C600730B94 /* DianZiZaZhiDetailModelSource.m */,
-				69E43C071D65E80900AB20CE /* TouGaoViewController.h */,
-				69E43C081D65E80900AB20CE /* TouGaoViewController.m */,
-				69E43C091D65E80900AB20CE /* TouGaoViewController.xib */,
 				69DD74B31D5B491600730B94 /* SubmissionViewController.h */,
 				69DD74B41D5B491600730B94 /* SubmissionViewController.m */,
 				69DD74B51D5B491600730B94 /* SubmissionViewController.xib */,
@@ -1167,7 +1159,6 @@
 				7C05E1471D5C7DB6006D4EA9 /* MessageReplyView.xib in Resources */,
 				7C05E19B1D6165F8006D4EA9 /* MIngYiViewController.xib in Resources */,
 				7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */,
-				69E43C0B1D65E80900AB20CE /* TouGaoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1245,7 +1236,6 @@
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */,
 				7C05E1731D5DF643006D4EA9 /* YiLiaoJiGouLeftViewCell.m in Sources */,
-				69E43C0A1D65E80900AB20CE /* TouGaoViewController.m in Sources */,
 				69DA4C701D6011680027A504 /* UIView+Toast.m in Sources */,
 				53BC4C811D291CB3009035BC /* HENetTask.m in Sources */,
 				7C05E1601D5DDCEC006D4EA9 /* YiMiaoDetailObject.m in Sources */,
