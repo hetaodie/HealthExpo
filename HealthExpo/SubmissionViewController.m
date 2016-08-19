@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) NSString *titleText;
 @property (nonatomic, assign) BOOL isSubMission;//yes 为我要投稿，no 为广告合作。
-@property (strong, nonatomic) IBOutlet UILabel *descLabel;
+@property (strong, nonatomic) IBOutlet UITextView *descLabel;
 
 @property (strong, nonatomic) LiuYanModul *liuYanModul;
 
@@ -58,7 +58,8 @@
     }
    
     self.MessageInfoView.delegate = self;
-    self.messageReplyView.delegate = self;    
+    self.messageReplyView.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,6 +83,7 @@
     self.navigationItem.leftBarButtonItem = backItem;
     
     self.navigationItem.title = self.titleText;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)doBack:(id)sender{
@@ -90,7 +92,19 @@
 
 #pragma mark -- SubmissionModelSourceDelegate
 - (void)getSubmissionDataSuccess:(NSDictionary *)data{
-    self.descLabel.text = data[@"contenttext"];
+    NSString *content = data[@"contenttext"];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+     self.descLabel.attributedText = attributedString;
+
+//    content = [content stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"\t" withString:@""];
+//     content= [content stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"\n\n\n\n\n\n" withString:@"\n\n"];
+    
+//    self.descLabel.text = content;
 }
 
 - (void)getSubmissionDataFailed{
@@ -98,7 +112,16 @@
 }
 
 - (void)getCooperateDataSuccess:(NSDictionary *)data{
-    self.descLabel.text = data[@"contenttext"];
+    NSString *content = data[@"contenttext"];
+    
+//    content = [content stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"\t" withString:@""];
+//    content= [content stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    
+    self.descLabel.text = content;
 }
 
 - (void)getCooperateDataFailed{

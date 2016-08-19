@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubmissionViewController">
             <connections>
                 <outlet property="MessageInfoView" destination="rlz-tJ-tqW" id="sId-lE-Nfc"/>
-                <outlet property="descLabel" destination="Pjq-bF-wcc" id="Jo3-xd-vxA"/>
+                <outlet property="descLabel" destination="T44-tO-r1h" id="XeG-E0-EFt"/>
                 <outlet property="messageReplyView" destination="9Hb-B7-s8e" id="m7b-KJ-q1r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,19 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjq-bF-wcc">
-                    <rect key="frame" x="15" y="74" width="570" height="21"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T44-tO-r1h">
+                    <rect key="frame" x="15" y="74" width="570" height="308"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="308" id="e2D-io-75g"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="gz0-ES-aB6"/>
+                        <constraint firstAttribute="height" constant="308" id="KMm-KF-P4C"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 、</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-tJ-tqW" customClass="MessageInfoView">
-                    <rect key="frame" x="0.0" y="95" width="600" height="505"/>
+                    <rect key="frame" x="0.0" y="392" width="600" height="208"/>
                     <color key="backgroundColor" red="0.72946259469999997" green="0.42235293499999998" blue="0.060168584999999997" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-B7-s8e" customClass="MessageReplyView">
@@ -40,15 +39,15 @@
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Pjq-bF-wcc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="5ml-Ux-hhu"/>
-                <constraint firstAttribute="trailing" secondItem="Pjq-bF-wcc" secondAttribute="trailing" constant="15" id="af2-WI-2jM"/>
+                <constraint firstItem="T44-tO-r1h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="6xC-dT-hfh"/>
+                <constraint firstItem="T44-tO-r1h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="IO4-Su-0to"/>
+                <constraint firstItem="rlz-tJ-tqW" firstAttribute="top" secondItem="T44-tO-r1h" secondAttribute="bottom" constant="10" id="KQt-KG-wbU"/>
+                <constraint firstAttribute="trailing" secondItem="T44-tO-r1h" secondAttribute="trailing" constant="15" id="YhM-be-wMz"/>
                 <constraint firstAttribute="bottom" secondItem="9Hb-B7-s8e" secondAttribute="bottom" id="bFO-ED-OQU"/>
-                <constraint firstItem="rlz-tJ-tqW" firstAttribute="top" secondItem="Pjq-bF-wcc" secondAttribute="bottom" id="d6r-Tk-Yot"/>
                 <constraint firstItem="9Hb-B7-s8e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dd5-kk-PHS"/>
                 <constraint firstAttribute="bottom" secondItem="rlz-tJ-tqW" secondAttribute="bottom" id="jVa-nt-cMg"/>
                 <constraint firstItem="rlz-tJ-tqW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lHh-Gh-FNG"/>
                 <constraint firstAttribute="trailing" secondItem="rlz-tJ-tqW" secondAttribute="trailing" id="m59-NI-dPo"/>
-                <constraint firstItem="Pjq-bF-wcc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="oXc-2k-OcY"/>
                 <constraint firstAttribute="trailing" secondItem="9Hb-B7-s8e" secondAttribute="trailing" id="q9g-BA-Mne"/>
                 <constraint firstItem="9Hb-B7-s8e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xQX-5a-CEN"/>
             </constraints>
