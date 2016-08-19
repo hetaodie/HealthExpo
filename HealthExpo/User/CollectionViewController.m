@@ -8,6 +8,7 @@
 
 #import "CollectionViewController.h"
 #import "CollectionModelSource.h"
+#import "NewsDetailViewController.h"
 
 @interface CollectionViewController ()<CollectionModelSourceDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -96,6 +97,15 @@
         [self.dataArr removeObjectAtIndex:indexPath.row];
         [self.tableView reloadData];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+     NSDictionary *dict = self.dataArr[indexPath.row];
+    NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
+    ndVC.newsID = [dict[@"id"] stringValue];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 #pragma mark - CollectionModelSourceDelegate
