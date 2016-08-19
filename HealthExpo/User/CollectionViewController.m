@@ -103,7 +103,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
      NSDictionary *dict = self.dataArr[indexPath.row];
     NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
-    ndVC.newsID = [dict[@"id"] stringValue];
+    ndVC.newsID = [dict[@"cid"] stringValue];
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 }

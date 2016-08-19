@@ -35,7 +35,7 @@
 - (NSArray *)convertResponseObject:(NSArray *)arr{
     NSMutableArray *retArray = [NSMutableArray array];
     for (NSDictionary *dict in arr) {
-        NSDictionary *tempDict = @{@"ctitle":dict[@"ctitle"], @"id":dict[@"id"]};
+        NSDictionary *tempDict = @{@"ctitle":dict[@"ctitle"], @"id":dict[@"id"],@"cid":dict[@"cid"]};
         [retArray addObject:tempDict];
     }
     return retArray;
