@@ -35,8 +35,28 @@
 - (NSArray *)convertResponseObject:(NSArray *)arr{
     NSMutableArray *retArray = [NSMutableArray array];
     for (NSDictionary *dict in arr) {
-        [retArray addObject:dict[@"ctitle"]];
+        NSDictionary *tempDict = @{@"ctitle":dict[@"ctitle"], @"id":dict[@"id"]};
+        [retArray addObject:tempDict];
     }
     return retArray;
+}
+
+- (void)cancelCollection:(NSString *)cID{
+    NSString *path = [NSString stringWithFormat:@"/mobile/delCollectInfo.action?clid=%@", cID];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:path];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(cancelCollectionSuccess:)]) {
+            [weakSelf.delegate cancelCollectionSuccess:responseObject];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(cancelCollectionFailed)]) {
+            [weakSelf.delegate cancelCollectionFailed];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
 }
 @end
