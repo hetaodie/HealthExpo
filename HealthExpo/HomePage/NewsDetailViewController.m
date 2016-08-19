@@ -10,6 +10,7 @@
 #import "NewsDetailModelSource.h"
 #import "HENetTask.h"
 #import "UIImageView+WebCache.h"
+#import "UIView+Toast.h"
 
 @interface NewsDetailViewController ()<NewsDetailModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -18,6 +19,8 @@
 
 @property (nonatomic, strong)NewsDetailModelSource *modelSource;
 @property (nonatomic, strong)NSArray *dataArray;
+@property (nonatomic, strong)UIButton *collectButton;
+
 @end
 
 @implementation NewsDetailViewController
@@ -46,10 +49,22 @@
     self.navigationItem.leftBarButtonItem = backItem;
     
     self.navigationItem.title = @"新闻";
+    
+    self.collectButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.collectButton.frame = CGRectMake(0, 0, 30, 30);
+    [self.collectButton setTitle:@"收藏" forState:UIControlStateNormal];
+    self.collectButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.collectButton addTarget:self action:@selector(onCollectionButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *registerItem = [[UIBarButtonItem alloc] initWithCustomView:self.collectButton];
+    self.navigationItem.rightBarButtonItem = registerItem;
 }
 
 - (void)doBack:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)onCollectionButtonClicked:(UIButton *)button{
+    [self.modelSource collectionNewsWithID:self.newsID];
 }
 
 #pragma mark -- NewsDetailModelSourceDelegate
@@ -63,6 +78,14 @@
 }
 
 - (void)getNewsDetailModelSourceFailed{
+    
+}
+
+- (void)collectionNewsSuccess:(NSDictionary *)dict{
+    [self.view makeToast:@"收藏成功" duration:0.8 position:CSToastPositionCenter];
+}
+
+- (void)collectionNewsFailed{
     
 }
 
