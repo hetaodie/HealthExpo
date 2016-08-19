@@ -13,6 +13,9 @@
 
 - (void)collectionNewsSuccess:(NSDictionary *)dict;
 - (void)collectionNewsFailed;
+
+- (void)getNewsIsCollectionSuccession:(NSDictionary *)dict;
+- (void)getNewsIsCollectionFailed;
 @end
 
 @interface NewsDetailModelSource : NSObject
@@ -21,4 +24,6 @@
 - (void)getNewsDetailModelSource:(NSString *)cID;
 
 - (void)collectionNewsWithID:(NSString *)cID;
+
+- (void)getNewIsCollectioned:(NSString *)cID;
 @end

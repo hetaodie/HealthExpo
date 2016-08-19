@@ -39,7 +39,7 @@
 - (void)runInMethod:(HEHttpMethod)method{
     NSURL *url = [NSURL URLWithString:self.urlString];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html",@"text"]];
     switch (method) {
         case HE_GET:
             [manager GET:url.absoluteString parameters:nil progress:nil success:self.successBlock failure:self.failedBlock];

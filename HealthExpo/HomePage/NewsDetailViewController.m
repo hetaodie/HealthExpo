@@ -32,6 +32,7 @@
     self.modelSource = [[NewsDetailModelSource alloc] init];
     self.modelSource.delegate = self;
     [self.modelSource getNewsDetailModelSource:self.newsID];
+    [self.modelSource getNewIsCollectioned:self.newsID];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,6 +87,14 @@
 }
 
 - (void)collectionNewsFailed{
+    
+}
+
+- (void)getNewsIsCollectionSuccession:(NSDictionary *)dict{
+    
+}
+
+- (void)getNewsIsCollectionFailed{
     
 }
 
