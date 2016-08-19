@@ -33,6 +33,8 @@
     self.modelSource.delegate = self;
     [self.modelSource getNewsDetailModelSource:self.newsID];
     [self.modelSource getNewIsCollectioned:self.newsID];
+    
+    self.contextView.editable = NO;
 }
 
 - (void)didReceiveMemoryWarning {
