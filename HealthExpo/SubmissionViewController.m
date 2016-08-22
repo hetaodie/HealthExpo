@@ -96,15 +96,6 @@
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
      self.descLabel.attributedText = attributedString;
 
-//    content = [content stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"\t" withString:@""];
-//     content= [content stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"\n\n\n\n\n\n" withString:@"\n\n"];
-    
-//    self.descLabel.text = content;
 }
 
 - (void)getSubmissionDataFailed{
@@ -113,15 +104,8 @@
 
 - (void)getCooperateDataSuccess:(NSDictionary *)data{
     NSString *content = data[@"contenttext"];
-    
-//    content = [content stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"\t" withString:@""];
-//    content= [content stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-    
-    self.descLabel.text = content;
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    self.descLabel.attributedText = attributedString;
 }
 
 - (void)getCooperateDataFailed{
