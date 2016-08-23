@@ -121,9 +121,14 @@
 }
 
 - (void)onRegisterICallSuccess:(NSDictionary *)data{
+<<<<<<< HEAD
     
     NSInteger errorCode = [data[@"err_code"] integerValue];
     if([data[@"err_code"] integerValue] == 0){
+=======
+    NSInteger errorCode = [data[@"err_code"] integerValue];
+    if(errorCode == 0){
+>>>>>>> origin/master
         id tempKey = data[@"uid"];
         NSString *key = @"-1";
         if ([tempKey isKindOfClass:[NSNumber class]]) {
@@ -147,7 +152,18 @@
         [self.view makeToast:@"您在黄盖电话注册过，所以电话功能需要同步后才能使用，请稍后重新登录" duration:1.0 position:CSToastPositionCenter];
         [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:key];
         [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
-    } else {
+    } else if(errorCode == 2){
+        id tempKey = data[@"uid"];
+        NSString *key = @"-1";
+        if ([tempKey isKindOfClass:[NSNumber class]]) {
+            key = [tempKey stringValue];
+        } else {
+            key = tempKey;
+        }
+        [self.view makeToast:@"您在黄盖电话注册过，所以电话功能需要同步后才能使用，请稍后重新登录" duration:1.0 position:CSToastPositionCenter];
+        [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:key];
+        [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+    }  else {
         [self registerFailedToast];
     }
 }
