@@ -13,6 +13,7 @@
 #import "UserInfoManager.h"
 #import "HENotificationKey.h"
 #import "UIView+Toast.h"
+#import "NSString+MD5.h"
 
 @interface RegisterViewController ()<RegisterModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *registerPhoneNumBackgroundView;
@@ -120,6 +121,8 @@
 }
 
 - (void)onRegisterICallSuccess:(NSDictionary *)data{
+    
+    NSInteger errorCode = [data[@"err_code"] integerValue];
     if([data[@"err_code"] integerValue] == 0){
         id tempKey = data[@"uid"];
         NSString *key = @"-1";
@@ -128,6 +131,20 @@
         } else {
             key = tempKey;
         }
+        
+        [self.modelSource upDataPhoneToJianKangeBoLan:self.userName uid:data[@"uid"] andPwd:[NSString get_pwd:self.password]];
+        
+        [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:key];
+        [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
+    } else if(errorCode == 2){
+        id tempKey = data[@"uid"];
+        NSString *key = @"-1";
+        if ([tempKey isKindOfClass:[NSNumber class]]) {
+            key = [tempKey stringValue];
+        } else {
+            key = tempKey;
+        }
+        [self.view makeToast:@"您在黄盖电话注册过，所以电话功能需要同步后才能使用，请稍后重新登录" duration:1.0 position:CSToastPositionCenter];
         [[UserInfoManager shareManager] registerSuccessWithUserName:self.userName andPassword:self.password andUID:key];
         [[NSNotificationCenter defaultCenter] postNotificationName:HELogin_Success_Notification object:nil];
     } else {

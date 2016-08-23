@@ -50,4 +50,24 @@
     [task runInMethod:HE_POST];
 }
 
+- (void)upDataPhoneToJianKangeBoLan:(NSString *)username uid:(NSString *)uid andPwd:(NSString *)pwd {
+    NSString *path = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&reg_pwd=%@&user_id=%@", username, pwd,uid];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:path];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onRegisterSuccess:)]) {
+//            [weakSelf.delegate onRegisterSuccess:responseObject];
+//        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onRegisterFailed)]) {
+//            [weakSelf.delegate onRegisterFailed];
+//        }
+    };
+    
+    [task runInMethod:HE_GET];
+}
+
 @end

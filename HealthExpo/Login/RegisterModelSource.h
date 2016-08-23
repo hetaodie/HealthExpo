@@ -22,4 +22,6 @@
 
 - (void)registerICallWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd;
 
+- (void)upDataPhoneToJianKangeBoLan:(NSString *)username uid:(NSString *)uid andPwd:(NSString *)pwd;
+
 @end
