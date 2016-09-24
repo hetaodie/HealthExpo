@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargeViewController">
+            <connections>
+                <outlet property="cardNum" destination="QY1-mX-VBD" id="Wam-5A-V6S"/>
+                <outlet property="cardNumView" destination="Qg8-cb-hmP" id="A1I-5m-Sng"/>
+                <outlet property="cardPassword" destination="wne-ln-pTI" id="1T2-74-kD6"/>
+                <outlet property="cardPasswordView" destination="eVb-ff-olk" id="W3t-fT-NeU"/>
+                <outlet property="commitButton" destination="oL7-V0-pUb" id="8r9-Xj-rHN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-cb-hmP">
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="充值卡卡号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QY1-mX-VBD">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kahao" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-ai-Msi">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="2KE-Hc-OMW"/>
+                                <constraint firstAttribute="height" constant="17" id="cNc-EF-Zce"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-ia-WMx">
+                            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="U8b-3a-IvL"/>
+                                <constraint firstAttribute="height" constant="34" id="ZQM-aH-aBm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QY1-mX-VBD" secondAttribute="trailing" id="08w-CK-Bsq"/>
+                        <constraint firstItem="dq9-ai-Msi" firstAttribute="centerY" secondItem="Qg8-cb-hmP" secondAttribute="centerY" id="7QV-Df-Aga"/>
+                        <constraint firstItem="QY1-mX-VBD" firstAttribute="top" secondItem="Qg8-cb-hmP" secondAttribute="top" id="QXf-8B-Zij"/>
+                        <constraint firstAttribute="bottom" secondItem="QY1-mX-VBD" secondAttribute="bottom" id="UG3-Kl-nlo"/>
+                        <constraint firstAttribute="height" constant="44" id="bCk-Az-bfd"/>
+                        <constraint firstItem="dq9-ai-Msi" firstAttribute="leading" secondItem="Qg8-cb-hmP" secondAttribute="leading" constant="14" id="hbM-hs-Wib"/>
+                        <constraint firstItem="7ab-ia-WMx" firstAttribute="centerY" secondItem="Qg8-cb-hmP" secondAttribute="centerY" id="mfG-ar-tPu"/>
+                        <constraint firstItem="7ab-ia-WMx" firstAttribute="leading" secondItem="Qg8-cb-hmP" secondAttribute="leading" constant="45" id="rT4-TT-Urw"/>
+                        <constraint firstItem="QY1-mX-VBD" firstAttribute="leading" secondItem="7ab-ia-WMx" secondAttribute="trailing" constant="13" id="rxq-2v-Iyz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-ff-olk">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mima" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-SU-xqy">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="3n1-AY-xAI"/>
+                                <constraint firstAttribute="height" constant="16" id="eem-Cc-g4i"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KB4-1u-qfV">
+                            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Hrk-U1-luv"/>
+                                <constraint firstAttribute="width" constant="1" id="MPv-EK-NhY"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="充值卡密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wne-ln-pTI">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="KB4-1u-qfV" firstAttribute="centerY" secondItem="eVb-ff-olk" secondAttribute="centerY" id="0Jo-2C-Xgp"/>
+                        <constraint firstAttribute="trailing" secondItem="wne-ln-pTI" secondAttribute="trailing" id="KrO-Cy-cWc"/>
+                        <constraint firstAttribute="height" constant="44" id="Ltm-sj-TDo"/>
+                        <constraint firstItem="wne-ln-pTI" firstAttribute="top" secondItem="eVb-ff-olk" secondAttribute="top" id="aEW-aw-Xo8"/>
+                        <constraint firstAttribute="bottom" secondItem="wne-ln-pTI" secondAttribute="bottom" id="ekC-ng-rck"/>
+                        <constraint firstItem="wne-ln-pTI" firstAttribute="leading" secondItem="KB4-1u-qfV" secondAttribute="trailing" constant="13" id="fBk-Hj-p4z"/>
+                        <constraint firstItem="Rbz-SU-xqy" firstAttribute="centerY" secondItem="eVb-ff-olk" secondAttribute="centerY" id="iI9-Fq-kHn"/>
+                        <constraint firstItem="KB4-1u-qfV" firstAttribute="leading" secondItem="eVb-ff-olk" secondAttribute="leading" constant="45" id="jIX-Gc-c7s"/>
+                        <constraint firstItem="Rbz-SU-xqy" firstAttribute="leading" secondItem="eVb-ff-olk" secondAttribute="leading" constant="16" id="pUm-ni-xin"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-V0-pUb">
+                    <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zZ0-Ec-qXw"/>
+                    </constraints>
+                    <state key="normal" title="提交"/>
+                    <connections>
+                        <action selector="onCommitButtonClicked:" destination="-1" eventType="touchUpInside" id="nRU-mI-Wg1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Qg8-cb-hmP" secondAttribute="trailing" constant="15" id="Q2j-vv-Re2"/>
+                <constraint firstItem="oL7-V0-pUb" firstAttribute="width" secondItem="Qg8-cb-hmP" secondAttribute="width" id="Q2k-Ft-3fI"/>
+                <constraint firstItem="eVb-ff-olk" firstAttribute="width" secondItem="Qg8-cb-hmP" secondAttribute="width" id="RaP-qx-oZw"/>
+                <constraint firstItem="eVb-ff-olk" firstAttribute="centerX" secondItem="Qg8-cb-hmP" secondAttribute="centerX" id="UZC-wc-QIZ"/>
+                <constraint firstItem="eVb-ff-olk" firstAttribute="top" secondItem="Qg8-cb-hmP" secondAttribute="bottom" constant="20" id="XPK-ND-YGB"/>
+                <constraint firstItem="Qg8-cb-hmP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="arG-15-FWC"/>
+                <constraint firstItem="oL7-V0-pUb" firstAttribute="centerX" secondItem="Qg8-cb-hmP" secondAttribute="centerX" id="fhd-zQ-XS6"/>
+                <constraint firstItem="Qg8-cb-hmP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="gYi-IF-10m"/>
+                <constraint firstItem="oL7-V0-pUb" firstAttribute="top" secondItem="eVb-ff-olk" secondAttribute="bottom" constant="30" id="tQy-2Q-DAy"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="kahao" width="16" height="12"/>
+        <image name="mima" width="13" height="16"/>
+    </resources>
+</document>

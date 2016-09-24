@@ -16,8 +16,11 @@
 
 #import "ContactPersonObject.h"
 #import <AddressBook/AddressBook.h>
+#import "RechargeViewController.h"
 
-@interface PhoneViewController ()<PhoneModelSourceDelegate, UITableViewDataSource,UITableViewDelegate>
+#import <MessageUI/MessageUI.h>
+
+@interface PhoneViewController ()<PhoneModelSourceDelegate, UITableViewDataSource,UITableViewDelegate, MFMessageComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *phoneNumText;
 
 @property (nonatomic, strong) NSString *phoneNum;
@@ -120,9 +123,21 @@
 }
 
 - (IBAction)onChargeClicked:(id)sender {
+    RechargeViewController *rVC = [[RechargeViewController alloc] initWithNibName:@"RechargeViewController" bundle:nil];
+    rVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:rVC animated:YES];
 }
 
 - (IBAction)onShareClicked:(id)sender {
+    MFMessageComposeViewController *msgController = [[MFMessageComposeViewController alloc] init];
+    if([MFMessageComposeViewController canSendText])
+    {
+        msgController.body = @"我正在使用黄盖电话,方便又便宜!免费送6元试用,真的很不错,你也装上吧,咱们就可以免费通话了.下载地址: http://biz.hgvoip.com/download/";
+        msgController.recipients = [NSArray array];
+        msgController.messageComposeDelegate = self;
+        [self presentViewController:msgController animated:YES completion:nil];
+    }
+
 }
 
 - (IBAction)onContactsClicked:(id)sender {
@@ -239,6 +254,27 @@
 //        });
 //    });
     
+}
+
+#pragma mark - msgDlegate
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            NSLog(@"Cancelled");
+            break;
+        case MessageComposeResultFailed:
+            
+            
+            break;
+        case MessageComposeResultSent:
+            
+            break;
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - banner ScrollView handler

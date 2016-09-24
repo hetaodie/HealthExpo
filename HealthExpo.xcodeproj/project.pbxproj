@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424517031D96247700EF01D1 /* RechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424517011D96247700EF01D1 /* RechargeViewController.m */; };
+		424517041D96247700EF01D1 /* RechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424517021D96247700EF01D1 /* RechargeViewController.xib */; };
+		424517071D963FC700EF01D1 /* RechargeModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 424517061D963FC700EF01D1 /* RechargeModelSource.m */; };
+		424517091D9647A900EF01D1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424517081D9647A900EF01D1 /* MessageUI.framework */; };
 		532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405241D22BDAB004A1A43 /* UserSettingViewController.m */; };
 		532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532405251D22BDAB004A1A43 /* UserSettingViewController.xib */; };
 		5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */; };
@@ -180,6 +184,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		424517001D96247700EF01D1 /* RechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeViewController.h; sourceTree = "<group>"; };
+		424517011D96247700EF01D1 /* RechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeViewController.m; sourceTree = "<group>"; };
+		424517021D96247700EF01D1 /* RechargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RechargeViewController.xib; sourceTree = "<group>"; };
+		424517051D963FC700EF01D1 /* RechargeModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeModelSource.h; sourceTree = "<group>"; };
+		424517061D963FC700EF01D1 /* RechargeModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeModelSource.m; sourceTree = "<group>"; };
+		424517081D9647A900EF01D1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		532405231D22BDAB004A1A43 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingViewController.h; path = User/UserSettingViewController.h; sourceTree = "<group>"; };
 		532405241D22BDAB004A1A43 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingViewController.m; path = User/UserSettingViewController.m; sourceTree = "<group>"; };
 		532405251D22BDAB004A1A43 /* UserSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserSettingViewController.xib; path = User/UserSettingViewController.xib; sourceTree = "<group>"; };
@@ -477,6 +487,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424517091D9647A900EF01D1 /* MessageUI.framework in Frameworks */,
 				7C05E21B1D63F8C9006D4EA9 /* CoreTelephony.framework in Frameworks */,
 				7C05E2141D630BDF006D4EA9 /* MapKit.framework in Frameworks */,
 				7C05E2121D630BD8006D4EA9 /* CoreLocation.framework in Frameworks */,
@@ -491,6 +502,7 @@
 		34861F2DFE51E919EB04A2E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				424517081D9647A900EF01D1 /* MessageUI.framework */,
 				7C05E21A1D63F8C9006D4EA9 /* CoreTelephony.framework */,
 				7C05E2131D630BDF006D4EA9 /* MapKit.framework */,
 				7C05E2111D630BD8006D4EA9 /* CoreLocation.framework */,
@@ -800,6 +812,11 @@
 				69DC279D1D5DF386006EEF68 /* PhoneModelSource.m */,
 				69DA4C771D6020420027A504 /* PhoneCallModelSource.h */,
 				69DA4C781D6020420027A504 /* PhoneCallModelSource.m */,
+				424517001D96247700EF01D1 /* RechargeViewController.h */,
+				424517011D96247700EF01D1 /* RechargeViewController.m */,
+				424517021D96247700EF01D1 /* RechargeViewController.xib */,
+				424517051D963FC700EF01D1 /* RechargeModelSource.h */,
+				424517061D963FC700EF01D1 /* RechargeModelSource.m */,
 			);
 			name = Phone;
 			sourceTree = "<group>";
@@ -1118,6 +1135,7 @@
 				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
 				7C67446A1D2D1F7B00661276 /* YiLiaoJiGouRightView.xib in Resources */,
 				69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */,
+				424517041D96247700EF01D1 /* RechargeViewController.xib in Resources */,
 				7C67445A1D2CE6A900661276 /* YiMiaoDetailView.xib in Resources */,
 				7C67443C1D2BB34B00661276 /* JiBingInfoView.xib in Resources */,
 				7C67445F1D2D1E0A00661276 /* YiLiaoJiGouViewController.xib in Resources */,
@@ -1224,6 +1242,7 @@
 				7C6744691D2D1F7B00661276 /* YiLiaoJiGouRightView.m in Sources */,
 				69E684851D1E96CE0092F031 /* UIColor+HEX.m in Sources */,
 				7C05E1811D5EBC42006D4EA9 /* JiGouRightObject.m in Sources */,
+				424517031D96247700EF01D1 /* RechargeViewController.m in Sources */,
 				69E4BE6D1D1D1E6800B555FD /* UserInfoManager.m in Sources */,
 				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
 				7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */,
@@ -1309,6 +1328,7 @@
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
 				69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */,
+				424517071D963FC700EF01D1 /* RechargeModelSource.m in Sources */,
 				7C05E17B1D5DF6D3006D4EA9 /* YiLiaoJiGouModul.m in Sources */,
 				7C05E19A1D6165F8006D4EA9 /* MIngYiViewController.m in Sources */,
 				69DD74BA1D5B493900730B94 /* SubmissionModelSource.m in Sources */,
