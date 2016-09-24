@@ -121,14 +121,9 @@
 }
 
 - (void)onRegisterICallSuccess:(NSDictionary *)data{
-<<<<<<< HEAD
-    
-    NSInteger errorCode = [data[@"err_code"] integerValue];
-    if([data[@"err_code"] integerValue] == 0){
-=======
+
     NSInteger errorCode = [data[@"err_code"] integerValue];
     if(errorCode == 0){
->>>>>>> origin/master
         id tempKey = data[@"uid"];
         NSString *key = @"-1";
         if ([tempKey isKindOfClass:[NSNumber class]]) {

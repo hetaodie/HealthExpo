@@ -58,7 +58,7 @@
     [self monitorCallCenter];
 
     [self.reCallButton setHidden:NO];
-    
+    [self.navigationController setNavigationBarHidden:NO];
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 12, 21);
     [backBtn setImage:[UIImage imageNamed:@"houtui"] forState:UIControlStateNormal];

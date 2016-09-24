@@ -165,8 +165,7 @@
     for (NSInteger i = 0; i < allPics.count; i ++) {
         NSString *buttonName = [NSString stringWithFormat:@"banner%zd",i];
         UIButton *button = [self valueForKey:buttonName];
-        
-        [button sd_setImageWithURL:allPics[i] forState:UIControlStateNormal placeholderImage:placeHolderImage];
+        [button sd_setBackgroundImageWithURL:allPics[i] forState:UIControlStateNormal placeholderImage:placeHolderImage];
     }
     
 }
