@@ -31,6 +31,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *banner6;
 @property (strong, nonatomic) IBOutlet UIButton *banner7;
 
+@property (weak, nonatomic) IBOutlet UIView *directView;
+@property (weak, nonatomic) IBOutlet UIView *callBottomView;
+@property (weak, nonatomic) IBOutlet UIView *phoneNumFilterView;
+@property (weak, nonatomic) IBOutlet UITableView *filterTableView;
 @property (nonatomic, strong) PhoneModelSource *modelSource;
 
 @property (nonatomic, strong) NSDictionary *bannersDict;
@@ -48,7 +52,7 @@
     self.modelSource = [[PhoneModelSource alloc] init];
     self.modelSource.delegate = self;
     [self.modelSource getADBanners];
-    
+    [self hiddenPhoneFilterView];
 
     for (NSInteger i = 0; i < 7; i ++) {
         NSString *buttonName = [NSString stringWithFormat:@"banner%zd",i];
@@ -83,12 +87,9 @@
 
 #pragma mark -- button action
 - (IBAction)tongXunLuClicked:(id)sender {
-//    [[CustomTabBarController getInstance] clickAtIndex:2];
-    if (self.phoneNum.length >= 2 && self.phoneNum.length <= 11) {
-        CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
-        vc.phoneNum = self.phoneNum;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    [[CustomTabBarController getInstance] clickAtIndex:2];
+    self.tabBarController.tabBar.hidden = NO;
+    [self hiddenPhoneFilterView];
 }
 
 - (IBAction)deleteClicked:(id)sender {
@@ -109,8 +110,28 @@
 
 - (IBAction)onContactsClicked:(id)sender {
     [[CustomTabBarController getInstance] clickAtIndex:2];
+    self.tabBarController.tabBar.hidden = NO;
+    [self hiddenPhoneFilterView];
 }
 
+- (IBAction)homePageButtonClicked:(id)sender {
+    [[CustomTabBarController getInstance] clickAtIndex:0];
+    self.tabBarController.tabBar.hidden = NO;
+    [self hiddenPhoneFilterView];
+}
+
+- (IBAction)phoneCallButtonClicked:(id)sender {
+    if (self.phoneNum.length >= 2 && self.phoneNum.length <= 11) {
+        CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
+        vc.phoneNum = self.phoneNum;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (IBAction)backToPhonePage:(id)sender {
+    self.phoneNum = @"";
+    [self updatePhoneNum:@""];
+}
 #pragma mark -- phone Num action
 - (IBAction)onPhoneNumClicked:(UIButton *)sender {
     [self updatePhoneNum:sender.titleLabel.text];
@@ -125,12 +146,38 @@
         self.phoneNum = [_phoneNum stringByAppendingString:aNum];
         self.phoneNumText.text = _phoneNum;
     }
+    [self checkShowPhoneFilterView];
 }
 - (void)deleteAphoneNum{
     if(_phoneNum.length > 0){
         self.phoneNum = [_phoneNum substringToIndex:(_phoneNum.length-1)];
         self.phoneNumText.text = _phoneNum;
     }
+    [self checkShowPhoneFilterView];
+}
+
+- (void)checkShowPhoneFilterView{
+    if (_phoneNum.length > 0) {
+        [self showPhoneFilterView];
+    } else {
+        [self hiddenPhoneFilterView];
+    }
+}
+
+- (void)showPhoneFilterView{
+    self.topView.hidden = YES;
+    self.directView.hidden = YES;
+    self.callBottomView.hidden = NO;
+    self.phoneNumFilterView.hidden = NO;
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+- (void)hiddenPhoneFilterView{
+    self.topView.hidden = NO;
+    self.directView.hidden = NO;
+    self.callBottomView.hidden = YES;
+    self.phoneNumFilterView.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 #pragma mark - banner ScrollView handler
