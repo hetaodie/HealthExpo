@@ -16,7 +16,7 @@
             startingLineNumber = "108"
             endingLineNumber = "108"
             landmarkName = "-loginSuccess:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,12 +186,12 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/netease/source/github/HealthExpo/HealthExpo/Login/RegisterModelSource.m"
-                  timestampString = "493631665.340131"
+                  timestampString = "496565147.262738"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
                   endingLineNumber = "64"
-                  offsetFromSymbolStart = "248">
+                  offsetFromSymbolStart = "264">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -201,12 +201,12 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/netease/source/github/HealthExpo/HealthExpo/Login/RegisterModelSource.m"
-                  timestampString = "493631665.340236"
+                  timestampString = "496565147.263921"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "83">
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -225,6 +225,38 @@
             endingLineNumber = "135"
             landmarkName = "-onRegisterICallSuccess:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/Phone/PhoneViewController.m"
+            timestampString = "496565089.284595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "-filterContactsDataSource"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/Phone/PhoneViewController.m"
+            timestampString = "496565180.413682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "-filterContactsDataSource"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
