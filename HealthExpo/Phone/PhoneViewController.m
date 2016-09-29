@@ -45,6 +45,8 @@
 
 @property (nonatomic, strong) NSDictionary *bannersDict;
 
+@property (nonatomic, strong) NSMutableArray *filterArray;
+
 
 @property (nonatomic, strong) ContactPersonObject *personObject;
 @property (atomic, strong) NSMutableArray *personArray;
@@ -215,53 +217,7 @@
 }
 
 - (void)filterContactsDataSource{
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        if (self.phoneNum && self.phoneNum.length > 0) {
-            if (self.personArray && self.personArray.count > 0) {
-                NSInteger i = 0;
-                NSMutableArray *removeArray = [[NSMutableArray alloc] init];
-                NSMutableArray *addArray = [[NSMutableArray alloc] init];
-                for (id persons in self.personArray) {
-                    if ([persons  isKindOfClass:[NSArray class]]) {
-                        NSLog(@"**********************-------------%zd", i);
-                        NSArray *tmpPersons = (NSArray *)persons;
-                        NSMutableArray *editablePeasons = [NSMutableArray array];
-                        if (tmpPersons && tmpPersons.count > 0) {
-                            [editablePeasons addObjectsFromArray:tmpPersons];
-                            for (ContactPersonObject *person in tmpPersons) {
-                                if (![person.phone containsString:self.phoneNum]) {
-                                    [editablePeasons removeObject:person];
-                                }
-                            }
-                            [removeArray addObject:tmpPersons];
-//                            [self.personArray removeObject:tmpPersons];
-                            if (editablePeasons.count > 0) {
-                                [addArray addObjectsFromArray:editablePeasons];
-//                                [self.personArray addObjectsFromArray:editablePeasons];
-                            }
-                        }
-
-                    } else if ([persons isKindOfClass:[ContactPersonObject class]]){
-                        NSLog(@"**********************++++++++++++++%zd", i);
-                        ContactPersonObject *temPerson = (ContactPersonObject *)persons;
-                        if (![temPerson.phone containsString:self.phoneNum]) {
-//                            [self.personArray removeObject:persons];
-                              [removeArray addObject:persons];
-                        }
-                    }
-                    i++;
-                    
-                }
-                [self.personArray removeObjectsInArray:removeArray];
-                [self.personArray addObjectsFromArray:addArray];
-            }
-
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.filterTableView reloadData];
-        });
-    });
-    
+    [self dealDataWithArray:self.filterArray];
 }
 
 #pragma mark - msgDlegate
@@ -413,11 +369,14 @@
         
     }
     
+    self.filterArray = persons;
+    
     [self dealDataWithArray:persons];
 }
 
 - (void)dealDataWithArray:(NSArray *)array
 {
+    [self.personArray removeAllObjects];
     
     NSMutableArray * tmpArray = [[NSMutableArray alloc]init];
     for (NSInteger i =0; i <27; i++) {
@@ -450,7 +409,17 @@
     
     //此时数据已按首字母排序并分组
     //遍历数组，删掉空数组
-    for (NSMutableArray * mutArr in tmpArray) {
+    for (NSMutableArray * adjustArr in tmpArray) {
+        NSMutableArray *mutArr = [NSMutableArray array];
+        if (adjustArr.count != 0) {
+            if (self.phoneNum && self.phoneNum.length > 0){
+                for (ContactPersonObject *object in adjustArr) {
+                    if ([object.phone containsString:self.phoneNum]) {
+                        [mutArr addObject:object];
+                    }
+                }
+            }
+        }
         //如果数组不为空就添加到数据源当中
         if (mutArr.count != 0) {
             [self.personArray addObject:mutArr];
