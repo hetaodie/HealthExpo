@@ -11,6 +11,8 @@
 @protocol SearchModulDelegate <NSObject>
 
 - (void)onSearchSuccess:(NSArray *)aArray;
+@optional
+
 - (void)onSearchError;
 
 @end

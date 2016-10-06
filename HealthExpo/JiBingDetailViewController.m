@@ -149,4 +149,8 @@
 - (void)onSelectSearchData:(SearchObject *)aObject{
     [PushViewControllerWithSearchData pushViewControllerWithdata:aObject oldViewController:self];
 }
+
+- (void) onCancelSearch{
+
+}
 @end

@@ -59,6 +59,7 @@
 
 
 - (void)awakeFromNib{
+     [super awakeFromNib];
     _contentArray = [[NSMutableArray alloc] init];
 }
 

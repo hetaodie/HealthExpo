@@ -20,8 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-Ob-hEf" userLabel="top">
-                    <frame key="frameInset" width="600" height="64"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-Ob-hEf" userLabel="top">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibw-Gh-u76">
                             <constraints>
@@ -79,26 +78,19 @@
                         <constraint firstItem="eJj-r5-wEv" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="top" constant="26" id="lKB-Nb-stk"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVn-kl-ntd" customClass="JiBingInfoView">
-                    <frame key="frameInset" minY="64" width="600" height="215"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVn-kl-ntd" customClass="JiBingInfoView">
                     <color key="backgroundColor" red="0.1532170575" green="1" blue="0.1150021256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="215" id="N2q-ED-YA3"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0p0-Pr-f5m" customClass="MessageInfoView">
-                    <frame key="frameInset" minY="279" width="600" height="321"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0p0-Pr-f5m" customClass="MessageInfoView">
                     <color key="backgroundColor" red="0.72946259469999997" green="0.42235293499999998" blue="0.060168584999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cVj-Zw-bEm" customClass="MessageReplyView">
-                    <frame key="frameInset" width="600" height="600"/>
-                    <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf7-x4-0Zd" customClass="SearchView">
-                            <frame key="frameInset" minY="-64" width="600" height="600"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                    </subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVj-Zw-bEm" customClass="MessageReplyView">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vf7-x4-0Zd" customClass="SearchView">
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
@@ -107,16 +99,20 @@
                 <constraint firstAttribute="trailing" secondItem="0p0-Pr-f5m" secondAttribute="trailing" id="318-l3-dd1"/>
                 <constraint firstAttribute="trailing" secondItem="cVj-Zw-bEm" secondAttribute="trailing" id="BnD-XH-TDO"/>
                 <constraint firstAttribute="trailing" secondItem="oWq-Ob-hEf" secondAttribute="trailing" id="DOo-bF-sKX"/>
+                <constraint firstAttribute="trailing" secondItem="Vf7-x4-0Zd" secondAttribute="trailing" id="Lp1-tt-CLP"/>
                 <constraint firstItem="cVj-Zw-bEm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wix-pD-lZU"/>
                 <constraint firstItem="0p0-Pr-f5m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wjp-3f-R4x"/>
                 <constraint firstItem="dVn-kl-ntd" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="bottom" id="Xj1-rw-XcF"/>
+                <constraint firstItem="Vf7-x4-0Zd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XyI-08-vRP"/>
                 <constraint firstItem="oWq-Ob-hEf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aUD-nu-FxO"/>
                 <constraint firstItem="cVj-Zw-bEm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aVi-jh-eGM"/>
                 <constraint firstAttribute="bottom" secondItem="cVj-Zw-bEm" secondAttribute="bottom" id="cor-3E-PRS"/>
+                <constraint firstItem="Vf7-x4-0Zd" firstAttribute="top" secondItem="oWq-Ob-hEf" secondAttribute="bottom" id="eXv-NF-RJs"/>
                 <constraint firstAttribute="bottom" secondItem="0p0-Pr-f5m" secondAttribute="bottom" id="gfP-LE-jFO"/>
                 <constraint firstItem="oWq-Ob-hEf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hMW-4v-ldQ"/>
                 <constraint firstItem="0p0-Pr-f5m" firstAttribute="top" secondItem="dVn-kl-ntd" secondAttribute="bottom" id="nYr-Gx-Hei"/>
                 <constraint firstAttribute="trailing" secondItem="dVn-kl-ntd" secondAttribute="trailing" id="ozL-6x-dKS"/>
+                <constraint firstAttribute="bottom" secondItem="Vf7-x4-0Zd" secondAttribute="bottom" id="qlL-Cv-gkq"/>
                 <constraint firstItem="dVn-kl-ntd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yGv-Kg-hJK"/>
             </constraints>
         </view>

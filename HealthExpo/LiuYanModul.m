@@ -38,7 +38,7 @@
     
     NSString *urlPathUtf = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPathUtf];
-    __weak __typeof(self) weakSelf = self;
+//    __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSLog(@"%@", responseObject);
 
@@ -54,7 +54,7 @@
 - (void)cexiaoLiuYan:(LiuYanObject *)aObject{
     NSString *urlPath =[NSString stringWithFormat:@"/mobile/delCommentInfo.action?cmid=%ld",(long)aObject.id];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
-    __weak __typeof(self) weakSelf = self;
+//    __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSLog(@"%@", responseObject);
         if (self.delegate && [self.delegate respondsToSelector:@selector(oncexiaoSeccess)]) {
@@ -74,7 +74,7 @@
 - (void)liuYanReply:(LiuYanObject *)aObject{
     NSString *urlPath = @"/mobile/replyCommentInfo.action?cmid=29&username=13588001234&phone=11111111&content=32323232";
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
-    __weak __typeof(self) weakSelf = self;
+//    __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSLog(@"%@", responseObject);
         //        JiBingDetailObject *object = [self getDetailObjectFromDictionary:responseObject];

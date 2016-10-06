@@ -21,7 +21,7 @@
 
 - (void)onGetKeShiFenLeiDetailSeccess:(NSMutableArray *)aArray index:(NSInteger)aIndex;
 
-
+@optional
 - (void)onGetDiQuDetailErrorindex:(NSInteger)aIndex;
 
 - (void)onGetKeShiFenLeiDetailErrorindex:(NSInteger)aIndex;

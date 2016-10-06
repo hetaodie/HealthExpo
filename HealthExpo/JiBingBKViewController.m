@@ -104,6 +104,10 @@
      [self.leftView showContentWithArray:aArray];
 }
 
+- (void)onGetKeShiFenLeiDetailErrorindex:(NSInteger)aIndex{
+
+}
+
 - (void)onGetDianXingRenQunError{
     
 }

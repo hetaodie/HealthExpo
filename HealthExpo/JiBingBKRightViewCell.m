@@ -16,6 +16,7 @@
 @implementation JiBingBKRightViewCell
 
 - (void)awakeFromNib {
+     [super awakeFromNib];
     // Initialization code
 }
 

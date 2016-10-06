@@ -19,6 +19,7 @@
 @implementation YiLiaoJiGouRightViewCell
 
 - (void)awakeFromNib {
+     [super awakeFromNib];
     // Initialization code
 }
 

@@ -18,6 +18,7 @@
 @implementation YiMiaoScheduleCell
 
 - (void)awakeFromNib {
+     [super awakeFromNib];
     // Initialization code
 }
 

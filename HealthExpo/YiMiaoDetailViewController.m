@@ -161,4 +161,8 @@
     [PushViewControllerWithSearchData pushViewControllerWithdata:aObject oldViewController:self];
 }
 
+-(void)onCancelSearch{
+
+}
+
 @end
