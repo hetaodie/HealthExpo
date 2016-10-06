@@ -11,6 +11,7 @@
 		424517041D96247700EF01D1 /* RechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424517021D96247700EF01D1 /* RechargeViewController.xib */; };
 		424517071D963FC700EF01D1 /* RechargeModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 424517061D963FC700EF01D1 /* RechargeModelSource.m */; };
 		424517091D9647A900EF01D1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424517081D9647A900EF01D1 /* MessageUI.framework */; };
+		4F133BC51DA6401300C6DC19 /* UITextView+HtmlString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F133BC41DA6401300C6DC19 /* UITextView+HtmlString.m */; };
 		532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405241D22BDAB004A1A43 /* UserSettingViewController.m */; };
 		532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532405251D22BDAB004A1A43 /* UserSettingViewController.xib */; };
 		5324052B1D22C12D004A1A43 /* UserSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532405291D22C12D004A1A43 /* UserSettingTableViewCell.m */; };
@@ -190,6 +191,8 @@
 		424517051D963FC700EF01D1 /* RechargeModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeModelSource.h; sourceTree = "<group>"; };
 		424517061D963FC700EF01D1 /* RechargeModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeModelSource.m; sourceTree = "<group>"; };
 		424517081D9647A900EF01D1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4F133BC31DA6401300C6DC19 /* UITextView+HtmlString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+HtmlString.h"; sourceTree = "<group>"; };
+		4F133BC41DA6401300C6DC19 /* UITextView+HtmlString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+HtmlString.m"; sourceTree = "<group>"; };
 		532405231D22BDAB004A1A43 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingViewController.h; path = User/UserSettingViewController.h; sourceTree = "<group>"; };
 		532405241D22BDAB004A1A43 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingViewController.m; path = User/UserSettingViewController.m; sourceTree = "<group>"; };
 		532405251D22BDAB004A1A43 /* UserSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserSettingViewController.xib; path = User/UserSettingViewController.xib; sourceTree = "<group>"; };
@@ -603,6 +606,8 @@
 				53AD055A1D2C072F00557942 /* HEDataCategory.m */,
 				69DC9ADB1D35231900CF4140 /* SpeakerMessageItem.h */,
 				69DC9ADC1D35231900CF4140 /* SpeakerMessageItem.m */,
+				4F133BC31DA6401300C6DC19 /* UITextView+HtmlString.h */,
+				4F133BC41DA6401300C6DC19 /* UITextView+HtmlString.m */,
 			);
 			name = DataItems;
 			sourceTree = "<group>";
@@ -1260,6 +1265,7 @@
 				7C05E1601D5DDCEC006D4EA9 /* YiMiaoDetailObject.m in Sources */,
 				53F36E241D1ADADB00C8DBB2 /* LoginViewController.m in Sources */,
 				7C6A77C51D2B9348008A58D7 /* JiBingBKRightViewCell.m in Sources */,
+				4F133BC51DA6401300C6DC19 /* UITextView+HtmlString.m in Sources */,
 				7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */,
 				69E4BE551D1D107800B555FD /* HomePageViewController.m in Sources */,
 				7C67444F1D2CC6F100661276 /* YiMiaoScheduleCell.m in Sources */,

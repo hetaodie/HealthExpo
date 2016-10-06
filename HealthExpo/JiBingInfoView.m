@@ -8,10 +8,11 @@
 
 #import "JiBingInfoView.h"
 #import "UIColor+HEX.h"
+#import "UITextView+HtmlString.h"
 
 @interface JiBingInfoView()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 
 @property (weak, nonatomic) IBOutlet UILabel *lookMoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
@@ -25,7 +26,7 @@
 
 - (void)showViewWithObject:(JiBingDetailObject *)aObject{
     self.titleLabel.text = aObject.title;
-    self.contentLabel.text = aObject.contenttext;
+    [self.contentTextView showTextWithHtmlString:aObject.contenttext];
 }
 
 - (void)awakeFromNib{
@@ -56,7 +57,7 @@
 
 - (void)setupControlStatus{
     self.titleLabel.textColor = [UIColor colorWithHexString:@"0x333333" alpha:1.0];
-    self.contentLabel.textColor = [UIColor colorWithHexString:@"0x333333" alpha:1.0];
+    self.contentTextView.textColor = [UIColor colorWithHexString:@"0x333333" alpha:1.0];
     
     self.lookMoreLabel.textColor = [UIColor colorWithHexString:@"0x888888" alpha:1.0];
     self.titleBottomView.backgroundColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];

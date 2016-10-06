@@ -11,6 +11,7 @@
 #import "HENetTask.h"
 #import "UIImageView+WebCache.h"
 #import "UIView+Toast.h"
+#import "UITextView+HtmlString.h"
 
 @interface NewsDetailViewController ()<NewsDetailModelSourceDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -76,8 +77,8 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];
     
     self.titleLabel.text = dict[@"title"];
-    self.contextView.text = dict[@"contenttext"];
     
+    [self.contextView showTextWithHtmlString:dict[@"contenttext"]];
 }
 
 - (void)getNewsDetailModelSourceFailed{

@@ -13,6 +13,8 @@
 #import "MessageReplyView.h"
 #import "UserInfo.h"
 #import "UserInfoManager.h"
+#import "UITextView+HtmlString.h"
+
 @interface SubmissionViewController ()<SubmissionModelSourceDelegate, LiuYanModulDelegate, MessageInfoViewDelegate, MessageReplyViewDelegate>
 
 @property (nonatomic, strong)SubmissionModelSource *modelSource;
@@ -92,9 +94,7 @@
 
 #pragma mark -- SubmissionModelSourceDelegate
 - (void)getSubmissionDataSuccess:(NSDictionary *)data{
-    NSString *content = data[@"contenttext"];
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
-     self.descLabel.attributedText = attributedString;
+    [self.descLabel showTextWithHtmlString:data[@"contenttext"]];
 
 }
 

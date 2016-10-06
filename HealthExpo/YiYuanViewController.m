@@ -13,6 +13,7 @@
 #import "MIngYiViewController.h"
 #import "MapViewController.h"
 #import "CallViewController.h"
+#import "UITextView+HtmlString.h"
 
 @interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -100,7 +101,7 @@
     self.dizhiLabel.text = aObject.dizhi;
     [self.dianhuaButton setTitle:aObject.dianhua forState:UIControlStateNormal];
     
-    self.desc.text = aObject.desc;
+    [self.desc showTextWithHtmlString:aObject.desc];
 
 }
 
