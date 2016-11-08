@@ -1096,7 +1096,7 @@
 				TargetAttributes = {
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XWV65WS8FZ;
+						DevelopmentTeam = 9UL567ZJ57;
 					};
 				};
 			};
@@ -1460,7 +1460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XWV65WS8FZ;
+				DEVELOPMENT_TEAM = 9UL567ZJ57;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1469,7 +1469,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthExpo123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wei.xu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1482,7 +1482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XWV65WS8FZ;
+				DEVELOPMENT_TEAM = 9UL567ZJ57;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1491,7 +1491,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthExpo123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wei.xu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

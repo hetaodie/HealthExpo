@@ -168,6 +168,7 @@
 }
 #pragma mark -- phone Num action
 - (IBAction)onPhoneNumClicked:(UIButton *)sender {
+
     [self updatePhoneNum:sender.titleLabel.text];
 }
 
@@ -205,7 +206,6 @@
     self.phoneNumFilterView.hidden = NO;
     self.tabBarController.tabBar.hidden = YES;
     [self filterContactsDataSource];
-    [self.filterTableView reloadData];
 }
 
 - (void)hiddenPhoneFilterView{
@@ -217,7 +217,10 @@
 }
 
 - (void)filterContactsDataSource{
-    [self dealDataWithArray:self.filterArray];
+    dispatch_queue_t queue = dispatch_queue_create("updatePhoneNum", nil);
+    dispatch_async(queue, ^{
+        [self dealDataWithArray:self.filterArray];
+    });
 }
 
 #pragma mark - msgDlegate
@@ -370,72 +373,16 @@
     }
     
     self.filterArray = persons;
-    
-    [self dealDataWithArray:persons];
 }
 
 - (void)dealDataWithArray:(NSArray *)array
 {
     [self.personArray removeAllObjects];
     
-    NSMutableArray * tmpArray = [[NSMutableArray alloc]init];
-    for (NSInteger i =0; i <27; i++) {
-        //给临时数组创建27个数组作为元素，用来存放A-Z和#开头的联系人
-        NSMutableArray * array = [[NSMutableArray alloc]init];
-        [tmpArray addObject:array];
-    }
-    
-    for (ContactPersonObject * model in array) {
-        //AddressMode是联系人的数据模型
-        //转化为首拼音并取首字母
-        NSString * nickName = [self returnFirstWordWithString:model.lastName];
-        int firstWord = [nickName characterAtIndex:0];
-        
-        //把字典放到对应的数组中去
-        
-        if (firstWord >= 65 && firstWord <= 90) {
-            //如果首字母是A-Z，直接放到对应数组
-            NSMutableArray * array = tmpArray[firstWord - 65];
-            [array addObject:model];
-            
+    for (ContactPersonObject *object in array) {
+        if ([object.phone containsString:self.phoneNum]) {
+            [self.personArray addObject:object];
         }
-        else
-        {
-            //如果不是，就放到最后一个代表#的数组
-            NSMutableArray * array =[tmpArray lastObject];
-            [array addObject:model];
-        }
-    }
-    
-    //此时数据已按首字母排序并分组
-    //遍历数组，删掉空数组
-    for (NSMutableArray * adjustArr in tmpArray) {
-        NSMutableArray *mutArr = [NSMutableArray array];
-        if (adjustArr.count != 0) {
-            if (self.phoneNum && self.phoneNum.length > 0){
-                for (ContactPersonObject *object in adjustArr) {
-                    if ([object.phone containsString:self.phoneNum]) {
-                        [mutArr addObject:object];
-                    }
-                }
-            }
-        }
-        //如果数组不为空就添加到数据源当中
-        if (mutArr.count != 0) {
-            [self.personArray addObject:mutArr];
-            ContactPersonObject * model = mutArr[0];
-            NSString * nickName = [self returnFirstWordWithString:model.lastName];
-            int firstWord = [nickName characterAtIndex:0];
-            //取出其中的首字母放入到标题数组，暂时不考虑非A-Z的情况
-            if (firstWord >= 65 && firstWord <= 90) {
-                [self.titleArray addObject:nickName];
-            }
-        }
-    }
-    
-    //便利结束后，两个数组数目不相等说明有除大写字母外的其他首字母
-    if (!(self.titleArray.count == self.personArray.count)) {
-        [self.titleArray addObject:@"#"];
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -465,14 +412,11 @@
     
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return self.personArray.count;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.personArray[section] count];
+    NSInteger count = [self.personArray count];
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -485,29 +429,14 @@
     
     cell.imageView.image = [UIImage imageNamed:@"default_head"];
     
-    ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.section][indexPath.row];
+    ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.row];
     cell.textLabel.text = object.lastName;
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return [self.titleArray objectAtIndex:section];
-}
-
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    return self.titleArray;
-}
-
-//索引列点击事件
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-{
-    return index;
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.section][indexPath.row];
+    ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.row];
     NSString *phone = object.phone;
     
     CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
