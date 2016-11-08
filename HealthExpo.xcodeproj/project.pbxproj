@@ -145,6 +145,8 @@
 		7C05E2181D631483006D4EA9 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E2161D631483006D4EA9 /* CallViewController.m */; };
 		7C05E2191D631483006D4EA9 /* CallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05E2171D631483006D4EA9 /* CallViewController.xib */; };
 		7C05E21B1D63F8C9006D4EA9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05E21A1D63F8C9006D4EA9 /* CoreTelephony.framework */; };
+		7C34F3911DD1C33600C61015 /* PhoneViewNumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F38F1DD1C33600C61015 /* PhoneViewNumTableViewCell.m */; };
+		7C34F3921DD1C33600C61015 /* PhoneViewNumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F3901DD1C33600C61015 /* PhoneViewNumTableViewCell.xib */; };
 		7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */; };
 		7C6744371D2BB2E400661276 /* JiBingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */; };
 		7C67443A1D2BB33A00661276 /* JiBingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6744391D2BB33A00661276 /* JiBingInfoView.m */; };
@@ -427,6 +429,9 @@
 		7C05E2161D631483006D4EA9 /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
 		7C05E2171D631483006D4EA9 /* CallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallViewController.xib; sourceTree = "<group>"; };
 		7C05E21A1D63F8C9006D4EA9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7C34F38E1DD1C33600C61015 /* PhoneViewNumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewNumTableViewCell.h; sourceTree = "<group>"; };
+		7C34F38F1DD1C33600C61015 /* PhoneViewNumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewNumTableViewCell.m; sourceTree = "<group>"; };
+		7C34F3901DD1C33600C61015 /* PhoneViewNumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneViewNumTableViewCell.xib; sourceTree = "<group>"; };
 		7C6744331D2BB2E400661276 /* JiBingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingDetailViewController.h; sourceTree = "<group>"; };
 		7C6744341D2BB2E400661276 /* JiBingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingDetailViewController.m; sourceTree = "<group>"; };
 		7C6744351D2BB2E400661276 /* JiBingDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBingDetailViewController.xib; sourceTree = "<group>"; };
@@ -779,6 +784,9 @@
 				69DBC6AE1D5705430064346B /* PictureTableViewCell.h */,
 				69DBC6AF1D5705430064346B /* PictureTableViewCell.m */,
 				69DBC6B01D5705430064346B /* PictureTableViewCell.xib */,
+				7C34F38E1DD1C33600C61015 /* PhoneViewNumTableViewCell.h */,
+				7C34F38F1DD1C33600C61015 /* PhoneViewNumTableViewCell.m */,
+				7C34F3901DD1C33600C61015 /* PhoneViewNumTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1153,6 +1161,7 @@
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
 				7C05E16A1D5DF5DF006D4EA9 /* YiLiaoJiGouLeftView.xib in Resources */,
+				7C34F3921DD1C33600C61015 /* PhoneViewNumTableViewCell.xib in Resources */,
 				53A34BE61D20255D0043144E /* CallStatic.plist in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
 				53BC4C701D2907B8009035BC /* JianKangBKTableViewCell.xib in Resources */,
@@ -1240,6 +1249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C34F3911DD1C33600C61015 /* PhoneViewNumTableViewCell.m in Sources */,
 				53A34BDA1D2014D10043144E /* UserInfo.m in Sources */,
 				7C6744541D2CE66300661276 /* YiMiaoDetailViewController.m in Sources */,
 				53F36E291D1AE2E000C8DBB2 /* RegisterViewController.m in Sources */,

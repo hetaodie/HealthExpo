@@ -18,6 +18,8 @@
 #import <AddressBook/AddressBook.h>
 #import "RechargeViewController.h"
 
+#import "PhoneViewNumTableViewCell.h"
+
 #import <MessageUI/MessageUI.h>
 
 @interface PhoneViewController ()<PhoneModelSourceDelegate, UITableViewDataSource,UITableViewDelegate, MFMessageComposeViewControllerDelegate>
@@ -421,16 +423,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"contactCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    static NSString *identifier = @"PhoneViewNumTableViewCell";
+    PhoneViewNumTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [PhoneViewNumTableViewCell viewWithXIb];
     }
-    
-    cell.imageView.image = [UIImage imageNamed:@"default_head"];
-    
+        
     ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = object.lastName;
+    cell.nameLabel.text = object.lastName;
+    cell.phoneNumLabel.text = object.phone;
     return cell;
 }
 
