@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *yiyuanLabel;
 @property (weak, nonatomic) IBOutlet UILabel *shanchangLabel;
 @property (weak, nonatomic) IBOutlet UILabel *jianjieLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *jianjieWebView;
 @property (weak, nonatomic) IBOutlet UIButton *dianhua1Button;
 
 @property (weak, nonatomic) IBOutlet UIButton *dianhua2Button;
@@ -67,7 +68,10 @@
     self.zhichengLabel.text = aObject.zhicheng;
     self.yiyuanLabel.text = aObject.yiyuan;
     self.shanchangLabel.text =aObject.shanchang;
-    self.jianjieLabel.text = aObject.jianjie;
+    //self.jianjieLabel.text = aObject.jianjie;
+    
+    [self.jianjieWebView loadHTMLString:aObject.jianjie baseURL:nil];
+    
     [self.dianhua1Button setTitle:aObject.phone forState:UIControlStateNormal];
     [self.dianhua2Button setTitle:aObject.phone forState:UIControlStateNormal];
     self.yiyuanLabel.text = self.yiyuanTitle;

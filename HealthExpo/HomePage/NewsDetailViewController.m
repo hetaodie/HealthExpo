@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UITextView *contextView;
+@property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
 
 @property (nonatomic, strong)NewsDetailModelSource *modelSource;
 @property (nonatomic, strong)NSArray *dataArray;
@@ -78,7 +79,8 @@
     
     self.titleLabel.text = dict[@"title"];
     
-    [self.contextView showTextWithHtmlString:dict[@"contenttext"]];
+    //[self.contextView showTextWithHtmlString:dict[@"contenttext"]];
+    [self.contentWebView loadHTMLString:dict[@"contenttext"] baseURL:nil];
 }
 
 - (void)getNewsDetailModelSourceFailed{
@@ -100,5 +102,6 @@
 - (void)getNewsIsCollectionFailed{
     
 }
+
 
 @end

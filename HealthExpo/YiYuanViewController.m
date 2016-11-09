@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *menzhen;
 @property (weak, nonatomic) IBOutlet UILabel *dizhiLabel;
 @property (weak, nonatomic) IBOutlet UIButton *dianhuaButton;
+@property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
 @property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) YiYuanDetailModul *modul;
@@ -101,7 +102,8 @@
     self.dizhiLabel.text = aObject.dizhi;
     [self.dianhuaButton setTitle:aObject.dianhua forState:UIControlStateNormal];
     
-    [self.desc showTextWithHtmlString:aObject.desc];
+    //[self.desc showTextWithHtmlString:aObject.desc];
+    [self.contentWebView loadHTMLString:aObject.desc baseURL:nil];
 
 }
 

@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 
+@property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
+
 @property (weak, nonatomic) IBOutlet UILabel *lookMoreLabel;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIView *titleBottomView;
@@ -26,8 +28,8 @@
 
 - (void)showViewWithObject:(JiBingDetailObject *)aObject{
     self.titleLabel.text = aObject.title;
-    [self.contentTextView showTextWithHtmlString:aObject.contenttext];
-}
+    //[self.contentTextView showTextWithHtmlString:aObject.contenttext];
+    [self.contentWebView loadHTMLString:aObject.contenttext baseURL:nil];}
 
 - (void)awakeFromNib{
     [super awakeFromNib];

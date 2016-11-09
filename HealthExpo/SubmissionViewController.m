@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSString *titleText;
 @property (nonatomic, assign) BOOL isSubMission;//yes 为我要投稿，no 为广告合作。
+@property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
 @property (strong, nonatomic) IBOutlet UITextView *descLabel;
 
 @property (strong, nonatomic) LiuYanModul *liuYanModul;
@@ -94,7 +95,9 @@
 
 #pragma mark -- SubmissionModelSourceDelegate
 - (void)getSubmissionDataSuccess:(NSDictionary *)data{
-    [self.descLabel showTextWithHtmlString:data[@"contenttext"]];
+    //[self.descLabel showTextWithHtmlString:data[@"contenttext"]];
+    
+    [self.contentWebView loadHTMLString:data[@"contenttext"] baseURL:nil];
 
 }
 

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubmissionViewController">
             <connections>
                 <outlet property="MessageInfoView" destination="rlz-tJ-tqW" id="sId-lE-Nfc"/>
+                <outlet property="contentWebView" destination="ez0-jq-Yek" id="8Cg-0P-FoV"/>
                 <outlet property="descLabel" destination="T44-tO-r1h" id="XeG-E0-EFt"/>
                 <outlet property="messageReplyView" destination="9Hb-B7-s8e" id="m7b-KJ-q1r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -19,8 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T44-tO-r1h">
-                    <frame key="frameInset" minX="15" minY="74" width="570" height="308"/>
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T44-tO-r1h">
+                    <rect key="frame" x="15" y="74" width="345" height="308"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="308" id="KMm-KF-P4C"/>
@@ -29,24 +33,34 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-tJ-tqW" customClass="MessageInfoView">
-                    <frame key="frameInset" minY="392" width="600" height="208"/>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ez0-jq-Yek">
+                    <rect key="frame" x="15" y="74" width="345" height="308"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="308" id="7na-LG-yif"/>
+                    </constraints>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-tJ-tqW" customClass="MessageInfoView">
+                    <rect key="frame" x="0.0" y="392" width="375" height="275"/>
                     <color key="backgroundColor" red="0.72946259469999997" green="0.42235293499999998" blue="0.060168584999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-B7-s8e" customClass="MessageReplyView">
-                    <frame key="frameInset" width="600" height="600"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-B7-s8e" customClass="MessageReplyView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="T44-tO-r1h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="6xC-dT-hfh"/>
+                <constraint firstItem="ez0-jq-Yek" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="HQL-OE-kQl"/>
                 <constraint firstItem="T44-tO-r1h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="IO4-Su-0to"/>
-                <constraint firstItem="rlz-tJ-tqW" firstAttribute="top" secondItem="T44-tO-r1h" secondAttribute="bottom" constant="10" id="KQt-KG-wbU"/>
                 <constraint firstAttribute="trailing" secondItem="T44-tO-r1h" secondAttribute="trailing" constant="15" id="YhM-be-wMz"/>
                 <constraint firstAttribute="bottom" secondItem="9Hb-B7-s8e" secondAttribute="bottom" id="bFO-ED-OQU"/>
+                <constraint firstAttribute="trailing" secondItem="ez0-jq-Yek" secondAttribute="trailing" constant="15" id="cDj-F5-m0U"/>
                 <constraint firstItem="9Hb-B7-s8e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dd5-kk-PHS"/>
+                <constraint firstItem="rlz-tJ-tqW" firstAttribute="top" secondItem="ez0-jq-Yek" secondAttribute="bottom" constant="10" id="ffq-Hg-jov"/>
                 <constraint firstAttribute="bottom" secondItem="rlz-tJ-tqW" secondAttribute="bottom" id="jVa-nt-cMg"/>
+                <constraint firstItem="ez0-jq-Yek" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="jzy-JN-r4M"/>
                 <constraint firstItem="rlz-tJ-tqW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lHh-Gh-FNG"/>
                 <constraint firstAttribute="trailing" secondItem="rlz-tJ-tqW" secondAttribute="trailing" id="m59-NI-dPo"/>
                 <constraint firstAttribute="trailing" secondItem="9Hb-B7-s8e" secondAttribute="trailing" id="q9g-BA-Mne"/>
