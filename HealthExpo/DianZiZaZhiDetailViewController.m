@@ -13,7 +13,7 @@
 #import "UIColor+HEX.h"
 #import "NewsDetailViewController.h"
 
-@interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface DianZiZaZhiDetailViewController ()<DianZiZaZhiDetailModelSourceDelegate, UITableViewDelegate, UITableViewDataSource,UIWebViewDelegate>
 @property DianZiZaZhiDetailModelSource *modelSource;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *oneLabel;
@@ -21,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *threeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *fourLabel;
 
-@property (strong, nonatomic) IBOutlet UILabel *fiveLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *fiveWebView;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -87,7 +87,8 @@
     self.twoLabel.text = dict[@"content2"];
     self.threeLabel.text = dict[@"content3"];
     self.fourLabel.text = dict[@"content4"];
-    self.fiveLabel.text = dict[@"contenttext"];
+    
+    [self.fiveWebView loadHTMLString:dict[@"contenttext"] baseURL:nil];
 }
 
 - (void)getDianZiZaZhiDetailFailed{
@@ -105,7 +106,7 @@
 
 #pragma mark -- UItableViewDelegate && UItableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 25;
+    return 45;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -120,7 +121,7 @@
     NSDictionary *dict = self.listArray[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%zd. %@",(indexPath.row + 1), dict[@"title"]];
     cell.textLabel.textColor = [UIColor colorWithHex:0x333333 alpha:1];
-    [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:14]];
     return cell;
 }
 
@@ -131,6 +132,13 @@
     ndVC.newsID = [item[@"id"] stringValue];
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+   // NSString *jsString = [[NSString alloc] initWithFormat:@"document.body.style.fontSize=%f;document.body.style.color=%@",12.0f,[UIColor redColor]];
+    NSString *jsString = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '60%'";
+    
+    [webView stringByEvaluatingJavaScriptFromString:jsString];
 }
 
 @end

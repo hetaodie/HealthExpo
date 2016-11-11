@@ -159,7 +159,8 @@
 - (IBAction)phoneCallButtonClicked:(id)sender {
     if (self.phoneNum.length >= 2 && self.phoneNum.length <= 11) {
         CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
-        vc.phoneNum = self.phoneNum;
+         NSString *phone =[self.phoneNum stringByReplacingOccurrencesOfString:@" " withString:@""];
+        vc.phoneNum = phone;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -438,7 +439,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     ContactPersonObject *object= [self.personArray objectAtIndex:indexPath.row];
-    NSString *phone = object.phone;
+    NSString *phone =[object.phone stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
     vc.phoneNum = phone;

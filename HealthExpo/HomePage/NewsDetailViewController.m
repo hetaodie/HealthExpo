@@ -13,7 +13,7 @@
 #import "UIView+Toast.h"
 #import "UITextView+HtmlString.h"
 
-@interface NewsDetailViewController ()<NewsDetailModelSourceDelegate>
+@interface NewsDetailViewController ()<NewsDetailModelSourceDelegate,UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UITextView *contextView;
@@ -102,6 +102,5 @@
 - (void)getNewsIsCollectionFailed{
     
 }
-
 
 @end

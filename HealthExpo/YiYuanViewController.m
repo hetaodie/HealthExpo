@@ -71,7 +71,9 @@
     NSString *title = [button titleForState:UIControlStateNormal];
 
     CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
-    vc.phoneNum = title;
+    NSString *phone =[title stringByReplacingOccurrencesOfString:@" " withString:@""];
+
+    vc.phoneNum = phone;
     [self.navigationController pushViewController:vc animated:YES];
     
 }
@@ -154,4 +156,6 @@
 
     [self.navigationController pushViewController:jkdeVC animated:YES];
 }
+
+
 @end

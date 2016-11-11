@@ -10,7 +10,7 @@
 #import "UIColor+HEX.h"
 #import "UITextView+HtmlString.h"
 
-@interface JiBingInfoView()
+@interface JiBingInfoView() <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 
@@ -64,6 +64,14 @@
     self.lookMoreLabel.textColor = [UIColor colorWithHexString:@"0x888888" alpha:1.0];
     self.titleBottomView.backgroundColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
     self.lookMoreTopView.backgroundColor = [UIColor colorWithHexString:@"0xdcdcdc" alpha:1.0];
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    // NSString *jsString = [[NSString alloc] initWithFormat:@"document.body.style.fontSize=%f;document.body.style.color=%@",12.0f,[UIColor redColor]];
+    NSString *jsString = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '60%'";
+    
+    [webView stringByEvaluatingJavaScriptFromString:jsString];
 }
 
 @end

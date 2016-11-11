@@ -51,13 +51,6 @@
     self.navigationItem.leftBarButtonItem = backItem;
     
     self.navigationItem.title = @"电子杂志";
-    
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.frame = CGRectMake(0, 0, 18, 16);
-    [rightBtn setImage:[UIImage imageNamed:@"riqi"] forState:UIControlStateNormal];
-    [rightBtn addTarget:self action:@selector(doRightButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)doBack:(id)sender{

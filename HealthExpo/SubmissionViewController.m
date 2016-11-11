@@ -15,7 +15,7 @@
 #import "UserInfoManager.h"
 #import "UITextView+HtmlString.h"
 
-@interface SubmissionViewController ()<SubmissionModelSourceDelegate, LiuYanModulDelegate, MessageInfoViewDelegate, MessageReplyViewDelegate>
+@interface SubmissionViewController ()<SubmissionModelSourceDelegate, LiuYanModulDelegate, MessageInfoViewDelegate, MessageReplyViewDelegate,UIWebViewDelegate>
 
 @property (nonatomic, strong)SubmissionModelSource *modelSource;
 
@@ -173,4 +173,13 @@
 - (void)oncexiaoError{
     
 }
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    // NSString *jsString = [[NSString alloc] initWithFormat:@"document.body.style.fontSize=%f;document.body.style.color=%@",12.0f,[UIColor redColor]];
+    NSString *jsString = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '60%'";
+    
+    [webView stringByEvaluatingJavaScriptFromString:jsString];
+}
+
 @end

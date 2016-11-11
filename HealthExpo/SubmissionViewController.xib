@@ -29,7 +29,6 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="308" id="KMm-KF-P4C"/>
                     </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 、</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
@@ -39,6 +38,9 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="308" id="7na-LG-yif"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="DBf-Tn-KqF"/>
+                    </connections>
                 </webView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-tJ-tqW" customClass="MessageInfoView">
                     <rect key="frame" x="0.0" y="392" width="375" height="275"/>

@@ -10,7 +10,7 @@
 #import "MingYIDetailModul.h"
 #import "UIView+Toast.h"
 #import "CallViewController.h"
-@interface MIngYiViewController ()<MingYIDetailModulDelegate>
+@interface MIngYiViewController ()<MingYIDetailModulDelegate,UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *zhichengLabel;
@@ -59,7 +59,7 @@
     
     
     CallViewController *vc = [[CallViewController alloc] initWithNibName:@"CallViewController" bundle:nil];
-    vc.phoneNum = title;
+    vc.phoneNum = [title stringByReplacingOccurrencesOfString:@" " withString:@""];;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -80,6 +80,14 @@
 
 - (void)onGetMingYiDetialError{
 
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    // NSString *jsString = [[NSString alloc] initWithFormat:@"document.body.style.fontSize=%f;document.body.style.color=%@",12.0f,[UIColor redColor]];
+    NSString *jsString = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '60%'";
+    
+    [webView stringByEvaluatingJavaScriptFromString:jsString];
 }
 
 @end

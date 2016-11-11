@@ -8,11 +8,12 @@
 
 #import "YiMiaoDetailView.h"
 
-@interface YiMiaoDetailView()
+@interface YiMiaoDetailView() <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *yimiaoNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yumangLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tishiLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *tishiWebView;
+
 @property (weak, nonatomic) IBOutlet UILabel *duixiangLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
@@ -50,7 +51,8 @@
     self.numberLabel.text =[self numberFromString:aObject.strCount];
     
     self.yumangLabel.text = aObject.yumangJIbing;
-    self.tishiLabel.text = aObject.tishi;
+    [self.tishiWebView loadHTMLString:aObject.tishi baseURL:nil];
+    
     self.duixiangLabel.text = aObject.duixiang;
 }
 
@@ -68,6 +70,14 @@
     }
 //    NSString *string = [NSString stringWithFormat:@"第%@次/共%@次",[array objectAtIndex:0],[array objectAtIndex:1]];
     return string;
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    // NSString *jsString = [[NSString alloc] initWithFormat:@"document.body.style.fontSize=%f;document.body.style.color=%@",12.0f,[UIColor redColor]];
+    NSString *jsString = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '60%'";
+    
+    [webView stringByEvaluatingJavaScriptFromString:jsString];
 }
 
 @end
