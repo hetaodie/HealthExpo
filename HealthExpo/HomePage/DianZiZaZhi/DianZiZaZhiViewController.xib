@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,8 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odf-o1-YrC">
-                    <frame key="frameInset" minX="25" minY="80" width="200" height="29"/>
+                <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odf-o1-YrC">
+                    <rect key="frame" x="25" y="80" width="125" height="29"/>
                     <color key="backgroundColor" red="0.94901960784313721" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="TE0-gi-tdC"/>
@@ -35,8 +38,8 @@
                         <action selector="onTougaoButtonClicked:" destination="-1" eventType="touchUpInside" id="tmc-5S-N6G"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH9-85-w1E">
-                    <frame key="frameInset" minX="375" minY="80" width="200" height="29"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH9-85-w1E">
+                    <rect key="frame" x="225" y="80" width="125" height="29"/>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="yXX-XA-ZNa"/>
@@ -49,46 +52,46 @@
                         <action selector="onHeZuoButtonClicked:" destination="-1" eventType="touchUpInside" id="pqC-EG-eCq"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdh-eF-TiJ">
-                    <frame key="frameInset" minY="124" width="600" height="476"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdh-eF-TiJ">
+                    <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                     <subviews>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-mO-RKc">
-                            <frame key="frameInset" minX="300" width="1" height="476"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-mO-RKc">
+                            <rect key="frame" x="187.5" y="0.0" width="1" height="543"/>
                             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="TAY-Tw-rdc"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBs-LG-GkK">
-                            <frame key="frameInset" minY="224" width="600" height="1"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBs-LG-GkK">
+                            <rect key="frame" x="0.0" y="224" width="375" height="1"/>
                             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="uqC-je-HW0"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-WM-ooL" customClass="DianZiZaZhiItemView">
-                            <frame key="frameInset" width="300" height="224"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-WM-ooL" customClass="DianZiZaZhiItemView">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="224"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="Avc-3n-tQO"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nm-Dt-Il5" customClass="DianZiZaZhiItemView">
-                            <frame key="frameInset" minX="301" width="299" height="224"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nm-Dt-Il5" customClass="DianZiZaZhiItemView">
+                            <rect key="frame" x="188.5" y="0.0" width="186.5" height="224"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="x0f-tg-ak9"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-kv-86N" customClass="DianZiZaZhiItemView">
-                            <frame key="frameInset" minX="301" minY="225" width="299" height="224"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-kv-86N" customClass="DianZiZaZhiItemView">
+                            <rect key="frame" x="188.5" y="225" width="186.5" height="224"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="mbt-gk-OP6"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7OC-IT-WAt" customClass="DianZiZaZhiItemView">
-                            <frame key="frameInset" minY="225" width="300" height="224"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OC-IT-WAt" customClass="DianZiZaZhiItemView">
+                            <rect key="frame" x="0.0" y="225" width="187.5" height="224"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="Cim-Mv-gbQ"/>

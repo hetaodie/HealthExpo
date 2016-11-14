@@ -332,7 +332,7 @@
         
     }
     else{
-        [self.view makeToast:@"此应用无访问通讯录权限，请去设置->隐私-> 通讯录，开通权限" duration:0.8 position:CSToastPositionCenter];
+        [self.view makeToast:@"此应用无访问通讯录权限，请设置" duration:1.5 position:CSToastPositionCenter];
     }
 }
 
