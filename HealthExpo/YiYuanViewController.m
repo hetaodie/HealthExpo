@@ -24,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *dizhiLabel;
 @property (weak, nonatomic) IBOutlet UIButton *dianhuaButton;
 @property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
-@property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) YiYuanDetailModul *modul;
 
@@ -45,12 +44,12 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    UIButton *dituBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    dituBtn.frame = CGRectMake(0, 0, 40, 21);
-    [dituBtn setTitle:@"地图" forState:UIControlStateNormal];
-    [dituBtn addTarget:self action:@selector(showMap:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *dituItem = [[UIBarButtonItem alloc] initWithCustomView:dituBtn];
-    self.navigationItem.rightBarButtonItem = dituItem;
+    //UIButton *dituBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    //dituBtn.frame = CGRectMake(0, 0, 40, 21);
+    //[dituBtn setTitle:@"地图" forState:UIControlStateNormal];
+    //[dituBtn addTarget:self action:@selector(showMap:) forControlEvents:UIControlEventTouchUpInside];
+    //UIBarButtonItem *dituItem = [[UIBarButtonItem alloc] initWithCustomView:dituBtn];
+    //self.navigationItem.rightBarButtonItem = dituItem;
     
     _modul = [[YiYuanDetailModul alloc] init];
     _mingyiArray = [[NSMutableArray alloc] init];
@@ -104,7 +103,6 @@
     self.dizhiLabel.text = aObject.dizhi;
     [self.dianhuaButton setTitle:aObject.dianhua forState:UIControlStateNormal];
     
-    //[self.desc showTextWithHtmlString:aObject.desc];
     [self.contentWebView loadHTMLString:aObject.desc baseURL:nil];
 
 }
@@ -156,6 +154,5 @@
 
     [self.navigationController pushViewController:jkdeVC animated:YES];
 }
-
 
 @end

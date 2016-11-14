@@ -314,19 +314,26 @@
 
 - (void)sepUpAddressBook{
     // 实例化通讯录对象
+    ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
+    
     ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-    ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
-        if (granted) {
-            NSLog(@"授权成功！");
-            
-            CFErrorRef *error1 = NULL;
-            ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error1);
-            [self copyAddressBook:addressBook];
-        } else {
-            [self.view makeToast:@"通讯录授权失败，无法显示此页面" duration:0.8 position:CSToastPositionCenter];
-        }
-    });
-    CFRelease(addressBook);
+    if (status == kABAuthorizationStatusNotDetermined) {
+        ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+            if (granted) {
+                NSLog(@"授权成功！");
+                
+                CFErrorRef *error1 = NULL;
+                ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error1);
+                [self copyAddressBook:addressBook];
+            } else {
+                [self.view makeToast:@"通讯录授权失败，无法显示此页面" duration:0.8 position:CSToastPositionCenter];
+            }
+        });
+        
+    }
+    else{
+        [self.view makeToast:@"此应用无访问通讯录权限，请去设置->隐私-> 通讯录，开通权限" duration:0.8 position:CSToastPositionCenter];
+    }
 }
 
 - (void)copyAddressBook:(ABAddressBookRef)addressBook
