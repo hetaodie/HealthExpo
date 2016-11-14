@@ -1104,8 +1104,7 @@
 				TargetAttributes = {
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9UL567ZJ57;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1470,8 +1469,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9UL567ZJ57;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1480,10 +1479,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wei.xu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d8947e49-c346-49ed-99ea-1bfe65de858b";
+				PROVISIONING_PROFILE_SPECIFIER = weixu;
 			};
 			name = Debug;
 		};
@@ -1493,8 +1492,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9UL567ZJ57;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1503,10 +1502,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HealthExpo/iCallStatusSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wei.xu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d8947e49-c346-49ed-99ea-1bfe65de858b";
+				PROVISIONING_PROFILE_SPECIFIER = weixu;
 			};
 			name = Release;
 		};
