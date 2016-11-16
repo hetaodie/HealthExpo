@@ -136,7 +136,7 @@
             image = [UIImage imageNamed:@"ertong2"];
         }
         else{
-            image = [UIImage imageNamed:@"nanxing2"];
+            image = [UIImage imageNamed:@"jibingbaike"];
         }
     }
     else{
@@ -153,10 +153,10 @@
             image = [UIImage imageNamed:@"laoren"];
         }
         else if ([aTitle isEqualToString:@"儿童"]) {
-            image = [UIImage imageNamed:@"ertong"];
+            image = [UIImage imageNamed:@"ertong2"];
         }
         else{
-            image = [UIImage imageNamed:@"nanxing"];
+            image = [UIImage imageNamed:@"jibingbaike"];
         }
     }
     

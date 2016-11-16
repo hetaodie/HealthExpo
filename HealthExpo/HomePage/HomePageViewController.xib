@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,11 +24,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-oE-2ij">
-                    <frame key="frameInset" minY="64" width="600" height="40"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-oE-2ij">
+                    <rect key="frame" x="0.0" y="64" width="375" height="40"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="健康博览免费义诊进行中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb1-aM-PbS">
-                            <frame key="frameInset" minX="107" minY="10" width="443" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康博览免费义诊进行中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb1-aM-PbS">
+                            <rect key="frame" x="107" y="10" width="218" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="RzK-rJ-dmS"/>
                             </constraints>
@@ -34,13 +37,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laba" translatesAutoresizingMaskIntoConstraints="NO" id="pjt-Et-ehU">
+                            <rect key="frame" x="80" y="12" width="17" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="16" id="OE9-Tj-7Mg"/>
                                 <constraint firstAttribute="width" constant="17" id="sH1-mi-fKi"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-ax-ScB">
-                            <frame key="frameInset" width="600" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-ax-ScB">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <connections>
                                 <action selector="onTopMsgClicked:" destination="-1" eventType="touchUpInside" id="DD4-CI-Uoe"/>
                             </connections>
@@ -60,23 +64,27 @@
                         <constraint firstItem="pb1-aM-PbS" firstAttribute="leading" secondItem="pjt-Et-ehU" secondAttribute="trailing" constant="10" id="xTY-eR-XnF"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-ZV-xHn">
-                    <frame key="frameInset" minY="104" width="600" height="135"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-ZV-xHn">
+                    <rect key="frame" x="0.0" y="104" width="375" height="135"/>
                     <subviews>
                         <view contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="GaD-gQ-S1L" userLabel="View1">
+                            <rect key="frame" x="27" y="28" width="60" height="85"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yiliaobaike" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-UP-Lre">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="CSK-Zn-die"/>
                                         <constraint firstAttribute="width" constant="60" id="HnM-WY-LHe"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医疗百科" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-mh-Hfu">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康百科" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-mh-Hfu">
+                                    <rect key="frame" x="0.0" y="70" width="60" height="15"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zo-Uf-uEz">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
                                     <connections>
                                         <action selector="onBaiKeClicked:" destination="-1" eventType="touchUpInside" id="tVc-Sg-Rcz"/>
                                     </connections>
@@ -97,21 +105,24 @@
                                 <constraint firstItem="sTI-mh-Hfu" firstAttribute="leading" secondItem="GaD-gQ-S1L" secondAttribute="leading" id="gyE-9p-Uua"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-Ar-wcx" userLabel="View2">
-                            <frame key="frameInset" minX="189" minY="28" width="60" height="85"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-Ar-wcx" userLabel="View2">
+                            <rect key="frame" x="114" y="28" width="60" height="85"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yiliaojigou" translatesAutoresizingMaskIntoConstraints="NO" id="qho-uF-idJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="wbd-ce-8Mt"/>
                                         <constraint firstAttribute="width" constant="60" id="xkl-uF-ApG"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医疗机构" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-QP-HQV">
+                                    <rect key="frame" x="0.0" y="70" width="60" height="15"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8Q-SK-QYc">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
                                     <connections>
                                         <action selector="onJiGouClicked:" destination="-1" eventType="touchUpInside" id="wQE-Ai-pjn"/>
                                     </connections>
@@ -132,21 +143,24 @@
                                 <constraint firstAttribute="trailing" secondItem="sUq-QP-HQV" secondAttribute="trailing" id="ogB-qa-Gfc"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xpr-Gr-J1B" userLabel="View3">
-                            <frame key="frameInset" minX="351" minY="28" width="60" height="85"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xpr-Gr-J1B" userLabel="View3">
+                            <rect key="frame" x="201" y="28" width="60" height="85"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dianzizhazhi" translatesAutoresizingMaskIntoConstraints="NO" id="12n-J3-Rhc">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="3GJ-YH-q6e"/>
                                         <constraint firstAttribute="width" constant="60" id="pj7-fY-LEp"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电子杂志" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WG-EC-X56">
+                                    <rect key="frame" x="0.0" y="70" width="60" height="15"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7k-l0-Q8v">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
                                     <connections>
                                         <action selector="onZaZhiClicked:" destination="-1" eventType="touchUpInside" id="ryD-FJ-MzV"/>
                                     </connections>
@@ -167,21 +181,24 @@
                                 <constraint firstAttribute="width" constant="60" id="zNR-hm-K5F"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-KQ-Zkd" userLabel="View4">
-                            <frame key="frameInset" minX="513" minY="28" width="60" height="85"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-KQ-Zkd" userLabel="View4">
+                            <rect key="frame" x="288" y="28" width="60" height="85"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuyueguahao" translatesAutoresizingMaskIntoConstraints="NO" id="xXb-f9-VYk">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="aJI-Ru-r9b"/>
                                         <constraint firstAttribute="width" constant="60" id="hqr-of-zmi"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约挂号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8p-QL-l37">
+                                    <rect key="frame" x="0.0" y="70" width="60" height="15"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-Yh-oWC">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
                                     <connections>
                                         <action selector="onGuaHaoClicked:" destination="-1" eventType="touchUpInside" id="RaO-6Y-cxV"/>
                                     </connections>
@@ -202,20 +219,20 @@
                                 <constraint firstAttribute="trailing" secondItem="lz5-Yh-oWC" secondAttribute="trailing" id="x1s-RX-BxL"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Rk-5Y-j4d" userLabel="Viewb">
-                            <frame key="frameInset" minX="249" minY="18" width="102" height="100"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Rk-5Y-j4d" userLabel="Viewb">
+                            <rect key="frame" x="174" y="18" width="27" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="job-jc-Mh8"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-aK-HU6" userLabel="Viewc">
-                            <frame key="frameInset" minX="411" minY="18" width="102" height="100"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-aK-HU6" userLabel="Viewc">
+                            <rect key="frame" x="261" y="18" width="27" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="Uyc-LV-zoV"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFk-cV-rZ7" userLabel="Viewa">
-                            <frame key="frameInset" minX="87" minY="18" width="102" height="100"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFk-cV-rZ7" userLabel="Viewa">
+                            <rect key="frame" x="87" y="18" width="27" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="Egy-yV-jkk"/>
                             </constraints>
@@ -243,15 +260,16 @@
                         <constraint firstItem="r7a-aK-HU6" firstAttribute="width" secondItem="aFk-cV-rZ7" secondAttribute="width" id="xqh-gs-Gvt"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-ds-8GC">
-                    <frame key="frameInset" minX="10" minY="249" width="580" height="302"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-ds-8GC">
+                    <rect key="frame" x="10" y="249" width="355" height="369"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                 </tableView>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-Rg-JSn">
-                    <frame key="frameInset" width="600" height="64"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-Rg-JSn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康博览" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owe-EM-H8t">
+                            <rect key="frame" x="15" y="31" width="70" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="nj1-9z-DKU"/>
                                 <constraint firstAttribute="width" constant="70" id="tgm-yn-vBW"/>
@@ -260,25 +278,26 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fH6-Rj-VpU">
-                            <frame key="frameInset" minX="95" minY="26" width="495" height="29"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fH6-Rj-VpU">
+                            <rect key="frame" x="95" y="26" width="270" height="29"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sousuo" translatesAutoresizingMaskIntoConstraints="NO" id="1ft-2v-gna">
+                                    <rect key="frame" x="10" y="6" width="17" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="17" id="26B-u1-VUC"/>
                                         <constraint firstAttribute="height" constant="18" id="MuG-eT-Yas"/>
                                     </constraints>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="大家都再搜.二类疫苗" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JiP-KH-2v3">
-                                    <frame key="frameInset" minX="37" minY="7" width="448" height="16"/>
+                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="大家都再搜.二类疫苗" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JiP-KH-2v3">
+                                    <rect key="frame" x="37" y="7" width="223" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="jIa-ei-Qj6"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-83-5tb">
-                                    <frame key="frameInset" width="495" height="29"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-83-5tb">
+                                    <rect key="frame" x="0.0" y="0.0" width="270" height="29"/>
                                     <connections>
                                         <action selector="searchBtnPress:" destination="-1" eventType="touchUpInside" id="c45-1b-9lz"/>
                                     </connections>
@@ -309,8 +328,8 @@
                         <constraint firstAttribute="trailing" secondItem="fH6-Rj-VpU" secondAttribute="trailing" constant="10" id="zSP-Xi-NcT"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-Xl-Lob" customClass="SearchView">
-                    <frame key="frameInset" width="600" height="600"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-Xl-Lob" customClass="SearchView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
@@ -339,7 +358,7 @@
             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sIa-EJ-s6F">
-                <frame key="frameInset"/>
+                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             </view>
             <blurEffect style="light"/>

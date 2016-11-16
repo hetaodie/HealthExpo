@@ -13,7 +13,7 @@
 #import "SubmissionViewController.h"
 #import "CooperateViewController.h"
 
-@interface DianZiZaZhiViewController ()<DianZiZaZhiItemViewDelegate, DianZiZaZhiModelSourceDelegate>
+@interface DianZiZaZhiViewController ()<DianZiZaZhiItemViewDelegate, DianZiZaZhiModelSourceDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *firstItemView;
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *secondItemView;
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *thirdItemView;
@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) DianZiZaZhiModelSource *modelSource;
 @property (nonatomic, strong) NSArray *dataArray;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -51,6 +52,13 @@
     self.navigationItem.leftBarButtonItem = backItem;
     
     self.navigationItem.title = @"电子杂志";
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.frame = CGRectMake(0, 0, 12, 21);
+    [rightButton setImage:[UIImage imageNamed:@"riqi"] forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(selectDate:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
 }
 
 - (void)doBack:(id)sender{
@@ -95,12 +103,15 @@
         }
     }
 }
+
 - (void)getDianZiZaZhiListFailed{
     
 }
 
 - (void)getDianZiZaZhiListWithIDSuccess:(NSArray *)dataArr{
     self.dataArray = dataArr;
+    
+    [self.collectionView reloadData];
     if (dataArr) {
         [self fillDataIndex:0 toItemView:self.firstItemView];
         [self fillDataIndex:1 toItemView:self.secondItemView];
@@ -112,6 +123,7 @@
 - (void)getDianZiZaZhiListWithIDFailed{
     
 }
+
 #pragma mark - DianZiZaZhiItemViewDelegate
 - (void)ClickedDianZiZaZhiItemViewIndex:(NSInteger)index{
     NSDictionary *dict = [self.dataArray objectAtIndex:index];
@@ -120,4 +132,11 @@
     dzzzdVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:dzzzdVC animated:YES];
 }
+
+
+- (void)selectDate:(id)sender{
+    
+}
+
+
 @end

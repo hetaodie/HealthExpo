@@ -48,6 +48,7 @@
     object.zhuobiao2 = [aDic[@"content4"] floatValue];
     object.type = aDic[@"content5"];
     object.menzhen = aDic[@"content6"];
+    object.picUrl = aDic[@"picurl"];
 
     return object;
 

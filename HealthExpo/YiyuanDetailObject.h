@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface YiyuanDetailObject : NSObject
+@property (nonatomic, copy) NSString *picUrl;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *dengji;
 @property (nonatomic, copy) NSString *dizhi;

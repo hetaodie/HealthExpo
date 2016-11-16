@@ -14,6 +14,8 @@
 #import "MapViewController.h"
 #import "CallViewController.h"
 #import "UITextView+HtmlString.h"
+#import "HENetTask.h"
+#import "UIImageView+WebCache.h"
 
 @interface YiYuanViewController ()<YiYuanDetailModulDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -102,6 +104,8 @@
     self.menzhen.text = aObject.menzhen;
     self.dizhiLabel.text = aObject.dizhi;
     [self.dianhuaButton setTitle:aObject.dianhua forState:UIControlStateNormal];
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@%@", HEHttpServer,@"/upload", aObject.picUrl];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"01"]];
     
     [self.contentWebView loadHTMLString:aObject.desc baseURL:nil];
 

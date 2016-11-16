@@ -66,7 +66,7 @@
 - (IBAction)onTopMsgClicked:(id)sender {
     NewsDetailViewController *ndVC = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
     
-    ndVC.newsID = [NSString stringWithFormat:@"%zd", self.speakerData.ID];
+    ndVC.newsID = @"1";
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
     

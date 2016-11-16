@@ -12,10 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DianZiZaZhiViewController">
             <connections>
-                <outlet property="firstItemView" destination="nyb-WM-ooL" id="6JA-Ne-LSF"/>
-                <outlet property="fourthItemView" destination="Sf2-kv-86N" id="rIG-Mu-N69"/>
-                <outlet property="secondItemView" destination="2Nm-Dt-Il5" id="cx4-ji-YwC"/>
-                <outlet property="thirdItemView" destination="7OC-IT-WAt" id="emb-TM-TTL"/>
+                <outlet property="collectionView" destination="Cc7-R2-7x5" id="Qcq-BY-0YW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -55,73 +52,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdh-eF-TiJ">
                     <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-mO-RKc">
-                            <rect key="frame" x="187.5" y="0.0" width="1" height="543"/>
-                            <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="1" id="TAY-Tw-rdc"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBs-LG-GkK">
-                            <rect key="frame" x="0.0" y="224" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="uqC-je-HW0"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-WM-ooL" customClass="DianZiZaZhiItemView">
-                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="224"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Cc7-R2-7x5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YUp-Cr-Ags">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
                             <connections>
-                                <outlet property="delegate" destination="-1" id="Avc-3n-tQO"/>
+                                <outlet property="dataSource" destination="-1" id="R7K-9C-UHH"/>
+                                <outlet property="delegate" destination="-1" id="8kF-QJ-q0T"/>
                             </connections>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nm-Dt-Il5" customClass="DianZiZaZhiItemView">
-                            <rect key="frame" x="188.5" y="0.0" width="186.5" height="224"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <outlet property="delegate" destination="-1" id="x0f-tg-ak9"/>
-                            </connections>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-kv-86N" customClass="DianZiZaZhiItemView">
-                            <rect key="frame" x="188.5" y="225" width="186.5" height="224"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <outlet property="delegate" destination="-1" id="mbt-gk-OP6"/>
-                            </connections>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OC-IT-WAt" customClass="DianZiZaZhiItemView">
-                            <rect key="frame" x="0.0" y="225" width="187.5" height="224"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <outlet property="delegate" destination="-1" id="Cim-Mv-gbQ"/>
-                            </connections>
-                        </view>
+                        </collectionView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="2Nm-Dt-Il5" secondAttribute="trailing" id="0Ww-qe-I8G"/>
-                        <constraint firstItem="Sf2-kv-86N" firstAttribute="leading" secondItem="LWO-mO-RKc" secondAttribute="trailing" id="1CK-mP-9dZ"/>
-                        <constraint firstItem="CBs-LG-GkK" firstAttribute="top" secondItem="nyb-WM-ooL" secondAttribute="bottom" id="29i-it-SW2"/>
-                        <constraint firstItem="CBs-LG-GkK" firstAttribute="leading" secondItem="tdh-eF-TiJ" secondAttribute="leading" id="42u-iz-qmm"/>
-                        <constraint firstItem="LWO-mO-RKc" firstAttribute="top" secondItem="tdh-eF-TiJ" secondAttribute="top" id="88T-2L-Chu"/>
-                        <constraint firstItem="CBs-LG-GkK" firstAttribute="top" secondItem="tdh-eF-TiJ" secondAttribute="top" constant="224" id="8ZY-6p-8VV"/>
-                        <constraint firstAttribute="trailing" secondItem="Sf2-kv-86N" secondAttribute="trailing" id="D1g-ab-ZqL"/>
-                        <constraint firstItem="nyb-WM-ooL" firstAttribute="leading" secondItem="tdh-eF-TiJ" secondAttribute="leading" id="DZ8-GW-17T"/>
-                        <constraint firstItem="7OC-IT-WAt" firstAttribute="top" secondItem="CBs-LG-GkK" secondAttribute="bottom" id="Vbk-YT-vVb"/>
-                        <constraint firstItem="7OC-IT-WAt" firstAttribute="leading" secondItem="tdh-eF-TiJ" secondAttribute="leading" id="d7u-xf-hzo"/>
-                        <constraint firstItem="LWO-mO-RKc" firstAttribute="centerX" secondItem="tdh-eF-TiJ" secondAttribute="centerX" id="dig-2N-Wh3"/>
-                        <constraint firstAttribute="trailing" secondItem="CBs-LG-GkK" secondAttribute="trailing" id="fPk-Bs-bqx"/>
-                        <constraint firstItem="Sf2-kv-86N" firstAttribute="top" secondItem="CBs-LG-GkK" secondAttribute="bottom" id="huT-hF-VuB"/>
-                        <constraint firstItem="LWO-mO-RKc" firstAttribute="leading" secondItem="nyb-WM-ooL" secondAttribute="trailing" id="kog-PQ-YMy"/>
-                        <constraint firstItem="2Nm-Dt-Il5" firstAttribute="top" secondItem="tdh-eF-TiJ" secondAttribute="top" id="nbA-8h-hwG"/>
-                        <constraint firstAttribute="bottom" secondItem="LWO-mO-RKc" secondAttribute="bottom" id="pFq-VU-Xeu"/>
-                        <constraint firstItem="LWO-mO-RKc" firstAttribute="leading" secondItem="7OC-IT-WAt" secondAttribute="trailing" id="qLX-9g-S3O"/>
-                        <constraint firstItem="CBs-LG-GkK" firstAttribute="top" secondItem="2Nm-Dt-Il5" secondAttribute="bottom" id="sBb-dv-tQW"/>
-                        <constraint firstItem="Sf2-kv-86N" firstAttribute="height" secondItem="nyb-WM-ooL" secondAttribute="height" id="vTh-i2-e8Y"/>
-                        <constraint firstItem="nyb-WM-ooL" firstAttribute="top" secondItem="tdh-eF-TiJ" secondAttribute="top" id="xfT-6D-Rip"/>
-                        <constraint firstItem="7OC-IT-WAt" firstAttribute="height" secondItem="nyb-WM-ooL" secondAttribute="height" id="zpc-BQ-Bwv"/>
-                        <constraint firstItem="2Nm-Dt-Il5" firstAttribute="leading" secondItem="LWO-mO-RKc" secondAttribute="trailing" id="zsJ-OE-fx5"/>
+                        <constraint firstItem="Cc7-R2-7x5" firstAttribute="top" secondItem="tdh-eF-TiJ" secondAttribute="top" id="B0n-Gh-evu"/>
+                        <constraint firstItem="Cc7-R2-7x5" firstAttribute="leading" secondItem="tdh-eF-TiJ" secondAttribute="leading" id="SPb-9P-B4k"/>
+                        <constraint firstAttribute="trailing" secondItem="Cc7-R2-7x5" secondAttribute="trailing" id="UV7-5C-Cdr"/>
+                        <constraint firstAttribute="bottom" secondItem="Cc7-R2-7x5" secondAttribute="bottom" id="r3C-V6-dJS"/>
                     </constraints>
                 </view>
             </subviews>
