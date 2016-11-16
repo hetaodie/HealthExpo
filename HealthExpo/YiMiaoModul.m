@@ -47,7 +47,7 @@
 }
 
 - (void)getYImiaoList:(NSInteger)aId{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%ld",aId];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%ld",(long)aId];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
@@ -70,7 +70,7 @@
 
 
 - (void)getyimiaoDetail:(NSInteger)aId{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%ld",aId];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%ld",(long)aId];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {

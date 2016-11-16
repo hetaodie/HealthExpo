@@ -309,10 +309,10 @@
                         <constraint firstItem="kqi-eI-Vkr" firstAttribute="centerY" secondItem="10o-Oh-iqt" secondAttribute="centerY" id="xca-Mc-0fN"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfs-u9-pCa">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfs-u9-pCa">
                     <rect key="frame" x="0.0" y="208" width="375" height="100"/>
                     <subviews>
-                        <view contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-IM-FLw" userLabel="View1">
+                        <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-IM-FLw" userLabel="View1">
                             <rect key="frame" x="35" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonefaxian" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-4o-jMB">
@@ -328,7 +328,7 @@
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdr-cN-YPO">
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdr-cN-YPO">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
                                     <connections>
                                         <action selector="onDiscoverClicked:" destination="-1" eventType="touchUpInside" id="DwY-bc-oY2"/>
@@ -350,7 +350,7 @@
                                 <constraint firstAttribute="bottom" secondItem="GJn-Qf-gRt" secondAttribute="bottom" id="zML-Js-uga"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-Ae-HSO" userLabel="View2">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-Ae-HSO" userLabel="View2">
                             <rect key="frame" x="120" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonechongzhi" translatesAutoresizingMaskIntoConstraints="NO" id="Efk-qX-YiX">
@@ -388,7 +388,7 @@
                                 <constraint firstAttribute="bottom" secondItem="dP2-ac-b00" secondAttribute="bottom" id="zHf-fc-Rdj"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-2d-mwM" userLabel="View3">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-2d-mwM" userLabel="View3">
                             <rect key="frame" x="205" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonefenxiang" translatesAutoresizingMaskIntoConstraints="NO" id="oLp-bm-osZ">
@@ -426,7 +426,7 @@
                                 <constraint firstItem="oLp-bm-osZ" firstAttribute="top" secondItem="Zas-2d-mwM" secondAttribute="top" id="xs8-pk-peP"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlD-iJ-Lml" userLabel="View4">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlD-iJ-Lml" userLabel="View4">
                             <rect key="frame" x="290" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonetongxunlu" translatesAutoresizingMaskIntoConstraints="NO" id="QhH-AD-ukW">
@@ -464,19 +464,19 @@
                                 <constraint firstAttribute="height" constant="80" id="ux5-q7-Hox"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="112-el-HRI" userLabel="Viewb">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="112-el-HRI" userLabel="Viewb">
                             <rect key="frame" x="177" y="1" width="21" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="pIP-uM-R0Y"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTb-j7-KgQ" userLabel="Viewc">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTb-j7-KgQ" userLabel="Viewc">
                             <rect key="frame" x="258" y="1" width="22" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="64b-hr-tjr"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-AF-RI3" userLabel="Viewa">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-AF-RI3" userLabel="Viewa">
                             <rect key="frame" x="95" y="1" width="22" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="9yv-jf-5fr"/>

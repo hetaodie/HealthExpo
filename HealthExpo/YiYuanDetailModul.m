@@ -54,7 +54,7 @@
 }
 
 - (void)getMingYIListWithID:(NSInteger)aid{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList2.action?cid=%ld",aid];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList2.action?cid=%ld",(long)aid];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {

@@ -23,7 +23,7 @@
 }
 
 - (void)fillCellWithData:(HomePageNewsItem *)data{
-    NSString *urlPath = [NSString stringWithFormat:@"%@%@", HEHttpServer, data.picUrl];
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@%@", HEHttpServer,@"/upload", data.picUrl];
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];//image Data
     self.titleLabel.text = data.title;
     self.timeLabel.text = data.createDate;

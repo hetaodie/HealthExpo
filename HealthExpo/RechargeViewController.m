@@ -55,7 +55,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    self.navigationItem.title = @"充 值";
+    self.navigationItem.title = @"积  分";
     
 }
 

@@ -81,7 +81,7 @@
 
 #pragma mark -- DianZiZaZhiDetailModelSourceDelegate
 - (void)getDianZiZaZhiDetailSuccess:(NSDictionary *)dict{
-    NSString *urlPath = [NSString stringWithFormat:@"%@%@", HEHttpServer, dict[@"picurl"]];
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@%@", HEHttpServer,@"/upload", dict[@"picurl"]];
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"dianzizazhi1"]];
     self.oneLabel.text = dict[@"content1"];
     self.twoLabel.text = dict[@"content2"];

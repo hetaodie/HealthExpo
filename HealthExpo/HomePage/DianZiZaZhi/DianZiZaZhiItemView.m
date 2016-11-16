@@ -35,7 +35,7 @@
 - (void)fillItemWithCoverUrl:(NSString *)aUrl title:(NSString *)title andIndex:(NSInteger)index{
     self.itemIndex = index;
     self.titleLabel.text = title;
-    aUrl = [NSString stringWithFormat:@"%@%@", HEHttpServer, aUrl];
+    aUrl = [NSString stringWithFormat:@"%@%@%@", HEHttpServer,@"/upload", aUrl];
     NSString *placeHolder = [NSString stringWithFormat:@"dianzizazhi%zd", (index + 1)];
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:aUrl] placeholderImage:[UIImage imageNamed:placeHolder]];
 }

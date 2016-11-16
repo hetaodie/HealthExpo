@@ -19,11 +19,13 @@ com.shuchi.HealthExpo
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -32,9 +34,11 @@ com.shuchi.HealthExpo
 		<true/>
 	</dict>
 	<key>NSContactsUsageDescription</key>
-	<string>contactsDesciption</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>当前应用需要启用定位服务方可使用</string>
+	<string>当前应用需要启动访问通讯录权限方可使用通讯录进行访问通讯录拨打电话</string>
+	<key>NSLocationUsageDescription</key>
+	<string>如果需要定位，只有能同意才可以</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>此 App 需要您的同意才能读取媒体资料库</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

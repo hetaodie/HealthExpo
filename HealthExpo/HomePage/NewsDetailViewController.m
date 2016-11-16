@@ -74,7 +74,7 @@
 
 #pragma mark -- NewsDetailModelSourceDelegate
 - (void)getNewsDetailModelSourceSuccess:(NSDictionary *)dict{
-    NSString *urlPath = [NSString stringWithFormat:@"%@%@", HEHttpServer, dict[@"picurl"]];
+    NSString *urlPath = [NSString stringWithFormat:@"%@%@%@", HEHttpServer,@"/upload", dict[@"picurl"]];
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];
     
     self.titleLabel.text = dict[@"title"];

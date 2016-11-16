@@ -21,7 +21,7 @@
     switch (aObject.searchtype) {
         case NEWS: {
             NewsDetailViewController *vc = [[NewsDetailViewController alloc] initWithNibName:@"NewsDetailViewController" bundle:nil];
-            vc.newsID =[NSString stringWithFormat:@"%ld",aObject.id];
+            vc.newsID =[NSString stringWithFormat:@"%ld",(long)aObject.id];
             vc.hidesBottomBarWhenPushed = YES;
             [aViewController.navigationController pushViewController:vc animated:YES];
             
@@ -43,7 +43,7 @@
         }
         case ZAZHI: {
             DianZiZaZhiDetailViewController *vc = [[DianZiZaZhiDetailViewController alloc] initWithNibName:@"DianZiZaZhiDetailViewController" bundle:nil];
-            [vc fillDetailID:[NSString stringWithFormat:@"%ld",aObject.id] andTitle:aObject.title];
+            [vc fillDetailID:[NSString stringWithFormat:@"%ld",(long)aObject.id] andTitle:aObject.title];
             vc.hidesBottomBarWhenPushed = YES;
             [aViewController.navigationController pushViewController:vc animated:YES];
             break;
@@ -64,7 +64,7 @@
         }
         case ZASHIMULU: {
             DianZiZaZhiDetailViewController *vc = [[DianZiZaZhiDetailViewController alloc] initWithNibName:@"DianZiZaZhiDetailViewController" bundle:nil];
-            [vc fillDetailID:[NSString stringWithFormat:@"%ld",aObject.id] andTitle:aObject.title];
+            [vc fillDetailID:[NSString stringWithFormat:@"%ld",(long)aObject.id] andTitle:aObject.title];
             vc.hidesBottomBarWhenPushed = YES;
             [aViewController.navigationController pushViewController:vc animated:YES];
             break;

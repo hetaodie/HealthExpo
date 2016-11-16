@@ -11,7 +11,7 @@
 
 @implementation MingYIDetailModul
 - (void)getMingYiDetial:(NSInteger)cid{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%ld",cid];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%ld",(long)cid];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSDictionary *responseObject) {

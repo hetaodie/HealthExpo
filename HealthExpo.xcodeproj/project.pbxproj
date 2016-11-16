@@ -1468,8 +1468,8 @@
 			baseConfigurationReference = BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
@@ -1481,8 +1481,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d8947e49-c346-49ed-99ea-1bfe65de858b";
-				PROVISIONING_PROFILE_SPECIFIER = weixu;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = HealthExpo;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1491,8 +1492,8 @@
 			baseConfigurationReference = 63E82F490416CA25014F41CA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yan Yang (V6E6U3HMT8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
@@ -1504,8 +1505,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d8947e49-c346-49ed-99ea-1bfe65de858b";
-				PROVISIONING_PROFILE_SPECIFIER = weixu;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = HealthExpo;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
