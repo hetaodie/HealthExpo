@@ -185,6 +185,8 @@
 		7C6A77C61D2B9348008A58D7 /* JiBingBKRightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A77C41D2B9348008A58D7 /* JiBingBKRightViewCell.xib */; };
 		7CF736F11DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736EF1DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.m */; };
 		7CF736F21DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736F01DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib */; };
+		7CF736F51DDD961A00F92222 /* ZaZhiYearsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736F41DDD961A00F92222 /* ZaZhiYearsView.m */; };
+		7CF736F71DDD962E00F92222 /* ZaZhiYearsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -491,6 +493,9 @@
 		7CF736EE1DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianZiZaZhiItemCollectionViewCell.h; sourceTree = "<group>"; };
 		7CF736EF1DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianZiZaZhiItemCollectionViewCell.m; sourceTree = "<group>"; };
 		7CF736F01DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DianZiZaZhiItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CF736F31DDD961A00F92222 /* ZaZhiYearsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZaZhiYearsView.h; sourceTree = "<group>"; };
+		7CF736F41DDD961A00F92222 /* ZaZhiYearsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZaZhiYearsView.m; sourceTree = "<group>"; };
+		7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZaZhiYearsView.xib; sourceTree = "<group>"; };
 		BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F403DA16C4CB879B3CB0AE82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -768,6 +773,9 @@
 				7CF736EE1DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.h */,
 				7CF736EF1DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.m */,
 				7CF736F01DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib */,
+				7CF736F31DDD961A00F92222 /* ZaZhiYearsView.h */,
+				7CF736F41DDD961A00F92222 /* ZaZhiYearsView.m */,
+				7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1157,6 +1165,7 @@
 				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
 				7C67446A1D2D1F7B00661276 /* YiLiaoJiGouRightView.xib in Resources */,
 				69DBC6A71D5703790064346B /* DiscoverViewController.xib in Resources */,
+				7CF736F71DDD962E00F92222 /* ZaZhiYearsView.xib in Resources */,
 				424517041D96247700EF01D1 /* RechargeViewController.xib in Resources */,
 				7C67445A1D2CE6A900661276 /* YiMiaoDetailView.xib in Resources */,
 				7C67443C1D2BB34B00661276 /* JiBingInfoView.xib in Resources */,
@@ -1319,6 +1328,7 @@
 				7C05E1391D5C28A9006D4EA9 /* JiBingDetailmodul.m in Sources */,
 				7C6A77B01D2B5F2E008A58D7 /* JiBingBKRightView.m in Sources */,
 				7C04FBC21D1A69AF00414252 /* main.m in Sources */,
+				7CF736F51DDD961A00F92222 /* ZaZhiYearsView.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69DA4C8D1D6056280027A504 /* UserEditViewController.m in Sources */,
 				7C05E1361D5B295A006D4EA9 /* ClassifyObject.m in Sources */,

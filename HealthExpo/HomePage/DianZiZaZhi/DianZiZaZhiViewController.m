@@ -12,16 +12,21 @@
 #import "DianZiZaZhiDetailViewController.h"
 #import "SubmissionViewController.h"
 #import "CooperateViewController.h"
+#import "DianZiZaZhiItemCollectionViewCell.h"
 
-@interface DianZiZaZhiViewController ()<DianZiZaZhiItemViewDelegate, DianZiZaZhiModelSourceDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
+#import "ZaZhiYearsView.h"
+
+@interface DianZiZaZhiViewController ()<DianZiZaZhiItemViewDelegate, DianZiZaZhiModelSourceDelegate,UICollectionViewDelegate,UICollectionViewDataSource,ZaZhiYearsViewDelegate>
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *firstItemView;
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *secondItemView;
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *thirdItemView;
 @property (strong, nonatomic) IBOutlet DianZiZaZhiItemView *fourthItemView;
 
 @property (nonatomic, strong) DianZiZaZhiModelSource *modelSource;
-@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *zazhiYearArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet ZaZhiYearsView *yearsView;
 
 @end
 
@@ -29,12 +34,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpCollectionView];
     [self adjustNavigationBar];
     
     self.modelSource = [[DianZiZaZhiModelSource alloc] init];
     self.modelSource.delegate = self;
     
     [self.modelSource getDianZiZaZhiList];
+    self.dataArray = [[NSMutableArray alloc] init];
+    
+    self.zazhiYearArray = [[NSMutableArray alloc] init];
+    
+    self.yearsView.hidden = YES;
+    self.yearsView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,9 +93,6 @@
     [sVC fillTitle:@"我要投稿" andIsSubssion:NO];
     sVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:sVC animated:YES];
-//    CooperateViewController *cVC = [[CooperateViewController alloc] initWithNibName:@"CooperateViewController" bundle:nil];
-//    cVC.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:cVC animated:YES];
 }
 
 - (void)fillDataIndex:(NSInteger)index toItemView:(DianZiZaZhiItemView *)itemView{
@@ -96,12 +105,19 @@
 
 #pragma mark - DianZiZaZhiModelSourceDelegate
 - (void)getDianZiZaZhiListSuccess:(NSArray *)dataArr{
+    [self.zazhiYearArray setArray:dataArr];
+    
+    
     for (NSDictionary *dict in dataArr) {
         NSString *title = dict[@"title"];
         if ([title containsString:@"2016"]) {
-            [self.modelSource getDianZiZaZhiListWithID:dict[@"id"]];
+            [self getZaZhiListOfYear:dict[@"title"] withID:dict[@"id"]];
         }
     }
+}
+
+- (void)getZaZhiListOfYear:(NSString *)aYear withID:(NSString *)aId{
+    [self.modelSource getDianZiZaZhiListWithID:aId];
 }
 
 - (void)getDianZiZaZhiListFailed{
@@ -109,15 +125,9 @@
 }
 
 - (void)getDianZiZaZhiListWithIDSuccess:(NSArray *)dataArr{
-    self.dataArray = dataArr;
+    [self.dataArray setArray:dataArr];
     
     [self.collectionView reloadData];
-    if (dataArr) {
-        [self fillDataIndex:0 toItemView:self.firstItemView];
-        [self fillDataIndex:1 toItemView:self.secondItemView];
-        [self fillDataIndex:2 toItemView:self.thirdItemView];
-        [self fillDataIndex:3 toItemView:self.fourthItemView];
-    }
 }
 
 - (void)getDianZiZaZhiListWithIDFailed{
@@ -135,8 +145,50 @@
 
 
 - (void)selectDate:(id)sender{
-    
+    self.yearsView.hidden = NO;
+    [self.yearsView showViewWithArray:self.zazhiYearArray];
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
+    DianZiZaZhiDetailViewController *dzzzdVC = [[DianZiZaZhiDetailViewController alloc] initWithNibName:@"DianZiZaZhiDetailViewController" bundle:nil];
+    [dzzzdVC fillDetailID:dict[@"id"] andTitle:dict[@"title"]];
+    dzzzdVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:dzzzdVC animated:YES];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    NSInteger count = [self.dataArray count];
+    return count;
+}
+
+- ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    DianZiZaZhiItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DianZiZaZhiItemCollectionViewCell" forIndexPath:indexPath];
+    
+    NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
+    
+    [cell fillItemWithCoverUrl:[dict objectForKey:@"picurl"] title:[dict objectForKey:@"title"] andIndex:indexPath.row];
+    
+    return cell;
+}
+
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    CGSize size =[DianZiZaZhiItemCollectionViewCell cellSizeWithData:nil];
+    return size;
+}
+
+- (void)setUpCollectionView{
+    UINib *nib = [UINib nibWithNibName:@"DianZiZaZhiItemCollectionViewCell" bundle:nil];
+    
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"DianZiZaZhiItemCollectionViewCell"];
+}
+
+- (void)onOneElementSelectWithDic:(NSDictionary *)aDic andIndex:(NSInteger)aIndex{
+    [self getZaZhiListOfYear:aDic[@"title"] withID:aDic[@"id"]];
+    
+}
 
 @end

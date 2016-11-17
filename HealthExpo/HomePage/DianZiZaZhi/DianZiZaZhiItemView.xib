@@ -37,22 +37,12 @@
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-Ge-BPF">
-                    <rect key="frame" x="0.0" y="0.0" width="188" height="224"/>
-                    <connections>
-                        <action selector="ItemClicked:" destination="-1" eventType="touchUpInside" id="plg-TP-LJk"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="trK-1w-Ehs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Mx-VN-J4X"/>
                 <constraint firstAttribute="trailing" secondItem="trK-1w-Ehs" secondAttribute="trailing" id="5Cj-Dc-2X6"/>
                 <constraint firstItem="EBT-Gd-j2I" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="W8I-d1-rtE"/>
-                <constraint firstAttribute="bottom" secondItem="Gla-Ge-BPF" secondAttribute="bottom" id="aQp-5P-gkS"/>
-                <constraint firstAttribute="trailing" secondItem="Gla-Ge-BPF" secondAttribute="trailing" id="caL-Zb-gbU"/>
-                <constraint firstItem="Gla-Ge-BPF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dDZ-x6-wUf"/>
-                <constraint firstItem="Gla-Ge-BPF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gIO-vV-NPF"/>
                 <constraint firstItem="EBT-Gd-j2I" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rIa-fz-lV6"/>
                 <constraint firstItem="trK-1w-Ehs" firstAttribute="top" secondItem="EBT-Gd-j2I" secondAttribute="bottom" constant="10" id="yFI-ud-VBf"/>
             </constraints>

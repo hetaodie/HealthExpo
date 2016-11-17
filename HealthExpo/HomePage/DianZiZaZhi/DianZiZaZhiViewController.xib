@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="collectionView" destination="Cc7-R2-7x5" id="Qcq-BY-0YW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yearsView" destination="ckR-1R-YAl" id="1kW-j8-hIo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -66,12 +67,20 @@
                                 <outlet property="delegate" destination="-1" id="8kF-QJ-q0T"/>
                             </connections>
                         </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckR-1R-YAl" customClass="ZaZhiYearsView">
+                            <rect key="frame" x="38" y="163" width="300" height="217.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Cc7-R2-7x5" firstAttribute="top" secondItem="tdh-eF-TiJ" secondAttribute="top" id="B0n-Gh-evu"/>
+                        <constraint firstItem="ckR-1R-YAl" firstAttribute="centerY" secondItem="tdh-eF-TiJ" secondAttribute="centerY" id="IhC-oc-SUl"/>
+                        <constraint firstItem="ckR-1R-YAl" firstAttribute="height" secondItem="tdh-eF-TiJ" secondAttribute="height" multiplier="0.4" id="MDe-9b-sTn"/>
                         <constraint firstItem="Cc7-R2-7x5" firstAttribute="leading" secondItem="tdh-eF-TiJ" secondAttribute="leading" id="SPb-9P-B4k"/>
+                        <constraint firstItem="ckR-1R-YAl" firstAttribute="width" secondItem="tdh-eF-TiJ" secondAttribute="width" multiplier="0.8" id="U65-03-Wae"/>
                         <constraint firstAttribute="trailing" secondItem="Cc7-R2-7x5" secondAttribute="trailing" id="UV7-5C-Cdr"/>
+                        <constraint firstItem="ckR-1R-YAl" firstAttribute="centerX" secondItem="tdh-eF-TiJ" secondAttribute="centerX" id="Z0v-8P-BWB"/>
                         <constraint firstAttribute="bottom" secondItem="Cc7-R2-7x5" secondAttribute="bottom" id="r3C-V6-dJS"/>
                     </constraints>
                 </view>

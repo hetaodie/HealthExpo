@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self adjustNavigationBar];
-    self.descLabel.text = @"1.每个用户每日只能签到一次\n2.签到后会有随机的话费奖励";
+    self.descLabel.text = @"1.每人每天只赠送一次，不能代签重复签到无效\n2.每日签到赠送1元/次\n3.所赠送话费可用来拨打电话，不能用来兑换现金";
     
     self.modelSouce = [[CheckInModelSource alloc] init];
     self.modelSouce.delegate = self;

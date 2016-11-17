@@ -217,22 +217,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HealthExpo/HomePage/DianZiZaZhi/DianZiZaZhiItemView.m"
-            timestampString = "500955164.730919"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-fillItemWithCoverUrl:title:andIndex:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HealthExpo/DianZiZaZhiDetailViewController.m"
             timestampString = "500955321.38312"
             startingColumnNumber = "9223372036854775807"
@@ -362,7 +346,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/iosxianmu/HealthExpo/HealthExpo/HomePage/HomePageModelSource.m"
-                  timestampString = "500983272.090145"
+                  timestampString = "501071354.701672"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -377,7 +361,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/iosxianmu/HealthExpo/HealthExpo/HomePage/HomePageModelSource.m"
-                  timestampString = "500983272.091623"
+                  timestampString = "501071354.704015"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -410,7 +394,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/iosxianmu/HealthExpo/HealthExpo/HomePage/HomePageModelSource.m"
-                  timestampString = "500983272.095961"
+                  timestampString = "501071354.733709"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -425,7 +409,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/iosxianmu/HealthExpo/HealthExpo/HomePage/HomePageModelSource.m"
-                  timestampString = "500983272.097479"
+                  timestampString = "501071354.736213"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -634,12 +618,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HealthExpo/HomePage/DianZiZaZhi/DianZiZaZhiViewController.m"
-            timestampString = "500983267.921255"
+            timestampString = "501066297.52812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-getDianZiZaZhiListSuccess:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/User/UserViewController.m"
+            timestampString = "501071350.380098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "-refreshUserInformation"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

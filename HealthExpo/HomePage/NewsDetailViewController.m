@@ -78,7 +78,8 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlPath] placeholderImage:[UIImage imageNamed:@"homeDefault01"]];
     
     self.titleLabel.text = dict[@"title"];
-    
+    self.navigationItem.title = dict[@"title"];
+
     //[self.contextView showTextWithHtmlString:dict[@"contenttext"]];
     [self.contentWebView loadHTMLString:dict[@"contenttext"] baseURL:nil];
 }
