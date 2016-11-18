@@ -13,10 +13,16 @@
 - (void)onCallNumSuccess:(NSDictionary *)dataArr;
 - (void)onCallNumFailed;
 
+- (void)onShouChangNumSuccess:(NSDictionary *)dataArr;
+- (void)onShouChangNumFailed;
+
+
 @end
 
 @interface UserModelSource : NSObject
 @property (nonatomic, weak) id<UserModelSourceDelegate> delegate;
 
 - (void)getCallNum;
+
+- (void)getShouChangNum;
 @end

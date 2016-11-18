@@ -58,6 +58,8 @@
     self.modelSource = [[UserModelSource alloc] init];
     [self.modelSource getCallNum];
     
+    [self.modelSource getShouChangNum];
+    
     self.modelSource.delegate =self;
 }
 

@@ -33,4 +33,23 @@
     
     [task runInMethod:HE_GET];
 }
+
+- (void)getShouChangNum{
+    UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
+    NSString *path = [NSString stringWithFormat:@"/mobile/getCollectInfoCount.action?username=%@", info.userName];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:path];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onShouChangNumSuccess:)]) {
+            [weakSelf.delegate onShouChangNumSuccess:nil];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onShouChangNumFailed)]) {
+            [weakSelf.delegate onShouChangNumFailed];
+        }
+    };
+    
+    [task runInMethod:HE_GET];}
 @end

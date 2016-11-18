@@ -85,7 +85,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    if (indexPath.row == 0) {
+    if (indexPath.row == 3 || indexPath.row == 4) {
         UserEditViewController *ueVC = [[UserEditViewController alloc] initWithNibName:@"UserEditViewController" bundle:nil];
         ueVC.hidesBottomBarWhenPushed = YES;
         ueVC.editType = HEEditPhone;
