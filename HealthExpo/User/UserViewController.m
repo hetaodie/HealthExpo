@@ -16,8 +16,9 @@
 #import "CallDetailViewController.h"
 #import "UserEditViewController.h"
 #import "UserInfoManager.h"
+#import "UserModelSource.h"
 
-@interface UserViewController ()<UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface UserViewController ()<UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UserModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *topUserCover;
 @property (weak, nonatomic) IBOutlet UILabel *topUserName;
 @property (weak, nonatomic) IBOutlet UILabel *topUserPhoneNum;
@@ -30,6 +31,7 @@
 @property (nonatomic, strong) NSDate *editedBirth;
 
 @property (nonatomic, strong) UserInfo *userInfo;
+@property (nonatomic, strong) UserModelSource *modelSource;
 
 @end
 
@@ -52,6 +54,20 @@
     _datePicker.maximumDate = maxDate;
     
     self.birthEditView.hidden = YES;
+    
+    self.modelSource = [[UserModelSource alloc] init];
+    [self.modelSource getCallNum];
+    
+    self.modelSource.delegate =self;
+}
+
+-(void)onCallNumFailed{
+
+}
+
+- (void)onCallNumSuccess:(NSDictionary *)dataArr{
+    float balance = [dataArr[@"balance"] floatValue];
+    self.phoneFareLabel.text = [NSString stringWithFormat:@"话费(%.2f)",balance];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

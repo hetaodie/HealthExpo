@@ -187,6 +187,7 @@
 		7CF736F21DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736F01DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib */; };
 		7CF736F51DDD961A00F92222 /* ZaZhiYearsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736F41DDD961A00F92222 /* ZaZhiYearsView.m */; };
 		7CF736F71DDD962E00F92222 /* ZaZhiYearsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */; };
+		7CF736FD1DDEAD7200F92222 /* UserModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736FC1DDEAD7200F92222 /* UserModelSource.m */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -496,6 +497,8 @@
 		7CF736F31DDD961A00F92222 /* ZaZhiYearsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZaZhiYearsView.h; sourceTree = "<group>"; };
 		7CF736F41DDD961A00F92222 /* ZaZhiYearsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZaZhiYearsView.m; sourceTree = "<group>"; };
 		7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZaZhiYearsView.xib; sourceTree = "<group>"; };
+		7CF736FB1DDEAD7200F92222 /* UserModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModelSource.h; sourceTree = "<group>"; };
+		7CF736FC1DDEAD7200F92222 /* UserModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModelSource.m; sourceTree = "<group>"; };
 		BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F403DA16C4CB879B3CB0AE82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -544,6 +547,8 @@
 				53A34BC81D1FC4A60043144E /* UserViewController.h */,
 				53A34BC91D1FC4A60043144E /* UserViewController.m */,
 				53A34BCA1D1FC4A60043144E /* UserViewController.xib */,
+				7CF736FB1DDEAD7200F92222 /* UserModelSource.h */,
+				7CF736FC1DDEAD7200F92222 /* UserModelSource.m */,
 				69DC27A81D5DF7A3006EEF68 /* UserCenterModelSource.h */,
 				69DC27A91D5DF7A3006EEF68 /* UserCenterModelSource.m */,
 				69DA4C7F1D6048820027A504 /* CollectionViewController.h */,
@@ -1284,6 +1289,7 @@
 				69DA4C891D6050DF0027A504 /* CallDetailModelSource.m in Sources */,
 				7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */,
 				69DA4C761D6019120027A504 /* UserLoginInfo.m in Sources */,
+				7CF736FD1DDEAD7200F92222 /* UserModelSource.m in Sources */,
 				7CF736F11DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.m in Sources */,
 				7C05E14A1D5D63E5006D4EA9 /* YiMiaoModul.m in Sources */,
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,

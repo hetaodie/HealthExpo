@@ -69,7 +69,7 @@
 }
 
 #pragma mark - CallDetailModelSourceDelegate
-- (void)onCallDetailSuccess:(NSArray *)dataArr{
+- (void)onCallDetailSuccess:(NSDictionary *)dataArr{
     
 }
 

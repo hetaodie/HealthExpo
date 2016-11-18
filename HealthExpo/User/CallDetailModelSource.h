@@ -10,7 +10,7 @@
 
 @protocol CallDetailModelSourceDelegate <NSObject>
 
-- (void)onCallDetailSuccess:(NSArray *)dataArr;
+- (void)onCallDetailSuccess:(NSDictionary *)dataArr;
 - (void)onCallDetailFailed;
 
 @end
