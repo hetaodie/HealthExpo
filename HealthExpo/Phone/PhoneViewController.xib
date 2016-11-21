@@ -23,8 +23,10 @@
                 <outlet property="callBottomView" destination="pyF-oJ-ozh" id="AR9-xJ-tYd"/>
                 <outlet property="directView" destination="yfs-u9-pCa" id="xg9-eO-0bb"/>
                 <outlet property="filterTableView" destination="D49-FE-lx6" id="qhT-42-SEJ"/>
+                <outlet property="moneyButton" destination="zNw-Dv-DGL" id="KJJ-CN-nNL"/>
                 <outlet property="phoneNumFilterView" destination="8ns-Dv-bhA" id="a2v-d4-hay"/>
                 <outlet property="phoneNumText" destination="kqi-eI-Vkr" id="Qeu-l1-p8Y"/>
+                <outlet property="shareButton" destination="tWj-8P-j6W" id="nap-FP-2dW"/>
                 <outlet property="topBannerScrollView" destination="ook-VO-Yl8" id="aAu-d7-8cK"/>
                 <outlet property="topView" destination="QYW-Yh-AIg" id="jhJ-Q6-zO2"/>
                 <outlet property="topbannerContaintView" destination="6hl-tJ-Dzs" id="Dui-Ha-Mp2"/>
@@ -263,7 +265,7 @@
                         <constraint firstItem="Yqb-Wi-lFZ" firstAttribute="leading" secondItem="h1Y-DF-GOA" secondAttribute="leading" id="yn5-gN-rGY"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10o-Oh-iqt">
+                <view contentMode="scaleToFill" restorationIdentifier="show" translatesAutoresizingMaskIntoConstraints="NO" id="10o-Oh-iqt" userLabel="show">
                     <rect key="frame" x="0.0" y="318" width="375" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLQ-zw-CMl">
@@ -312,7 +314,7 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfs-u9-pCa">
                     <rect key="frame" x="0.0" y="208" width="375" height="100"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-IM-FLw" userLabel="View1">
+                        <view contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-IM-FLw" userLabel="View1">
                             <rect key="frame" x="35" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonefaxian" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-4o-jMB">
@@ -350,7 +352,7 @@
                                 <constraint firstAttribute="bottom" secondItem="GJn-Qf-gRt" secondAttribute="bottom" id="zML-Js-uga"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-Ae-HSO" userLabel="View2">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-Ae-HSO" userLabel="View2">
                             <rect key="frame" x="120" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonechongzhi" translatesAutoresizingMaskIntoConstraints="NO" id="Efk-qX-YiX">
@@ -388,7 +390,7 @@
                                 <constraint firstAttribute="bottom" secondItem="dP2-ac-b00" secondAttribute="bottom" id="zHf-fc-Rdj"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-2d-mwM" userLabel="View3">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-2d-mwM" userLabel="View3">
                             <rect key="frame" x="205" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonefenxiang" translatesAutoresizingMaskIntoConstraints="NO" id="oLp-bm-osZ">
@@ -406,9 +408,6 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7f-WL-AW0">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
-                                    <connections>
-                                        <action selector="onShareClicked:" destination="-1" eventType="touchUpInside" id="6FI-AN-97Z"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -426,7 +425,7 @@
                                 <constraint firstItem="oLp-bm-osZ" firstAttribute="top" secondItem="Zas-2d-mwM" secondAttribute="top" id="xs8-pk-peP"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlD-iJ-Lml" userLabel="View4">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlD-iJ-Lml" userLabel="View4">
                             <rect key="frame" x="290" y="14" width="50" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phonetongxunlu" translatesAutoresizingMaskIntoConstraints="NO" id="QhH-AD-ukW">
@@ -464,19 +463,19 @@
                                 <constraint firstAttribute="height" constant="80" id="ux5-q7-Hox"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="112-el-HRI" userLabel="Viewb">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="112-el-HRI" userLabel="Viewb">
                             <rect key="frame" x="177" y="1" width="21" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="pIP-uM-R0Y"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTb-j7-KgQ" userLabel="Viewc">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTb-j7-KgQ" userLabel="Viewc">
                             <rect key="frame" x="258" y="1" width="22" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="64b-hr-tjr"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-AF-RI3" userLabel="Viewa">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-AF-RI3" userLabel="Viewa">
                             <rect key="frame" x="95" y="1" width="22" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="9yv-jf-5fr"/>
@@ -506,65 +505,65 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-Yh-AIg">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="254"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ook-VO-Yl8">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hl-tJ-Dzs">
-                                    <rect key="frame" x="0.0" y="0.0" width="3000" height="208"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="3000" height="254"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8T-OJ-jZl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="dhG-bG-oqI"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-0q-d09">
-                                            <rect key="frame" x="375" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="375" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="uWC-8J-lsp"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEL-G7-af0">
-                                            <rect key="frame" x="750" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="750" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="Onk-rc-SFQ"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfC-Xu-bDz">
-                                            <rect key="frame" x="1125" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="1125" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="veV-hA-VXr"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khs-wD-Hyi">
-                                            <rect key="frame" x="1500" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="1500" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="nug-Qo-Iiz"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzU-XB-cIG">
-                                            <rect key="frame" x="1875" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="1875" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="PMo-1s-DKG"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-PV-JFx">
-                                            <rect key="frame" x="2250" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="2250" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="4sP-e6-vVy"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGs-D7-SUk">
-                                            <rect key="frame" x="2625" y="0.0" width="375" height="208"/>
+                                            <rect key="frame" x="2625" y="0.0" width="375" height="254"/>
                                             <state key="normal" backgroundImage="banner"/>
                                             <connections>
                                                 <action selector="onBannerClicked:" destination="-1" eventType="touchUpInside" id="ooH-xp-pyl"/>
@@ -627,10 +626,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ns-Dv-bhA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="318"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="254"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D49-FE-lx6">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="318"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </tableView>
                     </subviews>
@@ -708,6 +707,49 @@
                         <constraint firstItem="A3V-NC-gsf" firstAttribute="centerY" secondItem="pyF-oJ-ozh" secondAttribute="centerY" id="z51-Jg-Pti"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-hW-qny">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="便民电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMX-bC-Cfn">
+                            <rect key="frame" x="152.5" y="22" width="69.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNw-Dv-DGL">
+                            <rect key="frame" x="298.5" y="23.5" width="17.5" height="17.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17.5" id="9Uc-13-tE4"/>
+                                <constraint firstAttribute="width" constant="17.5" id="oNd-VD-8B0"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="money"/>
+                            <connections>
+                                <action selector="moneyBtnPress:" destination="-1" eventType="touchUpInside" id="151-PV-NjG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWj-8P-j6W">
+                            <rect key="frame" x="331" y="24.5" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="KxZ-Hy-F9a"/>
+                                <constraint firstAttribute="height" constant="16" id="TFB-dv-j0V"/>
+                            </constraints>
+                            <state key="normal" image="shareicon"/>
+                            <connections>
+                                <action selector="onShareClicked:" destination="-1" eventType="touchUpInside" id="aCK-wQ-2zv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="tWj-8P-j6W" firstAttribute="centerY" secondItem="3vp-hW-qny" secondAttribute="centerY" id="96v-9z-8YG"/>
+                        <constraint firstItem="tWj-8P-j6W" firstAttribute="leading" secondItem="zNw-Dv-DGL" secondAttribute="trailing" constant="15" id="BY2-jc-GSh"/>
+                        <constraint firstAttribute="trailing" secondItem="tWj-8P-j6W" secondAttribute="trailing" constant="28" id="NZj-dW-bol"/>
+                        <constraint firstItem="zNw-Dv-DGL" firstAttribute="centerY" secondItem="3vp-hW-qny" secondAttribute="centerY" id="OWr-df-by5"/>
+                        <constraint firstItem="YMX-bC-Cfn" firstAttribute="centerY" secondItem="3vp-hW-qny" secondAttribute="centerY" id="VAX-j8-744"/>
+                        <constraint firstItem="YMX-bC-Cfn" firstAttribute="centerX" secondItem="3vp-hW-qny" secondAttribute="centerX" id="Zcb-Cr-exE"/>
+                        <constraint firstAttribute="height" constant="64" id="cXE-20-6fG"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -715,25 +757,28 @@
                 <constraint firstItem="10o-Oh-iqt" firstAttribute="top" secondItem="yfs-u9-pCa" secondAttribute="bottom" constant="10" id="1uw-Jz-44K"/>
                 <constraint firstItem="10o-Oh-iqt" firstAttribute="top" secondItem="8ns-Dv-bhA" secondAttribute="bottom" id="35T-xz-n4w"/>
                 <constraint firstAttribute="trailing" secondItem="10o-Oh-iqt" secondAttribute="trailing" id="6Xd-Go-uiI"/>
-                <constraint firstItem="8ns-Dv-bhA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6m9-9o-7l9"/>
+                <constraint firstItem="8ns-Dv-bhA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="6m9-9o-7l9"/>
                 <constraint firstItem="h1Y-DF-GOA" firstAttribute="top" secondItem="10o-Oh-iqt" secondAttribute="bottom" id="91X-gd-Olj"/>
                 <constraint firstAttribute="trailing" secondItem="QYW-Yh-AIg" secondAttribute="trailing" id="Cf9-s8-16i"/>
                 <constraint firstItem="pyF-oJ-ozh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DxR-MO-wiU"/>
-                <constraint firstItem="yfs-u9-pCa" firstAttribute="top" secondItem="QYW-Yh-AIg" secondAttribute="bottom" id="DzQ-4W-AhN"/>
+                <constraint firstItem="10o-Oh-iqt" firstAttribute="top" secondItem="QYW-Yh-AIg" secondAttribute="bottom" id="J2d-pr-fcQ"/>
                 <constraint firstAttribute="trailing" secondItem="8ns-Dv-bhA" secondAttribute="trailing" id="JWR-iy-xFM"/>
+                <constraint firstItem="3vp-hW-qny" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="M8i-Ah-6yi"/>
+                <constraint firstItem="QYW-Yh-AIg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Pwn-Kc-765"/>
                 <constraint firstAttribute="trailing" secondItem="pyF-oJ-ozh" secondAttribute="trailing" id="TlZ-Is-r7L"/>
                 <constraint firstAttribute="trailing" secondItem="yfs-u9-pCa" secondAttribute="trailing" id="aU6-by-N5U"/>
                 <constraint firstItem="yfs-u9-pCa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cFL-Cl-kBA"/>
                 <constraint firstItem="h1Y-DF-GOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dh4-8w-Nbb"/>
                 <constraint firstItem="8ns-Dv-bhA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gJf-1Y-1cw"/>
+                <constraint firstAttribute="trailing" secondItem="3vp-hW-qny" secondAttribute="trailing" id="nOf-kK-V0s"/>
                 <constraint firstItem="pyF-oJ-ozh" firstAttribute="top" secondItem="h1Y-DF-GOA" secondAttribute="bottom" id="oN1-Bc-Yjs"/>
-                <constraint firstItem="QYW-Yh-AIg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ogr-Xp-PQt"/>
                 <constraint firstItem="10o-Oh-iqt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oxT-2Z-EFf"/>
                 <constraint firstAttribute="bottom" secondItem="h1Y-DF-GOA" secondAttribute="bottom" constant="49" id="pXl-Rx-qHx"/>
+                <constraint firstItem="3vp-hW-qny" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="twH-kx-wM3"/>
                 <constraint firstAttribute="trailing" secondItem="h1Y-DF-GOA" secondAttribute="trailing" id="zD2-12-MKl"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="26.5" y="51.5"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="-129" y="-441"/>
         </view>
     </objects>
     <resources>
@@ -744,5 +789,7 @@
         <image name="Phonetongxunlu" width="50" height="50"/>
         <image name="Phonetongxunlu2" width="23" height="23"/>
         <image name="banner" width="145" height="57"/>
+        <image name="money" width="35" height="35"/>
+        <image name="shareicon" width="32" height="32"/>
     </resources>
 </document>

@@ -29,7 +29,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.userInfo = [[UserInfoManager shareManager] userInfoFromUserDefaults];
-    [self.editText becomeFirstResponder];
+    //[self.editText becomeFirstResponder];
     
     switch (self.editType) {
         case HEEditName:
@@ -87,16 +87,18 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    self.navigationItem.title = [NSString stringWithFormat:@"编辑%@", _editTitle];
+    self.navigationItem.title = _editTitle;
     
+    /*
     UIButton *registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     registerBtn.frame = CGRectMake(0, 0, 30, 30);
-    [registerBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [registerBtn setTitle:@"确定" forState:UIControlStateNormaßl];
     registerBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     //    [registerBtn setImage:[UIImage imageNamed:@"houtui"] forState:UIControlStateNormal];
     [registerBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *registerItem = [[UIBarButtonItem alloc] initWithCustomView:registerBtn];
     self.navigationItem.rightBarButtonItem = registerItem;
+     */
 }
 
 - (void)doBack:(id)sender{

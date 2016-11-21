@@ -84,12 +84,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *name = nil;
+    if (indexPath.row == 3) {
+        name =@"帮助与反馈";
+    }
+    else if (indexPath.row == 4){
+        name =@"关于本系统";
+
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if (indexPath.row == 3 || indexPath.row == 4) {
         UserEditViewController *ueVC = [[UserEditViewController alloc] initWithNibName:@"UserEditViewController" bundle:nil];
         ueVC.hidesBottomBarWhenPushed = YES;
         ueVC.editType = HEEditPhone;
-        ueVC.editTitle = @"电话";
+        
+        ueVC.editTitle = name;
         [self.navigationController pushViewController:ueVC animated:YES];
     }
 }

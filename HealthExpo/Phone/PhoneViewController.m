@@ -53,6 +53,8 @@
 @property (nonatomic, strong) ContactPersonObject *personObject;
 @property (atomic, strong) NSMutableArray *personArray;
 @property (nonatomic, strong) NSMutableArray *titleArray;  //索引数组
+@property (weak, nonatomic) IBOutlet UIButton *moneyButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
 
@@ -94,7 +96,12 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -127,6 +134,12 @@
 }
 
 - (IBAction)onChargeClicked:(id)sender {
+    RechargeViewController *rVC = [[RechargeViewController alloc] initWithNibName:@"RechargeViewController" bundle:nil];
+    rVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:rVC animated:YES];
+}
+
+- (IBAction)moneyBtnPress:(id)sender {
     RechargeViewController *rVC = [[RechargeViewController alloc] initWithNibName:@"RechargeViewController" bundle:nil];
     rVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:rVC animated:YES];

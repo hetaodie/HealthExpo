@@ -188,6 +188,13 @@
 		7CF736F51DDD961A00F92222 /* ZaZhiYearsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736F41DDD961A00F92222 /* ZaZhiYearsView.m */; };
 		7CF736F71DDD962E00F92222 /* ZaZhiYearsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */; };
 		7CF736FD1DDEAD7200F92222 /* UserModelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736FC1DDEAD7200F92222 /* UserModelSource.m */; };
+		7CF737011DE2C5BB00F92222 /* ZhiFuBaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736FF1DE2C5BB00F92222 /* ZhiFuBaoViewController.m */; };
+		7CF737021DE2C5BB00F92222 /* ZhiFuBaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF737001DE2C5BB00F92222 /* ZhiFuBaoViewController.xib */; };
+		7CF737051DE2C80600F92222 /* RechargeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF737041DE2C80600F92222 /* RechargeInfoView.m */; };
+		7CF737071DE2C81300F92222 /* RechargeInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF737061DE2C81300F92222 /* RechargeInfoView.xib */; };
+		7CF7370B1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF737091DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m */; };
+		7CF7370C1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF7370A1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib */; };
+		7CF7370F1DE2D2C800F92222 /* ZhifubaoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7370E1DE2D2C800F92222 /* ZhifubaoObject.m */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -499,6 +506,17 @@
 		7CF736F61DDD962E00F92222 /* ZaZhiYearsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZaZhiYearsView.xib; sourceTree = "<group>"; };
 		7CF736FB1DDEAD7200F92222 /* UserModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModelSource.h; sourceTree = "<group>"; };
 		7CF736FC1DDEAD7200F92222 /* UserModelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModelSource.m; sourceTree = "<group>"; };
+		7CF736FE1DE2C5BB00F92222 /* ZhiFuBaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhiFuBaoViewController.h; sourceTree = "<group>"; };
+		7CF736FF1DE2C5BB00F92222 /* ZhiFuBaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhiFuBaoViewController.m; sourceTree = "<group>"; };
+		7CF737001DE2C5BB00F92222 /* ZhiFuBaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhiFuBaoViewController.xib; sourceTree = "<group>"; };
+		7CF737031DE2C80600F92222 /* RechargeInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeInfoView.h; sourceTree = "<group>"; };
+		7CF737041DE2C80600F92222 /* RechargeInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeInfoView.m; sourceTree = "<group>"; };
+		7CF737061DE2C81300F92222 /* RechargeInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RechargeInfoView.xib; sourceTree = "<group>"; };
+		7CF737081DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhifuBaoCollectionViewCell.h; sourceTree = "<group>"; };
+		7CF737091DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhifuBaoCollectionViewCell.m; sourceTree = "<group>"; };
+		7CF7370A1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhifuBaoCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CF7370D1DE2D2C800F92222 /* ZhifubaoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhifubaoObject.h; sourceTree = "<group>"; };
+		7CF7370E1DE2D2C800F92222 /* ZhifubaoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhifubaoObject.m; sourceTree = "<group>"; };
 		BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F403DA16C4CB879B3CB0AE82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -792,6 +810,14 @@
 				69DBC6A31D5703790064346B /* DiscoverViewController.h */,
 				69DBC6A41D5703790064346B /* DiscoverViewController.m */,
 				69DBC6A51D5703790064346B /* DiscoverViewController.xib */,
+				7CF737031DE2C80600F92222 /* RechargeInfoView.h */,
+				7CF737041DE2C80600F92222 /* RechargeInfoView.m */,
+				7CF737061DE2C81300F92222 /* RechargeInfoView.xib */,
+				7CF737081DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.h */,
+				7CF737091DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m */,
+				7CF7370A1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib */,
+				7CF7370D1DE2D2C800F92222 /* ZhifubaoObject.h */,
+				7CF7370E1DE2D2C800F92222 /* ZhifubaoObject.m */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -849,6 +875,9 @@
 				424517001D96247700EF01D1 /* RechargeViewController.h */,
 				424517011D96247700EF01D1 /* RechargeViewController.m */,
 				424517021D96247700EF01D1 /* RechargeViewController.xib */,
+				7CF736FE1DE2C5BB00F92222 /* ZhiFuBaoViewController.h */,
+				7CF736FF1DE2C5BB00F92222 /* ZhiFuBaoViewController.m */,
+				7CF737001DE2C5BB00F92222 /* ZhiFuBaoViewController.xib */,
 				424517051D963FC700EF01D1 /* RechargeModelSource.h */,
 				424517061D963FC700EF01D1 /* RechargeModelSource.m */,
 			);
@@ -1165,6 +1194,7 @@
 				7CF736F21DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.xib in Resources */,
 				53BC4C781D290EFD009035BC /* GuaHaoViewController.xib in Resources */,
 				7C67447A1D2D25F600661276 /* YiYuanViewController.xib in Resources */,
+				7CF737071DE2C81300F92222 /* RechargeInfoView.xib in Resources */,
 				53A34BD71D20115D0043144E /* UserInfoImageTableViewCell.xib in Resources */,
 				7C05E1961D6159C6006D4EA9 /* MingYICell.xib in Resources */,
 				53ABCD981D26BA0B00A424F0 /* HomePageCommonTableViewCell.xib in Resources */,
@@ -1186,6 +1216,7 @@
 				7C05E16A1D5DF5DF006D4EA9 /* YiLiaoJiGouLeftView.xib in Resources */,
 				7C34F3921DD1C33600C61015 /* PhoneViewNumTableViewCell.xib in Resources */,
 				53A34BE61D20255D0043144E /* CallStatic.plist in Resources */,
+				7CF7370C1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib in Resources */,
 				7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */,
 				53BC4C701D2907B8009035BC /* JianKangBKTableViewCell.xib in Resources */,
 				53ABCD931D26B72300A424F0 /* HomePagePictureTableViewCell.xib in Resources */,
@@ -1194,6 +1225,7 @@
 				69DD74B21D5B462D00730B94 /* NewsDetailViewController.xib in Resources */,
 				7C05E2191D631483006D4EA9 /* CallViewController.xib in Resources */,
 				69E4BE5B1D1D108C00B555FD /* PhoneViewController.xib in Resources */,
+				7CF737021DE2C5BB00F92222 /* ZhiFuBaoViewController.xib in Resources */,
 				69DA4C7E1D60481A0027A504 /* CallDetailViewController.xib in Resources */,
 				7C6A77B21D2B5F3D008A58D7 /* JiBingBKRightView.xib in Resources */,
 				7C05E15D1D5DD7D6006D4EA9 /* YiMiaoViewController.xib in Resources */,
@@ -1337,10 +1369,12 @@
 				7CF736F51DDD961A00F92222 /* ZaZhiYearsView.m in Sources */,
 				69E684821D1E877B0092F031 /* UIButton+CountDown.m in Sources */,
 				69DA4C8D1D6056280027A504 /* UserEditViewController.m in Sources */,
+				7CF737051DE2C80600F92222 /* RechargeInfoView.m in Sources */,
 				7C05E1361D5B295A006D4EA9 /* ClassifyObject.m in Sources */,
 				69E4BE691D1D10DF00B555FD /* ContactsViewController.m in Sources */,
 				7C05E1A41D616FAD006D4EA9 /* MingYiDetailObject.m in Sources */,
 				53AD055B1D2C072F00557942 /* HEDataCategory.m in Sources */,
+				7CF7370F1DE2D2C800F92222 /* ZhifubaoObject.m in Sources */,
 				53BC4C6F1D2907B8009035BC /* JianKangBKTableViewCell.m in Sources */,
 				7C05E1951D6159C6006D4EA9 /* MingYICell.m in Sources */,
 				7C67443F1D2BC3B100661276 /* MessageInfoView.m in Sources */,
@@ -1369,6 +1403,7 @@
 				7C05E1AF1D61BCA8006D4EA9 /* SearchObject.m in Sources */,
 				53A34BCB1D1FC4A60043144E /* UserViewController.m in Sources */,
 				7C6744361D2BB2E400661276 /* JiBingDetailViewController.m in Sources */,
+				7CF737011DE2C5BB00F92222 /* ZhiFuBaoViewController.m in Sources */,
 				69DA4C861D6049B20027A504 /* CollectionModelSource.m in Sources */,
 				424517071D963FC700EF01D1 /* RechargeModelSource.m in Sources */,
 				7C05E17B1D5DF6D3006D4EA9 /* YiLiaoJiGouModul.m in Sources */,
@@ -1380,6 +1415,7 @@
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				7C05E1B21D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m in Sources */,
 				69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */,
+				7CF7370B1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 				69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */,
 				69DBC6AC1D5705190064346B /* TextTableViewCell.m in Sources */,

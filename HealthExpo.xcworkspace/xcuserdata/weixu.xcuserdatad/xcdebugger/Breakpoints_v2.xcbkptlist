@@ -313,70 +313,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HealthExpo/HomePage/HomePageModelSource.m"
-            timestampString = "500973680.226088"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-getSpeakerMessage"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HomePageModelSource getSpeakerMessage]"
-                  moduleName = "HealthExpo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/weixu/iosxianmu/HealthExpo/HealthExpo/HomePage/HomePageModelSource.m"
-                  timestampString = "501154150.861874"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "261">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__40-[HomePageModelSource getSpeakerMessage]_block_invoke.38"
-                  moduleName = "HealthExpo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/weixu/iosxianmu/HealthExpo/HealthExpo/HomePage/HomePageModelSource.m"
-                  timestampString = "501154150.863236"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "75">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthExpo/HomePage/HomePageModelSource.m"
-            timestampString = "500973694.266251"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-getSpeakerMessage"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HealthExpo/SearchView.m"
             timestampString = "500973986.004634"
             startingColumnNumber = "9223372036854775807"
@@ -736,6 +672,22 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "-getShouChangNum"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/RechargeInfoView.m"
+            timestampString = "501402450.910274"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-awakeFromNib"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

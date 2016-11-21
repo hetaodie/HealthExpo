@@ -11,6 +11,8 @@
 #import "RechargeModelSource.h"
 #import "UIView+Toast.h"
 
+#import "ZhiFuBaoViewController.h"
+
 @interface RechargeViewController ()<RechargeModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *cardNumView;
 @property (weak, nonatomic) IBOutlet UITextField *cardNum;
@@ -55,7 +57,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     
-    self.navigationItem.title = @"积  分";
+    self.navigationItem.title = @"支  付";
     
 }
 
@@ -87,5 +89,15 @@
      [self.view makeToast:@"充值失败，请重试!" duration:1.0 position:CSToastPositionCenter];
 }
 
+- (IBAction)zhifubaobtnPress:(id)sender {
+    ZhiFuBaoViewController *rVC = [[ZhiFuBaoViewController alloc] initWithNibName:@"ZhiFuBaoViewController" bundle:nil];
+    rVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:rVC animated:YES];
+
+}
+
+- (IBAction)kachongzhibtnPress:(id)sender {
+    
+}
 
 @end
