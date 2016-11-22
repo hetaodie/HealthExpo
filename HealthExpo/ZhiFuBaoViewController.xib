@@ -35,7 +35,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-yw-sve">
-                    <rect key="frame" x="30" y="214" width="315" height="266.5"/>
+                    <rect key="frame" x="20" y="214" width="335" height="266.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" id="bwC-dc-0mp">
                         <size key="itemSize" width="50" height="50"/>
@@ -81,9 +81,9 @@
                 <constraint firstItem="chd-m2-HIF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="OyW-pL-gYe"/>
                 <constraint firstItem="o0T-q2-RvX" firstAttribute="top" secondItem="chd-m2-HIF" secondAttribute="bottom" constant="23" id="bYl-2Z-2x9"/>
                 <constraint firstAttribute="bottom" secondItem="ItO-7S-Yld" secondAttribute="bottom" constant="40" id="cgm-V9-NsL"/>
-                <constraint firstItem="bGB-yw-sve" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="iPe-7A-Q0S"/>
+                <constraint firstItem="bGB-yw-sve" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="iPe-7A-Q0S"/>
                 <constraint firstAttribute="trailing" secondItem="chd-m2-HIF" secondAttribute="trailing" id="kUs-Gl-m1k"/>
-                <constraint firstAttribute="trailing" secondItem="bGB-yw-sve" secondAttribute="trailing" constant="30" id="sTj-fB-7Q0"/>
+                <constraint firstAttribute="trailing" secondItem="bGB-yw-sve" secondAttribute="trailing" constant="20" id="sTj-fB-7Q0"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="73.5"/>
         </view>

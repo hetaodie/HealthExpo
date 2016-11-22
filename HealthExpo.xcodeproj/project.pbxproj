@@ -195,6 +195,8 @@
 		7CF7370B1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF737091DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m */; };
 		7CF7370C1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF7370A1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib */; };
 		7CF7370F1DE2D2C800F92222 /* ZhifubaoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7370E1DE2D2C800F92222 /* ZhifubaoObject.m */; };
+		7CF737131DE2DD0900F92222 /* KaChongZhiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF737111DE2DD0900F92222 /* KaChongZhiViewController.m */; };
+		7CF737141DE2DD0900F92222 /* KaChongZhiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF737121DE2DD0900F92222 /* KaChongZhiViewController.xib */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -517,6 +519,9 @@
 		7CF7370A1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhifuBaoCollectionViewCell.xib; sourceTree = "<group>"; };
 		7CF7370D1DE2D2C800F92222 /* ZhifubaoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhifubaoObject.h; sourceTree = "<group>"; };
 		7CF7370E1DE2D2C800F92222 /* ZhifubaoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhifubaoObject.m; sourceTree = "<group>"; };
+		7CF737101DE2DD0900F92222 /* KaChongZhiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaChongZhiViewController.h; sourceTree = "<group>"; };
+		7CF737111DE2DD0900F92222 /* KaChongZhiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaChongZhiViewController.m; sourceTree = "<group>"; };
+		7CF737121DE2DD0900F92222 /* KaChongZhiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KaChongZhiViewController.xib; sourceTree = "<group>"; };
 		BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F403DA16C4CB879B3CB0AE82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -878,6 +883,9 @@
 				7CF736FE1DE2C5BB00F92222 /* ZhiFuBaoViewController.h */,
 				7CF736FF1DE2C5BB00F92222 /* ZhiFuBaoViewController.m */,
 				7CF737001DE2C5BB00F92222 /* ZhiFuBaoViewController.xib */,
+				7CF737101DE2DD0900F92222 /* KaChongZhiViewController.h */,
+				7CF737111DE2DD0900F92222 /* KaChongZhiViewController.m */,
+				7CF737121DE2DD0900F92222 /* KaChongZhiViewController.xib */,
 				424517051D963FC700EF01D1 /* RechargeModelSource.h */,
 				424517061D963FC700EF01D1 /* RechargeModelSource.m */,
 			);
@@ -1183,6 +1191,7 @@
 			files = (
 				69DA4C8E1D6056280027A504 /* UserEditViewController.xib in Resources */,
 				69DBC6B21D5705430064346B /* PictureTableViewCell.xib in Resources */,
+				7CF737141DE2DD0900F92222 /* KaChongZhiViewController.xib in Resources */,
 				69DD74C31D5B499000730B94 /* CooperateViewController.xib in Resources */,
 				7C6744461D2C9ED300661276 /* MessageInfoViewCell.xib in Resources */,
 				7C6744411D2BC3BE00661276 /* MessageInfoView.xib in Resources */,
@@ -1324,6 +1333,7 @@
 				7CF736FD1DDEAD7200F92222 /* UserModelSource.m in Sources */,
 				7CF736F11DDC67C700F92222 /* DianZiZaZhiItemCollectionViewCell.m in Sources */,
 				7C05E14A1D5D63E5006D4EA9 /* YiMiaoModul.m in Sources */,
+				7CF737131DE2DD0900F92222 /* KaChongZhiViewController.m in Sources */,
 				53A34BD61D20115D0043144E /* UserInfoImageTableViewCell.m in Sources */,
 				7C05E1421D5C6431006D4EA9 /* LiuYanObject.m in Sources */,
 				7C05E1731D5DF643006D4EA9 /* YiLiaoJiGouLeftViewCell.m in Sources */,
@@ -1531,11 +1541,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1544,7 +1554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = HealthExpo;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1555,11 +1565,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HealthExpo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1568,7 +1578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = HealthExpo;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

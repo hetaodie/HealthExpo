@@ -330,7 +330,7 @@
     ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
     
     ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-    if (status == kABAuthorizationStatusNotDetermined) {
+    if (status == kABAuthorizationStatusNotDetermined|| status ==kABAuthorizationStatusAuthorized) {
         ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
             if (granted) {
                 NSLog(@"授权成功！");

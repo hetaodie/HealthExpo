@@ -12,6 +12,7 @@
 #import "UIView+Toast.h"
 
 #import "ZhiFuBaoViewController.h"
+#import "KaChongZhiViewController.h"
 
 @interface RechargeViewController ()<RechargeModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *cardNumView;
@@ -97,7 +98,10 @@
 }
 
 - (IBAction)kachongzhibtnPress:(id)sender {
-    
+    KaChongZhiViewController *rVC = [[KaChongZhiViewController alloc] initWithNibName:@"KaChongZhiViewController" bundle:nil];
+    rVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:rVC animated:YES];
+
 }
 
 @end
