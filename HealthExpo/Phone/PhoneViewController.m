@@ -60,8 +60,41 @@
 
 @implementation PhoneViewController
 
+- (NSDate *)stringToDate:(NSString *)strdate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];// NSString的时间格式
+    NSDate *retdate = [dateFormatter dateFromString:strdate];
+    return retdate;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSDate *currentDate = [NSDate date];
+    
+    NSString *strDate = @"2016-12-06 08:00:00";
+    
+    NSDate *disDate = [self stringToDate:strDate];
+    NSComparisonResult result = [currentDate compare:disDate];
+    switch(result){
+        case NSOrderedSame:
+            NSLog(@"对象时间等于参数时间");
+            self.moneyButton.hidden = NO;
+            break;
+        case NSOrderedAscending:
+            NSLog(@"对象时间早于参数时间");
+            self.moneyButton.hidden = YES;
+
+            break;
+        case NSOrderedDescending:
+            NSLog(@"对象时间晚于参数时间");
+            self.moneyButton.hidden = NO;
+
+            break;
+    }
+
     
 //    self.phoneNumLabel.layer.cornerRadius = 15;
 //    self.phoneNumLabel.clipsToBounds = YES;

@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-FC-eS9">
+                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-FC-eS9">
                     <rect key="frame" x="0.0" y="77" width="375" height="58"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9g-eT-TIO">
@@ -87,7 +87,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpW-JA-2x6">
-                    <rect key="frame" x="0.0" y="135" width="375" height="58"/>
+                    <rect key="frame" x="0.0" y="77" width="375" height="58"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kachongzhi" translatesAutoresizingMaskIntoConstraints="NO" id="hff-lZ-wcM">
                             <rect key="frame" x="20" y="12.5" width="33" height="33"/>
@@ -146,8 +146,8 @@
             <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ZpW-JA-2x6" secondAttribute="trailing" id="BC6-g4-EP7"/>
+                <constraint firstItem="ZpW-JA-2x6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="DsK-hX-YGE"/>
                 <constraint firstItem="qEf-FC-eS9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JMM-Yb-JXO"/>
-                <constraint firstItem="ZpW-JA-2x6" firstAttribute="top" secondItem="qEf-FC-eS9" secondAttribute="bottom" id="QnY-C3-ACK"/>
                 <constraint firstItem="ZpW-JA-2x6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rhv-tY-ArT"/>
                 <constraint firstAttribute="trailing" secondItem="qEf-FC-eS9" secondAttribute="trailing" id="saB-3p-wnG"/>
                 <constraint firstItem="qEf-FC-eS9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="xHi-JQ-MlX"/>

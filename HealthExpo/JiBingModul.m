@@ -77,7 +77,7 @@
 }
 
 - (void)getKeShiFenLeiDetail:(ClassifyObject *)aObject index:(NSInteger)aIndex{
-    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList1.action?catid=%ld",(long)aObject.id];
+    NSString *urlPath = [NSString stringWithFormat:@"/mobile/getContentList1.action?catid=%ld&stype=2",(long)aObject.id];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:urlPath];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, NSArray *responseObject) {
