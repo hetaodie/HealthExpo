@@ -8,16 +8,24 @@
 
 #import "CallViewController.h"
 #import "PhoneCallModelSource.h"
+#import "PhoneModelSource.h"
+#import "CycleBannersView.h"
 
 #import <CoreTelephony/CTCallCenter.h>
 #import <CoreTelephony/CTCall.h>
 
-@interface CallViewController ()<PhoneCallModelSourceDelegate>
+@interface CallViewController ()<PhoneCallModelSourceDelegate,PhoneModelSourceDelegate>
 @property (nonatomic,strong) PhoneCallModelSource *callModel;
 @property (weak, nonatomic) IBOutlet UILabel *tishiLabel;
 @property (weak, nonatomic) IBOutlet UIButton *reCallButton;
 
 @property (nonatomic, strong) CTCallCenter *callCenter;
+@property (weak, nonatomic) IBOutlet UILabel *bigNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *smallNumLabel;
+@property (nonatomic, strong) PhoneModelSource *modelSource;
+
+@property (weak, nonatomic) IBOutlet CycleBannersView *cycleBannersView;
+@property (weak, nonatomic) IBOutlet UIImageView *adImageView;
 @end
 
 @implementation CallViewController
@@ -67,11 +75,19 @@
     self.navigationItem.leftBarButtonItem = backItem;
     
     _callModel =[[PhoneCallModelSource alloc] init];
+    self.bigNumLabel.text = self.phoneNum;
+    self.smallNumLabel.text = self.phoneNum;
     
     self.callModel.delegate = self;
     
     [self.callModel onPhoneCallWithPhoneNum:self.phoneNum];
      [self.reCallButton setHidden:YES];
+    
+    self.navigationItem.title = @"便民电话";
+    
+    self.modelSource = [[PhoneModelSource alloc] init];
+    self.modelSource.delegate = self;
+    [self.modelSource getADBanners];
 }
 
 - (void)doBack:(id)sender{
@@ -79,9 +95,7 @@
 }
 
 - (IBAction)reCallBtnPress:(id)sender {
-    [self.callModel onPhoneCallWithPhoneNum:self.phoneNum];
-    self.tishiLabel.text =@"正在连接，请稍等...";
-    [self.reCallButton setHidden:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,5 +111,27 @@
     self.tishiLabel.text = [NSString stringWithFormat:@"%@",tipString];
     [self.reCallButton setHidden:NO];
 }
+
+- (void)getADBannersSuccess:(NSDictionary *)dict{
+    
+    NSArray *allPics = [dict allKeys];
+    if ([allPics count]>0) {
+        self.cycleBannersView.hidden = NO;
+        self.adImageView.hidden = YES;
+        [self.cycleBannersView showBannersWithBannersArray:allPics];
+        
+    }
+    else{
+        self.cycleBannersView.hidden = YES;
+        self.adImageView.hidden = NO;
+    }
+    
+}
+
+- (void)getADBannersFailed{
+    self.cycleBannersView.hidden = YES;
+    self.adImageView.hidden = NO;
+}
+
 
 @end

@@ -11,7 +11,7 @@
 #import "UIView+Toast.h"
 
 
-@interface KaChongZhiViewController ()<RechargeModelSourceDelegate>
+@interface KaChongZhiViewController ()<RechargeModelSourceDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *cardNumTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
 @property (nonatomic, retain) RechargeModelSource *modelSource;
@@ -26,11 +26,12 @@
     
     self.modelSource = [[RechargeModelSource alloc] init];
     self.modelSource.delegate = self;
+    self.cardNumTextField.delegate = self;
+    self.passWordTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)commentBtnPress:(id)sender {
@@ -46,14 +47,11 @@
 - (void)onRechargeFailed{
     [self.view makeToast:@"充值失败，请重试!" duration:1.0 position:CSToastPositionCenter];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
 }
-*/
 
 @end
