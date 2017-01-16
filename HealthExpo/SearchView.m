@@ -10,7 +10,7 @@
 #import "SearchModul.h"
 
 
-@interface SearchView() <UITableViewDataSource,UITableViewDelegate,SearchModulDelegate>
+@interface SearchView() <UITableViewDataSource,UITableViewDelegate,SearchModulDelegate,UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextLabel;
@@ -46,6 +46,15 @@
     self.modul.delegate = self;
     
     _searchArray = [[NSMutableArray alloc] init];
+    self.searchTextLabel.delegate = self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];    //主要是[receiver resignFirstResponder]在哪调用就能把receiver对应的键盘往下收
+    [self searchBtnPress:nil];
+    
+    return YES;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder

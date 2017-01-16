@@ -39,6 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess:) name:HELogin_Success_Notification object:nil];
     
     [self adjustNavigationBar];
@@ -75,6 +77,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self refreshUserInformation];
+    [[UserInfoManager shareManager] checkLoginKeyAvailable];
+
 }
 
 - (IBAction)onCollectionClicked:(id)sender {

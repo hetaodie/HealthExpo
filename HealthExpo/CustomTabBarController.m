@@ -9,7 +9,7 @@
 #import "CustomTabBarController.h"
 #import "LoginViewController.h"
 #import "HENotificationKey.h"
-@interface CustomTabBarController()
+@interface CustomTabBarController() <UITabBarControllerDelegate>
 @property (nonatomic, assign) BOOL isLogin;
 @property (nonatomic, strong) UINavigationController *loginNaVc;
 @end
@@ -31,8 +31,12 @@
     [self setSelectedIndex:index];
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.delegate =self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess:) name:HELogin_Success_Notification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:HELogout_Notification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTokenSuccess:) name:HECheck_Token_Success_Notification object:nil];

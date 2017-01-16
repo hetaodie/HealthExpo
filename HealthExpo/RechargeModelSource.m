@@ -50,7 +50,7 @@
     UserLoginInfo *info = [[UserInfoManager shareManager] getUserLoginInfo];
     NSString *key = [info.uid stringByAppendingString:@"gytx@#$.com"];
     NSString *payType = [self getPayTypeWithPhoneNum:info.phone];
-    NSString *url = [NSString stringWithFormat:@"http://pay.hgvoip.com/recharge/service/easypay.php?uid=%@&src=20&paytype=%@&goodstype=2&cardno=%@&cardpwd=%@&pv=Iphone&V=2.1.3&sign=%@", info.uid, payType,num, password, key.MD5];
+    NSString *url = [NSString stringWithFormat:@"http://pay.hgvoip.com/recharge/service/easypay.php?uid=%@&src=20&paytype=%@&goodstype=2&cardno=%@&cardpwd=%@&pv=Iphone&V=2.1.3&sign=%@", info.uid, @"98",num, password, key.MD5];
     HENetTask *task = [[HENetTask alloc] initWithTotalUrlString:url];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {

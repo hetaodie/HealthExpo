@@ -21,6 +21,9 @@
 #import "PhoneViewNumTableViewCell.h"
 
 #import <MessageUI/MessageUI.h>
+#import "UserInfoManager.h"
+#import "HENotificationKey.h"
+
 
 @interface PhoneViewController ()<PhoneModelSourceDelegate, UITableViewDataSource,UITableViewDelegate, MFMessageComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *phoneNumText;
@@ -74,7 +77,7 @@
     
     NSDate *currentDate = [NSDate date];
     
-    NSString *strDate = @"2016-12-06 08:00:00";
+    NSString *strDate = @"2017-01-19 08:00:00";
     
     NSDate *disDate = [self stringToDate:strDate];
     NSComparisonResult result = [currentDate compare:disDate];
@@ -101,7 +104,8 @@
     
     self.modelSource = [[PhoneModelSource alloc] init];
     self.modelSource.delegate = self;
-    [self.modelSource getADBanners];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getADBanners) name:HECheck_Token_Success_Notification object:nil];
     [self hiddenPhoneFilterView];
 
     for (NSInteger i = 0; i < 7; i ++) {
@@ -124,7 +128,12 @@
     self.filterTableView.delegate = self;
     self.filterTableView.dataSource = self;
 
+}
+
+- (void)getADBanners{
+    [self.modelSource getADBanners];
     [self bannerCycleSetting];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -134,6 +143,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    [[UserInfoManager shareManager] checkLoginKeyAvailable];
+
 
 }
 

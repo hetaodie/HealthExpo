@@ -32,7 +32,7 @@
     [self.window makeKeyAndVisible];
     
     [self adjustNavigationUI];
-    [[UserInfoManager shareManager] checkLoginKeyAvailable];
+    //[[UserInfoManager shareManager] checkLoginKeyAvailable];
     return YES;
 }
 
