@@ -102,6 +102,11 @@
 		7C04FBC51D1A69AF00414252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C04FBC41D1A69AF00414252 /* AppDelegate.m */; };
 		7C04FBCD1D1A69AF00414252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCC1D1A69AF00414252 /* Assets.xcassets */; };
 		7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C04FBCE1D1A69AF00414252 /* LaunchScreen.storyboard */; };
+		7C0567401E5084C3002380D8 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05673E1E5084C3002380D8 /* ForgetPasswordViewController.m */; };
+		7C0567411E5084C3002380D8 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C05673F1E5084C3002380D8 /* ForgetPasswordViewController.xib */; };
+		7C0567441E508B2A002380D8 /* ForgetPassWordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0567431E508B2A002380D8 /* ForgetPassWordSource.m */; };
+		7C0567481E509CC1002380D8 /* TiaoKuanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0567461E509CC1002380D8 /* TiaoKuanViewController.m */; };
+		7C0567491E509CC1002380D8 /* TiaoKuanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C0567471E509CC1002380D8 /* TiaoKuanViewController.xib */; };
 		7C05E1331D5B2886006D4EA9 /* JiBingModul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1321D5B2886006D4EA9 /* JiBingModul.m */; };
 		7C05E1361D5B295A006D4EA9 /* ClassifyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1351D5B295A006D4EA9 /* ClassifyObject.m */; };
 		7C05E1391D5C28A9006D4EA9 /* JiBingDetailmodul.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05E1381D5C28A9006D4EA9 /* JiBingDetailmodul.m */; };
@@ -373,6 +378,14 @@
 		7C04FBCC1D1A69AF00414252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C04FBCF1D1A69AF00414252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C04FBD11D1A69AF00414252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C05673D1E5084C3002380D8 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		7C05673E1E5084C3002380D8 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		7C05673F1E5084C3002380D8 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		7C0567421E508B2A002380D8 /* ForgetPassWordSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassWordSource.h; sourceTree = "<group>"; };
+		7C0567431E508B2A002380D8 /* ForgetPassWordSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassWordSource.m; sourceTree = "<group>"; };
+		7C0567451E509CC1002380D8 /* TiaoKuanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiaoKuanViewController.h; sourceTree = "<group>"; };
+		7C0567461E509CC1002380D8 /* TiaoKuanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiaoKuanViewController.m; sourceTree = "<group>"; };
+		7C0567471E509CC1002380D8 /* TiaoKuanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiaoKuanViewController.xib; sourceTree = "<group>"; };
 		7C05E1311D5B2886006D4EA9 /* JiBingModul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBingModul.h; sourceTree = "<group>"; };
 		7C05E1321D5B2886006D4EA9 /* JiBingModul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBingModul.m; sourceTree = "<group>"; };
 		7C05E1341D5B295A006D4EA9 /* ClassifyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyObject.h; sourceTree = "<group>"; };
@@ -798,6 +811,14 @@
 				53F36E281D1AE2E000C8DBB2 /* RegisterViewController.xib */,
 				69DC27A21D5DF58D006EEF68 /* RegisterModelSource.h */,
 				69DC27A31D5DF58D006EEF68 /* RegisterModelSource.m */,
+				7C05673D1E5084C3002380D8 /* ForgetPasswordViewController.h */,
+				7C05673E1E5084C3002380D8 /* ForgetPasswordViewController.m */,
+				7C05673F1E5084C3002380D8 /* ForgetPasswordViewController.xib */,
+				7C0567421E508B2A002380D8 /* ForgetPassWordSource.h */,
+				7C0567431E508B2A002380D8 /* ForgetPassWordSource.m */,
+				7C0567451E509CC1002380D8 /* TiaoKuanViewController.h */,
+				7C0567461E509CC1002380D8 /* TiaoKuanViewController.m */,
+				7C0567471E509CC1002380D8 /* TiaoKuanViewController.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1238,6 +1259,7 @@
 				532405271D22BDAB004A1A43 /* UserSettingViewController.xib in Resources */,
 				7C6A77BC1D2B81D5008A58D7 /* JiBingBKLeftViewCell.xib in Resources */,
 				53A34BCC1D1FC4A60043144E /* UserViewController.xib in Resources */,
+				7C0567491E509CC1002380D8 /* TiaoKuanViewController.xib in Resources */,
 				7C05E20F1D630BC8006D4EA9 /* MapViewController.xib in Resources */,
 				53F36E2A1D1AE2E000C8DBB2 /* RegisterViewController.xib in Resources */,
 				7C04FBD01D1A69AF00414252 /* LaunchScreen.storyboard in Resources */,
@@ -1267,6 +1289,7 @@
 				69DD74B71D5B491600730B94 /* SubmissionViewController.xib in Resources */,
 				69DA4C831D6048820027A504 /* CollectionViewController.xib in Resources */,
 				7C67444B1D2CC41E00661276 /* YiMiaoScheduleViewController.xib in Resources */,
+				7C0567411E5084C3002380D8 /* ForgetPasswordViewController.xib in Resources */,
 				7C6744501D2CC6F100661276 /* YiMiaoScheduleCell.xib in Resources */,
 				7C6A77A71D2B5EBA008A58D7 /* JiBingBKViewController.xib in Resources */,
 				694BB36F1D48DB8E007D8ED0 /* DianZiZaZhiItemView.xib in Resources */,
@@ -1377,6 +1400,7 @@
 				53BC4C691D290533009035BC /* JianKangBKViewController.m in Sources */,
 				7C6744791D2D25F600661276 /* YiYuanViewController.m in Sources */,
 				7C05E1451D5C7D1A006D4EA9 /* MessageReplyView.m in Sources */,
+				7C0567441E508B2A002380D8 /* ForgetPassWordSource.m in Sources */,
 				69DD74AC1D5B258E00730B94 /* DianZiZaZhiDetailViewController.m in Sources */,
 				532405261D22BDAB004A1A43 /* UserSettingViewController.m in Sources */,
 				694BB36B1D48DB3D007D8ED0 /* DianZiZaZhiItemView.m in Sources */,
@@ -1417,6 +1441,7 @@
 				69DA4C821D6048820027A504 /* CollectionViewController.m in Sources */,
 				7C67444A1D2CC41E00661276 /* YiMiaoScheduleViewController.m in Sources */,
 				7C6744451D2C9ED300661276 /* MessageInfoViewCell.m in Sources */,
+				7C0567481E509CC1002380D8 /* TiaoKuanViewController.m in Sources */,
 				69DC27A11D5DF3AC006EEF68 /* NSString+MD5.m in Sources */,
 				69E6847E1D1E78880092F031 /* CustomTabBarController.m in Sources */,
 				7C05E1331D5B2886006D4EA9 /* JiBingModul.m in Sources */,
@@ -1446,6 +1471,7 @@
 				53ABCD971D26BA0B00A424F0 /* HomePageCommonTableViewCell.m in Sources */,
 				7C05E1B21D61C1FE006D4EA9 /* PushViewControllerWithSearchData.m in Sources */,
 				69DD74A51D5B075100730B94 /* NewsDetailModelSource.m in Sources */,
+				7C0567401E5084C3002380D8 /* ForgetPasswordViewController.m in Sources */,
 				7CF7370B1DE2D20E00F92222 /* ZhifuBaoCollectionViewCell.m in Sources */,
 				69E4BE5A1D1D108C00B555FD /* PhoneViewController.m in Sources */,
 				69DC9ADD1D35231900CF4140 /* SpeakerMessageItem.m in Sources */,

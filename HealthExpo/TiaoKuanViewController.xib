@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TiaoKuanViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s0B-1b-78W">
+                    <rect key="frame" x="15" y="64" width="345" height="583"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">      在注册之前，请您详细阅读以下有关健康博览的使用条件与规则，并确认同意在您使用任何健康博览提供的信息、服务与活动时，皆能遵守。
+      您有妥善保管注册信息的责任与义务，我们建议您不要将自己的账号、服务经由转借、出售或任何方式提供他人使用。您对因您个人保管不当所造成的任何损失，应负全部责任。 
+      您使用健康博览提供的信息、服务、活动时，皆应遵守著作权、专利权、商标权、肖像权等相关法律规范，任何侵犯健康博览与他人权利的行为，您应负全部责任。
+      不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益，不得利用本站制作、复制和传播下列信息：
+（一）煽动抗拒、破坏宪法和法律、行政法规实施的；
+（二）煽动颠覆国家政权，推翻社会主义制度的；
+（三）煽动分裂国家、破坏国家统一的；
+（四）煽动民族仇恨、民族歧视，破坏民族团结的；
+（五）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；
+（六）宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；
+（七）公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；
+（八）损害国家机关信誉的；
+（九）其他违反宪法和法律行政法规的；
+（十）进行商业广告行为的。 
+ 附则 
+     1、本守则凡与国家法律法规有关的内容均依照《互联网电子公告服务管理规定》，当本守则与国家法律法规冲突时，以国家法律法规为准。 
+ 2、制订本守则的目的，不在于约束网友，而在于维护网站的正常秩序。
+ 3、APP对本守则具有最终解释权。</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="s0B-1b-78W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="19i-E7-zRd"/>
+                <constraint firstAttribute="trailing" secondItem="s0B-1b-78W" secondAttribute="trailing" constant="15" id="FxP-AU-8A3"/>
+                <constraint firstAttribute="bottom" secondItem="s0B-1b-78W" secondAttribute="bottom" constant="20" id="l7c-u3-DH5"/>
+                <constraint firstItem="s0B-1b-78W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="wup-U2-zP2"/>
+            </constraints>
+            <point key="canvasLocation" x="-220" y="16"/>
+        </view>
+    </objects>
+</document>

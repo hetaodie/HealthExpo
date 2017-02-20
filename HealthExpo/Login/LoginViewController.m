@@ -14,6 +14,7 @@
 #import "LoginModelSource.h"
 #import "UserInfoManager.h"
 #import "UIView+Toast.h"
+#import "ForgetPasswordViewController.h"
 
 @interface LoginViewController ()<LoginModelSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *phoneNumBackgroundView;
@@ -82,6 +83,9 @@
 
 - (IBAction)onForgetPasswordButtonClicked:(id)sender {
     //TODO 忘记密码view
+    ForgetPasswordViewController *registerVC = [[ForgetPasswordViewController alloc] initWithNibName:@"ForgetPasswordViewController" bundle:nil];
+    [self.navigationController pushViewController:registerVC animated:YES];
+
 }
 
 - (IBAction)onLoginButtonClicked:(id)sender {

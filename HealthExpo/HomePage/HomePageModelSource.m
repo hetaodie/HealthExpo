@@ -20,6 +20,7 @@
 
 - (void)getHomePageNews{
     HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getContentList.action?catid=1"];
+//    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getContentList.action?top=1"];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *array = [self itemsArrayFromJsonArray:responseObject];

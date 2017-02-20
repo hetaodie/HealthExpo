@@ -11,8 +11,30 @@
 #import "NSString+MD5.h"
 
 @implementation RegisterModelSource
-- (void)registerWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd{
-    NSString *path = [NSString stringWithFormat:@"/mobile/registerStaff.action?username=%@&password=%@", phone, pwd];
+
+- (void)forgetPasswordWithPhoneNum:(NSString *)phone andkey1:(NSString *)key1 andkey2:(NSString *)key2{
+    NSString *path = [NSString stringWithFormat:@"/mobile/staffPasswordForgot.action?username=%@&key1=%@&key2=%@", phone, key1,key2];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:path];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onRegisterSuccess:)]) {
+            [weakSelf.delegate onRegisterSuccess:responseObject];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onRegisterFailed)]) {
+            [weakSelf.delegate onRegisterFailed];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
+}
+
+
+- (void)registerWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd andkey1:(NSString *)key1 andkey2:(NSString *)key2{
+    NSString *path = [NSString stringWithFormat:@"/mobile/registerStaff.action?username=%@&password=%@&key1=%@&key2=%@", phone, pwd,key1,key2];
+    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:path];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {

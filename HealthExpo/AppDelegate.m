@@ -60,6 +60,15 @@
 
 
 #pragma mark - private Func 
+
+- (NSDate *)stringToDate:(NSString *)strdate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];// NSString的时间格式
+    NSDate *retdate = [dateFormatter dateFromString:strdate];
+    return retdate;
+}
+
 - (void)adjustNavigationUI{
     UINavigationBar *navBar = [UINavigationBar appearance];
     [navBar setBarTintColor:[UIColor colorWithHex:0x00b38a alpha:1]];
@@ -75,8 +84,32 @@
     PhoneViewController *phoneVC = [[PhoneViewController alloc] initWithNibName:@"PhoneViewController" bundle:nil];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:phoneVC];
     
+    NSDate *currentDate = [NSDate date];
+    
+    NSString *strDate = @"2017-02-25 08:00:00";
+    NSString *dianhuaTitle;
+    
+    NSDate *disDate = [self stringToDate:strDate];
+    NSComparisonResult result = [currentDate compare:disDate];
+    switch(result){
+        case NSOrderedSame:
+            NSLog(@"对象时间等于参数时间");
+            dianhuaTitle = @"电话";
+            break;
+        case NSOrderedAscending:
+            NSLog(@"对象时间早于参数时间");
+            dianhuaTitle = @"在线问诊";
+            
+            break;
+        case NSOrderedDescending:
+            NSLog(@"对象时间晚于参数时间");
+            dianhuaTitle = @"电话";
+            
+            break;
+    }
+    
     UIImage *dianhuaImage = [[UIImage imageNamed:@"dianhua"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"电话" image:dianhuaImage selectedImage:dianhuaImage];
+    nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:dianhuaTitle image:dianhuaImage selectedImage:dianhuaImage];
    
     ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:contactsVC];

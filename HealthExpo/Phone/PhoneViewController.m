@@ -77,7 +77,7 @@
     
     NSDate *currentDate = [NSDate date];
     
-    NSString *strDate = @"2017-01-19 08:00:00";
+    NSString *strDate = @"2017-02-25 08:00:00";
     
     NSDate *disDate = [self stringToDate:strDate];
     NSComparisonResult result = [currentDate compare:disDate];

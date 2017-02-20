@@ -18,10 +18,12 @@
 @interface RegisterModelSource : NSObject
 @property (nonatomic, weak) id <RegisterModelSourceDelegate> delegate;
 
-- (void)registerWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd;
+- (void)registerWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd andkey1:(NSString *)key1 andkey2:(NSString *)key2;
 
 - (void)registerICallWithPhoneNum:(NSString *)phone andPwd:(NSString *)pwd;
 
 - (void)upDataPhoneToJianKangeBoLan:(NSString *)username uid:(NSString *)uid andPwd:(NSString *)pwd;
+
+- (void)forgetPasswordWithPhoneNum:(NSString *)phone andkey1:(NSString *)key1 andkey2:(NSString *)key2;
 
 @end
