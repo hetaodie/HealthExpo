@@ -1,0 +1,16 @@
+//
+//  HealthExpo-Prefix.pch
+//  HealthExpo
+//
+//  Created by weixu on 2017/2/23.
+//  Copyright © 2017年 AllWantsLab. All rights reserved.
+//
+
+#ifndef HealthExpo_Prefix_pch
+#define HealthExpo_Prefix_pch
+#import "Comment.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* HealthExpo_Prefix_pch */

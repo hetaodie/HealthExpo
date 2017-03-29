@@ -45,7 +45,12 @@
 }
 
 - (IBAction)checkInButtonClicked:(id)sender {
-    [self.modelSouce onCheckInRequst];
+    if ([Comment isUseNetPhone]) {
+        [self.modelSouce onCheckInRequst];
+    }
+    else{
+        [self.view makeToast:@"签到成功" duration:0.8 position:CSToastPositionCenter];
+    }
 }
 
 #pragma mark -- CheckInModelSourceDelegate

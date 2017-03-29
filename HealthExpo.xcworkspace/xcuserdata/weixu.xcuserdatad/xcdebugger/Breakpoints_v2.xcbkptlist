@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HealthExpo/CallViewController.m"
-            timestampString = "504518672.159754"
+            timestampString = "509556826.290101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-onPhoneCallSuccess:"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HealthExpo/Phone/PhoneViewController.m"
-            timestampString = "505927796.765295"
+            timestampString = "509696274.896602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "-moneyBtnPress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,28 +634,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HealthExpo/CallViewController.m"
-            timestampString = "504518672.159754"
+            timestampString = "509556826.290101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-getADBannersSuccess:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthExpo/CallViewController.m"
-            timestampString = "504518331.411757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -858,7 +842,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/github/HealthExpo/HealthExpo/ForgetPassWordSource.m"
-                  timestampString = "509262860.452089"
+                  timestampString = "509557932.94259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
@@ -873,7 +857,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/github/HealthExpo/HealthExpo/ForgetPassWordSource.m"
-                  timestampString = "509262860.45338"
+                  timestampString = "509557932.94385"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -906,7 +890,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/github/HealthExpo/HealthExpo/ForgetPassWordSource.m"
-                  timestampString = "509262860.456628"
+                  timestampString = "509557932.94655"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -921,7 +905,7 @@
                   moduleName = "HealthExpo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/weixu/github/HealthExpo/HealthExpo/ForgetPassWordSource.m"
-                  timestampString = "509262860.458439"
+                  timestampString = "509557932.947886"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -1088,6 +1072,102 @@
             startingLineNumber = "128"
             endingLineNumber = "128"
             landmarkName = "-onRegisterButtonClicked:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/PhoneModelSource.m"
+            timestampString = "509523698.710441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-handerBannersResponse:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/Contacts/ContactsViewController.m"
+            timestampString = "509524064.186882"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/MIngYiViewController.m"
+            timestampString = "509524070.401191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-dianhuaBtnPress:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/Phone/PhoneViewController.m"
+            timestampString = "509696274.896602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "-phoneCallButtonClicked:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/CallViewController.m"
+            timestampString = "509556714.214336"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthExpo/Login/UserInfoManager.m"
+            timestampString = "509557028.831291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-registerSuccessWithUserName:andPassword:andUID:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

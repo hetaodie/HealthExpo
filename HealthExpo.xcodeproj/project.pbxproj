@@ -206,6 +206,7 @@
 		7CF7370F1DE2D2C800F92222 /* ZhifubaoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7370E1DE2D2C800F92222 /* ZhifubaoObject.m */; };
 		7CF737131DE2DD0900F92222 /* KaChongZhiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF737111DE2DD0900F92222 /* KaChongZhiViewController.m */; };
 		7CF737141DE2DD0900F92222 /* KaChongZhiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF737121DE2DD0900F92222 /* KaChongZhiViewController.xib */; };
+		7CFCCC371E5EC2FE00DCEC21 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC361E5EC2FE00DCEC21 /* Comment.m */; };
 		9759ADE1ADA94CA693249676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F403DA16C4CB879B3CB0AE82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -545,6 +546,9 @@
 		7CF737101DE2DD0900F92222 /* KaChongZhiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaChongZhiViewController.h; sourceTree = "<group>"; };
 		7CF737111DE2DD0900F92222 /* KaChongZhiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaChongZhiViewController.m; sourceTree = "<group>"; };
 		7CF737121DE2DD0900F92222 /* KaChongZhiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KaChongZhiViewController.xib; sourceTree = "<group>"; };
+		7CFCCC351E5EC2FE00DCEC21 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		7CFCCC361E5EC2FE00DCEC21 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		7CFCCC381E5ECC6800DCEC21 /* HealthExpo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HealthExpo-Prefix.pch"; sourceTree = "<group>"; };
 		BE62231A479DD1F2F8FA84B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F403DA16C4CB879B3CB0AE82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -982,6 +986,7 @@
 		7C04FBBF1D1A69AF00414252 /* HealthExpo */ = {
 			isa = PBXGroup;
 			children = (
+				7CFCCC341E5EC2E300DCEC21 /* comment */,
 				7C05E2081D630B88006D4EA9 /* otherVC */,
 				53BC4C7E1D291C78009035BC /* Tools */,
 				53A34BDB1D2025160043144E /* iCallSDK */,
@@ -1156,6 +1161,16 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		7CFCCC341E5EC2E300DCEC21 /* comment */ = {
+			isa = PBXGroup;
+			children = (
+				7CFCCC351E5EC2FE00DCEC21 /* Comment.h */,
+				7CFCCC361E5EC2FE00DCEC21 /* Comment.m */,
+				7CFCCC381E5ECC6800DCEC21 /* HealthExpo-Prefix.pch */,
+			);
+			name = comment;
+			sourceTree = "<group>";
+		};
 		8639F12BFCDBDAB9524DA0FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1200,7 +1215,12 @@
 					7C04FBBC1D1A69AF00414252 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 8C4MKF634P;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1368,6 +1388,7 @@
 				7C6A77A61D2B5EBA008A58D7 /* JiBingBKViewController.m in Sources */,
 				7C05E14D1D5D6AD9006D4EA9 /* YiMiaoObject.m in Sources */,
 				7C6A77BB1D2B81D5008A58D7 /* JiBingBKLeftViewCell.m in Sources */,
+				7CFCCC371E5EC2FE00DCEC21 /* Comment.m in Sources */,
 				7C05E1AC1D619CDB006D4EA9 /* SearchModul.m in Sources */,
 				69DA4C891D6050DF0027A504 /* CallDetailModelSource.m in Sources */,
 				7C6744581D2CE68E00661276 /* YiMiaoDetailView.m in Sources */,
@@ -1588,9 +1609,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 8C4MKF634P;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/weixu/github/HealthExpo/HealthExpo/HealthExpo-Prefix.pch";
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1600,7 +1623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82ba0b9e-89a6-4f8a-a238-e3af7aba3e26";
+				PROVISIONING_PROFILE = "a9dbc654-b1b7-4839-bddf-1b5a9509fd0b";
 				PROVISIONING_PROFILE_SPECIFIER = HealthExpo;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1612,9 +1635,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hangzhou shuchikeji Co.,Ltd. (8C4MKF634P)";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8C4MKF634P;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/weixu/github/HealthExpo/HealthExpo/HealthExpo-Prefix.pch";
 				INFOPLIST_FILE = HealthExpo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1625,7 +1650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthExpo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = HealthExpo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

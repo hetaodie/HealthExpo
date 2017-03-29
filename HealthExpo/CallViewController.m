@@ -79,15 +79,20 @@
     self.smallNumLabel.text = self.phoneNum;
     
     self.callModel.delegate = self;
-    
-    [self.callModel onPhoneCallWithPhoneNum:self.phoneNum];
+    if ([Comment isUseNetPhone]) {
+        [self.callModel onPhoneCallWithPhoneNum:self.phoneNum];
+        self.modelSource = [[PhoneModelSource alloc] init];
+        self.modelSource.delegate = self;
+        [self.modelSource getADBanners];
+    }
+    else{
+        NSString *phoneStr = [NSString stringWithFormat:@"tel://%@",self.phoneNum];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneStr]];
+    }
+    //[self.callModel onPhoneCallWithPhoneNum:self.phoneNum];
      [self.reCallButton setHidden:YES];
     
     self.navigationItem.title = @"便民电话";
-    
-    self.modelSource = [[PhoneModelSource alloc] init];
-    self.modelSource.delegate = self;
-    [self.modelSource getADBanners];
 }
 
 - (void)doBack:(id)sender{

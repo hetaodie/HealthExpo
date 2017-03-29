@@ -32,7 +32,9 @@
     [self.window makeKeyAndVisible];
     
     [self adjustNavigationUI];
-    //[[UserInfoManager shareManager] checkLoginKeyAvailable];
+    if ([Comment isUseNetPhone]) {
+        [[UserInfoManager shareManager] checkLoginKeyAvailable];
+    }
     return YES;
 }
 
@@ -84,32 +86,17 @@
     PhoneViewController *phoneVC = [[PhoneViewController alloc] initWithNibName:@"PhoneViewController" bundle:nil];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:phoneVC];
     
-    NSDate *currentDate = [NSDate date];
-    
-    NSString *strDate = @"2017-02-25 08:00:00";
-    NSString *dianhuaTitle;
-    
-    NSDate *disDate = [self stringToDate:strDate];
-    NSComparisonResult result = [currentDate compare:disDate];
-    switch(result){
-        case NSOrderedSame:
-            NSLog(@"对象时间等于参数时间");
-            dianhuaTitle = @"电话";
-            break;
-        case NSOrderedAscending:
-            NSLog(@"对象时间早于参数时间");
-            dianhuaTitle = @"在线问诊";
-            
-            break;
-        case NSOrderedDescending:
-            NSLog(@"对象时间晚于参数时间");
-            dianhuaTitle = @"电话";
-            
-            break;
-    }
     
     UIImage *dianhuaImage = [[UIImage imageNamed:@"dianhua"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:dianhuaTitle image:dianhuaImage selectedImage:dianhuaImage];
+    NSString *phoneTitle;
+    
+    if ([Comment isUseNetPhone]){
+        phoneTitle =@"电话";
+    }
+    else{
+        phoneTitle = @"问诊";
+    }
+    nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:phoneTitle image:dianhuaImage selectedImage:dianhuaImage];
    
     ContactsViewController *contactsVC = [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:contactsVC];
@@ -123,27 +110,34 @@
     UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:loginVC];
     nav5.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"wode"] selectedImage:[UIImage imageNamed:@"wode2"]];
     
-    tbController.viewControllers = @[nav1, nav2, nav3, nav4, nav5];
-    
-    if ([nav1 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        nav1.interactivePopGestureRecognizer.delegate = nil;
+   
+    if ([Comment isUseNetPhone]) {
+        tbController.viewControllers = @[nav1, nav2, nav3, nav4, nav5];
+    }
+    else{
+        tbController.viewControllers = @[nav1, nav2, nav3, nav4];
     }
     
-    if ([nav2 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        nav2.interactivePopGestureRecognizer.delegate = nil;
-    }
     
-    if ([nav3 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        nav3.interactivePopGestureRecognizer.delegate = nil;
-    }
-    
-    if ([nav4 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        nav4.interactivePopGestureRecognizer.delegate = nil;
-    }
-    
-    if ([nav5 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        nav5.interactivePopGestureRecognizer.delegate = nil;
-    }
+//    if ([nav1 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        nav1.interactivePopGestureRecognizer.delegate = nil;
+//    }
+//    
+//    if ([nav2 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        nav2.interactivePopGestureRecognizer.delegate = nil;
+//    }
+//    
+//    if ([nav3 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        nav3.interactivePopGestureRecognizer.delegate = nil;
+//    }
+//    
+//    if ([nav4 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        nav4.interactivePopGestureRecognizer.delegate = nil;
+//    }
+//    
+//    if ([nav5 respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        nav5.interactivePopGestureRecognizer.delegate = nil;
+//    }
     
 //    //改变tabBar 上title的颜色 和 字体大小
 //    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:102/255.0 green:122/255.0 blue:143/255.0 alpha:1.0f], NSForegroundColorAttributeName, [UIFont systemFontOfSize:14], NSFontAttributeName, nil nil] forState:UIControlStateNormal];

@@ -75,33 +75,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDate *currentDate = [NSDate date];
-    
-    NSString *strDate = @"2017-02-25 08:00:00";
-    
-    NSDate *disDate = [self stringToDate:strDate];
-    NSComparisonResult result = [currentDate compare:disDate];
-    switch(result){
-        case NSOrderedSame:
-            NSLog(@"对象时间等于参数时间");
-            self.moneyButton.hidden = NO;
-            break;
-        case NSOrderedAscending:
-            NSLog(@"对象时间早于参数时间");
-            self.moneyButton.hidden = YES;
-
-            break;
-        case NSOrderedDescending:
-            NSLog(@"对象时间晚于参数时间");
-            self.moneyButton.hidden = NO;
-
-            break;
+    if ([Comment isUseNetPhone]) {
+        self.moneyButton.hidden = NO;
+        self.shareButton.hidden = NO;
+    }
+    else{
+        self.moneyButton.hidden = YES;
+        self.shareButton.hidden = YES;
     }
 
-    
-//    self.phoneNumLabel.layer.cornerRadius = 15;
-//    self.phoneNumLabel.clipsToBounds = YES;
-    
     self.modelSource = [[PhoneModelSource alloc] init];
     self.modelSource.delegate = self;
     
@@ -143,9 +125,9 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    [[UserInfoManager shareManager] checkLoginKeyAvailable];
-
-
+    if ([Comment isUseNetPhone]) {
+        [[UserInfoManager shareManager] checkLoginKeyAvailable];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
